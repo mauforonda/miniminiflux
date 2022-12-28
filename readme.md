@@ -1,5 +1,7 @@
 A stream of links powered by miniflux and github actions
 
+![screenshot](screenshot.png)
+
 [see live](https://mauforonda.github.io/miniminiflux)
 
 Make it your own

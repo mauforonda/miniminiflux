@@ -1,27 +1,59 @@
+
 :root {
-    --background: #ffffff;
-    --text: #232730;
+    --background: #f9f9f9;
+    --text: #666971;
     --visited: #9aa1b5;
     --hover: rgb(159, 180, 214, .2);
     --comments: #c97849;
+    --frame: #d8dadf;
 }
 
 @media (prefers-color-scheme:dark) {
     :root {
-	--background: #1c1c1c;
-	--text: #ffffff;
-    --visited: #6f6f6f;
-    --hover: #000;
+        --background: #050528;
+        --text: #ffede6;
+        --visited: #6f6f6f;
+        --hover: #000;
+        --frame: #847e7c;
     }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0px;
     font-size: 14px;
     background: var(--background);
     text-align: left;
     display: flex;
     justify-content: center;
+}
+
+.feed {
+    display: flex;
+    flex-direction: row;
+/*     flex-wrap: wrap; */
+    /*! column-gap: 25px; */
+    width: 3000px;
+    overflow-x: auto;
+    justify-content: center;
+}
+
+.category {
+    min-width: 500px;
+    max-width: 500px;
+    margin: 15px;
+    overflow-y: auto;
+    height: calc(100vh - 30px);
+}
+
+.category_header {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: var(--frame);
 }
 
 .entries {
@@ -41,7 +73,7 @@ a:visited {
 }
 
 .content {
-    padding: 8px 10px;
+    padding: 10px 10px; 
 }
 
 .content:hover {
@@ -49,15 +81,13 @@ a:visited {
 }
 
 .title {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .meta {
     font-size: .8em;
     opacity: .6;
-}
-
-.feed {
+    display: flex;
 }
 
 .comments {
@@ -71,4 +101,13 @@ a:visited {
 
 .comments a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 1100px) {
+    .category {
+        min-width: calc(100vw - 30px) !important;
+    }
+    .feed {
+        justify-content: flex-start !important;
+    }
 }

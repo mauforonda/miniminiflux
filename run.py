@@ -14,16 +14,15 @@ def format_entry(entry: dict) -> dict:
         del e['comments_url']
     return e
 
-def update_feed(instance: str, token:str, num_entries:int, output:str) -> None:
+def update_feed(client:miniflux.Client, category:int, instance: str, token:str, num_entries:int) -> None:
 
-    client = miniflux.Client(instance, api_key=token)
     entries = client.get_entries(
+        category_id=category,
         direction='desc',
         order='published_at',
         limit=num_entries)
     entries = [format_entry(e) for e in entries['entries']]
-    with open(output, 'w+') as f:
-        json.dump(entries, f)
+    return entries
 
 if __name__ == "__main__":
 
@@ -41,9 +40,20 @@ if __name__ == "__main__":
     instance = os.getenv('INSTANCE')
     token = os.getenv('TOKEN')
 
-    update_feed(
-        instance,
-        token,
-        args.num_entries,
-        output
-    )
+    client = miniflux.Client(instance, api_key=token)
+    categories = client.get_categories()
+    feed = []
+
+    for category in categories:
+        
+        entries = update_feed(
+            client,
+            category['id'],
+            instance,
+            token,
+            args.num_entries,
+        )
+        feed.append({'name':category['title'], 'entries':entries})
+
+    with open(output, 'w+') as f:
+        json.dump(feed, f)
