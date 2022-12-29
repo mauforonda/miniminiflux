@@ -1,5 +1,35 @@
 var container = document.querySelector('.feed')
 var dateFormat = {hour:"numeric", minute:"numeric", day: "numeric", month: 'long'}
+var openPost
+
+render_post = (el, postID) => {
+    const post = document.createElement('div')
+    post.classList.add('post')
+    fetch(`posts/${postID}`).then((response) => {
+        response.text().then((postText) => {
+            post.innerHTML = postText
+        })
+    })
+    el.closest('.content').appendChild(post)
+    openPost = postID
+}
+
+linkHandler = (e) => {
+    var postID  = e.target.closest('.content').dataset.post
+    if (openPost == postID) {
+        const reading = document.querySelector('.post')
+        if (reading) {
+            reading.remove()
+        }
+        openPost = ''
+    } else {
+        const reading = document.querySelector('.post')
+        if (reading) {
+            reading.remove()
+        }
+        render_post(e.target, postID)
+    }
+}
 
 format_entry = (entry) => {
 
@@ -8,12 +38,13 @@ format_entry = (entry) => {
 
     const link = document.createElement('a')
     link.classList = ['entry']
-    link.href = entry.url
-    link.target = '_blank'
+    // link.href = entry.url
     link.title = dateString
+    link.addEventListener('click', linkHandler)
     
     const content = document.createElement('div')
     content.classList = ['content']
+    content.dataset.post = entry.id
 
     const title = document.createElement('div')
     title.classList = ['title']
@@ -24,6 +55,7 @@ format_entry = (entry) => {
     meta.classList = ['meta']
     const source = document.createElement('span')
     source.classList = ['source']
+    source.dataset.post = entry.id
     source.textContent = entry.feed
     meta.appendChild(source)
     if ('comments_url' in entry) {
@@ -38,6 +70,12 @@ format_entry = (entry) => {
     }
     content.appendChild(meta)
 
+    const original = document.createElement('a')
+    original.classList.add('original')
+    original.href = entry.url
+    original.target = '_blank'
+
+    link.appendChild(original)
     link.appendChild(content)
     return link
 }

@@ -3,18 +3,22 @@
     --background: #f9f9f9;
     --text: #666971;
     --visited: #9aa1b5;
-    --hover: rgb(159, 180, 214, .2);
+    --hover: rgb(243, 245, 244);
     --comments: #c97849;
     --frame: #d8dadf;
+    --linkHover: rgb(203, 234, 214);
+    --link: rgb(237, 242, 239);
 }
 
 @media (prefers-color-scheme:dark) {
     :root {
-        --background: #050528;
+        --background: #1c1c20;
         --text: #ffede6;
         --visited: #6f6f6f;
-        --hover: #000;
-        --frame: #847e7c;
+        --hover: #16161e;
+        --frame: #443e5c;
+        --linkHover: #30304f;
+        --link: #272740;
     }
 }
 
@@ -49,7 +53,7 @@ body {
 }
 
 .category_header {
-    padding: 10px;
+    padding: 10px 10px 10px 30px;
     font-weight: bold;
     font-size: 1.1em;
     text-transform: uppercase;
@@ -66,6 +70,7 @@ body {
     text-decoration: none;
     color: var(--text);
     margin: 0px;
+    display: flex;
 }
 
 a:visited {
@@ -74,6 +79,8 @@ a:visited {
 
 .content {
     padding: 10px 10px; 
+    max-width: calc(100% - 50px);
+    margin: 5px 0px;
 }
 
 .content:hover {
@@ -99,8 +106,52 @@ a:visited {
     color: var(--comments);
 }
 
-.comments a:hover {
+.comments a:hover, .post a:hover {
     text-decoration: underline;
+}
+
+.post {
+    max-width: calc(100% - 20px);
+    padding: 20px;
+    background: var(--background);
+    font-size: .9em;
+    line-height: 1.6;
+    border: 1px solid var(--frame);
+    margin: 15px 10px 10px 10px;
+    border-radius: 5px;
+}
+
+.post img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.post a {
+    color: var(--comments);
+    text-decoration: none;
+}
+
+.post>* {
+    max-width: 100%;
+}
+
+
+.original {
+    background: var(--link);
+    margin: 5px 0px;
+    min-width: 20px;
+    border-right: 1px solid var(--linkHover);
+  }
+  .original a {
+    width: 100%;
+  }
+
+
+.original:hover {
+  background: var(--linkHover);
+}
+.content {
+  width: 100%;
 }
 
 @media only screen and (max-width: 1100px) {
