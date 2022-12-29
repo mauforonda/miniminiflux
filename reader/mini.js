@@ -11,6 +11,7 @@ render_post = (el, postID) => {
         })
     })
     el.closest('.content').appendChild(post)
+    el.scrollIntoView()
     openPost = postID
 }
 
