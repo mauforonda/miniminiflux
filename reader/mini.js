@@ -10,18 +10,23 @@ render_post = (el, postID) => {
             post.innerHTML = postText
         })
     })
+    post.addEventListener('click', (e) => {
+        e.stopPropagation()
+    })
     el.closest('.content').appendChild(post)
     el.scrollIntoView({block:'start', behavior: "smooth"})
     openPost = postID
 }
 
 linkHandler = (e) => {
+    e.stopPropagation()
     var postID  = e.target.closest('.content').dataset.post
     if (openPost == postID) {
         const reading = document.querySelector('.post')
         if (reading) {
             reading.remove()
         }
+        e.target.scrollIntoView({block:'start', behavior: "smooth"})
         openPost = ''
     } else {
         const reading = document.querySelector('.post')
@@ -41,11 +46,11 @@ format_entry = (entry) => {
     link.classList = ['entry']
     // link.href = entry.url
     link.title = dateString
-    link.addEventListener('click', linkHandler)
     
     const content = document.createElement('div')
     content.classList = ['content']
     content.dataset.post = entry.id
+    content.addEventListener('click', linkHandler)
 
     const title = document.createElement('div')
     title.classList = ['title']
