@@ -2,11 +2,11 @@
 :root {
     --background: #f9f9f9;
     --text: #666971;
-    --visited: #9aa1b5;
+    --visited: #f7f7f7;
     --hover: rgb(243, 245, 244);
     --comments: #c97849;
     --frame: #d8dadf;
-    --linkHover: rgb(203, 234, 214);
+    --linkHover: rgb(192, 234, 207);
     --link: rgb(237, 242, 239);
 }
 
@@ -17,7 +17,7 @@
         --visited: #6f6f6f;
         --hover: #16161e;
         --frame: #443e5c;
-        --linkHover: #30304f;
+        --linkHover: #55558c;
         --link: #272740;
     }
 }
@@ -50,6 +50,7 @@ body {
     margin: 15px;
     overflow-y: auto;
     height: calc(100vh - 30px);
+    scroll-behavior: smooth;
 }
 
 .category_header {
@@ -81,6 +82,7 @@ a:visited {
     padding: 10px 10px; 
     max-width: calc(100% - 50px);
     margin: 5px 0px;
+    cursor: pointer;
 }
 
 .content:hover {
@@ -140,12 +142,15 @@ a:visited {
     background: var(--link);
     margin: 5px 0px;
     min-width: 20px;
-    border-right: 1px solid var(--linkHover);
+    border-right: 2px solid var(--linkHover);
   }
   .original a {
     width: 100%;
   }
 
+.original:visited {
+  border-color: var(--background);
+}
 
 .original:hover {
   background: var(--linkHover);
