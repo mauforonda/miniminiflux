@@ -1,5 +1,5 @@
 var container = document.querySelector('.feed')
-var dateFormat = {hour:"numeric", minute:"numeric", day: "numeric", month: 'long'}
+var dateFormat = {hour:"numeric", minute:"numeric", hour12: false, day: "numeric", month: 'short'}
 var openPost
 
 render_post = (el, postID) => {
@@ -14,7 +14,10 @@ render_post = (el, postID) => {
         e.stopPropagation()
     })
     el.closest('.content').appendChild(post)
-    el.scrollIntoView({block:'start', behavior: "smooth"})
+    entry = el.closest('.entry')
+    entry.classList.add('open')
+    container.classList.add('reading')
+    entry.scrollIntoView({block:'start', behavior: "smooth"})
     openPost = postID
 }
 
@@ -22,8 +25,10 @@ linkHandler = (e) => {
     e.stopPropagation()
     var postID  = e.target.closest('.content').dataset.post
     if (openPost == postID) {
+        container.classList.remove('reading')
         const reading = document.querySelector('.post')
         if (reading) {
+            reading.closest('.entry').classList.remove('open')
             reading.remove()
         }
         e.target.scrollIntoView({block:'start', behavior: "smooth"})
@@ -31,6 +36,7 @@ linkHandler = (e) => {
     } else {
         const reading = document.querySelector('.post')
         if (reading) {
+            reading.closest('.entry').classList.remove('open')
             reading.remove()
         }
         render_post(e.target, postID)
@@ -40,12 +46,13 @@ linkHandler = (e) => {
 format_entry = (entry) => {
 
     date = new Date(entry['published_at'])
-    dateString = date.toLocaleDateString("en-US", dateFormat)
+    dateShort = date.toLocaleTimeString("en-US", {hour: '2-digit', minute:'2-digit', hourCycle: 'h23'})
+    dateLong = date.toLocaleDateString('en-US', {hour:"numeric", minute:"numeric", day: "numeric", month: 'long', hourCycle: 'h23'})
 
     const link = document.createElement('a')
     link.classList = ['entry']
     // link.href = entry.url
-    link.title = dateString
+    // link.title = dateString
     
     const content = document.createElement('div')
     content.classList = ['content']
@@ -59,21 +66,30 @@ format_entry = (entry) => {
 
     const meta = document.createElement('div')
     meta.classList = ['meta']
+    
+    const pubdate = document.createElement('span')
+	pubdate.classList = ['pubdate']
+    pubdate.textContent = dateShort
+    pubdate.title = dateLong
+
     const source = document.createElement('span')
     source.classList = ['source']
     source.dataset.post = entry.id
     source.textContent = entry.feed
+    
     meta.appendChild(source)
-    if ('comments_url' in entry) {
-	const comments = document.createElement('span')
-	comments.classList = ['comments']
-	comments_link = document.createElement('a')
-	comments_link.href = entry.comments_url
-	comments_link.target = '_blank'
-	comments_link.textContent = 'comments'
-	comments.appendChild(comments_link)
-	meta.appendChild(comments)
-    }
+    meta.appendChild(pubdate)
+    
+    // if ('comments_url' in entry) {
+	// const comments = document.createElement('span')
+	// comments.classList = ['comments']
+	// comments_link = document.createElement('a')
+	// comments_link.href = entry.comments_url
+	// comments_link.target = '_blank'
+	// comments_link.textContent = 'comments'
+	// comments.appendChild(comments_link)
+	// meta.appendChild(comments)
+    // }
     content.appendChild(meta)
 
     const original = document.createElement('a')
