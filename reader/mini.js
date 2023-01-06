@@ -31,7 +31,7 @@ linkHandler = (e) => {
             reading.closest('.entry').classList.remove('open')
             reading.remove()
         }
-        e.target.scrollIntoView({block:'start', behavior: "smooth"})
+        e.target.closest('.entry').scrollIntoView({block:'start', behavior: "smooth"})
         openPost = ''
     } else {
         const reading = document.querySelector('.post')
@@ -80,16 +80,6 @@ format_entry = (entry) => {
     meta.appendChild(source)
     meta.appendChild(pubdate)
     
-    // if ('comments_url' in entry) {
-	// const comments = document.createElement('span')
-	// comments.classList = ['comments']
-	// comments_link = document.createElement('a')
-	// comments_link.href = entry.comments_url
-	// comments_link.target = '_blank'
-	// comments_link.textContent = 'comments'
-	// comments.appendChild(comments_link)
-	// meta.appendChild(comments)
-    // }
     content.appendChild(meta)
 
     const original = document.createElement('a')
