@@ -1,13 +1,13 @@
 
 :root {
     --background: #f7f7f7;
-    --text: #5e616a;
+    --text: #1c1c1c;
     --visited: #f7f7f7;
-    --hover: rgb(243, 245, 244);
+    --hover: rgb(240, 244, 242);
     --comments: #c97849;
-    --frame: #d8dadf;
+    --frame: #ccd5d2;
     --linkHover: rgb(192, 234, 207);
-    --link: rgb(237, 242, 239);
+    --link: rgb(231, 244, 237);
     --post: white;
 }
 
@@ -24,12 +24,12 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Crimson Pro', serif;
     margin: 0px;
-    font-size: 14px;
+    font-size: 16px;
     background: var(--background);
     text-align: left;
     display: flex;
@@ -60,9 +60,10 @@ body {
 .category_header {
     padding: 10px 10px 10px 42px;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.5em;
     text-transform: uppercase;
     color: var(--frame);
+    margin-bottom: 5px;
 }
 
 .entries {
@@ -110,11 +111,10 @@ a:visited {
   }
 
 .entry.open .title {
-    font-weight: bold;
 }
 
 .reading .entry:not(.open) {
-opacity: .6;
+    opacity: .6;
 }
 
 .pubdate {
