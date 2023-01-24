@@ -100,10 +100,12 @@ a:visited {
     position: sticky;
     top: 0;
     background-color: var(--hover);
-  }
-  .open .content {
+}
+
+.open .content {
     background-color: var(--hover);
-  }
+    padding-bottom: 10px;
+}
 
 .title {
     margin-bottom: 5px;
