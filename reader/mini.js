@@ -59,10 +59,13 @@ format_entry = (entry) => {
     content.dataset.post = entry.id
     content.addEventListener('click', linkHandler)
 
+    const header = document.createElement('div')
+    header.classList = ['header']
+
     const title = document.createElement('div')
     title.classList = ['title']
     title.textContent = entry.title
-    content.appendChild(title)
+    header.appendChild(title)
 
     const meta = document.createElement('div')
     meta.classList = ['meta']
@@ -80,7 +83,8 @@ format_entry = (entry) => {
     meta.appendChild(source)
     meta.appendChild(pubdate)
     
-    content.appendChild(meta)
+    header.appendChild(meta)
+    content.appendChild(header)
 
     const original = document.createElement('a')
     original.classList.add('original')
