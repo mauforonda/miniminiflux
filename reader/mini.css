@@ -100,6 +100,7 @@ a:visited {
     position: sticky;
     top: 0;
     background-color: var(--hover);
+    z-index: 99999;
 }
 
 .open .content {
