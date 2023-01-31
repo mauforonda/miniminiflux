@@ -213,7 +213,7 @@ pre {
 	overflow: auto;
 }
 
-.post img {
+.post img, .post video {
 	max-width: 100%;
 	object-fit: contain;
 	height: 100%;
