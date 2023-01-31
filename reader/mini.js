@@ -1,5 +1,6 @@
 var container = document.querySelector('.feed')
-var dateFormat = {hour:"numeric", minute:"numeric", hour12: false, day: "numeric", month: 'short'}
+var relativeDate = new Intl.RelativeTimeFormat('en', { style: 'narrow', numeric: 'auto'});
+const now = Date.now()
 var openPost
 
 render_post = (el, postID) => {
@@ -46,7 +47,8 @@ linkHandler = (e) => {
 format_entry = (entry) => {
 
     date = new Date(entry['published_at'])
-    dateShort = date.toLocaleTimeString("en-US", {hour: '2-digit', minute:'2-digit', hourCycle: 'h23'})
+    days = parseInt((now - date) / 86400000)
+    dateShort = relativeDate.format(0 - days, 'day')
     dateLong = date.toLocaleDateString('en-US', {hour:"numeric", minute:"numeric", day: "numeric", month: 'long', hourCycle: 'h23'})
 
     const link = document.createElement('a')
