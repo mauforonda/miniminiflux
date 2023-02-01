@@ -9,6 +9,7 @@
     --linkHover: rgb(212, 234, 236);
     --link: rgb(234, 245, 245);
     --post: white;
+    --card: #eaf0f2;
 }
 
 @media (prefers-color-scheme:dark) {
@@ -22,6 +23,7 @@
         --link: #272740;
         --post: black;
         --comments: #ec7e48;
+        --card: #1c1e1e;
     }
 }
 
@@ -67,6 +69,38 @@ body {
     color: var(--frame);
     margin: 5px 0px;
     /*! text-decoration: underline; */
+}
+
+.post>a[href^="https://twitter.com"] {
+    font-family: "Roboto";
+    font-size: .8em;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 15px;
+    margin: 10px 5px 0px 25px;
+    border-top: 1px solid var(--card);
+    color:var(--text);
+    /*! white-space: pre; */
+    max-width: 550px;
+}
+
+.post>a[href^="https://twitter.com"] + a:not([href^="https://twitter.com"]) {
+    font-size: .8em;
+    margin-left: 40px;
+    display: block;
+    color: var(--text);
+}
+
+.post>a[href^="https://twitter.com"]:hover {
+    text-decoration: none;
+}
+
+
+.post>a[href^="https://twitter.com"]>img {
+    max-width: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
 }
 
 .entries {
@@ -213,7 +247,7 @@ pre {
 	overflow: auto;
 }
 
-.post img, .post video {
+.post img {
 	max-width: 100%;
 	object-fit: contain;
 	height: 100%;
