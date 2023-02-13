@@ -25,7 +25,7 @@ jobs:
           INSTANCE: ${{ secrets.INSTANCE }}
           TOKEN: ${{ secrets.TOKEN }}
         run: |
-          python run.py -n 200
+          python run.py -n 400
       - name: publish
         uses: crazy-max/ghaction-github-pages@v3
         with:
