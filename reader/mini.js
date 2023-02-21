@@ -1,9 +1,47 @@
-var container = document.querySelector('.feed')
-var relativeDate = new Intl.RelativeTimeFormat('en', { style: 'narrow', numeric: 'auto'});
-const now = Date.now()
-var openPost
+const nav = document.querySelector('.nav');
+const feed = document.querySelector('.feed');
 
-render_post = (el, postID) => {
+var relativeDate = new Intl.RelativeTimeFormat('en', { style: 'narrow', numeric: 'auto'});
+const now = Date.now();
+
+let data;
+let activeFeed;
+let openPost;
+
+newElement = (element, classList) => {
+
+    const el = document.createElement(element)
+    el.classList.add(...classList)
+    return el
+
+}
+
+navUpdate = (category) => {
+
+    const active = document.querySelector('.active')
+    if (active) {
+        active.classList.remove('active')
+    }
+    document.querySelector(`[data-category="${category}"]`).classList.add('active')
+
+}
+
+categoryHandler = (e) => {
+
+    var category  = e.target.dataset.category
+    if (activeFeed != category) {
+        navUpdate(category)
+        const renderedCategory = document.querySelector('.category')
+        if (renderedCategory) {
+            renderedCategory.remove()
+        }
+        render_category(data[category])
+    }
+
+}
+
+renderPost = (el, postID) => {
+
     const post = document.createElement('div')
     post.classList.add('post')
     fetch(`posts/${postID}`).then((response) => {
@@ -17,22 +55,28 @@ render_post = (el, postID) => {
     el.closest('.content').appendChild(post)
     entry = el.closest('.entry')
     entry.classList.add('open')
-    container.classList.add('reading')
-    entry.scrollIntoView({block:'start', behavior: "smooth"})
+    feed.classList.add('reading')
+    entry.scrollIntoView({block:'nearest', behavior: "auto"})
     openPost = postID
+
 }
 
 linkHandler = (e) => {
+
     e.stopPropagation()
     var postID  = e.target.closest('.content').dataset.post
     if (openPost == postID) {
-        container.classList.remove('reading')
+        feed.classList.remove('reading')
         const reading = document.querySelector('.post')
         if (reading) {
             reading.closest('.entry').classList.remove('open')
             reading.remove()
         }
-        e.target.closest('.entry').scrollIntoView({block:'start', behavior: "smooth"})
+        const el = e.target.closest('.entry')
+        elTop = el.getBoundingClientRect().top + window.pageYOffset
+        if (window.scrollY > elTop) {
+            window.scrollTo({top: elTop - 25, behavior: 'auto'})
+        }
         openPost = ''
     } else {
         const reading = document.querySelector('.post')
@@ -40,92 +84,100 @@ linkHandler = (e) => {
             reading.closest('.entry').classList.remove('open')
             reading.remove()
         }
-        render_post(e.target, postID)
+        renderPost(e.target, postID)
     }
+
 }
 
-format_entry = (entry) => {
+formatEntry = (entry) => {
 
     date = new Date(entry['published_at'])
     days = parseInt((now - date) / 86400000)
     dateShort = relativeDate.format(0 - days, 'day')
     dateLong = date.toLocaleDateString('en-US', {hour:"numeric", minute:"numeric", day: "numeric", month: 'long', hourCycle: 'h23'})
 
-    const link = document.createElement('a')
-    link.classList = ['entry']
-    // link.href = entry.url
-    // link.title = dateString
+    const link = newElement('a', ['entry'])
     
-    const content = document.createElement('div')
-    content.classList = ['content']
+    const content = newElement('div', ['content'])
     content.dataset.post = entry.id
     content.addEventListener('click', linkHandler)
 
-    const header = document.createElement('div')
-    header.classList = ['header']
+    const header = newElement('div', ['header'])
 
-    const title = document.createElement('div')
-    title.classList = ['title']
+    const title = newElement('div', ['title'])
     title.textContent = entry.title
     header.appendChild(title)
 
-    const meta = document.createElement('div')
-    meta.classList = ['meta']
+    const meta = newElement('div', ['meta'])
     
-    const pubdate = document.createElement('span')
-	pubdate.classList = ['pubdate']
+    const pubdate = newElement('span', ['pubdate'])
     pubdate.textContent = dateShort
     pubdate.title = dateLong
 
-    const source = document.createElement('span')
-    source.classList = ['source']
+    const source = newElement('span', ['source'])
     source.dataset.post = entry.id
     source.textContent = entry.feed
+
+    const original = newElement('a', ['original'])
+    original.href = entry.url
+    original.target = '_blank'
+    original.textContent = "→"
     
     meta.appendChild(source)
     meta.appendChild(pubdate)
+    meta.appendChild(original)
     
     header.appendChild(meta)
     content.appendChild(header)
 
-    const original = document.createElement('a')
-    original.classList.add('original')
-    original.href = entry.url
-    original.target = '_blank'
-
-    link.appendChild(original)
     link.appendChild(content)
     return link
 }
 
-render_category = (cat) => {
+render_category = (category) => {
 
-    const category = document.createElement('div')
-    category.classList.add('category')
+    window.scrollTo({top: 0, behavior: 'auto'})
+    activeFeed = category
 
-    const category_header = document.createElement('div')
-    category_header.classList.add('category_header')
-    category_header.textContent = cat.name
-    
-    const category_entries = document.createElement('div')
-    category_entries.classList.add('category_entries')
-    cat.entries.forEach(e => {
-        const entry = format_entry(e)
+    const container = newElement('div', ['category'])
+
+    const category_entries = newElement('div', ['category_entries'])
+    category.entries.forEach(e => {
+        const entry = formatEntry(e)
         category_entries.appendChild(entry)
     })
 
-    category.appendChild(category_header)
-    category.appendChild(category_entries)
-    container.appendChild(category)
+    container.appendChild(category_entries)
+    feed.appendChild(container)
+
 }
 
-download_and_render = () => {
-    url = "entries.json"    
-    fetch(url).then((response) => {
-	response.json().then((categories) => {
-	    categories.forEach(cat => render_category(cat))
-	})
+categoryList = (cat) => {
+
+    var category = newElement('a', ['navcat'])
+    category.textContent = cat
+    category.dataset.category = cat
+    category.addEventListener('click', categoryHandler)
+    nav.appendChild(category)
+
+}
+
+const getData = async () => {
+
+    return  new Promise(async function(resolve, reject) {
+        const response = await fetch('entries.json');
+        const responseJSON = await response.json();
+        data = responseJSON.reduce((a, v) => ({...a, [v.name]:v}), {})
+        resolve()
     })
+
 }
 
-download_and_render()
+getData().then(function() {
+    Object.keys(data).forEach(
+        category => categoryList(category)
+    );
+    const firstCategory = Object.keys(data).slice(0,1)[0]
+    navUpdate(firstCategory)
+    render_category(data[firstCategory])
+})

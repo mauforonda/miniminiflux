@@ -1,3 +1,4 @@
 *.ipynb
 .ipynb_checkpoints
 reader/*.json
+reader/posts/
