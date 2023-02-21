@@ -75,7 +75,7 @@ linkHandler = (e) => {
         const el = e.target.closest('.entry')
         elTop = el.getBoundingClientRect().top + window.pageYOffset
         if (window.scrollY > elTop) {
-            window.scrollTo({top: elTop - 25, behavior: 'auto'})
+            window.scrollTo({top: elTop - 30, behavior: 'auto'})
         }
         openPost = ''
     } else {
