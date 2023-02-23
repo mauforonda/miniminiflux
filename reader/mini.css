@@ -214,10 +214,14 @@ pre {
     margin-bottom: 0;
 }
 
-.post img {
+picture {
+	height: 100%;
+}
+
+.post img, .post video {
 	max-width: 100%;
 	object-fit: contain;
-	height: 100%;
+	height: auto;
 }
 
 figure {
@@ -241,6 +245,8 @@ figcaption {
 	opacity: .6;
 	font-size: .9em;
 }
+
+/* Weird ass rules for substack posts */
 
 .post>a[href^="https://twitter.com"] {
     font-family: "Roboto";
@@ -268,9 +274,10 @@ figcaption {
 }
 
 .post>a[href^="https://twitter.com"]>img {
-    max-width: 50px;
+    max-width: 40px;
     border-radius: 50%;
     margin-right: 5px;
+    height: auto;
 }
 
 iframe {
