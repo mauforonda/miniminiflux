@@ -160,6 +160,7 @@ body {
 
 pre {
 	overflow: auto;
+    font-size: .8em;
 }
 
 .content {
@@ -246,9 +247,14 @@ figcaption {
 	font-size: .9em;
 }
 
+.post > a > img {
+	display: block;
+	margin: 10px 0px;
+}
+
 /* Weird ass rules for substack posts */
 
-.post>a[href^="https://twitter.com"] {
+.post>a[href^="https://twitter.com"], .post>a[href$="&utm_campaign=post_embed&utm_medium=web"] {
     font-family: "Roboto";
     font-size: .8em;
     display: flex;
@@ -258,27 +264,31 @@ figcaption {
     margin: 10px 5px 0px 25px;
     border-top: 1px solid var(--background);
     color:var(--text);
-    /*! white-space: pre; */
     max-width: 550px;
 }
 
-.post>a[href^="https://twitter.com"] + a:not([href^="https://twitter.com"]) {
+.post>a[href^="https://twitter.com"] + a:not([href^="https://twitter.com"]), 
+.post>a[href^="https://twitter.com"] + video, 
+.post>a[href^="https://twitter.com"] + picture>img, 
+.post>a[href^="https://twitter.com"] + a:not([href^="https://twitter.com"]) + video, 
+.post>a[href^="https://twitter.com"] + a:not([href^="https://twitter.com"]) + picture>img {
     font-size: .8em;
     margin-left: 40px;
     display: block;
     color: var(--text);
 }
 
-.post>a[href^="https://twitter.com"]:hover {
-    text-decoration: none;
+.post>a[href^="https://twitter.com"]:hover,.post>a[href$="&utm_campaign=post_embed&utm_medium=web"]:hover {
+    text-decoration: underline dotted var(--links);
 }
 
-.post>a[href^="https://twitter.com"]>img {
+.post>a[href^="https://twitter.com"]>img, .post > a[href$="&utm_campaign=post_embed&utm_medium=web"]>img {
     max-width: 40px;
     border-radius: 50%;
     margin-right: 5px;
     height: auto;
 }
+
 
 iframe {
     max-width: 100% !important;
