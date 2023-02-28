@@ -122,6 +122,9 @@ formatEntry = (entry) => {
     original.href = entry.url
     original.target = '_blank'
     original.textContent = "→"
+    original.addEventListener('click', (e) => {
+        e.stopPropagation()
+    })
     
     meta.appendChild(source)
     meta.appendChild(pubdate)
