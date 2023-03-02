@@ -2,7 +2,7 @@ A stream of links powered by miniflux and github actions
 
 ![screenshot](screenshot.png)
 
-[see live](https://mauforonda.github.io/miniminiflux)
+[see live](https://mauforonda.github.io/reader)
 
 Make it your own
 
