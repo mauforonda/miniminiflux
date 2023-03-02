@@ -30,6 +30,7 @@ body {
     text-align: left;
     display: flex;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent
 }
 
 /* Navigation */
