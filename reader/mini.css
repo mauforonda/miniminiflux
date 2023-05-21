@@ -1,18 +1,18 @@
 
 :root {
-    --background: #fffcfa;
-    --text: #1c1c1c;
-    --hover: #e1e1e1;
-    --links: #9d4f29;
+    --background: #e3eaf1;
+    --text: #0f2b3d;
+    --hover: #cdd6dd;
+    --links: #4d6bc9;
     --navHeight: 40px
 }
 
 @media (prefers-color-scheme:dark) {
     :root {
-        --background: #1c1c20;
-        --text: #ffede6;
-        --hover: #514a44;
-        --links: #ec7e48;
+        --background: #191b21;
+        --text: #e4e9f4;
+        --hover: #444451;
+        --links: #6471c0;
     }
 }
 
@@ -102,7 +102,7 @@ body {
 }
 
 .content {
-    padding: 0px 10px 0px 10px;
+    /* padding: 0px 10px 0px 10px; */
     margin: 0px;
     cursor: pointer;
     /*! border-radius: 0px 5px 5px 0px; */
