@@ -1,0 +1,20 @@
+<p>I&#39;m writing this post in the hope someone will rip off my idea and start selling it on Ali Express.</p>
+<p>Many years ago, I got a &#34;<a href="https://androidcommunity.com/pressy-turns-any-headphone-jack-into-a-button-full-of-shortcuts-20130829/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Pressy</a>&#34;. It was a little dongle which fitted into your phone&#39;s headphone jack. It had a single button on the top. It came with an app so when you tapped the button the app would do <em>something</em>. For example, tap once to open email, double-tap to switch to flight mode, etc.</p>
+<p><img src="https://reader.miniflux.app/proxy/MnbWW-VxDXcbHjbmLTG2cAMbn4pGuOMFOoFOIsPInm8=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzA5L3ByZXNzeS5qcGc=" alt="Little gadget the same shape as a headphone connector. There is a flat black button on the end." width="512" height="341" loading="lazy"/></p>
+<p>Most modern phones eschew headphone ports. They let water in, are fragile, and a cheap DAC produces worse sound quality than Bluetooth<sup id="fnref-47348-fight"><a href="#fn-47348-fight" title="Read footnote.">1</a></sup>.</p>
+<p>So would it be possible to have a USB-C component which does something similar?</p>
+<p>Technically, yes!</p>
+<ul>
+<li>There are <a href="https://amzn.to/3RDLlMC" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">USB-C keyboard which plug directly into phones</a>.</li>
+<li>For a couple of quid, you can get <a href="https://s.click.aliexpress.com/e/_Dl12GCf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">mini keyboards with a custom amount of keys</a></li>
+<li>I can find a <a href="https://www.ebay.co.uk/itm/314277203979" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">single button PTT USB-C device</a> albeit with a ridiculously long cable.</li>
+<li>The <a href="https://www.yubico.com/gb/product/yubikey-5c-nano/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Yubikey 5C nano</a> has the right form factor and comes with a (pre-programmed) single button.</li>
+</ul>
+<p>I don&#39;t have the skills to solder one of these devices myself. So, who makes one?</p>
+
+
+<ol>
+<li id="fn-47348-fight">
+Fight me. <a href="#fnref-47348-fight" title="Return to main content.">↩</a>
+</li>
+</ol>

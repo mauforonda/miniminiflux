@@ -1,0 +1,28 @@
+<p><a href="https://arxiv.org/pdf/2301.10597.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">PDF</a>, <a href="https://dustri.org/b/files/papers/breaking_bad.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">local mirror</a></p>
+<p>More or less all conversations involving the <a href="https://www.torproject.org/download/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">tor browser</a>
+will at some point contain the following line: &#34;No, javascript isn&#39;t disabled
+by default because too many sites would break. You can always crank the
+security slider all the way up if you want tho.&#34;</p>
+<p>We all agree that javascript enables all sorts of despicable behaviours making
+the web a nightmare-material privacy/security cesspit and completely
+inscrutable to a lot of users, so having research done
+to quantify how to make it a better place for everyone is always more than welcome.</p>
+<p>The main idea of the paper is to load pages from the <a href="https://hispar.cs.duke.edu/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Hispar
+set</a> with and without <code>javascript.enabled</code> set,
+via <a href="https://pptr.dev" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Puppeteer</a>, and to perform
+magic human-assisted smart diffing to detect user-perceived/perceivable
+breakages. </p>
+<p>The paper is full of fancy graphs and analysis, but the <a href="https://en.wikipedia.org/wiki/TL;DR" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">tldr</a> is:</p>
+<blockquote>
+<p>We discover that 43 % of web pages are not strictly dependent on JavaScript
+and that more than 67 % of pages are likely to be usable as long as the visitor
+only requires the content from the main section of the page, for which the user
+most likely reached the page, while reducing the number of tracking requests by
+85 % on average.</p>
+</blockquote>
+<p>An interesting take is that the usage of javascript framework is the main
+source of breakage, since <s>a lot</s> all of them result in completely
+unusable websites when javascript is disabled. Moreover, anecdotal data seems
+to suggest that the bigger a company is, the more their website is going to
+break when javascript is disabled.</p>
+<p>And like every decent paper, it comes with the <a href="https://gitlab.inria.fr/Spirals/breaking-bad" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">related code and data published</a>.</p>

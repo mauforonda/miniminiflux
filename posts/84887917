@@ -1,0 +1,216 @@
+Latest Complexity Digest Posts
+        
+    
+    
+        
+        
+            <table>
+                <tbody><tr>
+                    <td>
+                        
+                        <table>
+                            <tbody><tr>
+                                <td>
+                                
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                                Learn about the latest and greatest related to complex systems research. More at <a href="http://comdig.unam.mx" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">http://comdig.unam.mx</a>
+                                            </td>
+                                            
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        
+                        <table>
+                            <tbody><tr>
+                                <td>
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                            
+                                                
+                                                <a href="http://comdig.unam.mx" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/gWY-VZqmIAQWx2fEMyEg0xaNJDkctXXxaVrxadZohB4=/aHR0cHM6Ly9nYWxsZXJ5Lm1haWxjaGltcC5jb20vMGViMGFjOWI0ZTg1NjVmMjk2N2E4MzA0Yi9pbWFnZXMvbG9nb2Q3NzAzOC5wbmc=" alt="Complexity Digest" width="600" loading="lazy"/></a>
+                                                
+                                            
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                
+                                                
+                                                <table>
+                                                    <tbody><tr>
+                                                        <td>
+                                                            <strong>Contents from of the 09/18/2023 edition:</strong><br/>
+<ul id="mctoc"><li><a href="#mctoc1">Analytic relationship of relative synchronizability to network structure and motifs</a></li><li><a href="#mctoc2">Reducing Uncertainty in Collective Perception Using Self-Organizing Hierarchy</a></li><li><a href="#mctoc3">Multi-Swarm Interaction through Augmented Reality for Kilobots</a></li><li><a href="#mctoc4">Efficient, Formal, Material, and Final Causes in Biology and Technology</a></li><li><a href="#mctoc5">Travel distance, frequency of return, and the spread of disease</a></li></ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            
+<h2><br/>
+Analytic relationship of relative synchronizability to network structure and motifs</h2>
+<p>Joseph T. Lizier, Frank Bauer, Fatihcan M. Atay, and Jürgen Jost</p>
+<p>PNAS 120 (37) e2303332120</p>
+<p>How does the quality of synchronization between coupled oscillators depend on the network structure that connects them? This question has been at the forefont of studies on the structure–dynamics relationship, one of the most important open problems in complex systems. We present a method to fully and generally relate the structure of a network to its synchronizability, without assumptions made by previous approaches such as symmetric connections. Moreover, we reveal the impact of patterns of network connections among small groups of nodes (motifs) on the whole of network synchronizability. Our results implicate the prevalence of clustered structure such as feedforward and feedback loops as the most important factor in synchronizability.</p>
+<p>Read the full article at: <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2303332120" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.pnas.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-9385df3e&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Df995bee2e0%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F16%252Fanalytic-relationship-of-relative-synchronizability-to-network-structure-and-motifs%252F%26title%3DAnalytic%2520relationship%2520of%2520relative%2520synchr...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=f995bee2e0" title="Like Analytic relationship of relative synchronizability to network structure and motifs on Facebook" id="fblike-9385df3e" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Analytic relationship of relative synchronizability to network structure and motifs on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Reducing Uncertainty in Collective Perception Using Self-Organizing Hierarchy</h2>
+<p>ARYO JAMSHIDPEY, MARCO DORIGO, AND MARY KATHERINE HEINRICH</p>
+<p>INTELLIGENT COMPUTING 13 Sep 2023 Vol 2 Article ID: 0044 DOI: 10.34133/icomputing.0044</p>
+<p>In collective perception, agents sample spatial data and use the samples to agree on some estimate. In this paper, we identify the sources of statistical uncertainty that occur in collective perception and note that improving the accuracy of fully decentralized approaches, beyond a certain threshold, might be intractable. We propose self-organizing hierarchy as an approach to improve accuracy in collective perception by reducing or eliminating some of the sources of uncertainty. Using self-organizing hierarchy, aspects of centralization and decentralization can be combined: robots can understand their relative positions system-wide and fuse their information at one point, without requiring, e.g., a fully connected or static communication network. In this way, multi-sensor fusion techniques that were designed for fully centralized systems can be applied to a self-organized system for the first time, without losing the key practical benefits of decentralization. We implement simple proof-of-concept fusion in a self-organizing hierarchy approach and test it against three fully decentralized benchmark approaches. We test the perceptual accuracy of the approaches for absolute conditions that are uniform time-invariant, time-varying, and spatially nonuniform with high heterogeneity, as well as the scalability and fault tolerance of their accuracy. We show that, under our tested conditions, the self-organizing hierarchy approach is generally more accurate, more consistent, and faster than the other approaches and also that its accuracy is more scalable and comparably fault-tolerant. Under spatially nonuniform conditions, our results indicate that the four approaches are comparable in terms of similarity to the reference samples. In future work, extending these results to additional methods, such as collective probability distribution fitting, is likely to be much more straightforward in the self-organizing hierarchy approach than in the decentralized approaches.</p>
+<p>Read the full article at: <a href="https://spj.science.org/doi/10.34133/icomputing.0044" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">spj.science.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-b5b347c9&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Df995bee2e0%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F14%252Freducing-uncertainty-in-collective-perception-using-self-organizing-hierarchy%252F%26title%3DReducing%2520Uncertainty%2520in%2520Collective%2520Perce...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=f995bee2e0" title="Like Reducing Uncertainty in Collective Perception Using Self-Organizing Hierarchy on Facebook" id="fblike-b5b347c9" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Reducing Uncertainty in Collective Perception Using Self-Organizing Hierarchy on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Multi-Swarm Interaction through Augmented Reality for Kilobots</h2>
+<p>L. Feola, A. Reina, M. S. Talamali, V. Trianni. Multi-Swarm Interaction through Augmented Reality for Kilobots. IEEE Robotics and Automation Letters 8(11), 2023.</p>
+<p>Research with swarm robotics systems can be complicated, time-consuming, and often expensive in terms of space and resources. The situation is even worse for studies involving multiple, possibly heterogeneous robot swarms. Augmented reality can provide an interesting solution to these problems, as demonstrated by the ARK system (Augmented Reality for Kilobots), which enhanced the experimentation possibilities with Kilobots, also relieving researchers from demanding tracking and logging activities. However, ARK is limited in mostly enabling experimentation with a single swarm. In this paper, we introduce M-ARK, a system to support studies on multi-swarm interaction. M-ARK is based on the synchronisation over a network connection of multiple ARK systems, whether real or simulated, serving a twofold purpose: (i) to study the interaction of multiple, possibly heterogeneous swarms, and (ii) to enable a gradual transition from simulation to reality. Moreover, M-ARK enables the interaction between swarms dislocated across multiple labs worldwide, encouraging scientific collaboration and advancement in multi-swarm interaction studies.</p>
+<p>Read the full article at: <a href="https://ieeexplore.ieee.org/document/10239272/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ieeexplore.ieee.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-e44ad9b3&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Df995bee2e0%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F13%252Fmulti-swarm-interaction-through-augmented-reality-for-kilobots%252F%26title%3DMulti-Swarm%2520Interaction%2520through%2520Augmente...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=f995bee2e0" title="Like Multi-Swarm Interaction through Augmented Reality for Kilobots on Facebook" id="fblike-e44ad9b3" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Multi-Swarm Interaction through Augmented Reality for Kilobots on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Efficient, Formal, Material, and Final Causes in Biology and Technology</h2>
+<p><img src="https://reader.miniflux.app/proxy/n8kAo9rNT6f4vQd2nPwGs5NnathU3xK4_RSYePBFkJk=/aHR0cHM6Ly9jeGRpZy5maWxlcy53b3JkcHJlc3MuY29tLzIwMjMvMDkvNzE5ODczMDMtZmIzOS00NGQ1LWJiNmMtNjlmZWYxNzgxMzFmLTEuanBnP3c9MTEwOA==" loading="lazy"/></p>
+<p>George F. R. Ellis</p>
+<p>Entropy 2023, 25(9), 1301</p>
+<p>This paper considers how a classification of causal effects as comprising efficient, formal, material, and final causation can provide a useful understanding of how emergence takes place in biology and technology, with formal, material, and final causation all including cases of downward causation; they each occur in both synchronic and diachronic forms. Taken together, they underlie why all emergent levels in the hierarchy of emergence have causal powers (which is Noble’s principle of biological relativity) and so why causal closure only occurs when the upwards and downwards interactions between all emergent levels are taken into account, contra to claims that some underlying physics level is by itself causality complete. A key feature is that stochasticity at the molecular level plays an important role in enabling agency to emerge, underlying the possibility of final causation occurring in these contexts.</p>
+<p>Read the full article at: <a href="https://www.mdpi.com/1099-4300/25/9/1301" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.mdpi.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-2566184b&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Df995bee2e0%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F13%252Fefficient-formal-material-and-final-causes-in-biology-and-technology%252F%26title%3DEfficient%252C%2520Formal%252C%2520Material%252C%2520and%2520Final%2520C...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=f995bee2e0" title="Like Efficient, Formal, Material, and Final Causes in Biology and Technology on Facebook" id="fblike-2566184b" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Efficient, Formal, Material, and Final Causes in Biology and Technology on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Travel distance, frequency of return, and the spread of disease</h2>
+<p>Cate Heine, Kevin P. O’Keeffe, Paolo Santi, Li Yan &amp; Carlo Ratti <br/>Scientific Reports volume 13, Article number: 14064 (2023)</p>
+<p>Human mobility is a key driver of infectious disease spread. Recent literature has uncovered a clear pattern underlying the complexity of human mobility in cities: 𝑟⋅𝑓, the product of distance traveled r and frequency of return f per user to a given location, is invariant across space. This paper asks whether the invariant 𝑟⋅𝑓 also serves as a driver for epidemic spread, so that the risk associated with human movement can be modeled by a unifying variable 𝑟⋅𝑓. We use two large-scale datasets of individual human mobility to show that there is in fact a simple relation between r and f and both speed and spatial dispersion of disease spread. This discovery could assist in modeling spread of disease and inform travel policies in future epidemics—based not only on travel distance r but also on frequency of return f.</p>
+<p></p>
+<p>Read the full article at: <a href="https://www.nature.com/articles/s41598-023-38840-0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.nature.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-5a7bf76f&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Df995bee2e0%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F12%252Ftravel-distance-frequency-of-return-and-the-spread-of-disease%252F%26title%3DTravel%2520distance%252C%2520frequency%2520of%2520return%252C%2520an...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=f995bee2e0" title="Like Travel distance, frequency of return, and the spread of disease on Facebook" id="fblike-5a7bf76f" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Travel distance, frequency of return, and the spread of disease on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h3>More to read:</h3>
+
+<table>
+	
+		<tbody><tr>
+			<td>
+			<table>
+				
+					<tbody><tr>
+						<td><a href="https://comdig.unam.mx/2023/09/09/dynamical-heterogeneity-and-universality-of-power-grids/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Dynamical heterogeneity and universality of power-grids</a><br/><a href="https://comdig.unam.mx/2023/09/09/active-oscillations-in-microscale-navigation/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Active oscillations in microscale navigation</a><br/><a href="https://comdig.unam.mx/2023/09/08/the-entropy-of-entropy-are-we-talking-about-the-same-thing/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The Entropy of Entropy: Are We Talking about the Same Thing?</a><br/><a href="https://comdig.unam.mx/2023/09/08/a-taxonomy-of-multiple-stable-states-in-complex-ecological-communities/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">A taxonomy of multiple stable states in complex ecological communities</a><br/><a href="https://comdig.unam.mx/2023/09/07/statistics-of-remote-regions-of-networks/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Statistics of remote regions of networks</a><br/><a href="https://comdig.unam.mx/2023/09/06/generalized-zureks-bound-on-the-cost-of-an-individual-classical-or-quantum-computation/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Generalized Zurek’s bound on the cost of an individual classical or quantum computation</a><br/><a href="https://comdig.unam.mx/2023/09/06/how-the-brain-makes-you-collective-intelligence-and-computation-by-neural-circuits/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">How the Brain Makes You: Collective Intelligence and Computation by Neural Circuits</a><br/><a href="https://comdig.unam.mx/2023/09/06/a-causal-discovery-approach-to-learn-how-urban-form-shapes-sustainable-mobility-across-continents/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">A Causal Discovery Approach To Learn How Urban Form Shapes Sustainable Mobility Across Continents</a><br/><a href="https://comdig.unam.mx/2023/09/06/how-biological-codes-break-causal-chains-to-enable-autonomy-for-organisms-2/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">How biological codes break causal chains to enable autonomy for organisms</a><br/><a href="https://comdig.unam.mx/2023/09/03/more-is-different-in-real-world-multilayer-networks/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">More is different in real-world multilayer networks</a></td>
+					</tr>
+				
+			</tbody></table>
+			</td>
+		</tr>
+	
+</tbody></table>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                                
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                            
+                                                
+                                                <table>
+                                                    <tbody><tr>
+                                                        <td colspan="2">
+                                                             <a href="http://twitter.com/cxdig" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">follow on Twitter</a> | <a href="https://www.facebook.com/pages/Complexity-Digest/103026839755164" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">like on Facebook</a> | <a href="http://www.linkedin.com/groups?gid=3270291" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">join on LinkedIn</a> | <a href="https://plus.google.com/b/105687854558109225649/105687854558109225649/posts" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Google+</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            
+                                                        </td>
+                                                        <td>
+                                                            
+                                                                 <a href="http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter&amp;utm_medium=email&amp;utm_campaign=referral_marketing&amp;aid=0eb0ac9b4e8565f2967a8304b&amp;afl=1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/hs10_MQ15R2QK5H4lve1DmmZBzxvn-h8RkX8kiNvCSk=/aHR0cHM6Ly9jZG4taW1hZ2VzLm1haWxjaGltcC5jb20vbW9ua2V5X3Jld2FyZHMvaW50dWl0LW1jLXJld2FyZHMtMi5wbmc=" alt="Email Marketing Powered by Mailchimp" title="Mailchimp Email Marketing" width="137" height="53" loading="lazy"/></a> 
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                                
+                                            
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <br/>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+                
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <table>
+                    <tbody><tr>
+                        <td>
+                            <table>
+                                <tbody><tr>
+                                    <td>
+                                        This email was sent to <a href="mailto:&lt;&lt;Email Address&gt;&gt;" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">&lt;&lt;Email Address&gt;&gt;</a>
+                                        <br/>
+                                        <a href="https://unam.us4.list-manage.com/about?u=0eb0ac9b4e8565f2967a8304b&amp;id=f55ea67de1&amp;e=[UNIQID]&amp;c=f995bee2e0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><em>why did I get this?</em></a>    <a href="https://unam.us4.list-manage.com/unsubscribe?u=0eb0ac9b4e8565f2967a8304b&amp;id=f55ea67de1&amp;e=[UNIQID]&amp;c=f995bee2e0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">unsubscribe from this list</a>    <a href="https://unam.us4.list-manage.com/profile?u=0eb0ac9b4e8565f2967a8304b&amp;id=f55ea67de1&amp;e=[UNIQID]&amp;c=f995bee2e0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">update subscription preferences</a>
+                                        <br/>
+                                        Complexity Digest · Universidad Nacional Autónoma de México · Ciudad Universitaria · Mexico City, DF 01000 · Mexico
+                                        <br/>
+                                        <br/>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+                
+            

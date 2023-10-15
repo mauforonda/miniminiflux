@@ -1,0 +1,9 @@
+Minimising loss via gradient descent When we talk about neural networks, the loss of a given network architecture on a set of example inputs is a scalar value which represents how well the model does (or doesn’t) fit those inputs1. Examples of loss functions include root mean squared error and cross-entropy.
+Training a neural network involves minimising some chosen loss function $ℒ$. It is an iterative process. The most straightforward way to go about this minimisation is via the technique known as gradient descent – at a high level, given some initial parameters ${\theta = (\theta_1, \ldots, \theta_k)}$ of our network2, and a loss function $ℒ$, we can implement gradient descent by repeatedly performing the following steps:
+
+<p>
+    This post was originally published <a href="https://accelerated-computing.com/blog/notes-on-neural-networks-part-02/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a> and
+    you are reading it in the
+    <a href="https://blaggregator.recurse.com/new/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Blaggregator</a> feed.
+    <a href="https://recurse.zulipchat.com/#narrow/stream/blogging/topic/Notes.20on.20neural.20networks.3A.20loss.2C.20gradient.20descent.2C.20and.20bac.2E.2E.2E" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Join the discussion</a> on Zulip!.
+</p>

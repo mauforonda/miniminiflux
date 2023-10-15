@@ -1,0 +1,165 @@
+<p>The <a href="https://aaronhertzmann.com/2020/09/12/how-to-draw-pictures-contours.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">occluding contours of a smooth surface</a> let you render 3D objects <a href="https://aaronhertzmann.com/2020/09/14/how-to-draw-pictures-style.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">in many different artistic styles</a>, such as this pen-and-ink hatching style:</p>
+
+
+<figure>
+  <img src="https://reader.miniflux.app/proxy/oZt15voofl3djAQmafljK_-iJcmgaNyL1axRMk5xZng=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9jdXBpZF9oYXRjaC5wbmc=" alt="Cupid hatching" loading="lazy"/>
+  <figcaption>3D hatching, <a href="https://www.mrl.nyu.edu/publications/illustrating-smooth/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">automatically generated</a> from the 3D model on the left.
+</figcaption>
+</figure>
+
+<p>Simple occluding contour renderings appear throughout many kinds of animations, TV shows and films throughout the past few decades, often consisting of basic black outlines. 
+Some recent examples include <a href="https://www.youtube.com/watch?v=pgd4aU56Kig" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the game “Hi-Fi Rush”</a>
+and the Spider-Verse movies:</p>
+
+<figure>
+  <img src="https://reader.miniflux.app/proxy/Silhjo2Y3WGkPrlihW-N17esUq5q7AiYgxFCCSnP-tc=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9zcGlkZXJ2ZXJzZS5qcGc=" alt="Spiderverse image" loading="lazy"/>
+  <figcaption>The character on the left has occluding contour outlines.
+</figcaption>
+</figure>
+
+
+<p>Now, there are a lot richer classes of stylizations in the research literature. Here are some examples:</p>
+
+<figure>
+  <img src="https://reader.miniflux.app/proxy/KMOofNyjE4OBy_gJtRYhjKISSjLFZkUIeHwZxvL15JM=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9zdHlsZXMuanBn" alt="NPR contour styles" loading="lazy"/>
+</figure>
+
+<p>But we’re not seeing these styles in games or movies. Why not? These styles rely on vector contour extraction algorithms, and all of the existing algorithms for smooth surfaces have unpredictable failure cases. And we’ve never really understood why.</p>
+
+<p>This year, we finally cracked the case.</p>
+
+<p>In a paper called <a href="https://dgp.toronto.edu/~hertzman/contesse/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ConTesse</a>, we finally explain exactly what the problem really is, and describe when a solution works or doesn’t; moreover, we describe a method that produces correct results for subdivision surfaces. And, in <a href="http://ryanjcapouellez.com/papers/algebraic_smooth_occluding_contours.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a second paper</a>, we show
+how to generate exact smooth contours based on input meshes, allowing for very fast and accurate contours.</p>
+
+<p>In this blog post, I explain exactly what the problem is, and, in <a href="https://aaronhertzmann.com/2023/07/31/occluding-contours-part-2.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the next post</a>, what the breakthroughs are. In <a href="https://aaronhertzmann.com/2023/07/31/occluding-contours-part-3.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the third post</a>, I recommend which of the existing methods to try for different types of problems, and point to where more research and development is needed to move these ideas from research to practical applications.</p>
+
+<p>This post is intended for readers knowledgable about computer graphics algorithms. You can find <a href="https://aaronhertzmann.com/2020/09/12/how-to-draw-pictures-contours.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a non-technical introduction to these topics here</a>.</p>
+
+<h1 id="the-occluding-contour-problem">The Occluding Contour Problem</h1>
+
+<p>Here’s an example of occluding contours, drawn as black lines on a 3D model:</p>
+
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/Sdr8i5v47codRjcAVMmlw-lqXFRKU3Zc2XC_YS9TpuU=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9waWdfdG9vbi5wbmc=" alt="Occluding contour rendering" loading="lazy"/>
+</p>
+</figure>
+
+
+<p>The occluding contours occur where a surface overlaps itself in image space:</p>
+
+
+<figure>
+   <p>
+   <img src="https://reader.miniflux.app/proxy/LTIVluMWofN8ct8RkVvj4WJW7VhWWrmsLqkDL3Rflwo=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9waWdfc2lkZS5wbmc=" alt="Contour defintions" loading="lazy"/>
+</p>
+</figure>
+
+
+<p>For a triangle mesh, it’s easy to find the occluding contours: take all the edges that connect a front-face to a back-face, and then compute which of those edges are visible:</p>
+
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/IKpAAgCLjrwPzlPfEoA5cDNZRRmWdIF36JjusV03sgs=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9tZXNoLWNvbnRvdXItZGVmLnBuZw==" alt="Occluding contours for meshes" loading="lazy"/>
+</p>
+</figure>
+
+<p>Our existing algorithms for triangle mesh contours are robust and effective.</p>
+
+<p>I’m assuming that the surface is <em>oriented</em>: the faces have normal directions consistent with their neighbors, and the camera position is constrained, so that only front-facing surface will ever be visible. These assumptions are common in computer graphics applications.</p>
+
+<p>(In this post, I am being very casual with definitions and terminology.  You can see <a href="https://arxiv.org/abs/1810.01175" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">our tutorial paper for a detailed and precise definitions</a>.)</p>
+
+<p><strong>For smooth surfaces,</strong> i.e., surfaces with continous normals, the occluding contours are all <em>visible</em> surface points where <em>the tangent plane contains the view vector</em>. For example:</p>
+
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/H-IJTeMReWMPjRU1Q8DVZTGC7s97yojgXZcaVJD0f4k=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9zbW9vdGgtY29udG91ci1kZWYucG5n" alt="Occluding contours for meshes" loading="lazy"/>
+</p>
+</figure>
+
+
+<p>That shouldn’t be so hard to compute, right?</p>
+
+<h1 id="topology-problems">Topology Problems</h1>
+
+<p>What makes the problem difficult isn’t computing the contour points, it’s computing the <em>visible</em> points. We want the visible curves to have sensible topology: no gaps at all in the outlines, nor extra curves and junctions, or other mistakes that would mess up stylization.</p>
+
+<p>For example, suppose you start with this smooth object:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/A6S16qBxmeLEyfA4xAfAJZjveefpxomLc9cBE26UwoA=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9vdm9pZC1zbW9vdGgucG5n" alt="Occluding contours for meshes" loading="lazy"/>
+</p>
+</figure>
+
+<p>The obvious thing is to triangulate it into a mesh, and then compute the contours of the mesh. But look what happens:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/xpPIl3LXJbWbSit752_336qhTzKlLoqWM9z-5t-uvhs=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9vdm9pZC1tZXNoLnBuZw==" alt="Occluding contours for meshes" loading="lazy"/>
+</p>
+</figure>
+
+<p>The smooth object has a simple contour, but the triangle mesh’s contour has lots of extra complicated pieces. This is because the surface is no longer cleanly split into one front-facing region and one back-facing region.  The simple contour has become a mess, and this gets worse as surfaces get more complicated:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/E_gs4YdnRxT8X3aXX7oF8ZTaHQxLAI3ZgTJ1EtjoDk4=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9idW5ueS1wdXJwbGUucG5n" alt="Occluding contours for meshes" loading="lazy"/>
+</p>
+</figure>
+
+<p>(This is an older rendering with a different color scheme for front and back faces.)</p>
+
+<p>This matters when you try to stylize the contours, such as this animation:</p>
+
+<video width="720" height="480" controls="">
+  <source src="https://aaronhertzmann.com/images/howtodraw/Angela_candle_meshC-17288.mp4" type="video/mp4"/>
+Your browser does not support the video tag.
+</video>
+
+<p>Note how the stylization flickers and strokes appear and disappear, despite a number of attempts in this algorithm to keep things coherent.</p>
+
+<h1 id="really-its-shockingly-hard">Really, It’s Shockingly Hard</h1>
+
+<p>If you are like most researchers, you might think there are simple solutions to this problem. In my experience, pretty much <em>everyone</em>, when confronted with these problems, immediately suggests simple solutions that they confidently believe will solve the problem.</p>
+
+<p>For example, you could come up with <a href="https://www.cs.princeton.edu/courses/archive/fall00/cs597b/papers/artistic-sils-300dpi.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">simple rules to fix up the curves</a>, but these will all fail in various ways. You could try subdividing the surface (as did one very confident paper reviewer recently told us), but this doesn’t fix anything (we analyzed why <a href="https://www.labri.fr/perso/pbenard/publications/contours/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">in our 2014 paper</a>).  Nothing has worked robustly.  Many other algorithms are surveyed in <a href="https://arxiv.org/abs/1810.01175" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">our tutorial paper</a>, Chapters 6 and 7.</p>
+
+<p><a href="https://mrl.cs.nyu.edu/publications/illustrating-smooth/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">We proposed one of these algorithms in our 2001 paper</a>, an interpolation-based approach that makes nice smooth curves. But, if you zoom in on the figures, you can see gaps in the outlines:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/LClyb8s6Ochjxk3nvwIoeXs8B6Ie2d0ugcKZr3eqBhE=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9jdXBpZC1nYXBzLnBuZw==" alt="Occluding contours and hatching on a cupid model" loading="lazy"/>
+</p>
+</figure>
+
+
+<p>And this affects real applications. For example,  <a href="https://en.wikipedia.org/wiki/Freestyle_(software)" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Blender Freestyle</a> uses  our 2001 algorithm, from the implementation in <a href="https://dl.acm.org/doi/abs/10.1145/1731047.1731056" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Stephane Grabli’s work</a>.  <a href="https://www.google.com/search?q=freestyle+gaps+blender" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Online, you can find many complaints about the gaps</a> in Freestyle’s contours:</p>
+
+<figure>
+   <p>
+   	<a href="https://blenderartists.org/t/trying-to-close-gaps-in-freestyle-lines/688753" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+<img src="https://reader.miniflux.app/proxy/XZ_2p7dEeEdKrzEarIxKM1AkzneSRpM3DxZA_HZ-_KU=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9mcmVlc3R5bGUucG5n" alt="Blender forum discussion of gaps in Freestyle" loading="lazy"/></a>
+</p>
+</figure>
+
+<p>And, here’s an animation from <a href="https://dl.acm.org/doi/10.1145/2024676.2024683" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a 2011 paper</a> that tries to fix our method using planar maps, but still has gaps in the outline in some frames:</p>
+
+
+<video width="640" height="360" controls="">
+  <source src="https://aaronhertzmann.com/images/howtodraw/karsch-hart-snaxels.mp4" type="video/mp4"/>
+Your browser does not support the video tag.
+</video>
+<p>Even <a href="https://aaronhertzmann.com/images/howtodraw/pig_toon.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the pig image</a>, which we showed in our survey paper, has an incorrect gap that I only just noticed writing this post.</p>
+
+<p>In addition to their effects on animation, gaps and other errors prevent <em>vectorization</em>, converting these curves to 2D vector graphics. This is important for region-based stylization, filling regions with styles, since style is not just about outline curves, it’s about how you fill in regions as well.</p>
+
+<p>This problem was <a href="https://dl.acm.org/doi/abs/10.1145/321328.321330" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">first published in 1966</a>; it’s older than photorealistic computer graphics. Depending on how you count, I’ve spent nearly <em>a decade</em> of my career working on this one little problem (that’s <a href="https://en.wikipedia.org/wiki/Elapsed_real_time" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">wall-clock time</a>, not system time).  You try implementing something, and it seems like there’s just one or two cases to fix with heuristics, but then other cases don’t work… and it becomes whack-a-mole. Nothing works reliably.</p>
+
+<p>And it wasn’t just that we didn’t know how to get the curves looking “right”, we didn’t even know how, exactly, to define the problem… what does “right” even mean here?</p>
+
+<h1 id="read-on-in-part-2-for-some-answers"><a href="https://aaronhertzmann.com/2023/07/31/occluding-contours-part-2.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Read on in Part 2 for some answers</a></h1>

@@ -1,0 +1,36 @@
+<ul>
+<li><a href="https://dustri.org/b/files/papers/hallucination.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Exported PDF</a>
+(<a href="https://web.archive.org/web/20230630164317/https://www.activision.com/cdn/research/hallucinations" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">archive.org</a>/<a href="https://archive.is/GtQyI" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">archive.is</a>)</li>
+</ul>
+<p>Anti-cheat is <a href="https://unknowncheats.me" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">an impossibly hard problem</a>, meaning that
+the heuristics used to approximate solutions are often baroque, and sometimes clever.
+This is the case for this one, <a href="https://www.callofduty.com/blog/2023/06/call-of-duty-ricochet-anti-cheat-season-04-update" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">mentioned</a>
+on Call of Duty&#39;s blog, at the end of June 2023. The research paper is
+unfortunately a <a href="https://www.activision.com/cdn/research/hallucinations" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">webpage</a>,
+and not a proper™ one in <a href="https://en.wikipedia.org/wiki/LaTeX" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">LaTeX</a>, and was
+<a href="https://schedule.gdconf.com/session/online-game-technology-summit-hallucinations-baiting-cheaters-into-self-identifying-by-reversing-detection/891726" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">presented</a>
+at the <a href="https://en.wikipedia.org/wiki/Game_Developers_Conference" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">GDC</a> 2023.</p>
+<p>The main idea is that since the server knows everything about the state of the
+game, it can send <em>hallucinations</em> to player, by cloning existing player info,
+and placing those hallucinations so that non-cheating players can&#39;t see them:
+outside of the field of vision, beyond maximum draw distance, directly above/below
+the player, behind walls, … To prevent hallucinations from appearing from nowhere, they
+can emerge from actual players, so that the cheat has to take a bet about
+which one is the real player and which one is the decoy.</p>
+<p>This is a really smart and cheap solution, allowing anti-cheat developers to
+tweak the hallucinations&#39; parameters and behaviours easily, and in doing so, &#34;reverse the
+detection-generation cycle&#34;, putting the churn burden on cheat developers.</p>
+<p>An obvious way to bypass this is to enable cheating features
+(<a href="https://en.wikipedia.org/wiki/Extrasensory_perception" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ESP</a>, wallhack, radar,
+…) only against players that have been displayed on screen at least one, and
+make them disappear again should they &#34;fork&#34; out of sight.</p>
+<p>There are also other minor issues:</p>
+<ul>
+<li>False-positives: if players are able to shoot
+  through walls, or throw explosives around; meaning that a sparingly used 
+  cheat wouldn&#39;t be detected.</li>
+<li>Data-set poisoning: if an attacker runs a significant amount of bots doing
+  nothing but firing in the air, odds are that the hallucinations&#39; training
+  model with start picking this behaviour up, allowing it to be fingerprinted.</li>
+</ul>
+<p>Overall a fun and attacker-costly mitigation.</p>

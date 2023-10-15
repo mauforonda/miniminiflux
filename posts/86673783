@@ -1,0 +1,161 @@
+<p>If you use WordPress, you can get a fairly basic embedded audio player by using the audio shortcode:</p>
+<p><code>[audio mp3=&#34;/path/to/file.mp3&#34;]</code></p>
+<p>I didn&#39;t particularly like how it was styled so - because WordPress is so hackable - I changed it!</p>
+<p>Now my embedded audio looks like this:</p>
+<figure>
+	<figcaption>🔊 Location Based QR Codes - Introducing http://xmts.mobi/<br/>🎤 edent</figcaption>
+	<img src="https://reader.miniflux.app/proxy/p0UvPR5abTBvInxywDHK9kIGmV2pwP8EvRLQp-q0ZaM=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwLzE5MjYwOS1tcDMtaW1hZ2UucG5n" alt="" loading="lazy"/>
+	<audio src="https://shkspr.mobi/blog/wp-content/uploads/2010/11/192609.mp3" controls="">
+		<a href="https://shkspr.mobi/blog/wp-content/uploads/2010/11/192609.mp3" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Download this audio file</a>.
+	</audio>
+</figure>
+<p>It gets a nice border, a title, displays any attached image, and uses the native HTML5 audio element.</p>
+<p>Here&#39;s the code to do it. Stick it in your <code>functions.php</code> and add suitable CSS. Shout if you spot any weird bugs.</p>
+<pre><code>add_filter(&#39;wp_audio_shortcode_override&#39;, &#39;edent_audio_shortcode_override&#39;, 10, 2);
+function edent_audio_shortcode_override( $html, $attr ) {
+    $audio_url = &#34;&#34;;
+
+    //  The shortcode will have an attribute with the URl to the file:
+    //  e.g. [ audio mp3=&#34;https://example.com/path/to/file.mp3&#34; ]
+    if ( isset( $attr[&#39;wav&#39;]  ) ) { $audio_url = $attr[&#39;wav&#39;];  }
+    if ( isset( $attr[&#39;mp3&#39;]  ) ) { $audio_url = $attr[&#39;mp3&#39;];  }
+    if ( isset( $attr[&#39;m4a&#39;]  ) ) { $audio_url = $attr[&#39;m4a&#39;];  }
+    if ( isset( $attr[&#39;ogg&#39;]  ) ) { $audio_url = $attr[&#39;ogg&#39;];  }
+    if ( isset( $attr[&#39;opus&#39;] ) ) { $audio_url = $attr[&#39;opus&#39;]; };
+    if ( isset( $attr[&#39;src&#39;]  ) ) { $audio_url = $attr[&#39;src&#39;];  }; //   For raw links without a shortcode
+
+    //  Defaults
+    $audio_meta = null;
+    $audio_thumb = false;
+
+    //  Get the attachment ID from the media library
+    $audio_id = attachment_url_to_postid( $audio_url );
+    if ($audio_id &gt; 0) { 
+        $audio_meta  = wp_get_attachment_metadata($audio_id); 
+        $audio_thumb = get_the_post_thumbnail_url( $audio_id );
+    } else {
+        //  Is this on our server?
+        $upload_dir = wp_upload_dir(); // Get the upload directory info
+        $upload_baseurl = $upload_dir[&#39;baseurl&#39;];
+
+        // Check if the provided URL belongs to the site
+        if (strpos($audio_url, $upload_baseurl) !== false) {
+            // URL belongs to the site, get the file path
+            $file_path = str_replace($upload_baseurl, $upload_dir[&#39;basedir&#39;], $audio_url);
+            // Check if the file exists on disk
+            if (file_exists($file_path)) {
+                require_once ABSPATH . &#39;wp-admin/includes/media.php&#39;;
+                $audio_meta  = wp_read_audio_metadata( $file_path );
+                $audio_thumb = false;
+            }
+        }
+    }
+
+    //  Get the title of the audio - or use a default
+    if ( isset( $audio_meta[&#34;title&#34;] ) ) { 
+        $audio_title = &#34;🔊 &#34; . htmlspecialchars( $audio_meta[&#34;title&#34;], ENT_NOQUOTES | ENT_HTML5 | ENT_SUBSTITUTE, &#39;UTF-8&#39;, /*double_encode*/false ); 
+    } else {
+        $audio_title = &#34;🔊&#34;;
+    }
+
+    //  Get the artist of the audio - or use a default
+    if ( isset( $audio_meta[&#34;artist&#34;] ) ) { 
+        $audio_artist = &#34;&lt;br&gt;🎤 &#34; . htmlspecialchars( $audio_meta[&#34;artist&#34;], ENT_NOQUOTES | ENT_HTML5 | ENT_SUBSTITUTE, &#39;UTF-8&#39;, /*double_encode*/false ); 
+    } else {
+        $audio_artist = &#34;&#34;;
+    }
+
+    //  Set the HTML for the thumbnail
+    if ( $audio_thumb ) {
+        $audio_thumb_html = &#34;&lt;img src=\&#34;{$audio_thumb}\&#34; class=\&#34;audio-thumb\&#34; alt=\&#34;\&#34;&gt;&#34;;
+    } else {
+        $audio_thumb_html = &#34;&#34;;
+    }
+
+    $audio_html = &lt;&lt;&lt;EOT
+&lt;figure class=&#34;audio&#34;&gt;
+    &lt;figcaption class=&#34;audio&#34;&gt;{$audio_title}{$audio_artist}&lt;/figcaption&gt;
+    {$audio_thumb_html}
+    &lt;audio class=&#34;audio-player&#34; controls src=&#34;{$audio_url}&#34;&gt;
+        &lt;a href=&#34;{$audio_url}&#34;&gt;Download audio&lt;/a&gt;
+    &lt;/audio&gt;
+&lt;/figure&gt;
+EOT;
+    return $audio_html;
+}
+</code></pre>
+<h2 id="how-it-works"><a href="#how-it-works">How it works</a></h2>
+<p>I&#39;m indebted to <a href="https://wordpress.stackexchange.com/questions/163324/extending-the-audio-shortcode" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">this answer on WordPress StackExchange</a> and <a href="https://stackoverflow.com/questions/68702574/wordpress-audio-shortcode-override-metadata" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">this one onStackOverflow</a>.</p>
+<p>There&#39;s a whole bunch of metadata available in the audio files.</p>
+<p>But to start with, you need to take the URl of the audio source and find its ID in the media library.</p>
+<p><code>attachment_url_to_postid( &#34;https://example.com/path/to/file.mp3&#34; );</code></p>
+<p>That should give you an ID. And here&#39;s how to get all the metadata from that attachment ID: <code>wp_get_attachment_metadata( 1234 )</code></p>
+<p>Which spits out:</p>
+<pre><code>array(25) {
+  [&#34;dataformat&#34;]=&gt;  string(3) &#34;mp3&#34;
+  [&#34;channels&#34;]=&gt;  int(1)
+  [&#34;sample_rate&#34;]=&gt;  int(44100)
+  [&#34;bitrate&#34;]=&gt;  float(63731.43187641008)
+  [&#34;channelmode&#34;]=&gt;  string(4) &#34;mono&#34;
+  [&#34;bitrate_mode&#34;]=&gt;  string(3) &#34;vbr&#34;
+  [&#34;codec&#34;]=&gt;  string(4) &#34;LAME&#34;
+  [&#34;encoder&#34;]=&gt;  string(8) &#34;LAME3.97&#34;
+  [&#34;lossless&#34;]=&gt;  bool(false)
+  [&#34;encoder_options&#34;]=&gt;  string(41) &#34;--preset fast medium -b64 --lowpass 17500&#34;
+  [&#34;compression_ratio&#34;]=&gt;  float(0.09032232408788277)
+  [&#34;fileformat&#34;]=&gt;  string(3) &#34;mp3&#34;
+  [&#34;filesize&#34;]=&gt;  int(5714048)
+  [&#34;mime_type&#34;]=&gt;  string(10) &#34;audio/mpeg&#34;
+  [&#34;length&#34;]=&gt;  int(683)
+  [&#34;length_formatted&#34;]=&gt;  string(5) &#34;11:23&#34;
+  [&#34;title&#34;]=&gt;  string(55) &#34;Location Based QR Codes - Introducing http://xmts.mobi/&#34;
+  [&#34;artist&#34;]=&gt;  string(5) &#34;edent&#34;
+  [&#34;copyright_message&#34;]=&gt;  string(5) &#34;edent&#34;
+  [&#34;time&#34;]=&gt;  string(4) &#34;0549&#34;
+  [&#34;date&#34;]=&gt;  string(4) &#34;0310&#34;
+  [&#34;year&#34;]=&gt;  string(4) &#34;2010&#34;
+  [&#34;encoded_by&#34;]=&gt;  string(18) &#34;http://audioboo.fm&#34;
+  [&#34;image&#34;]=&gt;  array(3) {
+    [&#34;mime&#34;]=&gt;    string(9) &#34;image/png&#34;
+    [&#34;width&#34;]=&gt;    int(826)
+    [&#34;height&#34;]=&gt;    int(1169)
+  }
+  [&#34;album&#34;]=&gt;  string(0) &#34;&#34;
+}
+</code></pre>
+<p>You&#39;ll notice that it doesn&#39;t actually have the image data inside. If WordPress noticed there was an embedded image in the audio on upload, it will be attached to it as a featured image. You can get it using: <code>get_the_post_thumbnail( 1234 );</code></p>
+<p>Alternative, you can get the binary data for the image using the path to the file: <code>wp_read_audio_metadata(&#34;wp-content/uploads/2010/11/1234.mp3&#34;);</code></p>
+<p>This gives:</p>
+<pre><code>array(24) {
+  [&#34;dataformat&#34;]=&gt;  string(3) &#34;mp3&#34;
+  [&#34;channels&#34;]=&gt;  int(1)
+  [&#34;sample_rate&#34;]=&gt;  int(44100)
+  [&#34;bitrate&#34;]=&gt;  float(63731.43187641008)
+  [&#34;channelmode&#34;]=&gt;  string(4) &#34;mono&#34;
+  [&#34;bitrate_mode&#34;]=&gt;  string(3) &#34;vbr&#34;
+  [&#34;codec&#34;]=&gt;  string(4) &#34;LAME&#34;
+  [&#34;encoder&#34;]=&gt;  string(8) &#34;LAME3.97&#34;
+  [&#34;lossless&#34;]=&gt;  bool(false)
+  [&#34;encoder_options&#34;]=&gt;  string(41) &#34;--preset fast medium -b64 --lowpass 17500&#34;
+  [&#34;compression_ratio&#34;]=&gt;  float(0.09032232408788277)
+  [&#34;fileformat&#34;]=&gt;  string(3) &#34;mp3&#34;
+  [&#34;filesize&#34;]=&gt;  int(5714048)
+  [&#34;mime_type&#34;]=&gt;  string(10) &#34;audio/mpeg&#34;
+  [&#34;length&#34;]=&gt;  int(683)
+  [&#34;length_formatted&#34;]=&gt;  string(5) &#34;11:23&#34;
+  [&#34;title&#34;]=&gt;  string(55) &#34;Location Based QR Codes - Introducing http://xmts.mobi/&#34;
+  [&#34;artist&#34;]=&gt;  string(5) &#34;edent&#34;
+  [&#34;copyright_message&#34;]=&gt;  string(5) &#34;edent&#34;
+  [&#34;time&#34;]=&gt;  string(4) &#34;0549&#34;
+  [&#34;date&#34;]=&gt;  string(4) &#34;0310&#34;
+  [&#34;year&#34;]=&gt;  string(4) &#34;2010&#34;
+  [&#34;encoded_by&#34;]=&gt;  string(18) &#34;http://audioboo.fm&#34;
+  [&#34;image&#34;]=&gt;  array(4) {
+    [&#34;data&#34;]=&gt;    BINARY DATA
+    [&#34;mime&#34;]=&gt;    string(9) &#34;image/png&#34;
+    [&#34;width&#34;]=&gt;    int(826)
+    [&#34;height&#34;]=&gt;    int(1169)
+  }
+}
+</code></pre>
+<p>See <a href="https://developer.wordpress.org/reference/functions/wp_read_audio_metadata/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><code>wp_read_audio_metadata()</code></a> for more details. Note, it only works on local files - no reading from remote files.</p>

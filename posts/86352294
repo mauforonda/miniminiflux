@@ -1,0 +1,112 @@
+<p>Chinese import competition in Peru had adverse effects on employment in the short term, which dissipates for men, but is long-lasting for low-educated women in the tradable sector</p>
+                                    
+                    <p>In the international economics literature, it is well-established that trade boosts welfare and productivity by reallocating production factors among firms, industries, and countries (Melitz 2003). However, these transitions are not always smooth. Workers, in particular, may encounter frictions in moving to new jobs, and these frictions could vary depending on their individual characteristics, such as their educational level, skill level, and, importantly, gender (Goldberg and Pavcnik 2007, Sauré and Zoabi 2014, Acemoglu et al. 2016).</p>
+<p>While prior studies have found consistent negative effects for men (Autor et al. 2013, Dix-Carneiro and Kovak 2017), there is no consensus on how trade liberalisation affects the demand for female workers or the gender gap in the labour market; how persistent these effects are, and how trade shocks shape the long-term labour market outcomes of women (Juhn et al. 2014, Gaddis and Pieters 2017, Autor et al. 2019, Erten and Keskin 2021). This lack of consensus is because many of the empirical analyses on the gendered effects of trade liberalisation were conducted in countries where male dominated industries were the most affected.  </p>
+<p>In our recent research (Mansour et al. 2022), we study these questions in the context of increased Chinese imports to Peru. Our results show that (i) both low-educated men and women experience a short-term decline in employment, (ii) the negative employment effect is only persistent for low-educated women; they effectively leave the labour force or move to the informal sector, (iii) the gendered effects of trade liberalisation extend beyond labour market outcomes. In follow-up research (Mansour et al. 2023) we find, for instance, that import competition led to an increase in the share of single people and a decrease in their marriage rates.</p>
+<h2>Import competition shock in Peru</h2>
+<p>Peru’s context provides important elements that make it an ideal setting to investigate the gendered effects of import competition. First, China’s accession to the WTO resulted in substantial growth in Chinese exports to Latin American countries. However, the impact on Peru was notably more pronounced than the regional average. By 2008, China’s imports to Peru were valued at $3.2 billion (in 1998 $US), which represents a 1416% increase compared to imports in 1998 (Mansour et al. 2022). Second, exposure to Chinese imports varied across industries and regions (Medina 2022). For instance, the agricultural products industry was not exposed to Chinese imports between 1998-2008, while industries such as textiles and communication equipment faced a large influx of Chinese imports (Panel (a) of Figure 1). This variation across industries is also present when we calculate changes in Chinese imports as a share of total imports (Panel (b) of Figure 1). Third, unlike trade liberalisation policies in other Latin American countries (such as Brazil or Mexico) or the United States, both male- and female-intensive manufacturing industries in Peru were exposed to a large influx of Chinese imports after 2001. </p>
+<p><strong>Figure 1:</strong> Chinese imports by industry (Panel A: Chinese imports, Panel B: Chinese import shares)</p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/dOhY2vAeEITT-eyZSFZZovgNFOtWekUx8pMiOMuvpbU=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvcGVydXRyYWRlX2ZpZ3VyZTFhLmpwZw==" loading="lazy"/></p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/JnNDDf9k_W-OsuIlQz5pUsOPXqkEIDvTM6QmzjjrAFs=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvcGVydXRyYWRlX2ZpZ3VyZTFiLmpwZw==" loading="lazy"/></p>
+<p>Notes: Chinese imports by industry. Industries are defined at the two-digit CIIU Rev 3.1. level. Panel (A) shows the level of Chinese imports in Peru in millions of 1998 dollars. Panel (B) plots the share of Chinese imports relative to imports to Peru from any origin country. Source: UN Comtrade. (Mansour et al. 2023)</p>
+<h2>What happened to Peruvian workers in affected industries?</h2>
+<p>We examine workers’ responses at the local labour market level using household and customs data, and an instrumental variables (IV) approach.  To establish a causal relationship, we map the national increase in Chinese imports to local areas using baseline (pre-accession) variation in their industrial composition and estimate effects at the local labour market level (Bartik 1991, Autor et al. 2013).</p>
+<p>Our main results show that by 2004 both female and male low-educated workers in markets with greater exposure to Chinese imports experienced large short-term employment losses. However, whereas the negative employment effects on male workers diminish over time, the adverse effects on female employment and labour force participation persist in the long term. </p>
+<p>Figure 2 shows these effects for men and women, disaggregated by education, where low-educated workers are individuals who have a high school education or below, and high-educated workers are those with above a high school degree. </p>
+<p><strong>Figure 2</strong>: Effect of China trade shock on employment by gender and education</p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/OdxxKcxQWigoiJTjap7A-3TWSt029akWSsXeq9SZ46w=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvcGVydXRyYWRlX2ZpZ3VyZTIuanBn" loading="lazy"/></p>
+<p>Notes: The dots show the coefficient of a regression model measuring the effect of the import shock on the difference in the total employment share between 1998 and the year shown, where employment share is defined as the ratio between the number of working-age (25–55) individuals employed in a local labour market divided by the population in the given labour market, multiplied by 100. Confidence intervals are shown at the 90% confidence level. (Mansour et al. 2022) </p>
+<p>Two main results emerge from this figure. First, the negative effects of import competition on the employment of Peruvian workers were driven by low-educated individuals. Second, among low-educated workers, the effects for females are not only larger in the short-term relative to the effect for males, but the effects persist through 2008. Thus, exposure to imports led to a lasting decline in the employment of low-educated females, contributing to a widening gender gap in employment. </p>
+<h2>Why could women not reallocate to booming exporting industries?</h2>
+<p>To understand the mechanism underlying these results, we explore potential patterns of labour reallocation. Specifically, we explore movements between the tradable and non-tradable sectors, and the informal and formal sectors.  </p>
+<p>We find that reallocation from the tradable to the non-tradable sector played a crucial role in the adjustment of female workers to increased import competition.  Thus, the persistent reduction in the employment of low-educated women suggests that the non-tradable sector was not able to fully absorb the displaced workers from impacted industries in the tradable sector.  In contrast, we find that male workers did not reallocate into the non-tradable sector but, instead, found opportunities in expanding exporting industries within the tradable sector.</p>
+<p>These results are consistent with a mechanism in which expanding industries in the tradable sector do not increase their demand for female workers either because of occupational gender segregation or imperfect substitutability between male and female workers.</p>
+<p>We complement this analysis by investigating reallocation between the formal and informal sectors. We find that the decline in the employment share of low-educated women is primarily driven by a decrease in informal employment without a corresponding increase in the formal sector.</p>
+<p>In contrast, we find that low-educated men reallocate from the informal to the formal sector within the tradable sector in response to greater import competition, indicating improved labour market options in expanding exporting industries.</p>
+<h2>Is there more to it than labour market effects?</h2>
+<p>These gendered effects of import competition on labour market outcomes, especially if persistent, are likely to have profound implications on marital formation and fertility that could vary across different countries. The impact of changing labour market opportunities on the decision to marry is theoretically uncertain. Neoclassical marriage models suggest that when women&#39;s labour market opportunities decline relative to men&#39;s, there may be a greater incentive for household specialisation (Becker 1973). Conversely, an overall decrease in female workers&#39; labour market prospects can diminish the attractiveness of marriage for both men and women, affecting shared consumption, such as raising children (Wilson and Neckerman 1986, Wilson 1996, Mansour and McKinnish 2014).</p>
+<p>In contrast to the predictions of Becker’s model of household specialisation, we find that the increase in import competition during this period increased the share of single low-educated people and decreased their marriage rates. We find little evidence that exposure to trade impacted divorce rates. These results suggest that exposure to import competition did not merely delay the timing of when people married but led to a decrease in marital formation (Mansour et al. 2023). There is little evidence that increased import competition impacted fertility decisions.</p>
+<p>Overall, our studies in Peru contribute to the literature by examining an import shock that disproportionally affected the labour market of low-educated women. When these effects occur in an already unequal society, it is crucial to assess its impacts beyond the short-term and beyond the immediate labour market dynamics.</p>
+<h2>References</h2>
+<p>Acemoglu, D, D Autor, D Dorn, G H Hanson, and B Price (2016), “Import Competition and the Great US Employment Sag of the 2000s,” <em>Journal of Labor Economics</em>, 34(S1): S141-S198.</p>
+<p>Autor, D H, D Dorn, and G H Hanson (2013), “The China Syndrome: Local Labor Market Effects of Import Competition in the United States,” <em>American Economic Review</em>, 103(6): 2121-68.</p>
+<p>Autor, D H, D Dorn, and G H Hanson (2019), “When Work Disappears: Manufacturing Decline and the Falling Marriage Market Value of Young Men,” <em>American Economic Review: Insights</em>, 1(2): 161-78.</p>
+<p>Bartik, T (1991), “Who Benefits from State and Local Economic Development Policies,” W.E. Upjohn Institute.</p>
+<p>Becker, G S (1973), “A Theory of Marriage: Part I.” <em>Journal of Political Economy</em>, 81(4): 813–46.</p>
+<p>Dix-Carneiro, R, and B K Kovak (2017), “Trade Liberalization and Regional Dynamics,” <em>American Economic Review</em>, 107(10): 1908-2946.</p>
+<p>Erten, B, and P Keskin (2021), “Trade-Offs? The Impact of WTO Accession on Intimate Partner Violence in Cambodia.”<em> Review of Economics and Statistics</em>, 1-40.</p>
+<p>Gaddis, I, and J Pieters (2017), “The Gendered Labor Market Impacts of Trade Liberalization: Evidence from Brazil,” <em>Journal of Human Resources</em>, 52(2): 457-90.</p>
+<p>Goldberg, P K, and N Pavcnik (2007), “Distributional Effects of Globalization in Developing Countries,” <em>Journal of Economic Literature</em>, 45(1): 39-82.</p>
+<p>Juhn, C, G Ujhelyi, and C Villegas-Sanchez (2014), “Men, Women, and Machines: How Trade Impacts Gender Inequality,” <em>Journal of Development Economics</em>, 106: 179-193.</p>
+<p>Mansour, H, and T McKinnish (2014), “Couples’ Time Together: Complementarities in Production versus Complementarities in Consumption,” <em>Journal of Population Economics</em>, 27(4): 1432–75.</p>
+<p>Mansour, H, P Medina, and A Velásquez (2022), “Import Competition and Gender Differences in Labor Reallocation,” <em>Labour Economics</em>, 76: 102149.</p>
+<p>Mansour, H, P Medina, and A Velásquez (2023), “When Women’s Work Disappears: Marriage and Fertility Decisions in Peru,” <em>Journal of Globalization and Development</em>. <a href="https://doi.org/10.1515/jgd-2023-0012" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://doi.org/10.1515/jgd-2023-0012</a></p>
+<p>Medina, P, (2022), “Import Competition, Quality Upgrading, and Exporting: Evidence from the Peruvian Apparel Industry,” <em>The Review of Economics and Statistics</em>: 1–45. <a href="https://doi.org/10.1162/rest_a_01221" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://doi.org/10.1162/rest_a_01221</a></p>
+<p>Melitz, M J (2003), “The Impact of Trade on Intra-Industry Reallocations and Aggregate Industry Productivity,” <em>Econometrica</em>, 71(6): 1695-1725.</p>
+<p>Sauré, P, and H Zoabi, “International Trade, the Gender Wage Gap and Female Labor Force Participation,” <em>Journal of Development Economics,</em> 2014, 111: 17–33.</p>
+<p>Wilson, W J (1996). When Work Disappears: The World of the New Urban Poor. New York: Alfred A. Knopf.</p>
+<p>Wilson, W J, and K Neckerman (1986). “Poverty and Family Structure: The Widening Gap between Evidence and Public Policy Issues.” In Fighting Poverty: What Works and What Doesn’t, edited by S. Danziger, and D. Weinberg, 232–59. Cambridge: Harvard University Press.</p>
+                
+
+                    
+                    
+                    Peru
+                                
+                    Trade
+                                
+                    Gender and trade
+                                
+                    Import competition
+                                
+                    China shock
+                        
+    
+    
+    
+        <p>Share this article:</p>
+
+        <a href="https://twitter.com/intent/tweet/?text=The+gendered+effects+of+import+competition+in+Peru&amp;url=https%3A%2F%2Fvoxdev.org%2Ftopic%2Ffirms-trade%2Fgendered-effects-import-competition-peru" title="Share on Twitter" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvoxdev.org%2Ftopic%2Ffirms-trade%2Fgendered-effects-import-competition-peru" title="Share on Facebook" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        
+        <a href="https://voxdev.org/cdn-cgi/l/email-protection#e6d99593848c838592dbae839483c68f95c687c6b0899ea28390c68794928f858a83c69f8993c68b879fc68483c68f889283948395928382c68f88c08489829fdb8e92929695dcc9c990899e828390c8899481c99289968f85c9808f948b95cb9294878283c98183888283948382cb83808083859295cb8f8b96899492cb85898b9683928f928f8988cb96839493" title="Share on Email" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fvoxdev.org%2Ftopic%2Ffirms-trade%2Fgendered-effects-import-competition-peru&amp;title=The+gendered+effects+of+import+competition+in+Peru" title="Share on LinkedIn" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        
+                    
+        
+        <a href="https://voxdev.org/print/77705" title="Print this page" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+    
+
+            

@@ -1,0 +1,151 @@
+<figure><img src="https://reader.miniflux.app/proxy/4qb3WJd6YxvQHC7r8Wa5aZK2O59pRzu1ujb7zxKOJ1c=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMi8xMS9Ud2l0dGVyLUxhdy1vZi1QbHVuZ2luZy1SZXR1cm5zLmpwZw==" alt="Cartoon of a senior scientist giving a conference presentation, with a graph showing a rise and precipitous drop. She says &#34;We call it the Twitter Law of Plunging Returns&#34;. (Cartoon by Hilda Bastian.)" width="361" height="383" srcset="https://reader.miniflux.app/proxy/4qb3WJd6YxvQHC7r8Wa5aZK2O59pRzu1ujb7zxKOJ1c=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMi8xMS9Ud2l0dGVyLUxhdy1vZi1QbHVuZ2luZy1SZXR1cm5zLmpwZw== 524w, https://reader.miniflux.app/proxy/zt8xzCC-H0oKsoHHt4tDf8oh0zUUn5JqIiHA-GUpJ78=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMi8xMS9Ud2l0dGVyLUxhdy1vZi1QbHVuZ2luZy1SZXR1cm5zLTI4M3gzMDAuanBn 283w" sizes="(max-width: 361px) 100vw, 361px" loading="lazy"/></figure>
+
+
+
+
+
+
+
+<p><em>“Thousands of scientists are cutting back on Twitter, seeding angst and uncertainty.”</em> And Mastodon was the most common destination if they opened a new social media account elsewhere. This news spread quickly through both Mastodon and Science Twitter.</p>
+
+
+
+<p>It was the headline of <a href="https://www.nature.com/articles/d41586-023-02554-0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a news feature</a> in the journal <em>Nature</em> a couple of days ago, based on a survey they ran. The survey was very limited, though. The response rate was particularly poor – only around 5% – without any reporting that could give you an idea of who was in this small group: Were people who were dissatisfied with Twitter more likely to respond?   ¯\_(ツ)_/¯   Plus, the study was measuring people’s reports, not their behavior.</p>
+
+
+
+<p>The news feature gave the impression that “the Mastodon migration” of Science X/Twitter could be pretty big. I’d tried to get a handle on that last November, <a href="https://absolutelymaybe.plos.org/2022/11/13/mapping-the-mastodon-migration-is-it-a-one-way-trip-or-an-each-way-bet-for-science-twitter/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">with a post here</a> asking if the rush to set up accounts on Mastodon was a genuine migration, or an each-way bet in case Twitter went under. It was too soon to know then. The <em>Nature</em> survey got me interested in how it’s traveling 9 months later. So I updated <a href="https://statistically-funny.blogspot.com/p/twitter-study-tracker-after-2022.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">my tracker for studies</a> on X/Twitter’s decline since the takeover in October 2022 and Mastodon’s growth in that time. As well as the <em>Nature</em> survey, I added another 2 studies on patterns of use of X/Twitter and/or Mastodon, bringing the total to 12. Let’s dig in.</p>
+
+
+
+<p>I’d discussed studies on Twitter use plus advertiser-related data a couple of months ago for <a href="https://absolutelymaybe.plos.org/2023/06/07/17-studies-plus-advertising-data-map-out-twitters-decline/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a post here</a>. Early this year, Twitter was telling advertisers that their platform’s “global advertising reach” had dropped by nearly a third. The studies lined up with that pretty well, pegging the drop in use at about 20 or 30 percentage points. That included studies from several countries, and both surveys and studies of Twitter activity. That was despite a boom in antisocial tweeting and misinformation, with the decline varying between groups.</p>
+
+
+
+<p>Given how turbulent the scene is, that drop of up to a third might be outdated. The <em>Nature</em> survey got a more recent snapshot. Their survey was run in July, asking scientists about their social media activity in the previous 6 months. They emailed over 170,000 corresponding authors of papers in the Web of Science who had tweeted about their own publications. (They came from <a href="https://dapp.orvium.io/deposits/644240c8722f31118270b7ec/view" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">this database</a>, with data up to February 2023.) There were only responses for 9,153 of them.</p>
+
+
+
+<p>The results for that group was a decline in use a bit over 50%, with 7% stopping X/Twitter use altogether, 24% saying their use had decreased “significantly,” and 23% saying theirs had decreased “slightly.” With only 7% actually abandoning “Science X”, though, the network effect remains, albeit with materially diminished value – more so, if previously highly active tweeters dominated among those significantly decreasing their activity.</p>
+
+
+
+<p>I haven’t found stronger data on scientists specifically. While we can’t put too much weight on that one survey, I think it’s plausible that scientists could be reducing their use more than the average. And I found 3 studies of X/Twitter behavior in topics that would engage scientists in related fields – 2 for climate change and biodiversity, and another in a computer science-related topic:</p>
+
+
+
+<ul><li><a href="https://hal.science/hal-04103183/document" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The Climatoscope project</a> has been monitoring the climate change debate since 2016, drawing over 400 million tweets from the Twitter API up to March 2023. About a third of accounts that tweeted concern about climate change had stopped by then – roughly the general decline for that time.</li><li><a href="https://www.cell.com/trends/ecology-evolution/fulltext/S0169-5347(23)00189-1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Charlotte Chang and colleagues analyzed</a> about 380,000 participants in what they called “Environment Twitter” (frequently tweeting about biodiversity and mitigating climate change), between July 2019 and April 2023. Enviro Twitter dropped considerably more than others: Only 53% of them were tweeting at least once a fortnight, whereas 79% of a comparison group were. </li><li><a href="https://www.cyentia.com/the-death-of-infosec-twitter/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The Cyentia Institute</a> is a group including information security professionals, computer scientists, and data scientists, among others. They monitored what they called “Infosec Twitter” using Twitter’s API from July 2021 to July 2023 when Twitter began charging for access to the data. They found no major change immediately after the takeover, but there was a dramatic decline from April to May 2023. So much so, that they pronounced “Infosec Twitter” effectively dead. (Tweets on the keywords they monitored had dropped from around 1,200 a week day to around 300.)</li></ul>
+
+
+
+<p>That recent plunge in tweet value for “Infosec Twitter” could indicate that the action moved elsewhere, given how many have persisted in social media use. Which brings us to the question of how Mastodon is faring.</p>
+
+
+
+<p>In the <em>Nature</em> survey, respondents were asked if they had opened an account at another social media platform in the previous year. Nearly half said they had (46%). By far the most common one mentioned was Mastodon (47% of that group). The next closest was LinkedIn (35%). The respondents weren’t asked, though, if they use their new accounts much.</p>
+
+
+
+<p>This chart gives us an idea of what’s been happening at Mastodon. The green line above shows the growth in accounts since the October takeover. The blue one indicates growth in activity. It’s the number of accounts that were active in the previous month. There was a surge in June big enough to bring Mastodon use close to the level it was back in November when people panicked Twitter would suddenly crash and burn. </p>
+
+
+
+
+
+
+
+<p><strong>Mastodon users since the Twitter takeover</strong></p>
+
+
+
+<figure><img src="https://reader.miniflux.app/proxy/pv4PPAO1b_bQQ3-GPkVah3cEJ0nQHOl9zPTmeVvlqJA=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wOC9NYXN0b2Rvbi11c2VyLWRhdGEtMjAyMy0wOC0xOS5qcGc=" alt="Chart graphing total users and monthly active users, showing a huge bump in active users in October/November, and then a large one in June. " width="570" height="339" srcset="https://reader.miniflux.app/proxy/pv4PPAO1b_bQQ3-GPkVah3cEJ0nQHOl9zPTmeVvlqJA=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wOC9NYXN0b2Rvbi11c2VyLWRhdGEtMjAyMy0wOC0xOS5qcGc= 568w, https://reader.miniflux.app/proxy/-U8PWXzGlIyM91Su-ynDUVB5fa1bQmI1PUMASGmHVWA=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wOC9NYXN0b2Rvbi11c2VyLWRhdGEtMjAyMy0wOC0xOS0zMDB4MTc5LmpwZw== 300w" sizes="(max-width: 570px) 100vw, 570px" loading="lazy"/><figcaption><a href="https://cryptpad.fr/sheet/#/2/sheet/view/8TmIxgfFMBQ9h4maRV79wdiEwlu-37v3gRfTKUFDwEM/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Click here to see the source data:</a> Mastodon API data charted by <a href="https://hachyderm.io/@tobiaalberti" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Tobia Alberti</a></figcaption></figure>
+
+
+
+<p><em>(Monthly active = the number of accounts that were used in the previous month)</em></p>
+
+
+
+
+
+
+
+<p><em>Side note: </em>The chart only shows Mastodon use, not the other social media options in the Fediverse – the federated universe of open, interconnected services. Quite a few of the people I follow from my Mastodon account are actually in other similar, interoperable Fediverse services. There are <a href="https://the-federation.info/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">now well over 16 million</a> accounts in the Fediverse – with 8 million users, Mastodon is still the biggest single group within it, and it’s the biggest home for micro-blogging.</p>
+
+
+
+<p><a href="https://absolutelymaybe.plos.org/2023/04/30/mastodons-growth-and-communities-branching/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Back in April</a>, I wrote that Mastodon was pretty much experiencing the “scalloped growth” that <a href="https://doctorow.medium.com/of-course-mastodon-lost-users-c48ef8102891" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Cory Doctorow says</a> we could expect for a successful social media community having surges of new users: “Some of those users try the new service, decide it’s not worth it, and leave – but not all of them. Each event triggers a high tide of new signups, but the low tide that follows is still higher than the old level. Surge after surge, the number of users steadily builds, despite the normal ebb and flow.”</p>
+
+
+
+<p>This mid-year activity surge at Mastodon is driven, like surges before it, partly by people joining, and partly by people returning to their dormant accounts. They’re joining, or returning to, a Mastodon that’s changing, and not just because there’s more people and more activity.</p>
+
+
+
+<p>The big influx late last year also brought in a surge of donations and people putting their shoulders to the open source wheels that develop and maintain Mastodon. That means usability is improving. Within the next fortnight, for example, we’re expecting to see the <a href="https://vmst.io/@vmstan/110916835085272187" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">introduction of opt-in full text searching</a>. And on top of that, the throttling of third party apps for X/Twitter saw many turn their efforts to developing apps for Mastodon.</p>
+
+
+
+<p>Institutional participation in Science Mastodon has been growing, too, with lots of journals now running accounts, for example. Björn Brembs and colleagues <a href="https://royalsocietypublishing.org/doi/full/10.1098/rsos.230207" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">recently wrote</a> that this is an important moment for the scientific community to advance the goal of “publicly owned scholarly knowledge”. Social media, they argue, has become an integral part of scholarly discourse and community-building, and the Mastodon migration offers an opportunity to reclaim ownership of this part of the scholarly commons.</p>
+
+
+
+<p>It’s exciting to join in the growth and success of truly social media – media that doesn’t trap us in commercially-owned spaces that are extractive and manipulative. It feels worth investing in a community for the longterm when you know they can follow you if you move to a different neighborhood.</p>
+
+
+
+<p>Robert W. Gehl holds a Research Chair for Digital Governance in Social Justice in Canada. The tentative title of the book <a href="https://aoir.social/@rwg/110906572238412434" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">he’s working on</a> seems to me to capture the goal, and the patience and effort we need to get there – <em>Move Slowly and Build Bridges: Mastodon, the Fediverse, and the Struggle for Democratic Social Media.</em></p>
+
+
+
+<p>Shedding the hectic energy Twitter had conditioned me to was an adjustment, but it definitely made life better. And watching the vandalism wreaking havoc on the place formerly known as Twitter makes building so very satisfying. Science Mastodon doesn’t even need to grow to be great. But it sure looks like it’s going to.</p>
+
+
+
+
+
+
+
+<p><em>Brembs is <a href="https://mastodon.social/@brembs" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">@brembs@mastodon.social</a> on Mastodon, and Gehl is <a href="https://aoir.social/@rwg" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">@rwg@aoir.social</a>.</em></p>
+
+
+
+<p><em><br/>I’m <a href="https://mastodon.online/@hildabast" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">@hildabast@mastodon.online</a>.</em> <em>Interested in Mastodon? Check out my <a href="https://absolutelymaybe.plos.org/2022/12/12/some-shortcuts-to-giving-mastodon-a-try/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Shortcuts to Giving Mastodon a Try</a>.</em></p>
+
+
+
+<p>You can check out my newsletter, <em>Living With Evidence,</em> <a href="https://hildabastian.wordpress.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a>.</p>
+
+
+
+<p><em>RSS feeds:</em></p>
+
+
+
+<ul><li>This blog, <em><a href="https://absolutelymaybe.plos.org/feed/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Absolutely Maybe</a></em>.</li><li>My newsletter, <a href="https://hildabastian.wordpress.com/feed/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><em>Living With Evidence</em></a>.</li><li><a href="https://mastodon.online/@hildabast.rss" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">My Mastodon account</a>.</li></ul>
+
+
+
+
+
+
+
+<p>~~~~</p>
+
+
+
+
+
+
+
+<p><em>Disclosures: <a href="https://twitter.com/hildabast" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">My Twitter</a> followers peaked a few hundred above 32,000, and were down to 30,600 as of writing. I <em><a href="https://mastodon.online/@hildabast" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">joined Mastodon</a></em> on October 31, and had over 5,300 followers there as of writing.</em> <em>I’m very active on Mastodon.</em> <em>I also have 3 accounts that are mostly placeholders for people on those platforms to find me. I have accounts on <a href="https://www.facebook.com/HildaBastianLWE/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Facebook</a> and <a href="https://www.linkedin.com/in/hilda-bastian-397924140/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">LinkedIn</a> that I pop into occasionally to check if anyone’s asked me anything – new issues of my newsletter get posted in both automatically.</em> <em>Plus I have an <a href="https://www.threads.net/@hildabastianphd" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">account on Threads</a> that I don’t use – though if WordPress adds the automatic posting option for it, I’ll do that, too.</em></p>
+
+
+
+
+
+
+
+<p></p>
+
+<p>The post <a href="https://absolutelymaybe.plos.org/2023/08/20/how-is-science-twitters-mastodon-migration-panning-out/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">How Is Science Twitter’s “Mastodon Migration” Panning Out?</a> appeared first on <a href="https://absolutelymaybe.plos.org" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Absolutely Maybe</a>.</p>

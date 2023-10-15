@@ -1,0 +1,21 @@
+<p>Yesterday James Knight did a fun interview with me for his “Philosophical Muser” podcast about Aumann’s agreement theorem and human disagreements more generally.  It’s <a href="https://www.youtube.com/watch?v=F8J_rFmBDyc" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">already on YouTube here</a> for those who would like to listen.</p>
+
+
+
+
+
+
+
+<p>Speaking of making things common knowledge, several people asked me to blog about the recent IBM paper in <em>Nature</em>, <a href="https://www.nature.com/articles/s41586-023-06096-3" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">“Evidence for the utility of quantum computing before fault tolerance.”</a>  So, uhh, consider it blogged about now!  I was very happy to have the authors speak (by Zoom) in our UT Austin quantum computing group meeting.  Much of the discussion focused on whether they were claiming a quantum advantage over classical, and how quantum computing could have “utility” if it doesn’t beat classical.  Eventually I understood something like: no, they weren’t <em>claiming</em> a quantum advantage for their physics simulation, but they also hadn’t <em>ruled out the possibility</em> of quantum advantage (i.e., they didn’t know how to reproduce many of their data points in reasonable time on a classical computer), and they’d be <em>happy</em> if quantum advantage turned out to stand, but were also prepared for the possibility that it wouldn’t.</p>
+
+
+
+<p>And I also understood: we’re now in an era where we’re going to see more and more of this stuff: call it the “pass the popcorn” era of potential quantum speedups for physical simulation problems.  And I’m totally fine with it—as long as people communicate about it honestly, as these authors took pains to.</p>
+
+
+
+<p>And then, a few days after our group meeting came <a href="https://arxiv.org/abs/2306.16372" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">three</a> <a href="https://scirate.com/arxiv/2306.14887" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">papers</a> <a href="https://scirate.com/arxiv/2306.15970" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">refuting</a> the quantum speedup that was never claimed in the first place, by giving efficient classical simulations.  And I was fine with that too.</p>
+
+
+
+<p>I remember that years ago, probably during one of the interminable debates about D-Wave, Peter Shor mused to me that quantum computers might someday show “practical utility” without “beating” classical computers in any complexity-theoretic sense—if, for example, a single quantum device could easily simulate a thousand different quantum systems, and if the device’s performance on any one of those systems could be matched classically, but only if a team of clever programmers spent a year optimizing for that specific system.  I don’t think we’re at that stage yet, and even if we <em>do</em> reach the stage it hopefully won’t last forever.  But I acknowledge the possibility that such a stage might exist and that we might be heading for it.</p>

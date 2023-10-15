@@ -1,0 +1,263 @@
+Published on October 8, 2023 2:58 PM GMT<br/><br/><p><em>[Metadata: crossposted from <a href="https://tsvibt.blogspot.com/2023/06/time-is-homogeneous-sequentially.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://tsvibt.blogspot.com/2023/06/time-is-homogeneous-sequentially.html</a>. First completed June 30, 2023.]</em></p>
+<p>Time is the character of courses of events in which determinations——the ways that one event determines the next——are uniform across events and across composing determinations.</p>
+<p><em>Thanks to Sam Eisenstat, Scott Garrabrant, Brady Pelkey, and Kyle Scott for related conversations.</em></p>
+<h1>Reasons to talk about time</h1>
+<p>Why talk about time? Here are some key concepts that are bound up with time, and so make demands on the understanding of time:</p>
+<ul>
+<li><em>Stability.</em> Suppose a human understands another mind well enough to know that the other mind will have effects the human desires. That understanding (arguably) has to describe something <em>in some sense fixed</em> about the other mind. What the understanding describes about the mind is, in other words, <em>stable</em> in the mind. Stability is an <em>in some sense dynamical</em> concept, since it says: &#34;This could <em>change over time</em>, but it doesn&#39;t.&#34;.</li>
+<li><em>Learning, growth.</em> A mind <em>comes into being</em> by <em>gaining</em> new understanding over the course of a <a href="https://tsvibt.blogspot.com/2023/01/the-voyage-of-novelty.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">voyage of novelty</a>——information is gained, ideas are created, elements <a href="https://tsvibt.blogspot.com/2023/03/explicitness.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">become explicit</a>. This <a href="https://tsvibt.blogspot.com/2023/03/the-fraught-voyage-of-aligned-novelty.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><em>process</em> is fraught</a>, in part because it&#39;s dynamic.</li>
+<li><em>Counterfactuals, agency.</em> The notion of affecting something is, pretheoretically, temporal. &#34;If I do this, <em>then</em> what will happen <em>afterward</em> as a <em>consequence</em> of that decision?&#34;</li>
+<li><em>Values coming to be.</em> The fundamental question <a href="https://tsvibt.blogspot.com/2023/04/fundamental-question-what-determines.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">&#34;What determines a mind&#39;s effects?&#34;</a> asks about the mind&#39;s <a href="https://tsvibt.blogspot.com/2023/06/telopheme-telophore-and-telotect.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">telotect</a>——what <em>brings about</em> that the mind pushes the world in some direction, and what selects the telopheme, which says what direction the mind pushes the world. <em>Across</em> <a href="https://www.lesswrong.com/tag/ontological-crisis" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ontological crises</a>, and <em>across the process</em> of <em>becoming</em> <a href="https://tsvibt.blogspot.com/2022/10/counting-down-vs-counting-up-coherence.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">more coherent</a> <em>starting</em> from nothing, and <em>across the process of unfolding</em> <a href="https://tsvibt.blogspot.com/2023/09/the-cosmopolitan-leviathan-enthymeme.html#pointing-at-reality-through-novelty" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">reference through novelty</a>, a mind has to somehow <em>arrive</em> at how it will affect [the world as understood by the new understanding] (for example, by <a href="https://tsvibt.blogspot.com/2022/11/do-humans-derive-values-from-fictitious.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">FIAT</a>).</li>
+<li><em>Change, tendency.</em> In general, there may be mental <em>clines</em>——<a href="https://tsvibt.blogspot.com/2022/08/structure-creativity-and-novelty.html#1-elements-and-structure" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">elements</a> that by their nature tend to <em>change</em> in some direction. An element is <a href="https://tsvibt.blogspot.com/2023/03/provisionality.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">provisional</a> when it <em>hasn&#39;t yet</em> followed all its clines. Clines follow their tendencies over <em>time</em>.</li>
+<li><em>Dynamics.</em> In general, dynamical concepts depend on time. E.g.: attraction basins, in/stability, dis/equilibrium, identity, forces, path dependence. These concepts beg questions about the temporal context like: {stability, etc.} of what? Moving through what space, crossing what intermediate points? Over the course of what events?</li>
+</ul>
+<p>See also <a href="https://www.lesswrong.com/posts/gEKHX8WKrXGM4roRC/saving-time" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">&#34;Saving Time&#34;</a> and <a href="https://www.lesswrong.com/posts/N5Jm6Nj4HkNKySA5Z/finite-factored-sets" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">&#34;Finite Factored Sets&#34;</a>.</p>
+<h1>Bearers of time</h1>
+<p>Here are some overlapping aspects of the cosmos that have some timelikeness:</p>
+<ul>
+<li>
+<p><em>Ordinary processes.</em> Rain falling, wheels rolling, iron rusting, plants growing, teeth chewing. Ordinary things going on through sequences of familiar events via regular processes driven by ordinary forces.</p>
+</li>
+<li>
+<p><em>Synchronous, comparable processes.</em> It turns out that clocks in different places and times (very nearly, aside from relativity) agree with each other. And, clocks continue to correspond to other processes in the same way as they would correspond in any other place and time. For example, an apple will ripen after the same number of clock ticks (in distribution), no matter if the apple and the clock are placed on the floor in this or that corner of an empty, sealed, symmetric room. Two clocks sent to two different cities will stay synced for a long time, so that if they&#39;re reunited they&#39;ll mark nearby minutes. A train, shuttling regularly between the two cities (with no rest stops), will mark off [a number of clock ticks of the first city&#39;s clock between departing and returning at that city] that is the same (on average) as [the number of clock ticks of the second city&#39;s clock between departing and returning at the second city].</p>
+</li>
+<li>
+<p><em>Phenomenal, subject-internal processes.</em> Regardless of an external world, a mind could have an internal sense of time. The mind can notice sensory irritations changing, or can count purely abstractly. In either case, the &#34;same&#34; mental element has two different states, and so it marks off two moments. (The &#34;same&#34; sensory element lights up in different ways, or the &#34;same&#34; element &#34;appears in two places at once&#34; and so is recognized as multiple-of-the-same where previously there was only one-of-the-same.) Compare Brouwer&#39;s &#34;two-oneness&#34;.</p>
+</li>
+<li>
+<p><em>Self-relating, entity-internal processes.</em> Things have their own internal elements and relations, which unfold under their own pressures.</p>
+<ul>
+<li>Most simply, a machine&#39;s operation might mostly depend on internal relations of its components, like gears meshing and wires connecting, and internal events like switches being flipped. The electric kettle shuts itself off, all on its own, in its own time. What changes about a component is salient insofar as how it relates to other components, e.g. by being in contact with another component.</li>
+<li>The internal unfolding marks off the entity&#39;s own time. My phone might take 2 seconds or 20 seconds to open a browser app, and then when it&#39;s done it goes on to reload the webpage——the events proceed in their own fixed order, but not on a fixed sidereal timetable. The crystal grows, not by the clock, but whensoever another particle of the right kind comes to one of the right places.</li>
+<li>As a special case of unfolding, a programmed sequence of changes can unfold according to a set schedule proceeding by cumulative stages, e.g. in the growth of living things: the seed, the sprout, the leaves, the bud, the bloom.</li>
+<li>Growing minds have a progressive structure that comes from what mental elements unlock the creation of what other mental elements. Coming to know things has a partial ordering.</li>
+<li>Tendencies internal to a system drive the system&#39;s changes, giving the system a self-driven character. Art and math progress to deeper abstraction under the force of reflection; tectonic plates drift and grind; orbiting spheroids dance with all of each other at once; languages cycle between isolating and agglutinative tendencies, under competing forces of expressivity and conserving effort (van Gelderen); species fall down fitness cliffs of unlocked niches or phenotypic characters, escalate intraspecific competition, and get sucked into runaway perceptual selection.</li>
+<li>See Herb Simon on &#34;nearly decomposable systems&#34;.</li>
+<li>Most systems are not totally separated from the rest of the cosmos, and many systems are very interwoven with other systems. For example, human-historical events like wars, treaties, states, governments, and economic production, are heavily related to things that aren&#39;t very &#34;historical&#34;, like disease, culture, the weather, and math. There&#39;s some characteristic internal &#34;historical forces&#34; and &#34;historical events&#34;, but not cleanly separated from other events and progressions.</li>
+</ul>
+</li>
+<li>
+<p><em>Dynamical systems.</em> E.g. Hamiltonian mechanics.</p>
+</li>
+<li>
+<p><em>Causal systems.</em> See Pearl&#39;s theory. If A causes B, then A comes before B.</p>
+</li>
+<li>
+<p><em>Information.</em> If a variable X depends on Y, so that you have to know Y in order to know X, then X comes after (or at least, not before) Y in some sense. See <a href="https://www.lesswrong.com/posts/N5Jm6Nj4HkNKySA5Z/finite-factored-sets" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">&#34;Finite Factored Sets&#34;</a>.</p>
+</li>
+<li>
+<p><em>Computation.</em> The internal events of a computation are ordered by one event&#39;s need to use the outcome of another event: if you&#39;re running mergesort you have to first compute the sorted version of the first half of the list, and then use that to compute the sorted version of the whole list, not vice versa. Also, computational complexity induces a time order on tasks: which can be finished first?</p>
+</li>
+<li>
+<p><em>Logical implication.</em> If A logically implies B, and not vice versa, then B comes after A. First you know A, and then as a consequence you come to know B.</p>
+</li>
+<li>
+<p><em>Probabilistic updating.</em> If hypothesis H predicts E more strongly than the average of how strongly hypotheses predict E, then observing E increases the probability of H. Probabilistic updating reverses the direction of time compared to logical implication.</p>
+</li>
+<li>
+<p><em>Definition, founding.</em> A concept that is constituted by another concept is founded on that other concept.</p>
+<ul>
+<li>For example, the idea of a <a href="https://en.wikipedia.org/wiki/Group_theory" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">group</a> is founded on the idea of a set and the idea of a function.</li>
+<li>An idea I founded on an other idea I′ comes &#34;after&#34; the other idea I′, in the sense that——at least in many contexts——it makes sense to explain I after explaining I′.</li>
+<li>Note that <a href="https://tsvibt.blogspot.com/2022/08/non-directed-conceptual-founding.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">there&#39;s no single ordering of conceptual founding</a>. For example, the idea of a group could also be founded on a pretheoretical familiarity with systems of isometric transformations of geometric objects, without using a clear, explicit notion of set or function.</li>
+<li>A computer, or the hypothetical &#34;reader with no prerequisite experience assumed&#34;, is more of a blank slate than a natural person. There&#39;s some orderings of founding that make sense for a blank slate. A formal proof system, whether it uses first-order logic or type theory, whether it uses set theory or category theory, won&#39;t define groups by appealing to a pretheoretic familiarity with rigid motions of geometric objects.</li>
+</ul>
+</li>
+<li>
+<p><em>Discovery, invention.</em> In some cases, A strongly tends (across possible minds) to be discovered or invented before B.</p>
+<ul>
+<li>For example, you don&#39;t discover the classification of simple Lie groups before discovering the idea of Lie groups.</li>
+<li>Discovery time often reverses logical implication, e.g. many pairs of large cardinal hypotheses were discovered out of order of logical strength. For example, Mahlo cardinals are naturally an idea following after inaccessible cardinals, and Mahlo (1911) cites Hausdorff (1908) where inaccessibles are introduced, but the existence of Mahlo cardinals implies the existence of inaccessibles.</li>
+<li>Discovery time also reverses or cross-cuts definition-time.</li>
+</ul>
+</li>
+<li>
+<p><em>Justification, purpose.</em> If the goal G1 asks that you pursue the goal G2, then G2 is after G1. First you want G1, and then as a consequence you come to want G2. The right answer to some form of the question &#34;What is the cause of the male deer having antlers?&#34; is &#34;Because it&#39;s better for a male deer if he wins the head-bashing fight with other male deer.&#34;.</p>
+</li>
+<li>
+<p><em>Design, orchestration, organization.</em></p>
+<ul>
+<li>When designing something, high-level considerations are worked out, and then are unfolded into a more detailed design that specifies narrower, more concrete features.</li>
+<li>Complex mental objects such as plans and theories are also designed.</li>
+<li>Quoting from &#34;A Pattern Language&#34; by Christopher Alexander, Murray Silverstein, and Sara Ishikawa (<a href="https://gateway.ipfs.io/ipfs/bafykbzacedtqk3byoh56znh4de6ksxg5yc7pkntjnfvzxax7iz4jld6uuvcbe" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">IPFS</a>): &#34;The patterns are ordered, beginning with the very largest, for regions and towns, then working down through neighborhoods, clusters of buildings, buildings, rooms and alcoves, ending finally with details of construction. This order, which is presented as a straight linear sequence, is essential to the way the language works. [...] What is most important about this sequence, is that it is based on the connections between the patterns. Each pattern is connected to certain &#34;larger&#34; patterns which come above it in the language; and to certain &#34;smaller&#34; patterns which come below it in the language. The pattern helps to complete those larger patterns which are &#34;above&#34; it, and is itself completed by those smaller patterns which are &#34;below&#34; it.&#34;</li>
+<li>Quoting from &#34;The nature of technology&#34; by W. Brian Arthur (<a href="https://gateway.ipfs.io/ipfs/bafykbzaced5j2y365let33v5ceyhvf3p2kuy7prsho77ge4a4prnr7rebz3j6" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">IPFS</a>): &#34;[A] technology is always organized around a central concept or principle: &#34;the method of the thing,&#34; or essential idea that allows it to work. The principle of a clock is to count the beats of some stable frequency. The principle of radar——its essential idea——is to send out high-frequency radio waves and detect distant objects by analyzing the reflections of these signals from the objects&#39; surfaces. The principle of a laser printer is to use a computer-controlled laser to &#34;write&#34; images onto a copier drum. As with basic xerography, toner particles then stick to the parts of the drum that have been electrostatically written on, and are fused from there onto paper. To be brought into physical reality a principle needs to be expressed in the form of physical components. In practice this means that a technology consists of a main assembly: an overall backbone of the device or method that executes its base principle. This backbone is supported by other assemblies to take care of its working, regulate its function, feed it with energy, and perform other subsidiary tasks. So the primary structure of a technology consists of a main assembly that carries out its base function plus a set of subassemblies that support this.&#34;</li>
+</ul>
+</li>
+<li>
+<p><em>Emergence.</em> Atop force fields, there emerge particles; atop particles, there emerge molecules and chemical reactions; atop chemical reactions, there emerges life; atop life there emerges mind. Atop water and wind there emerge waves. Atop gas there emerge stars.</p>
+</li>
+<li>
+<p><em>Construction.</em> Where exactly the foundations were lain constrains where the posts can be erected, which constrains where exactly the drywall can be hung.</p>
+</li>
+<li>
+<p><em>Self-transformation.</em></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Nomic" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Nomic</a> is a game where players can change the rules of the game, including rules about how rules are followed and changed.</li>
+<li>History is like a big game of Nomic.</li>
+<li>As a mind grows, the way in which it grows and coherentifies is shaped by something. But by what, and how? The shaping can seemingly come &#34;from any direction&#34; in the space of all structure. See &#34;Values coming to be&#34; above.</li>
+<li>As a mind grows, it can shape itself for its own purposes. The mind&#39;s purposes are prior to themselves??</li>
+</ul>
+</li>
+<li>
+<p><em>Decision.</em></p>
+<ul>
+<li>An agent makes a decision. This puts the agent in a new situation, which presents more decisions for the agent to make.</li>
+<li>An agent makes a decision. In response, another agent makes a decision.</li>
+<li>An agent makes a decision. Consequences follow from that decision.</li>
+</ul>
+</li>
+<li>
+<p><em>Control.</em> See <a href="https://tsvibt.blogspot.com/2022/08/control.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Control</a>.</p>
+</li>
+<li>
+<p><em>Reasoning in general.</em> Thought B naturally follows thought A.</p>
+</li>
+<li>
+<p><em>Growing.</em> An idea can start as an abstract, ungrounded, purposeless, vague, protean, seedlike, <a href="https://tsvibt.blogspot.com/2023/03/explicitness.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">inexplicit</a>, <a href="https://tsvibt.blogspot.com/2023/03/provisionality.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">provisional</a>, or inconsistent structure, and then grow into a fleshed out, meaningful, useful, concrete, precise, explicit, final, and consistent structure. Whereas design is a process that starts with a specific outcome, a mind doesn&#39;t know beforehand what will be the significance of a growing idea.</p>
+</li>
+<li>
+<p><em>Ontological shifts.</em> As a mind grows it gains new structure and becomes <a href="https://tsvibt.blogspot.com/2022/10/counting-down-vs-counting-up-coherence.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">more coherent</a>. The new structure is <a href="https://tsvibt.blogspot.com/2023/03/the-fraught-voyage-of-aligned-novelty.html#alienness" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">alien</a> to the mind as the mind was previously, before gaining the new structure. This shift marks off moments in time.</p>
+<ul>
+<li>A &#34;gap&#34; is opened between the mind as it was previously and as it is now. The mind climbs up a <a href="https://en.wikipedia.org/wiki/Wittgenstein%27s_ladder" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ladder</a>, and then kicks the ladder out from under itself. For example, when an agent invents a new decision theory and then &#34;adopts&#34; it, it&#39;s as though a new agent has come into being. The new agent can more clearly coordinate with its current and future self than with its past self.</li>
+<li>The mind has to interpret, translate, or create its values in the new language it speaks, e.g. by <a href="https://tsvibt.blogspot.com/2022/11/do-humans-derive-values-from-fictitious.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">FIAT</a>.</li>
+<li>The mind is tempted to interpret the previous mind in current terms. E.g. it&#39;s tempting and kind of true to say that the Greeks were on their way to Cartesian algebraic geometry, but this is a description that would be sort of alien to the Greeks; they couldn&#39;t recognize it as a good description without going through major insights such as treating area and length as combinable in calculation.</li>
+</ul>
+</li>
+<li>
+<p><em>Supervenience.</em> A coarse or abstract structure can supervene, describe, or &#34;organize&#34; a refined or concrete structure.</p>
+<ul>
+<li>Attractors in dynamical systems explain, or are &#34;prior to&#34;, the endpoints of many particular trajectories of the dynamical system.</li>
+<li>The mathematical operation of addition supervenes on the electrons moving through wires in a calculator, so that the result of the mathematical operation is &#34;prior to&#34; the lights that flash on the calculator&#39;s screen.</li>
+<li>The basketball&#39;s trajectory is an &#34;organizing core&#34; of the massive ensemble of trajectories of all the atoms in the basketball.</li>
+<li>Some mythological cosmogonies give sequential organizing cores for the cosmos.</li>
+</ul>
+</li>
+<li>
+<p><em>Statistical mechanics.</em> Say that there&#39;s a distribution over a system&#39;s current state. Suppose that the distribution is somewhat special——it concentrates mass (uniformly) in some special <em>kind</em> of state that&#39;s very rare. (For example, having all the gas particles in a box being in the left half of the box, or having a hot poker next to an ice cube.) Now evolve the system according to its rules of evolution. Assume also that the rules of evolution don&#39;t happen to in any way &#34;somehow privilege&#34; the special <em>kind</em> of state that the system is likely to be in (for example, the evolution doesn&#39;t always send every special state to another special state). Under these conditions, the evolution takes those special states all over the place randomly. Since the special states are very rare, most states aren&#39;t of that special kind. So most special states end up in non-special states. This gives an asymmetry: most non-special states also end up in non-special states, so the non-special kind of state is the unique kind of state (as opposed to the special kind) where most states (of any kind) will get to after some evolution.</p>
+</li>
+</ul>
+<p><img src="https://reader.miniflux.app/proxy/81ArdGpFKmqhiF5ZpVk6Hmm91m3DOsX-Q_bWNqC6W5s=/aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vbGVzc3dyb25nLTItMC9pbWFnZS91cGxvYWQvZl9hdXRvLHFfYXV0by92MS9taXJyb3JlZEltYWdlcy82cXJMZkFHN21EVHlySG1oNy9tY3Nia2lhZHhreXljMXV3amxqdQ==" alt="" loading="lazy"/></p>
+<ul>
+<li><em>Images of time.</em>
+<ul>
+<li>A cross-section of a tree shows its growth over time projected into space.</li>
+<li>Digging in the ground where people lived long ago brings up remnants of people in the reverse order of when they lived there.</li>
+<li>Ontogeny recapitulates phylogeny, though <a href="https://en.wikipedia.org/wiki/Recapitulation_theory#Contemporary_criticism" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">not in a simple way</a>. The sequence of bundles of evolutionary changes leading to a species is (partially and in a complicated way) reflected in the sequence of bundles of morphological changes that an embryo of that species passes through during development. The embryo is a sort of image of evolution, where layers of design-work stacked one on top of the other over evolutionary time are projected (messily) onto steps of construction-work executed one after the other.</li>
+<li>I suspect there are many rhymes between the sequence of ideas and attitudes that humanity as a whole goes through, and the sequence of ideas that a person goes through. But the situation is very messy.</li>
+<li>When a person starts to self-reflect much more intensely than before, they can go through a self-archaeology, digging further back in time, seeing layers of mental elements that had been built up. If society is set up to progressively &#34;socialize&#34; people in layered aspects, there will be rhymes between self-archaeology and the socialization layers, and hence between the self-archaeology and historical development of society (in reverse).</li>
+<li>A scientist unlearns or unconditions on preconceptions, and so &#34;returns&#34; to a more eternal point of view. But curiously, this sort of archaeology always has to first happen &#34;in reverse&#34;. Abstraction is a gain of structure, not a loss; minds start parochial, and then <a href="https://tsvibt.blogspot.com/2022/05/expanding-domain-of-discourse-reveals.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">expand their domain of discourse</a>.</li>
+</ul>
+</li>
+</ul>
+<h1>Relationships between time-courses</h1>
+<h2>Canonical global time</h2>
+<p>In some dynamical systems, there&#39;s a unique natural global time.</p>
+<ul>
+<li>In some dynamical systems, the state of the system is &#34;fully connected&#34; with the future state. Anything about the state at one time can affect anything about the state at any future time. In other words, anything in the so-called &#34;past&#34; is actually in the past, in the sense that it might have affected (any given element of) the present.</li>
+<li>As a toy example, imagine a system S of finitely many equal-sized billiard balls moving in the plane R2. There are no forces (such as gravity or friction) other than from perfectly elastic collisions. Now, suppose we give a partial description of the state St of S at time t, e.g. by saying where some of the billiards are and what their velocities are. Does our description pin down the state St+ϵ of the system at time t+ϵ? If our partial description was a full description, then yes, St+ϵ is completely pinned down. If our description was strictly partial, e.g. we didn&#39;t say where one of the billiard balls is, then of course we haven&#39;t fully pinned down St+ϵ; the last billiard ball could end up anywhere at that time. Even if our description was strictly partial, have we at least pinned down <em>something</em> about St+ϵ? Strictly speaking, yes, because we&#39;ve ensured that the system starting in state St+ϵ but with the velocities negated will, after being run forward for time ϵ, end up satisfying our description. But we haven&#39;t ensured anything at all about where an individual billiard ball is, or what will be in any given place, at time t+ϵ: the unspecified ball could knock any other ball around arbitrarily. In other words, the contents of any region of the state at time t can strongly affect the contents of any other region after any positive amount of time has elapsed. Note that this example obeys relativity——the physical law is the same in any inertial frame——though it can&#39;t support a speed limit.</li>
+<li>In Conway&#39;s Game of Life, states are not fully connected, and specifying a small region at one time does specify some region at some of the subsequent times. There is a unique global time in some sense though. For one thing, although there are lightcones and unaffectable stuff that hasn&#39;t happened yet, we can&#39;t actually draw any space-like surfaces other than the standard one. For another thing, you can tell if you&#39;re in inertial motion, so there&#39;s a natural unique frame (the rest frame). And, all observers (at rest or moving), using the naive notion of simultaneity, will agree on simultaneity.</li>
+<li>However, even if there is a canonical global time in this sense, there can be a more complex structure of time-courses in the system. See below.</li>
+</ul>
+<h2>Canonical local time</h2>
+<ul>
+<li>In a relativistic world, there&#39;s no way to distinguish between inertial frames of reference (by postulate). This, along with the invariance of the speed of light, requires that if there&#39;s a natural notion of simultaneity for an observer, that notion of simultaneity as applied by another observer will make different judgements of simultaneity. In other words, there&#39;s no privileged global counting of time. (If the notion of simultaneity isn&#39;t required to be a natural function of the observer&#39;s observations, you can just say &#34;measure simultaneity according to International Atomic Time, Earth, Sol, Milkyway&#34;.)</li>
+<li>However, there is an absolute notion of &#34;internal&#34; or &#34;local&#34; time, called <a href="https://en.wikipedia.org/wiki/Proper_time" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">proper time</a>. Everyone agrees on how many times a particular clock has ticked between the moment when it left one station aboard a train and the moment when it arrived at another station. This preserves some core comparability between processes over time. Apples ripen at the same rate, compared to a nearby clock, whether on Earth or on a near-lightspeed ship.</li>
+</ul>
+<h2>Forced shared time</h2>
+<p>Stuff goes on in the world, regardless of what you think, on its own time, and then that stuff can impinge on you. Time courses forcibly (or &#34;objectively&#34;) interact with each other.</p>
+<ul>
+<li>The physical universe gives one example of objective time.</li>
+<li>Another example is acausal trade time. To make acausal trades, you might have to make decisions legibly, which means making some policy-level decision earlier in the time-order of decisions (e.g. &#34;If you cooperate, then I&#39;ll cooperate.&#34;, or more complicated decisions like that). What was supposed to be timeless might just have a different time-course, and that time-course may be just as forcing as physical time.</li>
+<li>A non-example would be separate dynamical systems. Their dynamical-system-timecourses run in parallel and don&#39;t interact.</li>
+<li>A class of intermediate examples is the situation of many parallel timecourses. One example is some models of two-dimensional time, where a dynamical system allows time travel by finding a fixed point of the operation of allowing one run of the system to send emissaries to appear in the next run of the system. Another example is children, whose trajectories share many similar progressions. Children&#39;s trajectories are largely individual but with substantial interactions, e.g. a child can &#34;send messages back in time&#34; by communicating with younger children. (Adults too, though many adults are stuck in time.)</li>
+</ul>
+<h2>Criss-crossing timecourses</h2>
+<p>Timecourses——channels in which timelike sequences of events go on, connected in a timelike way——can cross each other.</p>
+<h3>Multiple tributaries</h3>
+<p>Timecourses can intersect in an event, coming from different directions.</p>
+<ul>
+<li>Two things can contribute to the same event, so that their timecourses pass through the same event.
+<ul>
+<li>E.g. two rocks thrown at the same time at the same window ensure that the window breaks.</li>
+<li>Two things&#39;s internal times can collide. E.g. if two people are playing capture the flag and both want to tag an enemy player who just picked up the flag, so they both sprint towards the enemy from different directions without noticing the other, their two internal courses of experience will then acutely affect each other by leading to a collision.</li>
+</ul>
+</li>
+<li>Coarse dynamics lead to coarse facts about an event in a dynamical system, and fine dynamics lead to fine facts. There&#39;s some &#34;leakage&#34; between the two timecourses, so they &#34;intersect&#34; (at an acute angle, going almost parallel) in that they both lead to the one event. E.g. when and where a thrown basketball hits the ground can be mostly understood as a result of the basketball&#39;s weight, gross volume, aggregate velocity, and aggregate experienced air friction and gravity. More precisely, it matters which exact air molecules hit the ball where and when, where are the bumps on the basketball and the concrete, how defects in the basketball&#39;s rubber affected how it deformed due to air friction, and so on. (Of course the finer dynamics, if understood completely, could stand on their own.)</li>
+<li>If 5, 12, and × are entered into a calculator, it will show 60. The event of the calculator showing 60 follows from the physical dynamics of the calculator——the sequence of states of electrons moving through the wires. The event also follows from the logical structure of arithmetic: since the calculator implements integer multiplication when given × and since 5×12=60, the calculator shows 60. The timecourse of logical implication or abstract computation intersects the timecourse of physical events and physical law, at less acute, maybe almost orthogonal angles.</li>
+<li>The proto-vertebrates fell down a steep fitness gradient and gave rise to the vertebrates. This followed from the state of the genome pool and environment of the proto-vertebrates, through physical time and evolutionary time. From another perspective, it followed from the (&#34;prior&#34;) existence of an attractor basin in designspace, &#34;already there&#34; for any species to stumble into, which &#34;pulled in&#34; the proto-vertebrates.</li>
+</ul>
+<h3>Loopy time</h3>
+<p>A timecourse can seem to go in a loop, so that something is in its own past.</p>
+<p><img src="https://reader.miniflux.app/proxy/zfWpYlgdw54nwmW0ashS8qKNUZ8SaKMnEI7NYWWcPPA=/aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vbGVzc3dyb25nLTItMC9pbWFnZS91cGxvYWQvZl9hdXRvLHFfYXV0by92MS9taXJyb3JlZEltYWdlcy9OdndqRXhBN0ZjUERvbzNMNy9ramVxZjhpYnNwNG56dGQxa3Rmaw==" alt="" loading="lazy"/>
+<em>[Modified from <a href="https://pmontalb.github.io/TuringPatterns/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://pmontalb.github.io/TuringPatterns/</a>.]</em></p>
+<ul>
+<li>Something can seem to cause its own existence. For example, why is there a red patch in that particular spot in the Turing pattern shown above? Answer: because there&#39;s a red patch there, so red is created more densely there. Going backwards in time from the red patch, we find the same red patch again.</li>
+<li>Things can seem to bring each other about, in a cycle.
+<ul>
+<li>The wind pushing on the raised part of the wave causes the wave to become more raised, which causes the wind to catch on the wave more forcefully. The wind being caught comes after the wave being raised, and the wave being raised comes after the wind being caught.</li>
+<li>A living thing is maintained in its existence by each part contributing to overall activity that leads to each part being maintained.</li>
+<li>A person&#39;s specialization might cause itself. Since they are a bit better than normal at repairing shoes, they are asked a bit more frequently to repair shoes. Since they repair shoes more frequently than normal, they become better than normal at repairing shoes. The same might happen to a mental element playing its role in the mind——so that a natural idea comes in part from what a similar idea would tend to be called upon to be.</li>
+</ul>
+</li>
+<li>See <a href="https://en.wikipedia.org/wiki/Dynamic_Bayesian_network" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">dynamic bayes nets</a>.</li>
+<li>Since <a href="https://www.lesswrong.com/posts/gEKHX8WKrXGM4roRC/saving-time#Why_Time_" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">agency is time travel</a>, agents create loops in time. E.g. self-fulfilling prophecies, basilisks, game theory outcomes that depend on common knowledge.</li>
+</ul>
+<h3>Directly opposed time</h3>
+<p>Timecourses can be directly opposed, flowing in opposite directions and colliding with each other.</p>
+<ul>
+<li>
+<p><em>2-sided thermodynamic arrow of time.</em></p>
+<ul>
+<li>Let St be the state of the universe at time t. Suppose the universe is governed by some dynamical laws so that the universe obeys the second law of thermodynamics (I&#39;m not sure exactly what to assume here). Suppose that the dynamical laws are reversible, so that the evolution of the universe will also satisfy the dynamical laws with time reversed.</li>
+<li>If we have the maximum entropy prior over the state S0, then we also have the maximum entropy prior over St for any t.</li>
+<li>If we then probabilistically condition on St∈s where s is some tiny, &#34;natural&#34; subset of statespace (&#34;macrostate&#34;), then we&#39;ll come to believe in an arrow of time. Our probability distribution over what St′ for t′&gt;t is will, as t′ increases, trend toward the maximum entropy distribution over &#34;natural&#34; subsets of statespace. If we see two macrostates st′ and st′′ with t′&gt;t and t′′&gt;t, where st′ is lower entropy than st′′, then we&#39;ll guess that t′′&gt;t′.</li>
+<li>Note that this also works backwards from time t. Since the dynamical laws are time-reversible, the situation, even after conditioning on St∈s, is symmetric under the transformation t+s↔t−s. So looking backwards from St, there&#39;s a backwards arrow of time. One imagines that before the big bang, there was a big weird crunch, where eggs unsmash and unlay and so on. Or more sensibly, that the big bang is like the summit of a mountain, with physics running forward down either side.</li>
+<li>Suppose that we condition our maximum entropy prior on the conjunction of two properties: St∈s and S−t∈s. What does the resulting conditional distribution look like? I don&#39;t know. But I think it looks like a mostly-normal universe starting at time −t and running forward in time, a mostly-normal universe starting at time t and running backwards in time, and a weird zone in the middle around time 0 where... I don&#39;t know what. But it seems like an instance of timecourse colliding in a directly opposed way——though maybe it would be righter to say that they synergistically push down the entropy in the middle zone?</li>
+</ul>
+</li>
+<li>
+<p><em>Contradiction.</em></p>
+<ul>
+<li>As logical time goes on, propositions grow an aura of other propositions that they imply. The auras of two propositions P0 and P1 might contradict each other, one saying Q and the other saying ¬Q. In a context where both propositions to some extent &#34;ought to&#34; or &#34;were trying to&#34; be true, they then collide on Q. One or the other logical timecourse might go on, so that e.g. since P1 leads to Q, it then leads to ¬P2 via Q.</li>
+<li>Constraints propagate as logical time goes on. Multiple, incompatible constraints might come to apply to one thing.</li>
+</ul>
+</li>
+</ul>
+<h1>The thingness of time</h1>
+<p>Is time a <a href="https://tsvibt.blogspot.com/2022/08/the-thingness-of-things.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Thing</a>? Looking through the above list of timecourses, are there central shared features that lead into other relevant shared features?</p>
+<h2>Past, present, future</h2>
+<p>The past is something you can learn from, remember from; it&#39;s something you could have seen or otherwise sensed. What&#39;s past is in a sense locked in, irreversible; it can&#39;t be changed that, on Friday June 30 2023 at 10:13, I was typing this sentence. The past can also lock in or irreversibly cause enduring features of the cosmos. E.g. if a hard-drive is dissolved in a vat of acid, the data it uniquely stored is irretrievably lost. In some cases the past is something you could respond to, diagonalize against, erase, countervene, or reverse——you can react to affect the past&#39;s effects, though you can&#39;t affect the past. The past gave rise to you, made you what you are.</p>
+<p>The future is something you can affect. It&#39;s something you can&#39;t see and can&#39;t have seen, except in imagination (or by waiting). It&#39;s something that is not locked in, that could be changed. You give rise to the future and to your future self.</p>
+<p>The present is what you immediately——without mediation——sense and act upon. It&#39;s where plans cash out into actions, where actions are taken; it&#39;s the purview and responsibility of the actor. It&#39;s the last chance to affect things, where future becomes past.</p>
+<h2>Determination as the core of time</h2>
+<p>Time involves succession: an event B comes after another event A, and A comes before B. Why do we say &#34;after&#34;, instead of just saying that there are two events, A and B, which are separate, just like two simultaneous events are separate?</p>
+<p>One answer is: because we compare A and B against other processes, such as the spinning hands of a clock, and see the ordering of A and B relative to the familiar ordering of the clock-hand positions. This says something about when and how we say &#34;after&#34;, but it doesn&#39;t say why we say &#34;after&#34;.</p>
+<p>Another answer: We say that B comes after A when A can affect B. If A determines, affects, or causes B——then A comes before B. If B depends on A, or if B is a consequence or implication of A, or if B is decided, determined, committed to, or locked-in by A——then B comes after A.</p>
+<p>&#34;Affect&#34; is not quite the right word. It seems to emphasize physical causality and exclude some timecourses, e.g. logical constraints propagating or discoveries unlocking other discoveries. Instead:</p>
+<blockquote>
+<p>Time is the course of determination.</p>
+</blockquote>
+<p>This opens the black box of time and takes out a slightly different, still mysterious, black box called &#34;determination&#34;. The question &#34;What is determination?&#34; or &#34;How should I think about determination?&#34; is almost the same question as &#34;How should I think about <a href="https://www.lesswrong.com/tag/counterfactuals" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">counterfactuals</a>?&#34;. The emphasis of &#34;counterfactuals&#34; is on the agent: What if I did this or that? What would then come as a consequence of my action? &#34;Determination&#34; emphasizes some partially objective structure——the reality that bites back, the reality that you can&#39;t get around just by having something different in your head. I suspect both forces have to be integrated: the root of determination in the actions of an agent, and the sturdy cage/scaffold of non-mind-determined reality.</p>
+<p>Quoting the closing paragraphs of &#34;<a href="https://intelligence.org/files/TDT.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Timeless Decision Theory</a>&#34; by Eliezer Yudkowsky:</p>
+<blockquote>
+<p>I wish to keep the language of causality, including counterfactuals, while proposing that the language of change should be considered harmful. Just as previous statisticians tried to cast out causal language from statistics, I now wish to cast out the language of change from decision theory. I do not object to speaking of an object changing state from one time to another. I wish to cast out the language that speaks of futures, outcomes, or consequences being changed by decision or action.</p>
+</blockquote>
+<blockquote>
+<p>What should fill the vacuum thus created? I propose that we should speak of determining the outcome. Does this seem like a mere matter of words? Then I propose that our concepts must be altered in such fashion, that we no longer find it counterintuitive to speak of a decision determining an outcome that is &#34;already fixed.&#34; Let us take up the abhorred language of higher-order time, and say that the future is already determined. Determined by what? By the agent. The future is already written, and we are ourselves the writers. But, you reply, the agent&#39;s decision can change nothing in the grand system, for she herself is deterministic. There is the notion I wish to cast out from decision theory. I delete the harmful word change, and leave only the point that her decision determines the outcome——whether her decision is itself deterministic or not.</p>
+</blockquote>
+<h2>Sequentiality</h2>
+<blockquote>
+<p>If A determines B and B determines C, then A determines C.</p>
+</blockquote>
+<p>This transitivity formula specializes to the various timecourses. If A {logically implies, physically causes, gives rise to by emergence, unlocks the discovery of, structures the design of, sets the preconditions to decide, unfolds into, ...} B and B does the same to C, then A does the same to C.</p>
+<p>The transitivity of determination sets up a genuine sequence of events connected by determination. The sequence [A,B,C] isn&#39;t just a collection, it has an ordering that consistently relates all the elements of the sequence to each other. What we call time is a time-course, a sequence of composed determinations.</p>
+<h2>Homogeneity</h2>
+<p>There wouldn&#39;t be much power in the idea of time, or determination, if there weren&#39;t anything to say about it that applied across many determinations, or many connections between events. Physical law, and generally dynamical laws, are time-invariant. The connection between an event A and a subsequent event B——the way A determines B——greatly overlaps with the connection between B and a subsequent event C. For example, the same logical laws apply when deriving B from A and when deriving C from B.</p>
+<p>That&#39;s how clocks work: what goes on in the clock, goes on in (roughly) the same way, however much it&#39;s already gone on.</p>
+<p>There are other invariances, e.g. the invariance of physical law with respect to space or motion, or the invariance of the laws of logical deduction with respect to a difference of axioms. Time forms ordered strands, sequences of connections. Time is the character of homogeneity in determinations that can be composed sequentially, one after the other (so to speak). If A→B and B→C, then also A→C, and furthermore the way in which A→C is like the way in which A→B and B→C. So we have the formula:</p>
+<blockquote>
+<p>Time is homogeneous sequentially-composable determination.</p>
+</blockquote>
+<p><img src="https://reader.miniflux.app/proxy/VSrbTqHfdSq2n15rU0CTkWOvckpKfHer3NMmUFpa_bc=/aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vbGVzc3dyb25nLTItMC9pbWFnZS91cGxvYWQvZl9hdXRvLHFfYXV0by92MS9taXJyb3JlZEltYWdlcy82cXJMZkFHN21EVHlySG1oNy9mMnlpaGw2eWFzandubXJjdnJmNA==" alt="" loading="lazy"/>
+<em>[From <a href="https://falseknees.com/297.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://falseknees.com/297.html</a>.]</em></p>
+<br/><br/><a href="https://www.alignmentforum.org/posts/6qrLfAG7mDTyrHmh7/time-is-homogeneous-sequentially-composable-determination#comments" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Discuss</a>

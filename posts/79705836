@@ -1,0 +1,64 @@
+<p>I finally got access to the <a href="https://slack.com/blog/news/meet-slack-canvas" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">recently-launched</a> <a href="https://slack.com/features/canvas" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Slack canvas</a> feature. This project was the last thing I worked on before I left Quip/Slack/Salesforce in April of 2022, and I was curious how it had evolved since then.</p>
+
+<p>Canvas started as a prototype in mid-2021 to reuse <a href="https://quip.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Quip</a> technology to power a collaborative editing surface inside of Slack. The initial phase involved <a href="https://www.linkedin.com/in/mwhahn/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Michael Hahn</a> and I doing unspeakable things with iframes<sup>1</sup> to get the two large codebases to work together<sup>2 </sup>with minimal changes. This allowed a relatively rich feature set to be explored quickly, but it was not something that was designed to be generally available. At the time of my departure the work on productionizing (<a href="https://en.wikipedia.org/wiki/Ninety%E2%80%93ninety_rule" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the second 90%</a> of the project) had just begun.</p>
+
+<p>The first thing that becomes apparent is that the roots of canvas in Quip are entirely hidden from the user — no Quip references in the <a href="https://slack.com/blog/news/meet-slack-canvas" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">announcement</a> or anywhere in the UI. This makes sense from a <a href="https://en.wikipedia.org/wiki/Conway%27s_law" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">“don’t ship your org chart”</a> perspective — no user should care how a feature is implemented. However, if you peek under the hood, you can start to see the some Quip tidbits. The most obvious place to start is to look for network requests with <code>quip</code> in them — a couple of which happen when loading a Slack canvas:</p>
+
+<p>
+<img alt="Slack canvas network requests" src="https://reader.miniflux.app/proxy/obrIvrCmtluQSO9XQGMrGw2XX-d5Cl2JSqdSwwe5aS8=/aHR0cHM6Ly9wZXJzaXN0ZW50LmluZm8vaW1hZ2VzL3NsYWNrLWNhbnZhcy1uZXR3b3JrLXJlcXVlc3RzLnBuZw==" loading="lazy"/>
+</p>
+
+<p>The “controller” is the core logic of Slack canvas editor, and we if load one of those URLs, we see even more Quip references:</p>
+
+<p>
+<img alt="Slack canvas Quip minified JavaScript" src="https://reader.miniflux.app/proxy/zrQfrIVALaFdyHtZ0YQ5CORCm1Eq0acudzQNSwh3xwI=/aHR0cHM6Ly9wZXJzaXN0ZW50LmluZm8vaW1hZ2VzL3NsYWNrLWNhbnZhcy1qcy1zb3VyY2UucG5n" width="611" height="161" loading="lazy"/>
+</p>
+
+<p>The DOM also resembles Quip’s, down to the same CSS class names being used. The need to scope/namespace them to avoid colliding with Slack’s was one of the open questions when I left, but I guess Slack has a BEM-like structure which ensures that Quip’s simpler class names don’t collide (as long as they don’t integrate another similar un-prefixed codebase). There are also no iframes in sight, which is great.</p>
+
+<p>
+<img alt="Slack canvas DOM structure" src="https://reader.miniflux.app/proxy/pTnsgQi8HOn9t4roBg0iPDL_J4ituIV9Mxv7CcGEI3o=/aHR0cHM6Ly9wZXJzaXN0ZW50LmluZm8vaW1hZ2VzL3NsYWNrLWNhbnZhcy1kb20ucG5n" loading="lazy"/>
+</p>
+
+<p>Quip also had extensive <a href="https://quip.com/blog/how-quip-builds-inproduct-debugging-tools" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">in-product debugging tools</a>, and I was curious if they also made the transition to Slack canvas. They’re normally only enabled for employee accounts, but as <a href="https://quip.com/blog/how-quip-builds-inproduct-debugging-tools#:~:text=However%2C%20if%20you%27d%20like%20to%C2%A0%E2%80%9Ccheat%E2%80%9D%20there%20may%20be%20a%20way%20%E2%80%94%20keep%20in%20mind%20that%20Marathon%20didn%27t%20have%20any%20cheat%20codes%20but%20one%20of%20its%20contemporaries%20did." rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">hinted</a> there is a way to enable them as a “civilian” user too. A couple of commands in the dev tools, and I was greeted by the green UI that I had spent so many years in:</p>
+
+<p>
+<img alt="Slack canvas showing Quip&#39;s debug tools" src="https://reader.miniflux.app/proxy/lE5okQeh0SUOBfW9eU_br95yQo5WLk8K2kvxHc3X1AI=/aHR0cHM6Ly9wZXJzaXN0ZW50LmluZm8vaW1hZ2VzL3NsYWNrLWNhbnZhcy1kZWJ1Zy10b29scy5wbmc=" loading="lazy"/>
+</p>
+
+<p>I was also hoping that copying/pasting content from Quip into Slack canvas was a backdoor way to get some of features that have not (yet?) made the transition (spreadsheets, date mentions, etc.), but it does not appear to work.</p>
+
+<p>On the mobile side, I had explored reusing Quip’s hybrid editing approach in the Slack iOS app, including the <a href="https://medium.com/@btaylor/react-with-c-building-the-quip-mac-and-windows-apps-c63155c1531b" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">core Syncer library</a>. Hooking up <a href="http://Console.app" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Console.app</a> to an iOS device shows that the Syncer (and thus Quip) are still involved whenever a canvas is loaded.</p>
+
+<p>
+<img alt="Slack canvas iOS logging showing Quip references" src="https://reader.miniflux.app/proxy/e-QuP8CBz5_xFhAkj-uEPWPmyMbV8vGFlJRRAjTWyFo=/aHR0cHM6Ly9wZXJzaXN0ZW50LmluZm8vaW1hZ2VzL3NsYWNrLWNhbnZhcy1pb3MtbG9nZ2luZy5wbmc=" loading="lazy"/>
+</p>
+
+<p>One of the open questions on mobile at the time of my departure was how to render Slack content that’s embedded in a document. Quip’s mobile editor is a (<a href="https://blog.persistent.info/search/label/WebKit" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">heavily customized</a>) web view, so that we can reuse the same rendering logic on all platforms. It&#39;s possible to see that the canvas rendering is still web-based by inspecting the Slack app bundle (<a href="https://www.emergetools.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Emerge Tools</a> provides a <a href="https://www.emergetools.com/app/example/ios/slack?search=collab" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">nice online tree view</a>) – there is a <code>mobile_collab.js</code> file which implements document rendering:</p>
+
+<p>
+<img alt="CollabSdk.framework embedded in the Slack iOS app (as of June 2022)" src="https://reader.miniflux.app/proxy/cNgYI8RCS12fHjJ45jqZfW0XtQG24GIuLcmoqnkUBGA=/aHR0cHM6Ly9wZXJzaXN0ZW50LmluZm8vaW1hZ2VzL3NsYWNrLWNhbnZhcy1pb3MtY29sbGFic2RrLnBuZw==" width="411" height="521" loading="lazy"/>
+</p>
+
+<p>Slack on the other hand is an entirely native app. Porting Quip’s editor to native components didn’t seem feasible on any sort of reasonable timeframe. It was also not appealing to reuse Slack’s web components on mobile, since they weren’t designed for that (either from a UI or data loading perspective). I had speculated that we could leave a “placeholder” element in the web view for Slack-provided UI (like a message card), and then overlay the native component on top of it. But I wasn’t sure if it would be feasible, especially when the document is scrolled (and the native view overlay would have to be repositioned continuously).</p>
+
+<p>It’s not as easy to inspect the view hierarchy of an iOS app (<a href="https://doist.dev/posts/debugging-the-ui-of-third-party-ios-apps" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">without jailbreaking</a>), so I can’t verify this directly, but it would appear that this placeholder/overlay approach was indeed chosen. Most of the time, the native Slack UI is positioned perfectly over the document. However, in some edge cases (e.g when a scroll is triggered because the keyboard is being brought up), things end up slightly out of sync, and the placeholder is visible:</p>
+
+<table>
+<tbody><tr>
+<td>
+<img src="https://reader.miniflux.app/proxy/cgWnj8fACRmvXzuVe-z6jc4mzBXMnO-sGjkxTXWVb-c=/aHR0cHM6Ly9wZXJzaXN0ZW50LmluZm8vaW1hZ2VzL3NsYWNrLWNhbnZhcy1pb3MtZW1iZWQucG5n" width="390" height="844" alt="Message embed in Slack canvas" loading="lazy"/>
+</td>
+<td>
+<img src="https://reader.miniflux.app/proxy/kSgdVbb_OezUiy3yNz_RNhOR--oAza4wT6uD14zaoFI=/aHR0cHM6Ly9wZXJzaXN0ZW50LmluZm8vaW1hZ2VzL3NsYWNrLWNhbnZhcy1pb3MtZW1iZWQtb2Zmc2V0LnBuZw==" width="390" height="844" alt="Offset message embed in Slack canvas, captured during keyboard scroll" loading="lazy"/>
+</td>
+</tr>
+</tbody></table>
+
+<p>This is my first time being on the outside of a project while significant work on it continued (unlike <a href="https://blog.persistent.info/2023/07/10th-anniversary-of-google-reader.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">other</a> <a href="https://twitter.com/mihai/status/1007099329226539008" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">times</a>), and it’s been fascinating to observe. I congratulate all the people involved in shipping Slack canvas, and will cheer them on<sup>3</sup>.</p>
+
+<ol>
+<li>I later realized I had done the same thing 15 years earlier, <a href="https://blog.persistent.info/2006/10/google-reader-redux.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">getting Reader iframed into Gmail</a> as another proof-of-concept.</li>
+<li>At one point we had <a href="http://slack.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">slack.com</a> iframing <a href="https://quip.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">quip.com</a> which in turn was iframing <a href="http://slack.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">slack.com</a> again (so that we could show Slack UI components inside documents), an architecture we took to calling “turducken.”</li>
+<li>Especially if they bring back syntax highlighting for code blocks.</li>
+</ol>

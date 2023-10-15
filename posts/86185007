@@ -1,0 +1,69 @@
+Posted on  7 October 2023
+    
+
+
+    
+        Tags: <a href="https://vaibhavsagar.com/blog/tags/programming/index.html" title="All pages tagged &#39;programming&#39;." rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">programming</a>, <a href="https://vaibhavsagar.com/blog/tags/haskell/index.html" title="All pages tagged &#39;haskell&#39;." rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">haskell</a>
+    
+
+
+<p>Hash Array Mapped Tries (HAMTs) are a persistent data structure used to implement hashmaps. They’re heavily used <a href="https://github.com/clojure/clojure/blob/2a058814e5fa3e8fb630ae507c3fa7dc865138c6/src/jvm/clojure/lang/PersistentHashMap.java" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">in Clojure</a> and used to be the backbone of Haskell’s <a href="https://hackage.haskell.org/package/aeson" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><code>aeson</code></a> library until <a href="https://hackage.haskell.org/package/aeson-2.0.1.0/changelog" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">relatively recently</a>. I’ve <a href="https://vaibhavsagar.com/blog/2018/07/29/hamts-from-scratch/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">written about HAMTs before</a> but wanted to try a different approach: starting with a binary tree (or something close to it) and then making a series of straightforward modifications until we end up with the implementation detailed there.</p>
+<p>Let’s start with some language extensions and imports:</p>
+<pre><code>{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+{-# LANGUAGE TypeSynonymInstances #-}
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE RankNTypes #-}
+
+
+import Data.Bits             (Bits (bit, complement, popCount, shiftR, (.&amp;.), (.|.), testBit),
+                              FiniteBits (finiteBitSize))
+import Data.ByteArray.Hash   (FnvHash32 (..), fnv1Hash)
+import Data.ByteString.Char8 (pack)
+import Data.Char             (intToDigit)
+import Data.Semigroup        ((&lt;&gt;))
+import Data.Vector           (Vector, drop, singleton, take, replicate, (!), (//))
+import Data.Word             (Word16, Word32)
+import Numeric               (showIntAtBase)
+import Prelude               hiding (drop, lookup, take, replicate)
+import qualified             Prelude
+import System.TimeIt         (timeIt)
+import Text.Show.Pretty      (pPrint)</code></pre>
+<p>I think it’s useful to be able to visualise these structures, for which we need some more imports:</p>
+<pre><code>import IHaskell.Display.Graphviz
+import Control.Monad.Trans.State.Strict
+import Control.Monad.Trans.Writer.CPS
+import Control.Monad.Trans.Class
+import qualified Data.Vector as Vector
+import Data.List (intercalate, intersperse, foldl&#39;)</code></pre>
+<p>I’m going to define some instances for pretty-printing hashes:</p>
+<pre><code>newtype Binary a = Binary a
+    deriving (Enum, Ord, Real, Integral, Eq, Num, Bits, FiniteBits)
+
+instance (FiniteBits a, Show a, Integral a) =&gt; Show (Binary a) where
+    show (Binary n) = let
+        str = showIntAtBase 2 intToDigit n &#34;&#34;
+        size = finiteBitSize n
+        in Prelude.replicate (size - length str) &#39;0&#39; &lt;&gt; str</code></pre>
+<pre><code>type Hash = Binary Word32
+
+class Hashable a where
+    hash :: a -&gt; Hash</code></pre>
+<p>One can think of hashing as mapping values of some type to fixed-size values of another type, and in this case I’ve decided to hash <code>Int</code>s to themselves for demonstration purposes. I would strongly recommend against doing this in production, but when explaining how these trees are constructed it’s handy to be able to immediately tell what the hash of some <code>Int</code> will be.</p>
+<pre><code>instance Hashable String where
+    hash s = let
+        FnvHash32 h = fnv1Hash (pack s)
+        in Binary h
+
+instance Hashable Int where
+    hash int = Binary (fromIntegral int)</code></pre>
+I’m also defining some helpers so that we can generate DOT representations and use <code>ihaskell-graphviz</code> to display each of the structures defined here:
+
+
+Graphviz helper functions
+
+<p>
+    This post was originally published <a href="https://vaibhavsagar.com/blog/2023/10/07/binary-trees-to-hamts/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a> and
+    you are reading it in the
+    <a href="https://blaggregator.recurse.com/new/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Blaggregator</a> feed.
+    <a href="https://recurse.zulipchat.com/#narrow/stream/blogging/topic/Binary.20Trees.20To.20Hash.20Array.20Mapped.20Tries.2C.20Step.20by.20Step" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Join the discussion</a> on Zulip!.
+</p>

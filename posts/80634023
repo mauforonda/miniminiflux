@@ -1,0 +1,118 @@
+<p><em>This post was written in a rush and represents a few hours of research on a thing I was curious about, and is an exercise in being less of a perfectionist. I&#39;d love to see someone build on this work! Thanks a lot to Wes Gurnee for pairing with me on this</em></p>
+<p><img src="https://reader.miniflux.app/proxy/sYEVKtG5MIUSrEvo3a5YpxgMu7axJLCBxrNTmAdNpq0=/aHR0cHM6Ly9maXJlYmFzZXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vdjAvYi9maXJlc2NyaXB0LTU3N2EyLmFwcHNwb3QuY29tL28vaW1ncyUyRmFwcCUyRk5lZWxOYW5kYSUyRk1HTThBZmRvMjAucG5nP2FsdD1tZWRpYSZ0b2tlbj0xNzliNjVlNC0yMjk2LTQ4YzYtYTNiOS1hNTExYjBhMjI5Nzc=" alt="" loading="lazy"/>
+<em>Tokens are weird, man</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>A particularly notable observation in <a href="https://arxiv.org/abs/2211.00593" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">interpretability in the wild</a> is that part of the studied circuit moves around information about whether the indirect object of the sentence is the first or second name in the sentence. The natural guess is that heads are moving around the absolute position of the correct name. <em>But</em> even in prompt formats where the first and second names are in the different absolute positions, they find that the informations conveyed by these heads are exactly the same, and can be patched between prompt templates! (credit to Alexandre Variengien for making this point to me).</p>
+<p>This raises the possibility that the model has learned what I call <strong>emergent positional embeddings</strong> - rather than representing &#34;this is the token in position 5&#34; it may represent &#34;this token is the second name in the sentence&#34; or &#34;this token is the fourth word in the sentence&#34; or &#34;this is the third sentence in the paragraph&#34; etc. Intuitively, models will often want to do things like attend to the previous word, or the corresponding word in the previous sentence, etc - there are lots of things it will plausibly want to do that are natural in some emergent coordinate scheme that are unnatural in the actual token coordinate scheme.</p>
+<p>I was curious about this, and spent an afternoon poking around with Wes Gurnee at whether I could convince myself that these emergent positional embeddings were a thing. This post is an experiment: I&#39;m speedrunning a rough write-up on a few hours of hacky experiments, because this seemed more interesting to write-up than not to, and I was never going to do the high-effort version. Please take all this with a mountain of salt, and I&#39;d love to see anyone build on my incredibly rough results - <a href="https://github.com/neelnanda-io/Synthetic-Word-Index-Embeddings" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">code here</a>.</p>
+<h2 id="experiments">Experiments</h2>
+<p><em>You can see <a href="https://github.com/neelnanda-io/Synthetic-Word-Index-Embeddings" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">some terrible code</a> for these experiments here. See the Appendix for technical details</em></p>
+<p>I wanted to come up with the dumbest experiment I could that could shed light on whether this was a thing. One thing that models should <em>really</em> care about is the ability to attend to tokens in the previous word. Words can commonly range from 1 to 3 tokens (and maybe much longer for rare or mispelt words) so this is naturally done with an emergent scheme saying which word a token is part of.</p>
+<p>My experiment: I took prompts with a fixed prefix of 19 tokens and then seven random lowercase English words of varying token length, like <code>token|izer| help| apple| dram|at|isation| architecture| sick| al|p|aca</code>. I ran GPT-2 Small on this, look the residual stream after layer 3 (33% of the way through the model) and then trained a logistic regression probe on the residual stream of the token at the end of each word to predict which word it was in.</p>
+<p><img src="https://reader.miniflux.app/proxy/4KCjvF-Klr0cU7fbmhqIn-43FPvke0Sh-iv2Yr74wc8=/aHR0cHM6Ly9maXJlYmFzZXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vdjAvYi9maXJlc2NyaXB0LTU3N2EyLmFwcHNwb3QuY29tL28vaW1ncyUyRmFwcCUyRk5lZWxOYW5kYSUyRnp5NG9yZVRkdUYucG5nP2FsdD1tZWRpYSZ0b2tlbj1iMzAwMTdiMy1kNTZlLTQxYTUtODgzZS0xY2FjN2I0NzY2NzY=" alt="" loading="lazy"/></p>
+<p><strong>This is the key plot</strong>, though it takes a bit of time to get your head around. The x axis is the absolute position of the token in the prompt and the row is the ground truth of the word index. The bar for each absolute position and row shows the distribution of guesses given on the probe validation set. The colours correspond to the seven possible indices (note that the legend is not in numerical order, sigh).</p>
+<p>For example: take the third bar in the second row (index=1, abs_pos=22). This is mostly red (index = 1, correct!), with a bit of blue at the bottom (index = 0, incorrect) and a bit of green at the top (index = 2, incorrect). In contrast, the bar in the row below (second bar in the third row, index=2, abs_pos=23) is mostly green, showing that despite having the same absolute position, the probe can tell that it&#39;s mostly index=2, with a bit of red error (index=1) and purple error (index=3)</p>
+<p>Key observations from this plot:</p>
+<ul>
+<li>The probe works at all! The model tracks this feature!<ul>
+<li>I forgot to write down the actual probe accuracy lol (and banned myself from running code while writing this post), but eyeballing the graph makes pretty clear that the probe can do this!</li>
+</ul>
+</li>
+<li>This is not just absolute position! You can see this on any fixed column - despite absolute position being the same, the distribution of word index guesses is strongly skewed towards the correct word index.<ul>
+<li>This is clearest in early words, where eg word two vs word three is extremely clear at any column!</li>
+</ul>
+</li>
+<li>The feature is much weaker and harder to pick up on for later words (or corrupted by the correlation with absolute position), and performance is much worse.<ul>
+<li>It&#39;s still visibly much better than random, but definitely messy, discussed more in the limitations section</li>
+</ul>
+</li>
+</ul>
+<h2 id="conceptual-subtleties-commentary">Conceptual Subtleties + Commentary</h2>
+<p><strong>Why might models care about emergent positional embeddings at all?</strong> One of the weirdnesses of transformers is that, from the perspective of attention, every previous token position looks similar regardless of how far back it is - they&#39;re just as easy to attend to! The standard way of dealing with this is various hacks to hard-code knowledge of positional info, like <a href="https://dynalist.io/d/n2ZWtnoYHrU1s4vnFSAQ519J#z=bef36Bf9k7FYsCt1DpzCw6eV" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">rotary</a>, or <a href="https://dynalist.io/d/n2ZWtnoYHrU1s4vnFSAQ519J#z=ZHyzbsfsQCNLoH9oGROtx0kI" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">absolute positional embeddings</a>. But tokens are a pretty weird format, different things of the same conceptual &#34;length&#34; can get split into wildly varying numbers of tokens, eg &#34; Alexander&#34; -&gt; &#34; Alexander&#34; while &#34; Neel&#34; -&gt; &#34; Ne&#34; &#34;el&#34; (apparently Neel isn&#39;t as popular a name :&#39;( ).</p>
+<p>It&#39;s also plausible that being able to move around creative positional schemes is just much more efficient than actual token values. In indirect object identification part of the circuit tracks the position of the indirect object (two possible values, 1 bit) and the token value (hundreds to thousands of possible names!), the position just seems vastly more efficient!</p>
+<p><strong>Why should we care if this happens?</strong> Honestly I mostly think that this would just be cool! But it seems pretty important to understand if it does occur, since I expect this to be a sizable part of what models are doing internally - moving these around in creative ways, and computing more complex emergent positional schemes. If we don&#39;t understand the features inside the model or the common motifs, it seems much harder to understand what&#39;s actually going on. And it&#39;s plausible to me that quite a lot of sophisticated attention head circuitry looks like creative forms of passing around emergent positional embeddings. Also, just, this was not a hypothesis I think I would have easily naturally thought of on my own, and it&#39;s useful to know what you&#39;re looking for when doing weird alien neuroscience.</p>
+<p><strong>Models are probably bad at counting:</strong> One observation is that my probe performance gets much worse as we get to later words. I&#39;m not confident in why, but my weak intuition is that counting in this organic, emergent way is just pretty hard! In particular, I&#39;d guess that heads need an &#34;anchor&#34; nearby like a full stop or newline or comma such that they count from there onwards. Eg they have attn score 3 to the full stop and then 1 to each token beginning with a space, -inf to everything else. And the OV just accumulates things beginning with a space. This creates big difference for early words but washes out later on.</p>
+<p>This hypothesis predicts that models do <em>not</em> do anything like tracking &#34;I am word 98&#34; etc, but rather &#34;I am the third word in the fifth sentence&#34; etc. Since I imagine models mostly care about local attention to recent words/sentences/etc this kind of nearby counting seems maybe sufficient.</p>
+<p><strong>What are the limitations of my experiment</strong></p>
+<ul>
+<li>I didn&#39;t balance absolute position between the classes, so the probes should partially pick up on absolute position<ul>
+<li>The probes may also pick up on &#34;begins with a space&#34; - this implies that it&#39;s a one token word (as I gave in the last token) which implies that it&#39;s a later word index for a fixed absolute position, and is an easy to detect linear feature.</li>
+</ul>
+</li>
+<li>I didn&#39;t show that the probe directions were at all <em>used</em> by the model, or even that it uses these absolute positional embeddings at all<ul>
+<li>An alternate hypothesis: There&#39;s a direction for tokens beginning with a space. There are heads that attend strongly to the most recent full-stop and with a small constant-ish amount to all tokens in the sentence (which are used in unrelated circuitry), such that the probe can just detect the strength of the &#34;begins with space&#34; direction to compute the embedding<ul>
+<li>Though this doesn&#39;t explain why the probe can correctly predict intermediate word positions rather than just 0 or 6</li>
+</ul>
+</li>
+<li>The obvious idea would be looking for attention heads whose patterns respond to word-level structure, eg attending to the first or last token of the previous word, and seeing if ablating the probe directions changes the attention patterns of the heads</li>
+</ul>
+</li>
+<li>I used a fairly dumb and arbitrary prefix, and also proceeded to not change it. I&#39;m interested in what happens if you repeat this experiment with a much longer or shorter prefix, or what happens if you apply the probe</li>
+<li>I arbitrary chose layer 3 and only looked at that lol.</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<h3 id="natural-next-experiments-to-run">Natural next experiments to run</h3>
+<ul>
+<li>Making a dataset balanced for absolute position (maybe also absolute position in the current line/sentence), eg probing for third vs fourth word for things at absolute position 25</li>
+<li>Fixing various rough edges in my work, like varying the prefix<ul>
+<li>Do the results look the same if you just give it a random sequence of tokens that do/don&#39;t begin with a space, but aren&#39;t words at all? What if you make the &#34;words&#34; extremely long?</li>
+</ul>
+</li>
+<li>What is probe performance at different layers? What&#39;s the earliest layer where it works?</li>
+<li>What do these directions mean in general? If we take arbitrary text and visualise the probe outputs by token, do we see any clear patterns?</li>
+<li>Can we find other reference schemes? Eg tracking the nth subject or name or adjective in a sentence? The nth item in a list? The nth sentence in a paragraph? The nth newline in code? etc.</li>
+<li>Looking for heads that have attention patterns implying some emergent scheme: heads that attend to the first token of the current word, first/last token of the previous word, most recent full stop, full stop of the previous sentence, etc.<ul>
+<li>Note that there are alternate hypotheses for these, and you&#39;d need follow-up work. Eg, &#34;attending to the first token of the current word&#34; could be done by strongly attending to any token beginning with a space, <em>and</em> have a strong positional decay that penalises far away tokens.</li>
+<li>If you find anything that uses them, using this as a spring board to try to understand a circuit using them would be great!</li>
+</ul>
+</li>
+<li>Try resample ablating the probe directions on general text and see if anything happens.<ul>
+<li>The heads in the previous point may be good places to look.</li>
+</ul>
+</li>
+</ul>
+<h3 id="finding-a-circuit">Finding a circuit</h3>
+<ul>
+<li>The core thing I&#39;d be excited about is trying to figure out the circuit that computes these!<ul>
+<li>My guess: The embedding has a direction saying &#34;this token begins with a space&#34;. The model uses certain attention heads to attend to all recent tokens beginning with a space, in eg the current sentence. There&#39;s a high score on the newline/full stop at the start of the sentence, a small score on space prepended tokens, and -inf on everything else. The head&#39;s OV circuit only picks up on the &#34;I have a space&#34; direction and gets nothing from the newline. For small numbers of words, the head&#39;s output will be in a fixed direction with magnitude proportional to the number of words, and an MLP layer can be used to &#34;sharpen&#34; that into orthogonal directions for each word index.</li>
+</ul>
+</li>
+<li>My angle of attack for circuit finding:<ul>
+<li>Find the earliest layer where the probe works and focus there</li>
+<li>Find some case study where I can do activation patching in a nice and token aligned way, eg a 3|1 setting vs a 1|2|1 setting and patching between activations on the fourth token to see why the second vs third word probe work in the two cases.<ul>
+<li>Note that I&#39;d be doing activation patching to <em>just</em> understand the circuit in the first few layers. The &#34;patching metric&#34; would be the difference in probe logits between the second and third word index, and would have nothing to do with the model logits.</li>
+</ul>
+</li>
+<li>Do linear attribution to the probe direction - which heads/neurons/MLP layers most contribute to the probe direction? (the same idea as <a href="https://dynalist.io/d/n2ZWtnoYHrU1s4vnFSAQ519J#z=disz2gTx-jooAcR0a5r8e7LZ" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">direct logit attribution</a>).<ul>
+<li>This <em>might</em> be important/common enough to get dedicated neurons, which would be very cool!</li>
+</ul>
+</li>
+<li>Resample/mean ablate heads and MLP layers to see which ones matter.<ul>
+<li>Look at the attention patterns of the key heads and see if they have anything like the pattern predicted</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="appendix-technical-details-of-the-experiment">Appendix: Technical details of the experiment</h2>
+<p><em>Meta - I was optimising for moving fast and getting</em>some<em>results, which is why the below are extremely hacky. See <a href="https://github.com/neelnanda-io/Synthetic-Word-Index-Embeddings/blob/main/scratch.py" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">my terrible code</a> for more.</em></p>
+<ul>
+<li>This is on layer 3 of GPT-2 Small (it was a small model but probably smart enough for this task, and &#39;early-mid&#39; layers felt right like the right place to look)</li>
+<li>The probes are trained on 10,000 data points, and validated on 2560 * 7 data points (one for each word index)</li>
+<li>I used the scikit-learn logistic regression implementation, with default hyperparameters</li>
+<li>I gave it a dictionary of common english words, all fed in as lower case strings preceded by a space (for a nice consistent format) for lengths 1 to 3 tokens. I uniformly chose the token length and then uniformly chose a token of that length. I couldn&#39;t be bothered to filter for eg &#34;length 3 words are not repeated in this prompt&#34; or &#34;these words actually make sense together&#34;<ul>
+<li>I didn&#39;t bother to do further filtering for balanced absolute position, so absolute position <em>will</em> correlate with the correct answer</li>
+<li>I took 80% of the dictionary to generate prompts in my probe training set, and the other 20% of the dictionary to generate prompts in my probe validation set, just to further reduce confounders</li>
+</ul>
+</li>
+<li>I gave the 19-ish token prefix: &#34;The United States Declaration of Independence received its first formal public reading, in Philadelphia.\nWhen&#34;.<ul>
+<li>I wanted some generic filler text because early positions are often weird, followed by a newline to reset</li>
+<li>I wanted a single token to start the sentence that did not begin with a space and had a capital, so that the rest of the tokens could all begin with a space and be lowercase</li>
+</ul>
+</li>
+<li>The token lengths are uniformly chosen, so for given word index the absolute position is binomially distributed - this means that there&#39;s high sample size in the middle and tiny at the ends.</li>
+<li>I trained my probe on the <em>last</em> token of each word. I predict this doesn&#39;t matter, but didn&#39;t check.<ul>
+<li>Note the subtlety that the first token begins with a space and is obviously a new word, while identifying the last token is less obvious - maybe the next token is part of the same word! Thus I guessed that doing the last token is harder, especially for earlier words, and so more impressive.</li>
+</ul>
+</li>
+</ul>

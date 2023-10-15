@@ -1,0 +1,4 @@
+<p><a href="https://linus.zone/contra-colab" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Bottleneck T5 Text Autoencoder</a></p>
+<p>Colab notebook by Linus Lee demonstrating his Contra Bottleneck T5 embedding model, which can take up to 512 tokens of text, convert that into a 1024 floating point number embedding vector... and then then reconstruct the original text (or a close imitation) from the embedding again.<br/><br/>This allows for some fascinating tricks, where you can do things like generate embeddings for two completely different sentences and then reconstruct a new sentence that combines the weights from both.</p>
+
+    <p>Via <a href="https://twitter.com/thesephist/status/1711597804974739530" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">@thesephist</a></p>

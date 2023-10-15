@@ -1,0 +1,359 @@
+<figure><img src="https://reader.miniflux.app/proxy/Omse2z4E5auQm0jy23l0pVBrOuBMYoq1Yut0tQHP0Yc=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wNi9WaXJ1cy12cy12YWNjaW5lLWZpbmdlcnMtY3Jvc3NlZC11cGRhdGVkLmpwZw==" alt="Group of aggressive coronaviruses with one saying &#34;Spikes up!&#34; A woman is in a library looking t her laptop, thinking, &#34;Fingers crossed!&#34; (Cartoon by Hilda Bastian.)" width="497" height="284" srcset="https://reader.miniflux.app/proxy/Omse2z4E5auQm0jy23l0pVBrOuBMYoq1Yut0tQHP0Yc=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wNi9WaXJ1cy12cy12YWNjaW5lLWZpbmdlcnMtY3Jvc3NlZC11cGRhdGVkLmpwZw== 1009w, https://reader.miniflux.app/proxy/eWuhEzA8tqhwOpb3QAxHOvQmTlVo4Fzx9nczHzoU-B8=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wNi9WaXJ1cy12cy12YWNjaW5lLWZpbmdlcnMtY3Jvc3NlZC11cGRhdGVkLTMwMHgxNzIuanBn 300w, https://reader.miniflux.app/proxy/lDyEw3HKsGU-OnkGeeDLfzXLUU_9A2hNI2sn5rsAEA4=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wNi9WaXJ1cy12cy12YWNjaW5lLWZpbmdlcnMtY3Jvc3NlZC11cGRhdGVkLTc2OHg0NDAuanBn 768w" sizes="(max-width: 497px) 100vw, 497px" loading="lazy"/></figure>
+
+
+
+
+
+
+
+<p>Next generation vaccines are already varying from each other a lot, just as the first generation did. However, there are several ways that some next generation vaccines could turn out to be more effective than the originals, including potentially staying effective for longer. The vaccines could hold their own better against the current coronavirus’ variants, be protective against future coronaviruses, and/or protect against getting infected as well as against serious disease. This month, there’s a lot of progress to report in all 3 of those categories, including some more data from clinical trials.</p>
+
+
+
+<p>Highlights in clinical trials in the last month include results of a phase 3 trial of the inhaled vaccine from China’s CanSino. A couple of vaccines have also reported that early phase 1 trials have had reassuring safety results and are expanding. One is the Tetherex intranasal vaccine, initially developed by the Mayo Clinic – it’s now testing an inhaled version as well. The other is the needle-free mRNA pancoronavirus vaccine from Cambridge University spin-off, Diosynvax – that trial is now recruiting more people in Cambridge. And there’s a publication of some phase 1 results for the Gritstone Bio vaccine aiming to be “variant-proof”.</p>
+
+
+
+<p>This post also discusses several preclinical studies. Highlights here include the protein subunit pancoronavirus from the Inserm Vaccine Research Institute in France. In a conference presentation earlier this year they reported that in mice, their vaccine induced more long-term immune memory cells than the Pfizer Covid vaccine could. And another vaccine that’s showed better signs of mucosal immunity in preclinical studies than the Pfizer vaccine has been modified. It’s a live vaccine developed in Germany at the Freie Universität of Berlin. The live virus has been modified to reduce the risk of submission. Those developers are working with a Swiss pharmaceutical manufacturer.</p>
+
+
+
+<p>In an <a href="https://www.nytimes.com/2023/06/26/health/covid-vaccines-nextgen.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">article in <em>The New York Times</em></a>, Mueller, Weiland, and Zimmer report that more than 70 companies responded to the US Government’s Project NextGen call. (There’s background on this in <a href="https://absolutelymaybe.plos.org/2023/05/30/progress-on-next-generation-covid-vaccines-update-7/#nextgen" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">my previous update</a>.) Spokespeople said a “handful” of grants will be awarded in the next few months, and “a dozen or more” by early 2024.</p>
+
+
+
+<p>However, the article includes several people dampening expectations about what’s possible, and pessimistic takes about lack of resources from spokespeople from several small companies. It’s hard to know if that picture would look different if there had also been spokespeople from groups expecting to receive funding, and for whom there are prospects for running phase 3 trials after Project NextGen support is over. I think non-US-centric perspectives might be different, too – especially where manufacturers can be fairly confident that governments would invest considerable resources in purchasing improved vaccines. For most of us, better vaccines than we’ve got access to already aren’t just around the corner – but there are quite a few vaccine candidates definitely worth watching with fingers crossed. It’s been just 4 weeks since my last update post, and there’s a lot for you to dig into from that short time. </p>
+
+
+
+
+
+
+
+<p> <strong><em>Contents:</em></strong></p>
+
+
+
+<h2 id="contents"></h2>
+
+
+
+
+
+
+
+<ul><li><a href="#mucosal">Mucosal</a> vaccine news</li><li>Covid-19 <a href="#panSARS2">“variant-proof”</a> vaccine news</li><li><a href="#pancoronavirus">Pancoronavirus</a> vaccine news</li><li><em>Addendum 1:</em> Table of <a href="#mucosaltable">mucosal vaccines</a> in clinical trials</li><li><em>Addendum 2: </em>Table of <a href="#pantable">pancoronavirus vaccines</a> with results</li><li><em>Addendum 3:</em> <a href="#definitions">Definitions</a> of vaccine types</li></ul>
+
+
+
+<h2 id="mucosal"></h2>
+
+
+
+
+
+
+
+<h4>Mucosal vaccine news</h4>
+
+
+
+
+
+
+
+<p>Results for the largest phase 3 trial of aerosolized Convidecia as a booster after inactivated vaccine <a href="https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(23)00350-X/fulltext" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">has been published</a> – with over 10,000 people in China. That’s the viral vector vaccine from CanSino, and it was compared to a booster of inactivated vaccines (some of the least effective Covid vaccines). Adverse events were relatively low, with a rate of 13% of recipients in the first 28 days. People who got the inhaled vaccine had higher levels of neutralizing antibodies as those who received a third inactivated vaccine shot. Signs of immune response in saliva were also measured. It wasn’t detectable in most people before the booster, and was much higher in the inhaled vaccine group afterwards – but by 3 months, there was no difference again. However, neutralizing antibodies were still higher after the inhaled vaccine at a year. </p>
+
+
+
+<p>There’s progress on the intranasal viral vector vaccine that US pharmaceutical company Tetherex licensed from the Mayo Clinic. It’s called SC-Ad6-1. A <a href="https://classic.clinicaltrials.gov/ct2/show/NCT04839042" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">phase 1 trial</a> for this vaccine had started in Australia in June 2022. In September, Tetherex <a href="https://www.prnewswire.com/news-releases/moat-biotechnology-forms-to-develop-novel-mucosal-vaccines-for-covid-19-and-beyond-announces-initial-funding-round-and-promising-phase-i-trial-results-for-intranasal-covid-19-vaccine-301627680.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">announced</a> they’d started a spin-off company called Moat Biotechnology to further develop the vaccine. This month, Moat Bio reported in a <a href="https://www.prnewswire.com/news-releases/moat-biotechnology-raises-6-5m-in-first-close-for-intranasalinhaled-covid-19-vaccine-301849665.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">press release</a> that the majority of people in the trial who had the vaccine had a systemic as well as mucosal response. The trial has now been expanded from 130 to 190 people, with the additional people testing an inhaled version of the vaccine.</p>
+
+
+
+<p>In other news, the developers of the Oragenics intranasal Covid vaccine received funding to develop it as a pancoronavirus vaccine – more on that in the pancoronavirus section <a href="#pancoronavirus">below</a>. It’s in the preclinical development phase.</p>
+
+
+
+<p>In the last month, I’ve added 5 preclinical studies for mucosal Covid vaccines to my database, all for vaccines that aren’t in clinical trials. They are:</p>
+
+
+
+<ul><li><a href="https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1011057" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">A challenge study in hamsters</a> for an intranasal pediatric viral vector vaccine, based on parainfluenza, developed by the NIH’s NIAID. With positive results, including for Omicron, the study authors report that the vaccine will be further developed to try to protect infants from both Covid and parainfluenza type 3.</li><li><a href="https://www.sciencedirect.com/science/article/pii/S0264410X23006849" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results in mice</a> for a vaccine called ISR52 being developed by Swedish company ISR Vaccine AB, with academic partners. It’s a subunit vaccine in powder form, for intranasal use.</li><li>Another subunit vaccine that’s being developed at Yonsei University in South Korea. The researchers published <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/adhm.202300889" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">results in mice</a> for a sublingual version of the vaccine – it’s applied via a dissolving patch.</li><li>Also from South Korea, this time from the Korea Advanced Institute of Science and Technology, come <a href="https://www.sciencedirect.com/science/article/pii/S0166354223001341" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">results in mice</a> for an intranasal viral vector vaccine called Ad5-S.Mod. </li><li>Another <a href="https://www.cell.com/molecular-therapy-family/molecular-therapy/fulltext/S1525-0016(23)00260-5" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">study in hamsters</a> comes from researchers at the Freie Universität in Berlin, working with a manufacturing company from Switzerland, RocketVax. It’s the fifth clinical research report<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/sCPD9%20Freie%20Uni%20Berlin%2FRocketVax/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"> in my collection</a> for this vaccine, called sCPD9. It’s a live intranasal vaccine that the researchers concluded offered greater mucosal responses than the mRNA vaccine from BioNTech/Pfizer. However, there was some transmission between animals. In this latest study, they modified the vaccine by removing some of the SARS-CoV-2 protein. There was no transmission between cohoused animals, and it was tested for safety in immunosuppressed mice as well. A <a href="https://rocketvax.com/news/nasal-vaccine-against-coronavirus-further-improved" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">press release from Rocketvax</a> says that clinical trials for this vaccine are coming, though it doesn’t say when.</li></ul>
+
+
+
+<p>Finally, the <a href="https://www.intravacc.nl/news/dutch-state-announces-the-sale-of-intravacc-b-v-the-netherlands/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Dutch government is privatizing</a> its vaccine manufacturer, Intravacc. It’s not clear what impact this will have on the company’s intranasal protein subunit vaccine – it’s in a phase 1 clinical trial.  </p>
+
+
+
+
+
+
+
+<p><em><a href="#contents">Back to contents</a></em></p>
+
+
+
+<h2 id="panSARS2"></h2>
+
+
+
+
+
+
+
+<h4>Covid-19 “variant-proof” vaccine news</h4>
+
+
+
+
+
+
+
+<p>In the last update, I included some brief results of 2 phase 1 trials of Gritstone Bio’s self-amplifying mRNA vaccine from conference presentations, with a <a href="https://absolutelymaybe.plos.org/2023/05/30/progress-on-next-generation-covid-vaccines-update-7/#panSARS2" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">brief discussion of this vaccine</a>. This US company has support from NIAID and others, and if it is eventually successful, some of the vaccine will be <a href="https://cepi.net/news_cepi/cepi-enters-into-funding-agreement-with-gritstone-bio-to-develop-covid-19-variant-vaccine/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">supplied to the COVAX program</a>. This month, results for one of them <a href="https://www.nature.com/articles/s41467-023-39053-9" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">have been published</a>. </p>
+
+
+
+<p>It’s a trial of using the Gritstone vax as a booster in people aged 60 years or older in the UK, who had previously been vaccinated with the AstraZeneca vaccine (a viral vector vaccine, that was not among the most effective Covid vaccines). The trial began in September 2021, originally planning to include 120 people. Later, it was dropped to 40, with some people previously vaxed with mRNA or J&amp;J vaccines as well. The publication reports that 54 people had been assessed for eligibility. This report covers 17 people who had AstraZeneca first.</p>
+
+
+
+<p>All of the 17 got a single shot of the Gritstone (either 10 µg or 30 µg), and they had the option of getting a second booster 20 weeks later: 10 chose to have it the second shot. Adverse events were common, but not severe at the lower dose – some headaches were severe for people getting the higher dose. More people reported adverse events after the second shot.</p>
+
+
+
+<p>As the company had reported in the conference poster in my last post, antibodies for the variants they tested – Beta, Delta, and Omicron – increased, and were maintained at 6 months with only a small slump. That was so for people who had only a single dose as well, although that’s a small number of people.</p>
+
+
+
+<p>What they didn’t report in the poster, though, was that when Omicron emerged, 8 of the 17 people were infected. It’s not clear how many were infected before a second dose, or before the time when a vaccine could be considered to have taken effect. They only reported the median time since dosing (which wasn’t defined). That was 3.6 months, with a range from 12 days to 5.2 months. Although their age put these people at high risk for severe disease, none became so severely ill that they were hospitalized.</p>
+
+
+
+
+
+
+
+<p><em><a href="#contents">Back to contents</a></em></p>
+
+
+
+<h2 id="pancoronavirus"></h2>
+
+
+
+
+
+
+
+<h4>Pancoronavirus vaccine news</h4>
+
+
+
+
+
+
+
+<p>There was news this month for one of the pancoronavirus vaccine candidates that’s in a phase 1 trial. It’s the needle-free mRNA vaccine from Cambridge University spin-off company, Diosynvax. Apparently the developers are happy with the safety results, and have expanded the trial to Cambridge for the dosage-setting stage – it was originally only recruiting in Southampton. Although this expansion <a href="https://www.nihr.ac.uk/news/trials-launched-for-revolutionary-needle-free-coronavirus-vaccine/33575" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">was announced</a>, it’s not reflected in the current registry entry for this vaccine. <a href="https://www.isrctn.com/ISRCTN87813400" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">That entry</a> reports that the trial was already fully recruited, and doesn’t note the Cambridge site.</p>
+
+
+
+<p>I’ve sent off some queries for more information. I haven’t get direct answers yet, but I was sent a copy of the patient information sheet, which was helpful. That confirmed that it’s still a phase 1 trial, and the dosage strengths being tested are the same as those in the trial protocol.</p>
+
+
+
+<p>In other news, as I mentioned above, the Oragenics intranasal vaccine is now being developed as a pancoronavirus vaccine (type unspecified). Canadian funding for that project was <a href="https://finance.yahoo.com/news/oragenics-project-develop-variant-agnostic-201800149.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">announced this month</a>. Oragenics is a US company, collaborating with Inspirevax and the National Research Council of Canada on this development. The vaccine is a protein subunit vaccine in the preclinical phase. (You can see their previous publications in the t<a href="#pantable">able below</a>.)</p>
+
+
+
+<p>I’ve also added a pair of previous preclinical studies I’d missed – one <a href="https://www.nature.com/articles/s41467-021-25382-0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">publication</a> from 2021 and a <a href="https://www.croiconference.org/wp-content/uploads/sites/2/posters/2023/CROI-Poster-Nguema020223-133204312648122137.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">conference poster</a> from February this year. Both are for the vaccine being developed by the Inserm Vaccine Research Institute (France). In the conference poster, the developers report that they compared their protein subunit vaccine (CD40.CoV2) with the BNT/Pfizer mRNA vaccine in humanized mice (mice with grafts). Their hypothesis was that their vaccine would be able to better induce a type of long-term memory cells in the immune system (CD8+ Tscm cells) than the first generation Covid vaccine. They report that their vaccine was able to induce more of 2 types of these long-memory cells (S- and N-specific) than the mRNA vaccine. </p>
+
+
+
+<p>Finally, VBI Vaccines has undergone <a href="https://www.fiercebiotech.com/biotech/vbi-vaccines-pares-down-pipeline-and-staff-focus-hepatitis-b-programs" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">major cutbacks</a>. It’s not clear what impact this will have on the company’s pancoronavirus vaccine, which is in a phase 1 clinical trial.</p>
+
+
+
+
+
+
+
+<p><em><a href="#contents">Back to contents</a></em></p>
+
+
+
+<h2 id="mucosaltable"></h2>
+
+
+
+
+
+
+
+<h4><em>Addendum 1: </em>Table of mucosal vaccines in clinical trials</h4>
+
+
+
+
+
+
+
+<p><em>*  Indicates new entry since my previous update post.</em></p>
+
+
+
+
+
+
+
+<p><em>Note: Where there is a link to “All records” for a vaccine, that’s in my public Zotero collection for the vaccine, and it may include non-mucosal studies for that vaccine. <em><em>Notes</em> <em>on that collection are <a href="https://absolutelymaybe.plos.org/2022/01/26/boosters-and-mixed-schedules-covid-vaccines-at-the-2-year-mark-part-1/#collection" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a>.</em></em> <em>For details on how I track Covid vaccine progress to maintain that collection, see my <a href="https://absolutelymaybe.plos.org/2022/02/28/tracking-the-covid-vaccine-race-in-the-wild-first-2-years-a-process-story/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">background post</a>.</em></em></p>
+
+
+
+
+
+
+
+<figure><table><thead><tr><th>Vaccine, type, manufacturer</th><th>Mucosal version(s)</th><th>Phase 1 to 2 clinical trials</th><th>Phase 3+ trial(s)</th><th>Phase 3+ efficacy or immunogenicity results</th></tr></thead><tbody><tr><td>ACM-001<br/><em>Protein subunit</em><br/><br/><em>ACM Biolabs (Singapore/Switzerland)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/ACM-001%20-%20ACM%20Biolabs/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT05385991" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.</td><td></td><td></td></tr><tr><td>Ad5-nCoV (Convidecia Air)<br/><em>Viral vector</em> <em>(adenovirus)</em><br/><br/><em>CanSino (China)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/Ad5-nCov%20CanSino/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Inhaled through the mouth using a nebulizer.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04552366" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>. <strong><a href="https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00087-X/fulltext" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong>.<br/><br/><a href="https://clinicaltrials.gov/ct2/show/NCT05043259" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1/2</a>. <strong><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4000565" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong> (plus <strong><a href="https://www.medrxiv.org/content/10.1101/2022.07.26.22278072v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">second later preprint</a></strong>).<br/><br/><a href="https://clinicaltrials.gov/ct2/show/NCT05330871" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 2</a> (aged 6-17 years).</td><td>10,420 people in China (<a href="https://clinicaltrials.gov/ct2/show/NCT05204589" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 3</a>).<br/>* <strong><a href="https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(23)00350-X/fulltext" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong>.<br/><br/>1,350 people (<a href="https://clinicaltrials.gov/ct2/show/NCT05442684" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 3</a>).<br/><br/>540 people, in Malaysia (<a href="https://clinicaltrials.gov/ct2/show/NCT05517642" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 3</a>).<br/><br/>904 people in China (<a href="https://www.chictr.org.cn/hvshowproject.aspx?id=148875" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 4</a>).<br/><strong><a href="https://www.medrxiv.org/content/10.1101/2022.03.08.22271816v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong>.<br/><br/>360 people (<a href="https://clinicaltrials.gov/ct2/show/NCT05303584" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 4</a>).</td><td>Comparison after 2-dose course of inactivated vax: Convidecia injection vs inhaled, protein subunit, or CoronaVac booster (<strong><a href="https://www.medrxiv.org/content/10.1101/2022.03.08.22271816v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 4 results</a></strong>). Both injected &amp; inhaled Convidecia had stronger impact on signs of immunity than the others; response after inhaled version was slower but longer-lasting than injected (which peaked then declined from day 14), better for Omicron though not as good for original virus. No measure of mucosal immunity used.</td></tr><tr><td>Ad5-triCoV/Mac &amp; ChAd-triCoV/Mac<br/><em>Viral vector (adenovirus)</em><br/><br/>McMaster University/Canadian Institutes of Health Research (Canada)<br/></td><td>Aerosol.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT05094609" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><br/></td><td></td><td></td></tr><tr><td>AdCOVID<br/><em>Viral vector</em> <em>(adenovirus)</em><br/><br/><em>AltImmune (USA)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/AdCOVID%20Altimmune/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04679909" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>. <strong><a href="https://ir.altimmune.com/news-releases/news-release-details/altimmune-announces-update-adcovidtm-phase-1-clinical-trial" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong> – press release only.<br/><br/><em>Discontinued after phase 1.</em></td><td></td><td> </td></tr><tr><td>AdS+N<br/><em>Viral vector (adenovirus)</em><br/><br/><em>ImmunityBio (USA)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/AdS%2BN%20(hAd5%20S-Fusion%20%2B%20N-ETSD)%20ImmunityBio,Mucosal%20vaccine/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)<br/><br/></td><td>Intranasal, oral capsule, or sublingual.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04732468" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a> (oral).<br/><br/><a href="https://clinicaltrials.gov/ct2/show/NCT04591717" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a> (sublingual).</td><td></td><td></td></tr><tr><td>Avacc 10<br/><em>Protein subunit</em><br/><br/><em>Intravacc (Netherlands)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/Avacc%2010%20-%20Intravacc/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT05604690" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.</td><td></td><td></td></tr><tr><td>bacTRL-Spike-1<br/><em>Live attenuated</em><br/><br/><em>Symvivo (Canada)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/bacTRL-Spike-1%20Symvivo/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Oral.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04334980" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.</td><td></td><td></td></tr><tr><td>BBV154 (iNCOVACC)<br/><em>Viral vector</em> <em>(adenovirus)</em><br/><br/><em>Bharat Biotech (India)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/BBV154%20Bharat/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)<br/></td><td>Intranasal.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04751682" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><br/><a href="http://ctri.nic.in/Clinicaltrials/pmaindet2.php?trialid=59902" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 2</a>.<br/><br/>Small amount of data from these trials in the <a href="https://www.bharatbiotech.com/images/incovacc/incovacc-smpc.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">drug product information</a>.<br/><br/><a href="http://ctri.nic.in/Clinicaltrials/pmaindet2.php?trialid=59216" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 2/3</a>.<br/><br/><a href="https://clinicaltrials.gov/ct2/show/NCT05639998" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 2</a>.</td><td>In India, 2-dose course of BBV154 vs 2-dose course of injected Covaxin inactivated vaccine (<a href="http://ctri.nic.in/Clinicaltrials/pmaindet2.php?trialid=65443" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 3</a> – and <a href="https://clinicaltrials.gov/ct2/show/NCT05522335" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a>).<br/><strong><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4342771" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong>.<br/><em>See also the <a href="https://www.bharatbiotech.com/images/incovacc/incovacc-smpc.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">drug product information</a>.</em><br/><br/>875 people in India, booster trial (<a href="http://ctri.nic.in/Clinicaltrials/pmaindet2.php?trialid=65451" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 3</a>).</td><td>2,998 previously unvaxed people were assigned for the intranasal iNCOVACC, 162 for injected Covaxin. This trial did not aim to assess disease outcomes. It took place during the first Omicron wave.<br/><br/>Signs of immune response were higher for iNCOVACC than Covaxin. <br/><br/>Adverse events rate very low (5% local and 3% systemic) – lower than for comparison group.</td></tr><tr><td>BV-AdCoV-1<br/><em>Viral vector (adenovirus)</em><br/><br/><em>Wuhan BravoVax</em><br/><em>(China)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/BV-AdCoV-1%20Wuhan%20BravoVax/items/NLEUGD29/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Inhaled through the mouth using a nebulizer.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT05706324" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.</td><td></td><td></td></tr><tr><td>ChAdOx1<br/><em>Viral vector (adenovirus)</em><br/><br/><em>Oxford University (UK)</em><br/><em>(This is the AstraZeneca vax)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/ChAdOx1%20nCov-19%20Oxford-AstraZeneca,Mucosal%20vaccine/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04816019" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><br/><a href="https://clinicaltrials.gov/ct2/show/NCT05007275" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><br/><strong><a href="https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(22)00480-7/fulltext" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong>.</td><td></td><td></td></tr><tr><td>CoV2-OGEN1<br/><em>Protein subunit</em><br/><br/><em>US Specialty Formulations/VaxForm</em> <em>(USA)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/CoV2-OGEN1%20USSF%2FVaxform/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Oral.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04893512" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/>(Fully recruited, final dose in November 2022.)</td><td></td><td></td></tr><tr><td>COVI-VAC<br/><em>Live attenuated</em><br/><br/><em>Codagenix (USA, with the Serum Institute of India)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/COVI-VAC%2FCoviLiv%20Codagenix/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal.</td><td><br/><a href="https://clinicaltrials.gov/ct2/show/NCT04619628" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><a href="https://www.prnewswire.com/news-releases/codagenix-announces-safety-and-immunogenicity-data-from-phase-1-covid-19-intranasal-vaccine-trial-and-intent-to-progress-to-phase-23-studies-301382120.html?tc=eml_cleartime" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Press release</a> stating successful (without data) and progressing to phase 2/3.<br/><strong><a href="https://europepmc.org/article/PMC/PMC8644858" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong> (conference abstract) and in <a href="https://codagenix.com/codagenix-intranasal-covid-19-vaccine-shows-potent-cellular-immune-response-against-conserved-viral-proteins-indicating-potential-for-immunogenicity-against-omicron-and-future-variants-in-phase-1-dat/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">press release</a>.<br/><br/><a href="https://clinicaltrials.gov/ct2/show/NCT05233826" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a> (booster).</td><td>Phase 2/3, as part of the <a href="https://www.isrctn.com/ISRCTN15779782" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">WHO Solidarity Trial for Vaccines</a> in <a href="https://cvd-mali.org/en/solidarity-trial-vaccines-enters-major-new-phase-recruiting-now/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Mali</a>. (<a href="https://cdn.who.int/media/docs/default-source/blue-print/who-covid-2019_solidarityvaccinetrial_14-june-2021_clean_for-registry.pdf?sfvrsn=77b2110a_11" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Protocol</a>.)</td><td></td></tr><tr><td>CVXGA1-001<br/><em>Viral vector (parainfluenza)</em><br/><br/><em>CyanVac (USA)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/CVXGA1-001%20-%20Uni%20of%20Georgia%2FCyanVac/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04954287" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><a href="https://clinicaltrials.gov/ct2/show/NCT05736835" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 2</a>.</td><td></td><td></td></tr><tr><td>DNS1-RBD (Pneucolin)<br/><em>Viral vector (influenza)</em><br/><br/><em>Beijing Wantai BioPharm (China)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/dNS1-RBD%20Beijing%20Wantai%20Biological%20Pharmacy%20Enterprise/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04809389" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><a href="https://clinicaltrials.gov/ct2/show/NCT05200741" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 2</a>.<br/><strong><a href="https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00131-X/fulltext" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Joint results</a></strong>.</td><td>30,990 participants in Colombia, Philippines, South Africa, Vietnam.<br/><strong><a href="https://www.researchsquare.com/article/rs-2407050/v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong>.<br/><br/>5,400 participants in Ghana (<a href="https://pactr.samrc.ac.za/TrialDisplay.aspx?TrialID=17163" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 3</a>).</td><td>Comparison of 2 doses of intranasal vaccine 14 days apart, with placebo control, during circulation of Omicron. Included &gt;13,000 previously unvaccinated people.<br/><br/>Efficacy shown 90 days after 2nd dose. There was some decline at 180 days.<br/><br/><em>Efficacy against symptomatic Covid:</em><br/>No previous vax: 55.2% (CI 13.8 to 76.7)<br/>Inactivated: 38.2% (CI -49.2 to 74.4)<br/>Viral vector: 39.9% (CI -16.7 to 69.1)<br/>mRNA: 10.1% (CI -45.9 to 44.5)<br/><br/><em>Efficacy against severe Covid:</em><br/>No previous vax: 66.7% (CI 8.3 to 87.9)<br/>Inactivated: 54.6% (CI -47.3 to 86.0)<br/>Viral vector: 50.0% (CI -6.8 to 76.6)<br/>mRNA: 19.5% (CI -39.2 to 53.4)<br/><br/><em>Efficacy against hospitalization:</em><br/>100% (CI -9.2 to 100)<br/><br/>Adverse events were very low – similar to placebo. Less than 8% of people had a runny and/or blocked nose or sore throat.</td></tr><tr><td>GAM-COVID-VAC (rAd26-S – Sputnik Light)<br/><em>Viral vector (adenovirus)</em><br/><br/><em>Gamaleya Research Institute (Russia)</em></td><td>Intranasal.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT05248373" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1/2</a><br/></td><td>7,000 participants in Russia (<a href="https://grls.rosminzdrav.ru/CiPermitionReg.aspx?PermYear=0&amp;DateInc=&amp;NumInc=&amp;DateBeg=&amp;DateEnd=&amp;Protocol=&amp;RegNm=&amp;Statement=&amp;ProtoId=&amp;idCIStatementCh=&amp;Qualifier=&amp;CiPhase=&amp;RangeOfApp=&amp;Torg=&amp;LFDos=&amp;Producer=%d0%9d%d0%b0%d1%86%d0%b8%d0%be%d0%bd%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9+%d0%b8%d1%81%d1%81%d0%bb%d0%b5%d0%b4%d0%be%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d1%8c%d1%81%d0%ba%d0%b8%d0%b9+%d1%86%d0%b5%d0%bd%d1%82%d1%80+%d1%8d%d0%bf%d0%b8%d0%b4%d0%b5%d0%bc%d0%b8%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d0%b8+%d0%b8+%d0%bc%d0%b8%d0%ba%d1%80%d0%be%d0%b1%d0%b8%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d0%b8&amp;Recearcher=&amp;sponsorCountry=&amp;MedBaseCount=&amp;CiType=&amp;PatientCount=&amp;OrgDocOut=2&amp;Status=1%2c2%2c3%2c4%2c&amp;NotInReg=0&amp;All=0&amp;PageSize=8&amp;order=numperm&amp;orderType=desc&amp;pagenum=1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 3</a> or phase 2/3 – not clear).</td><td></td></tr><tr><td>Mambisa<br/><em>Protein subunit</em><br/><br/><em>Centre for Genetic Engineering &amp; Biotechnology </em>(<em>CIGB) (Cuba)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/Mambisa%20CIBG%2FBioCubaFarma/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal drops.</td><td><a href="https://rpcec.sld.cu/en/trials/RPCEC00000345-En" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1/2</a>.<br/><br/><a href="https://rpcec.sld.cu/en/trials/RPCEC00000382-En" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1/2</a>.<br/><strong><a href="https://www.prensa-latina.cu/2022/04/27/candidato-vacunal-mambisa-de-cuba-cumple-expectativas-de-estudios" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong> (report of a conference presentation).<br/><br/><a href="https://rpcec.sld.cu/en/trials/RPCEC00000398-En" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 2</a>.</td><td></td><td></td></tr><tr><td>MV-014-212<br/><em>Viral vector</em><br/><em>(RSV)</em><br/><br/><em>Meissa Vaccines (USA)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/MV-014-212%20Meissa%20Vaccines/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal drops or spray. </td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04798001" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><strong><a href="https://www.businesswire.com/news/home/20211028005281/en/Meissa-Announces-Positive-Preliminary-Clinical-Data-on-Safety-and-Immunogenicity-of-Intranasal-COVID-19-Vaccine" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong> (press release).</td><td></td><td></td></tr><tr><td>MVA-SARS-2ST<br/><em>Viral vector (MVA)</em><br/><br/>German Centre for Infection Research (DZIF)/IDT Biologika<br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/MVA-SARS-2S%20German%20Centre%20for%20Infection%20Research%20(DZIF)%2FIDT%20Biologika/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Inhalation.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT05226390" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.</td><td></td><td></td></tr><tr><td>Patria (NDV-HXP-S/AVX-COVID-12-HEXAPRO)<br/><em>Viral vector (Newcastle Disease Virus)</em><br/><br/><em>Laboratorio Avi-Mex (Mexico)</em><br/>(All records on <a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/NDV-HXP-S%2FPatria%20(AVX-COVID-12-HEXAPRO)%20Avimex/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Patria</a>, early development of <a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/NDV-HXP-S%20-%20Icahn%20School%20of%20Medicine%20Mt%20Sinai/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">NDV-HXP-S</a>)<br/><br/></td><td>Intranasal.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04871737" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><strong><a href="https://www.nature.com/articles/s41541-023-00662-6" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong> <em>(previously available in preprint</em>).<br/><br/><a href="https://clinicaltrials.gov/ct2/show/NCT05205746" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 2</a>.<br/><strong><a href="https://avimex.com.mx/noticias-y-eventos/45" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong> (press release).</td><td></td><td><br/></td></tr><tr><td>PRAK-03202<br/><em>Protein subunit</em><br/><br/><em>Oravax (USA) [Oravax was established by OraMed (Israel) to develop this vaccine, using Premas Biotech’s PRAK-03202 and their oral vaccine technology]</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/PRAK-03202%20Oravax%2FOramed/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a> on oral PRAK-03202, and <a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/PRAK%E2%88%9203202%20Premas%20Biotech/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">on intramuscular version</a>)</td><td>Oral.</td><td><a href="https://sanctr.samrc.ac.za/TrialDisplay.aspx?TrialID=5673" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a> (in South Africa).<br/><strong><a href="https://www.prnewswire.com/news-releases/oramed-subsidiary-oravax-reports-positive-preliminary-phase-1-data-for-its-oral-covid-19-vaccine-301643522.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results </a></strong>(press release only).</td><td></td><td></td></tr><tr><td>Razi Cov Pars<br/><em>Protein subunit</em><br/><br/><em>Razi Vaccine &amp; Serum Research Institute (Iran)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/Razi%20Cov%20Pars%20-%20Razi%20Vaccine%20%26%20Serum%20Research%20Institute/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal (third dose after 2 injections).</td><td><a href="https://www.irct.ir/trial/52975" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><strong><a href="https://www.mdpi.com/2076-393X/11/2/455" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong>.<br/><br/><a href="https://www.irct.ir/trial/55238" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 2</a>.<br/><br/><a href="https://www.irct.ir/trial/61378" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1 to 2</a> (in 12-17 year-olds).</td><td>41,128 people in Iran, comparing the 3-dose course to 2-dose inactivated Sinopharm Beijing vax (<a href="https://www.irct.ir/trial/58143" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 3</a>). (Press report of <strong><a href="https://www.farsnews.ir/en/news/14001123000446/Razi-Insie-Chief-Underlines-High-Efficiency-f-Iran-Made-Razi-Cv-Pars" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">results</a></strong>, in the <a href="https://www.tasnimnews.com/fa/news/1400/11/20/2659676/%D8%A7%D8%AB%D8%B1%D8%A8%D8%AE%D8%B4%DB%8C-%D9%88%D8%A7%DA%A9%D8%B3%D9%86-%D8%B1%D8%A7%D8%B2%DB%8C-3-%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1-%D8%B3%DB%8C%D9%86%D9%88%D9%81%D8%A7%D8%B1%D9%85-%D8%A7%D8%B3%D8%AA-%D8%A7%D9%85%DA%A9%D8%A7%D9%86-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D8%AF%D9%88%D8%B2-%D8%A7%D8%B3%D8%AA%D9%86%D8%B4%D8%A7%D9%82%DB%8C-%D8%A8%D9%87-%D8%B9%D9%86%D9%88%D8%A7%D9%86-%D8%AF%D9%88%D8%B2-%D8%B3%D9%88%D9%85-%D9%88%D8%A7%DA%A9%D8%B3%D9%86-%D9%87%D8%A7%DB%8C-%DA%A9%D8%B1%D9%88%D9%86%D8%A7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">first 24,000</a> participants.)</td><td>There were no hospitalizations for Covid in the Razi Cov Pars group and 5 in the Sinopharm group. The rate of Covid was reportedly more than twice as high in the Sinopharm group.</td></tr><tr><td>SC-Ad6-1<br/><em>Viral vector (adenovirus)</em><br/><br/><em>Moat Bio/Tetherex (USA)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/SC-Ad6-1%20Mayo%20Clinic%2FTetherex%20Pharmaceuticals" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Intranasal * and inhaled.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04839042" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/>* Trial expanded to add an inhaled version (from 130 to 190 people). Results so far briefly mentioned in <a href="https://www.prnewswire.com/news-releases/moat-biotechnology-raises-6-5m-in-first-close-for-intranasalinhaled-covid-19-vaccine-301849665.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">press release</a>.</td><td></td><td></td></tr><tr><td>(Unnamed)<br/><em>Inactivated bacteria</em><br/><br/><em>DreamTec (Hong Kong)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/Unnamed%20-%20DreamTec/search/dreamtec/titleCreatorYear/item-list" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Oral.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT05057923" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><a href="https://clinicaltrials.gov/ct2/show/NCT05158855" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><a href="https://clinicaltrials.gov/ct2/show/NCT05239923" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><br/><em>Note: </em>An article of <a href="https://www.mdpi.com/2076-393X/10/11/1852" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">preclinical results has been retracted</a> over lack of ethics committee approval. </td><td></td><td></td></tr><tr><td>VXA-CoV2-1/VXA-CoV2-1.1-S<br/><em>Viral vector</em><br/><em>(adenovirus)</em><br/><br/><em>Vaxart (USA)</em><br/>(<a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/tags/VXA-CoV2-1%20-%20Vaxart/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All records</a>)</td><td>Tablets.</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04563702" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1</a>.<br/><strong><a href="https://www.medrxiv.org/content/10.1101/2022.07.16.22277601v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong>.<br/><br/><a href="https://clinicaltrials.gov/ct2/show/NCT05067933" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 2</a>. (Recruiting: started October 1, 2021.)<br/><strong><a href="https://investors.vaxart.com/news-releases/news-release-details/vaxart-announces-positive-top-line-phase-ii-clinical-study-data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Results</a></strong> (press release).</td><td>Omicron adaptation was developed for an Omicron challenge trial, originally <a href="https://investors.vaxart.com/news-releases/news-release-details/vaxart-announces-positive-top-line-phase-ii-clinical-study-data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">planned</a> for second half of 2023.<br/><br/>This vax is<a href="https://www.proactiveinvestors.co.uk/companies/news/1009235/hvivo-manufactures-omicron-human-challenge-study-1009235.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"> now on hold</a>, as Vaxart is trying to develop an oral pan-betacoronavirus vaccine.</td><td><br/></td></tr></tbody></table></figure>
+
+
+
+
+
+
+
+<p><em><a href="#contents">Back to contents</a></em></p>
+
+
+
+<h2 id="pantable"></h2>
+
+
+
+
+
+
+
+<h4>Addendum 2: <strong><em>Pancoronavirus vaccines with preclinical results</em></strong></h4>
+
+
+
+
+
+
+
+<p>* <em>Indicates new entry since previous update post. </em>  </p>
+
+
+
+
+
+
+
+<figure><table><thead><tr><th>Developer<br/><em>Country</em><br/><br/><em>Vaccine name</em></th><th>Type of:<br/><br/>Vaccine<br/><br/><em>Coronavirus</em></th><th>Preclinical results</th><th>Clinical trial status</th></tr></thead><tbody><tr><td>California Institute of Technology (Caltech)<br/><em>USA</em><br/><br/><em>Mosaic-8b</em></td><td>Protein subunit<br/><br/><em>Beta</em></td><td><a href="https://www.science.org/doi/10.1126/science.abf6840" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/><a href="https://www.biorxiv.org/content/10.1101/2023.02.24.529520v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/><a href="https://www.sciencedirect.com/science/article/pii/S107476132200560X" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/><a href="https://www.science.org/doi/10.1126/science.abq0839" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate, non-primate</a></td><td></td></tr><tr><td>Codiak<br/><em>USA</em><br/><br/><em>exoVACC Pan Beta Coronavirus</em></td><td>Protein subunit<br/><br/><em>Beta</em><br/></td><td><a href="https://www.sciencedirect.com/science/article/pii/S0092867421007972" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Article on development</a><br/><br/>Non-primate (<a href="https://s3.us-east-1.amazonaws.com/codiak-assets.investeddigital.com/publications/Codiak-WVIC-Poster-for-exoVACC-120221-FINAL.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">conference slides</a>)<br/><br/>Non-primate<br/>(<a href="https://s3.us-east-1.amazonaws.com/codiak-assets.investeddigital.com/publications/Codiak-World-Vaccine-Congress-April-20-2022-Final-V2.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">conference slides</a>)</td><td><em>(This company <a href="https://cases.stretto.com/codiak" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">began proceedings</a></em><br/><em>in bankruptcy court. See news.)</em></td></tr><tr><td>DIOSynvax<br/><em>UK</em><br/><br/><em>DIOS-CoVax/<br/>pEVAC-PS</em></td><td>mRNA<br/><br/><em>Sarbeco</em></td><td><a href="https://www.researchsquare.com/article/rs-995273/v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a></td><td><a href="https://www.isrctn.com/ISRCTN87813400" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1 trial</a> (incl. protocol)<br/><em>(Up to 36 participants)</em><br/>Began <a href="https://www.cam.ac.uk/stories/DIOSCoVax_safetytrial" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">December 2021</a>.<br/>Fully recruited.<br/>* <a href="https://www.nihr.ac.uk/news/trials-launched-for-revolutionary-needle-free-coronavirus-vaccine/33575" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Expanded </a>to another city – no trial register entry found.</td></tr><tr><td>Duke University<br/><em>USA</em><br/><br/><em>RBD–scNP</em></td><td>Protein subunit<br/><br/><em>Beta</em><br/></td><td><a href="https://www.nature.com/articles/s41586-021-03594-0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate</a><br/><br/><a href="https://www.nature.com/articles/s41467-022-33985-4" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate, non-primate</a><br/><br/><a href="https://www.biorxiv.org/content/10.1101/2023.05.22.540829v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a></td><td></td></tr><tr><td>Francis Crick Institute<br/><em>UK</em><br/><br/><em>(Unnamed)</em></td><td>Protein subunit with DNA boost<br/><br/><em>All</em></td><td><a href="https://www.science.org/doi/10.1126/scitranslmed.abn3715" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a></td><td></td></tr><tr><td>Fudan University<br/><em>China</em><br/><br/><em>CF501</em></td><td>Protein subunit<br/><br/><em>Sarbeco</em></td><td><a href="https://www.nature.com/articles/s41422-022-00612-2" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate, non-primate</a><br/><br/><a href="https://www.nature.com/articles/s41422-022-00631-z" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate</a><br/><br/><a href="https://www.pnas.org/doi/full/10.1073/pnas.2221713120" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate</a></td><td></td></tr><tr><td>Inserm Vaccine Research Institute<br/><em>France</em><br/><br/><em>CD40.CoV2</em></td><td>Protein subunit<br/><em>Sarbeco</em></td><td><a href="https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(22)00243-2/fulltext" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/>* <a href="https://www.nature.com/articles/s41467-021-25382-0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate, non-primate</a><br/><br/><a href="https://elifesciences.org/articles/75427" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate</a><br/><br/>* <a href="https://www.croiconference.org/wp-content/uploads/sites/2/posters/2023/CROI-Poster-Nguema020223-133204312648122137.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a> <em>(conference poster)</em></td><td></td></tr><tr><td>* Oragenics/Inspirevax/ National Research Council of Canada<br/><em>USA, Canada</em><br/><br/><em>NT-CoV2-1</em></td><td>Protein subunit<br/>(Intranasal)<br/><em>All</em></td><td><a href="https://www.nature.com/articles/s41598-021-01363-7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a> <em>(original vax)</em><br/><br/><a href="https://www.nature.com/articles/s41598-022-13819-5" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a> <em>(original vax)</em></td><td></td></tr><tr><td>Pennsylvania State University<br/><em>USA</em><br/><br/><em>(Unnamed)</em></td><td>Protein subunit<br/><br/><em>All</em></td><td><a href="https://onlinelibrary.wiley.com/doi/10.1002/adfm.202206055" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a></td><td></td></tr><tr><td>Scripps Research Institute<br/><em>USA</em><br/><br/><em>(Unnamed)</em></td><td>Protein subunit<br/><br/><em>Beta</em></td><td><br/><br/><a href="https://www.science.org/doi/10.1126/sciadv.abj3107" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a></td><td></td></tr><tr><td>SK Bioscience/ Uni of Washington/Uni of North Carolina at Chapel Hill<br/><em>South Korea, USA</em><br/><br/><em>GBP511</em></td><td>Protein subunit<br/><br/><em>Sarbeco</em></td><td><a href="https://www.science.org/doi/epdf/10.1126/scitranslmed.adg7404" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate, non-primate</a> <em>(testing Covid vaccine GBP510 against other sarbecoviruses)</em><br/></td><td><em>(<a href="https://cdn.who.int/media/docs/default-source/blue-print/dev_sk-biosciences_king_whoconsultation_pan-sarbecovirus_28jan2022.pdf?sfvrsn=53bc4a23_7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">More on plans for adapting this vaccine</a> – GBP510 authorized as SKYCovione.)</em></td></tr><tr><td>University of California Irvine<br/><em>USA</em><br/><br/><em>(Unnamed)</em></td><td>Viral vector<br/><br/><em>Beta</em></td><td><a href="https://www.biorxiv.org/content/10.1101/2023.05.24.541850v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/><a href="https://www.biorxiv.org/content/10.1101/2023.05.23.542024v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a> (mucosal)<br/><br/><em>(There was also a paper about this vaccine’s development <a href="https://journals.aai.org/jimmunol/article/206/11/2566/234252/Genome-Wide-B-Cell-CD4-and-CD8-T-Cell-Epitopes" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">in 2021</a>.)</em></td><td></td></tr><tr><td>University of North Carolina at Chapel Hill<br/><em>USA</em><br/><br/><em>(Unnamed)</em></td><td>Viral vector<br/><br/><em>Sarbeco</em></td><td><a href="https://www.biorxiv.org/content/10.1101/2022.11.28.518175v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a></td><td></td></tr><tr><td>University of Toronto<br/><em>Canada</em><br/><br/><em>(Unnamed)</em></td><td>Protein subunit<br/><br/><em>Sarbec</em>o</td><td><a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(23)00402-3" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a></td><td></td></tr><tr><td>University of Wisconsin-Madison (PanCorVac)<br/><em>USA</em><br/><br/><em>(Unnamed)</em></td><td>Protein subunit<br/><br/><em>All</em></td><td><a href="https://www.nature.com/articles/s42003-021-02128-8" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/><a href="https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(22)00523-0/fulltext" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/></td><td></td></tr><tr><td>VBI Vaccines<br/><em>Canada</em><br/><br/><em>VBI-2901</em></td><td>eVLP<br/><br/><em>All</em></td><td><a href="https://www.biorxiv.org/content/10.1101/2021.09.28.462109v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/><a href="https://www.vbivaccines.com/press-releases/new-data-and-progress-of-vbi-2900-coronavirus-program/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a> (Press release)<br/></td><td><a href="https://clinicaltrials.gov/ct2/show/NCT05548439" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1 trial</a><br/><em>(103 participants)</em><br/>Began October 2022.<br/>Fully recruited.<br/>(<a href="https://cdn.who.int/media/docs/default-source/blue-print/dev_vbi-vaccines_whoconsultation_pan-sarbecovirus_28jan2022.pdf?sfvrsn=2b17ebb1_12" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Further background info</a>.)</td></tr><tr><td>Walter Reed Army Institute of Research (WRAIR)<br/><em>USA</em><br/><br/><em>SpFN</em> <em>1B-06-PL</em></td><td>Protein subunit<br/><br/><em>Beta</em></td><td><a href="https://www.nature.com/articles/s41541-021-00392-7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/><a href="https://www.nature.com/articles/s41541-021-00414-4" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/><a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(21)01639-9" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a> (incl RFN)<br/><br/><a href="https://www.nature.com/articles/s41541-023-00638-6" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/><a href="https://www.science.org/doi/10.1126/scitranslmed.abi5735" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate</a><br/><br/><a href="https://www.mdpi.com/2076-393X/10/5/717" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate</a><br/><br/><a href="https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(23)00128-3" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate</a> (with J&amp;J vax)</td><td><a href="https://clinicaltrials.gov/ct2/show/NCT04784767" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Phase 1 trial</a><br/><em>(29 participants)</em><br/>Began April 2021.<br/>Results <a href="https://www.defenseone.com/technology/2021/12/us-army-creates-single-vaccine-effective-against-all-covid-sars-variants/360089/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">described</a> as “positive” – no data reported yet.<br/><a href="https://cdn.who.int/media/docs/default-source/blue-print/9.-modjarrad_vaccine-strategies_r-d-who-consultation_march-25-2020.pdf?sfvrsn=b7d46cdf_7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Additional detail</a> on phase 1 trial.</td></tr><tr><td>Walter Reed Army Institute of Research (WRAIR)<br/><em>USA</em><br/><br/><em>RFN</em></td><td>Protein subunit<br/><br/><em>Beta</em></td><td><a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(21)01639-9" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a> (incl SpFN)<br/><br/><a href="https://www.pnas.org/doi/10.1073/pnas.2106433118" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Primate</a></td><td></td></tr><tr><td>Yale University<br/><em>USA</em><br/><br/><em>(Unnamed)</em></td><td>mRNA<br/><br/><em>All</em></td><td><a href="https://www.nature.com/articles/s41467-022-30878-4" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a><br/><br/><a href="https://www.biorxiv.org/content/10.1101/2022.05.07.491038v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a></td><td></td></tr><tr><td>Yale University/Xanadu Bio<br/><em>USA</em><br/><br/><em>(Unnamed)</em></td><td>Protein subunit, intranasal booster<br/><br/><em>Sarbeco</em></td><td><a href="https://www.science.org/doi/10.1126/science.abo2523" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Non-primate</a></td><td></td></tr></tbody></table></figure>
+
+
+
+
+
+
+
+<p><em><a href="#contents">Back to contents</a></em></p>
+
+
+
+
+
+
+
+<h2 id="definitions"></h2>
+
+
+
+
+
+
+
+<h4><em>Addendum 3:</em> Definitions of vaccine types</h4>
+
+
+
+
+
+
+
+<ul><li>Mucosal vaccines: These enter the body the way the virus does – through mucosal tissues. It’s hoped that provides defence against infection. They can be administered via different routes – squirts or drops in the nose, inhaled through the mouth through a nebulizer (similar to an asthma medication), or in tablet, capsule, or sublingual form.</li><li>Pan-SARS-CoV-2 or “variant-proof” vaccines: These aim to provide protection against any variant of the coronavirus that causes Covid-19 – including future variants.</li><li>Pancoronavirus can be targeted to:<ul><li>the “subgroup” the 2 SARS viruses came from (the sarbecovirus subgenus),</li><li>coronaviruses from the next level up (the genus, betacoronavirus, which includes lethal diseases like MERS, as well as common cold viruses), or</li><li>the whole coronavirus family – it has 4 genuses, including betacoronavirus and alphacoronavirus (with more common cold viruses).</li></ul></li></ul>
+
+
+
+<p>I classify a vaccine as a pancoronavirus one when the developers are explicitly targeting coronaviruses more broadly than SARS-CoV-2, and have tested for signs of response to non-SARS-CoV-2 coronavirus(es) (or clearly plan to).</p>
+
+
+
+
+
+
+
+<p><em><a href="#contents">Back to contents</a></em></p>
+
+
+
+
+
+
+
+<p><em>You can keep up with my work at my newsletter, <a href="https://hildabastian.wordpress.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Living With Evidence</a>. And I’m active on Mastodon: <a href="https://mastodon.online/@hildabast" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">@hildabast@mastodon.online</a> </em></p>
+
+
+
+
+
+
+
+<p>~~~~</p>
+
+
+
+
+
+
+
+<p><em>For details on how I track Covid vaccine progress, see my <a href="https://absolutelymaybe.plos.org/2023/05/01/a-process-update-on-covid-vaccine-tracking/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">background post</a>.</em> <em>Notes</em> <em>on my collection of studies are <a href="https://absolutelymaybe.plos.org/2022/01/26/boosters-and-mixed-schedules-covid-vaccines-at-the-2-year-mark-part-1/#collection" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a>. The collection is in a public Zotero library you can dig into <a href="https://www.zotero.org/groups/2528572/covid-19_vaccine_results/library" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a>.</em></p>
+
+
+
+<p><strong><em>Previous update posts on next generation Covid vaccines:</em></strong></p>
+
+
+
+<ol><li>Mucosal vaccines (<a href="https://absolutelymaybe.plos.org/2022/03/30/the-race-to-reduce-covid-19-transmission-an-update-on-66-intranasal-6-oral-vaccines/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">March 2022</a>)</li><li>Pan-SARS-Cov-2 and pancoronavirus (<a href="https://absolutelymaybe.plos.org/2022/07/09/front-runners-in-the-race-for-variant-proof-and-all-coronavirus-vaccines/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">July 2022</a>)</li><li>Mucosal vaccines (<a href="https://absolutelymaybe.plos.org/2022/07/31/next-generation-covid-vaccine-update-intranasal-other-mucosal-vaxes/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">July 2022</a>)</li><li>Mucosal vaccines (<a href="https://absolutelymaybe.plos.org/2022/09/29/intranasal-co-a-very-big-month-for-mucosal-covid-vaccines/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">September 2022</a>)</li><li>Mucosal vaccines (<a href="https://absolutelymaybe.plos.org/2023/04/21/progress-on-intranasal-oral-covid-vaccines-plus-a-us-government-funding-boost/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">April 2023</a>)</li><li>Pancoronavirus vaccines (<a href="https://absolutelymaybe.plos.org/2023/04/26/pancoronavirus-vaccines-update-lots-of-preclinical-results-another-trial-underway/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">April 2023</a>)</li></ol>
+
+
+
+<p><strong><em><a href="https://absolutelymaybe.plos.org/?post_tag=covid-19-vaccine-race" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><br/></a></em></strong><em><a href="https://absolutelymaybe.plos.org/?post_tag=covid-19-vaccine-race" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All my Absolutely Maybe Covid-19 vaccine posts</a></em></p>
+
+
+
+<p><em><a href="https://absolutelymaybe.plos.org/?category=covid-19" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">All previous Covid-19 posts at Absolutely Maybe</a></em></p>
+
+
+
+<p><em>My posts</em> <em><a href="https://www.theatlantic.com/author/hilda-bastian/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">at The Atlantic</a>, </em><a href="https://www.wired.com/author/hilda-bastian/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><em>at WIRED</em></a><em>, and debunking posts <a href="http://hildabastian.net/index.php/covid-19" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">at my personal website</a>.</em></p>
+
+
+
+<p><em>Disclosures: My interest in Covid-19 vaccine trials is as a person worried about the virus, as my son is immunocompromised: I have no financial or professional interest in the vaccines. I have worked for an institute of the NIH in the past, but not the one working on vaccines (<a href="https://www.niaid.nih.gov/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">NIAID</a>). <a href="https://blogs.plos.org/absolutely-maybe/about-hilda-bastian/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">More about me</a>.</em></p>
+
+
+
+<p><em>The cartoons are my own <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">(CC BY-NC-ND license)</a></em>. <em>(More cartoons at <a href="http://statistically-funny.blogspot.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Statistically Funny</a>.)</em></p>
+
+
+
+
+
+
+
+<p></p>
+
+<p>The post <a href="https://absolutelymaybe.plos.org/2023/06/29/this-months-progress-in-next-generation-covid-vaccines-update-8/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">This Month’s Progress in Next Generation Covid Vaccines (Update 8)</a> appeared first on <a href="https://absolutelymaybe.plos.org" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Absolutely Maybe</a>.</p>

@@ -1,0 +1,21 @@
+<p><a href="https://snuffleupagus.readthedocs.org" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img alt="snuffleupagus logo" src="https://reader.miniflux.app/proxy/ogqvs-l7RNvHYNxTPto3bJA0bQiOka2XinPZLwt4mEY=/aHR0cHM6Ly9kdXN0cmkub3JnL2IvaW1hZ2VzL3NwLnBuZw==" loading="lazy"/></a></p>
+<p>I just published a new release of
+<a href="https://github.com/jvoisin/snuffleupagus/releases/tag/v0.10.0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Snuffleupagus</a>,
+the hardening module for php7+ and php8+,
+version <code>0.9.0</code>, codename &#34;Babar the Elephant&#34;,
+named the <a href="https://en.wikipedia.org/wiki/Babar_the_Elephant" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">eponymous character</a>.
+The main new feature is the PHP8.3 support, but there are a couple of
+quality-of-life improvements for people using Snuffleupagus with fuzzers as
+well.</p>
+<h3>Changelog</h3>
+<ul>
+<li>Compatibility with PHP8.3</li>
+<li>Add <code>sp.log_max_len</code> to limit the maximum size of the log messages</li>
+<li>Add an example configuration for Xenforo 2.2.12 </li>
+<li>Url encode functions arguments when logging them</li>
+<li>Fix a possible NULL-byte truncation when outputting parameters in the logs</li>
+<li>Make <code>readonly_exec</code> play nice on readonly filesystems </li>
+</ul>
+<p>As usual, if you want to help, we have some
+<a href="https://github.com/jvoisin/snuffleupagus/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">low hanging fruits</a> ♥</p>
+<p>See you in your PHP stack!</p>

@@ -1,0 +1,17 @@
+<p>I don&#39;t know if this is a bug, or just the way the world works now.</p>
+<p>Several of the people who live in my phone use artistic black and white headshots. They look very cool. But my Android phone shows their image with inverted colours - so they look like pure shite.</p>
+<p>Here&#39;s what my very real human girlfriend looks like when I ring her to go for brunch:<br/>
+<img src="https://reader.miniflux.app/proxy/sHP8CXfZRW7KdYUJeWwms9ySIUToABu19hBoOgIB-M8=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL05vcm1hbC1NTS1mczgucG5n" alt="Screenshot of the Android contacts app. A black and white photo of Marylin Monroe is featured." width="540" height="674" loading="lazy"/></p>
+<p>Come the evening, my phone switches to Dark Mode™ - so this is what she looks like when I ring her for a late-night booty call:<br/>
+<img src="https://reader.miniflux.app/proxy/XaSo9ok2h-vPzCEVwnaoZTvHyyEhCF9qSLgbzPQO218=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL0ludmVydGVkLU1NLWZzOC5wbmc=" alt="Monochrome photo of Marylin Monroe. The colours have been inverted and it looks rubbish." width="540" height="674" loading="lazy"/></p>
+<p>What&#39;s causing this? And is it expected behaviour?</p>
+<p>I&#39;m running <code>com.android.contacts</code> version 1.7.34 which <a href="https://android.googlesource.com/platform/packages/apps/Contacts/+/refs/heads/master/AndroidManifest.xml" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">appears to be the latest version</a> of the AOSP contacts app. It&#39;s bundled with LineageOS.</p>
+<h2 id="demo"><a href="#demo">Demo</a></h2>
+<p>If you&#39;re not lucky enough to be dating Marylin Monroe, here&#39;s a demo image for you to try:</p>
+<p><img src="https://reader.miniflux.app/proxy/GHd6I5UDhNG7lePOqMO0nHKYmXdLZOJyNWFTbI55qTM=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL21vbm9jaHJvbWV0ZXN0LmpwZw==" alt="A white square with the words &#34;monochrome test&#34; printed in black text." width="274" height="274" loading="lazy"/></p>
+<h2 id="is-this-expected-behaviour"><a href="#is-this-expected-behaviour">Is this expected behaviour?</a></h2>
+<p>Based on some quick tests, it appears that the contacts app will invert some monochrome images when it thinks there&#39;s &#34;too much&#34; bright white in the image.</p>
+<p>Interestingly, the contacts list doesn&#39;t invert avatars when in Dark Mode.</p>
+<p><img src="https://reader.miniflux.app/proxy/A70tp94n_iKXLAXZ_A1XCsLquQZ0S71REanaq7X6kSk=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL0NvbnRhY3RzLWxpc3Qtdmlldy1mczgucG5n" alt="Screenshot of Android&#39;s contacts list. A black background - but the photo of Marylin is normal." width="606" height="336" loading="lazy"/></p>
+<p>And... I don&#39;t know if I want this to happen.  I guess that most people who use Dark Mode want to avoid blinding bright white light searing into their precious eyeballs. But, presumably, they don&#39;t want the photos of their friends inverted into a weird artefact-ridden mess?</p>
+<p>So, before I get lost in Google&#39;s Kafka-esque bug reporting process - do <em>you</em> think this is expected or desirable behaviour?</p>

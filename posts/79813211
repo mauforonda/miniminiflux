@@ -1,0 +1,178 @@
+<h2 id="introduction">Introduction</h2>
+
+<p>Reusing pre-trained models often saves training costs. In the current large-scale paradigm, foundation models are routinely re-used by fine-tuning a general foundation model on specific tasks (<a href="#bib:bommasani2022opportunities">Bommasani et al. 2022</a>). But it is also possible to save costs by re-using an older foundation model to train a newer foundation model. Let’s call this practice “foundation model recycling”, which can be distinguished from the more general phenomenon of model re-use (<a href="#bib:jiang2023empirical">Jiang et al. 2023</a>). This short report investigates the benefits and implications of recycling foundation models.</p>
+
+<p>There appear to be two general ways of recycling foundation models. The first method is by employing a student-teacher setup with the older model as a teacher for at least some time during training. In deep reinforcement learning, this method is generally known as kickstarting, and helps cut down on training costs by providing a dense reward signal during the early stages of training (<a href="#bib:schmitt2018kickstarting">Schmitt et al. 2018</a>). The second method is to augment the older model with a modified architecture or learning algorithm, possibly making it larger and training it for longer or on different data. This could involve, for example, pruning the old model and using the pruned model as one component in the new model (e.g. <a href="#bib:qi2023reusing">Qi et al. 2023</a>).</p>
+
+<p>If model recycling is generally useful and becomes widely adopted as a result, we can anticipate some major consequences:</p>
+
+<ul>
+  <li>
+    <p>a general increase in the performance for SOTA (state of the art) models. Training compute expended on earlier models can partially substitute for the compute needed in subsequent training runs.</p>
+  </li>
+  <li>
+    <p>early models that are repeatedly recycled may influence the properties of later SOTA models. If this happens, current development might have greater leverage over the properties of future models than we might have otherwise thought, which may be an important consideration for AI safety.</p>
+  </li>
+  <li>
+    <p>it may become harder to train SOTA models unless one has access to the previous SOTA models.</p>
+  </li>
+</ul>
+
+<p>In this report, I study the benefit of model recycling. The primary result is that the benefits of model recycling are small. Although the benefits of model recycling add up over time, the effect is linear and thus only provides a minor benefit compared to the exponential growth in compute budgets and algorithmic progress that we’ve observed historically.</p>
+
+<p>More specifically, if compute budgets (in FLOP) increase by a factor of \(r\) each year, then the ratio of physical compute available in year \(T\) to the sum of compute over all years is given by \(\frac{C_0 r^T}{\sum_{t=0}^T C_0 r^t} =\frac{r-1}{r^{T+1}-1} \cdot r^T\). For large \(T\), this ratio approaches \((r-1)/r\), which is close to \(1\) for realistic values of \(r\), see <a href="#tab:speedups">Table 1</a>.</p>
+
+
+
+<table>
+  <caption>Table 1: Maximum compute multiplier for various growth rates of the effective compute budget used to train foundation models. We consider current physical compute growth rates, the growth rates at a fixed level of investment and the effect of algorithmic progress in both situations. We have taken the growth rates from <a href="#bib:epoch2023pcdtrends">Epoch 2022</a>. The compute multiplier is the effective multiple on compute for a training run as a result of model recycling, or in other words, the multiple of compute required to obtain the same performance without recycling.</caption>
+  <thead>
+      <tr>
+          <th>Considered growth rate</th>
+          <th>Growth rate</th>
+          <th>Recycling advantage</th>
+      </tr>
+  </thead>
+  
+      <tbody><tr>
+          <td>Current compute increase</td>
+          <td>4.2x/year</td>
+          <td>1.3x</td>
+      </tr>
+      <tr>
+          <td>Hardware efficiency</td>
+          <td>1.3x/year</td>
+          <td>4.1x</td>
+      </tr>
+      <tr>
+          <td>Current compute increase + Software efficiency</td>
+          <td>10.5x/year</td>
+          <td>1.1x</td>
+      </tr>
+      <tr>
+          <td>Hardware efficiency + Software efficiency</td>
+          <td>3.3x/year</td>
+          <td>1.4x</td>
+      </tr>
+  
+</tbody></table>
+
+<p>In fact, there may be no benefit at all from augmenting old models with new algorithms if inefficiencies in the older models deteriorate future performance. This result is plausible because model augmentation implicitly recycles old architectures, which may learn more slowly than newer architectures, decreasing our ability to take advantage of algorithmic progress. Both of these approaches will be considered in more detail in the rest of this report.</p>
+
+<h2 id="modeling-model-recycling">Modeling model recycling</h2>
+
+<p>As explained previously, we can distinguish between two forms of model recycling.</p>
+
+<ol>
+  <li>
+    <p>Kickstarting, in which a student model learns from the outputs of an older teacher model. This technique is generally beneficial because it provides a high-quality, dense reward signal during the initial stages of training (<a href="#bib:schmitt2018kickstarting">Schmitt et al. 2018</a>).</p>
+  </li>
+  <li>
+    <p>Model augmentation, in which an older model is augmented with new algorithms, such as a newer optimizer, or an additional recurrent layer, and trained for longer or with different data (e.g. <a href="#bib:qi2023reusing">Qi et al. 2023</a>).</p>
+  </li>
+</ol>
+
+<p>These approaches differ by what is being recycled. In the first approach, knowledge is recycled and distilled into the new model; in the second approach, the model weights themselves are recycled.</p>
+
+<p>Both approaches promise some efficiency benefits when performed over few iterations. However, since model augmentation involves recycling model weights, it also carries the risk of deteriorating performance. The reason is that recycling model weights implicitly recycles old architectures, which may learn more slowly than newer architectures. As a consequence, it appears that kickstarting, rather than model augmentation, will be more beneficial, especially over long sequences in which models are repeatedly recycled. At the same time, kickstarting comes with its own defects. Since kickstarting requires re-learning what was already known, it is more wasteful than model augmentation. These costs and benefits are worth considering in detail.</p>
+
+<p>In each case, we assume that the goal of model recycling is to increase adjusted compute, defined as the hypothetical amount of compute that would be required to train a model from scratch to reach the same level of performance that the actual model reached during training while employing model recycling. The value of model recycling is measured by the ratio of adjusted compute to real compute \(A/C\), which is beneficial when \(A/C &gt; 1\).</p>
+
+<h3 id="kickstarting">Kickstarting</h3>
+
+<p>At the core of kickstarting is the idea of training a new model using the outputs of a previous model, so that it can more quickly reach a baseline level of performance than if it trained from scratch. The rate at which it can reach this baseline level of performance determines the benefits. In the original paper on kickstarting, it was claimed that kickstarting can help the new model learn to a baseline level in as few as 10 percent the number of total training steps compared to learning from scratch (<a href="#bib:schmitt2018kickstarting">Schmitt et al. 2018</a>).</p>
+
+<p>Let’s sketch a model of model recycling using kickstarting. During the first training iteration, a model is trained from scratch with adjusted compute equal to real compute \(C_1 = A_1\). During each subsequent iteration (which will happen once per year), the real compute budget will grow at a constant rate \(r\). The amount of adjusted compute during each subsequent iteration is equal to the real compute allocated for that run, plus the amount of adjusted compute during the previous training run multiplied by a re-use efficiency parameter \(0 \leq \alpha \leq 1\). In summary, \(C_n = rC_{n - 1}, n &gt; 1\) \(A_1 = C_1\) \(A_n = C_n + \alpha A_{n - 1}\) The starting compute \(C_1\) does not affect the benefit of model recycling in this model. Instead the benefit is determined solely by \(r\) and \(\alpha\). The benefit, as measured by \(A/C\), is plotted below after effectively infinite iterations (years) in <a href="#fig:fig_1">Figure 1</a>.</p>
+
+<figure>
+  <img src="https://reader.miniflux.app/proxy/ROQZM-z6qtK-fQsqpz-RCvec8G2V93o0x9s8D1y2EqE=/aHR0cHM6Ly9lcG9jaGFpLm9yZy9hc3NldHMvaW1hZ2VzL3Bvc3RzLzIwMjMvdGhlLWxpbWl0ZWQtYmVuZWZpdC1vZi1yZWN5Y2xpbmctZm91bmRhdGlvbi1tb2RlbHMvYmVuZWZpdF9vZl9raWNrc3RhcnRpbmdfbm9fcmVzdHJpY3Rpb24uc3Zn" loading="lazy"/>
+  <figcaption>
+    <p>Figure 1: The benefit of kickstarting, as measured by the ratio of adjusted compute to real compute after effectively infinite iterations under various possible settings of the rate of growth of compute budgets \(r\) and the re-use efficiency \(\alpha\).</p>
+  </figcaption>
+</figure>
+
+<p>The benefit is increased after each iteration. However, this sequence quickly converges for most choices of \(r\) and \(\alpha\), as illustrated in <a href="#fig:fig_2">Figure 2</a>.</p>
+
+<figure>
+  <img src="https://reader.miniflux.app/proxy/iZC__8CYJz9uQIq4OhQNXZV17Tex2kpDttyo50ZjSDI=/aHR0cHM6Ly9lcG9jaGFpLm9yZy9hc3NldHMvaW1hZ2VzL3Bvc3RzLzIwMjMvdGhlLWxpbWl0ZWQtYmVuZWZpdC1vZi1yZWN5Y2xpbmctZm91bmRhdGlvbi1tb2RlbHMvYmVuZWZpdF9vZl9raWNrc3RhcnRpbmdfYXNfaXRlcmF0aW9uc19pbmNyZWFzZXMuc3Zn" loading="lazy"/>
+  <figcaption>
+    <p>Figure 2: The benefit of kickstarting after repeated variations under various possible settings of the rate of growth of compute budgets \(r\) and the re-use efficiency \(\alpha\).</p>
+  </figcaption>
+</figure>
+
+<p>So far, this model has not accounted for algorithmic progress, which can only yield more modest results. Algorithmic progress refers to the trend of algorithms requiring less compute or data to reach the same level of performance as previous algorithms. There seem to be two ways of incorporating algorithmic progress in this model: we can either (1) decrease our estimate of the re-use efficiency, \(\alpha\), as a result of better algorithms requiring less time to reach the same baseline level of performance compared to older algorithms, or (2) replace real compute with <em>effective</em> compute, which is adjusted for algorithmic progress and grows faster as a result. In either case, we can re-use the results obtained in <a href="#fig:fig_1">Figure 1</a> and <a href="#fig:fig_2">Figure 2</a>, while keeping in mind an adjustment for algorithmic efficiency.</p>
+
+<p>For example, <a href="#bib:erdil2023algorithmic">Erdil and Besiroglu 2023</a> estimated that algorithmic progress increases effective compute in computer vision at a rate of roughly 150% per year. <a href="#bib:sevilla2022compute">Sevilla et al. 2022</a> estimated that the current trend for the compute for the largest training runs to grow at a rate of 130% per year. Combining these together yields a rate of growth of effective compute of 475% per year. It is easy to see that at such an extreme rate of growth, it is impossible for the benefit ratio to exceed even 1.5, which is a modest benefit considering the fact that training runs have historically grown by orders of magnitude over just a few years. This pessimistic conclusion is even stronger in the case of model augmentation.</p>
+
+<figure>
+  <img src="https://reader.miniflux.app/proxy/pD95IKuA2t42TIf8yQsn1iHQ1gM714aA1IQ9x70CM_k=/aHR0cHM6Ly9lcG9jaGFpLm9yZy9hc3NldHMvaW1hZ2VzL3Bvc3RzLzIwMjMvdGhlLWxpbWl0ZWQtYmVuZWZpdC1vZi1yZWN5Y2xpbmctZm91bmRhdGlvbi1tb2RlbHMvY29udHJpYnV0aW9uX2Zyb21fa2lja3N0YXJ0aW5nX2FzX2l0ZXJhdGlvbnNfaW5jcmVhc2Uuc3Zn" loading="lazy"/>
+  <figcaption>
+    <p>Figure 3: The contribution to adjusted compute from kickstarting for values of \(\alpha=0.9\) and a rate of increase in effective compute of \(380\%\), where each year is one iteration.</p>
+  </figcaption>
+</figure>
+
+<h3 id="model-augmentation">Model augmentation</h3>
+
+<p>The central idea of model augmentation is that the model weights are re-used to train a new model rather than purely extracting knowledge from the previous model. However, since model weights intrinsically depend on the architectural details of a model for example, if one was re-using the weights for a convolutional layer model augmentation implicitly recycles old algorithms.</p>
+
+<p>Some architectural algorithms have been found to be better at learning certain tasks. For instance, it has been found that self-attention is better suited for language prediction tasks compared to convolutional networks, at least above a certain scale (<a href="#bib:tay2022scaling">Tay et al. 2022</a>). Re-using older, less efficient algorithms will therefore have the effect of deteriorating performance, which compounds over time as algorithmic progress continues.</p>
+
+<p>To model the process of model augmentation, let’s assume that re-using model weights only lets us take partial advantage of algorithmic progress \(P\), which acts as a multiplier on real compute and grows exogenously at rate \(g\) as a result of machine learning research. The parameter \(\beta\) determines the fraction of new algorithmic progress that we can take advantage of during each iteration \(i\). We set up the model according to the following equations.</p>
+
+<p>Just as before, we assume that compute grows exogenously at some rate \(r\). \(C_n = rC_{n - 1}, n &gt; 1\) And we assume that the adjusted compute starts at the level of the training compute during the first iteration. \(A_1 = C_1\) However, this time we include a parameter that sets algorithmic efficiency, which grows at rate \(g\). \(P_1 = 1\) \(P_n = gP_{n - 1}\) The adjusted compute during each iteration is equal to the real compute during that iteration multiplied by the algorithmic efficiency times \(\beta\), plus the adjusted compute from the last iteration. \(A_n = \beta P_n C_n + A_{n-1}\) This last equation implies that the adjusted compute could grow more slowly than effective compute, or \(P_n C_n\). In this case, it is often preferable to train from scratch since the decrease in performance from values of \(\beta &lt; 1\) ends up deteriorating performance for even relatively small values of \(n\). Some simulations of model augmentation under various parameter settings are shown in <a href="#fig:fig_4">Figure 4</a>. In fact, unless the re-use efficiency \(\beta\) is very close to \(1\) or the number of iterations is very small, the benefits to model augmentation appear modest or counterproductive in almost all cases. For this reason, it seems reasonable to expect that people will not employ model augmentation for more than a few iterations, if at all.</p>
+
+
+
+
+  <figure>
+    <img src="https://reader.miniflux.app/proxy/3AmkUb__o2ZrDDF51V654KR_HQKwaT7n7t-QWYSSEFk=/aHR0cHM6Ly9lcG9jaGFpLm9yZy9hc3NldHMvaW1hZ2VzL3Bvc3RzLzIwMjMvdGhlLWxpbWl0ZWQtYmVuZWZpdC1vZi1yZWN5Y2xpbmctZm91bmRhdGlvbi1tb2RlbHMvYmVuZWZpdF9vZl9hdWdtZW50YXRpb24tMi4wLTIuc3Zn" loading="lazy"/>
+    <figcaption>a)</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://reader.miniflux.app/proxy/F1gXF8Ei7zALD5-pM2mln5JIB95Td0aiMdPESqfEhu8=/aHR0cHM6Ly9lcG9jaGFpLm9yZy9hc3NldHMvaW1hZ2VzL3Bvc3RzLzIwMjMvdGhlLWxpbWl0ZWQtYmVuZWZpdC1vZi1yZWN5Y2xpbmctZm91bmRhdGlvbi1tb2RlbHMvYmVuZWZpdF9vZl9hdWdtZW50YXRpb24tMi4wLTUuc3Zn" loading="lazy"/>
+    <figcaption>b)</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://reader.miniflux.app/proxy/gAkthe5dbUBswyH3ukYGyCi-odBE2dnoFKF5XWhfFoY=/aHR0cHM6Ly9lcG9jaGFpLm9yZy9hc3NldHMvaW1hZ2VzL3Bvc3RzLzIwMjMvdGhlLWxpbWl0ZWQtYmVuZWZpdC1vZi1yZWN5Y2xpbmctZm91bmRhdGlvbi1tb2RlbHMvYmVuZWZpdF9vZl9hdWdtZW50YXRpb24tNC4wLTIuc3Zn" loading="lazy"/>
+    <figcaption>c)</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://reader.miniflux.app/proxy/UXSD4Gw1SF2mHTBEPAjd6oc32NKUXQP-P91ajZXz3U0=/aHR0cHM6Ly9lcG9jaGFpLm9yZy9hc3NldHMvaW1hZ2VzL3Bvc3RzLzIwMjMvdGhlLWxpbWl0ZWQtYmVuZWZpdC1vZi1yZWN5Y2xpbmctZm91bmRhdGlvbi1tb2RlbHMvYmVuZWZpdF9vZl9hdWdtZW50YXRpb24tNC4wLTUuc3Zn" loading="lazy"/>
+    <figcaption>d)</figcaption>
+  </figure>
+
+
+<h2 id="discussion">Discussion</h2>
+
+<p>In light of the modest benefits of both kickstarting and model augmentation, it seems likely that neither approach will increase the efficiency of large training runs for future large foundation models by more than a small degree. As a result, none of the anticipated effects of model recycling should be large either. To the extent that model recycling will still be employed, kickstarting appears more likely to be adopted compared to model augmentation, given that it permits researchers to upgrade algorithms while re-using knowledge obtained by models from prior training runs.</p>
+
+<p>Nonetheless, one consideration that these simple models do not take into account is the degree to which algorithmic progress is endogenous, or caused by the scale-up of models themselves. Algorithmic progress could be endogenous if ML models themselves play a role in AI research, which may already be happening to a limited degree from limited AI tools like GitHub Copilot (<a href="#bib:morris2023scientists">Morris 2023</a>). If performance via model recycling accelerates algorithmic progress, then the performance-enhancing effect of model recycling could be stronger than this simple analysis shows. It is an open question whether endogenizing hi algorithmic progress in these models significantly changes the overall conclusion that model recycling will have modest effects, or whether the pessimistic conclusion remains.</p>
+
+<p>Future research could also focus on creating more realistic models by estimating the re-use efficiency parameter more accurately, and providing better estimates of the rate of algorithmic progress. It is possible that re-use efficiency depends on factors such as model scale and algorithmic progress, and therefore may not be constant over time, as was assumed in this analysis. Alternative methods of recycling foundation models may also be identified that do not neatly fall into the two categories of kickstarting or model augmentation. Finally, this report focuses almost exclusively on model recycling from a theoretical perspective; the details for how to best recycle foundation models is a topic for future research.</p>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+
+<p>I want to thank Jaime Sevilla, Tamay Besiroglu, Pablo Villalobos, Tom Davidson, and Ben Cottier for helpful comments on this report.</p>
+
+<h3 id="references">References</h3>
+
+<p>Bommasani, Rishi et al. (2022). On the Opportunities and Risks of Foundation Models. arXiv: <a href="https://arxiv.org/abs/2108.07258" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2108.07258 [cs.LG]</a>.</p>
+
+<p>Epoch (2022). Parameter, Compute and Data Trends in Machine Learning. Accessed: 2023-6-5. url: <a href="https://epochai.org/mlinputs/visualization" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://epochai.org/mlinputs/visualization</a>.</p>
+
+<p>Erdil, Ege and Tamay Besiroglu (2023). Algorithmic progress in computer vision. arXiv: <a href="https://arxiv.org/abs/2212.05153" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2212.05153 [cs.CV]</a>.</p>
+
+<p>Jiang, Wenxin et al. (2023). An Empirical Study of Pre-Trained Model Reuse in the Hugging Face Deep Learning Model Registry. arXiv: <a href="https://arxiv.org/abs/2303.02552" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2303.02552 [cs.SE]</a>.</p>
+
+<p>Morris, Meredith Ringel (2023). Scientists’ Perspectives on the Potential for Generative AI in their Fields. arXiv: <a href="https://arxiv.org/abs/2304.01420" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2304.01420 [cs.CY]</a>.</p>
+
+<p>Qi, Binhang et al. (2023). Reusing Deep Neural Network Models through Model Re-engineering. arXiv: <a href="https://arxiv.org/abs/2304.00245" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2304.00245 [cs.SE]</a>.</p>
+
+<p>Schmitt, Simon et al. (2018). Kickstarting Deep Reinforcement Learning. arXiv: <a href="https://arxiv.org/abs/1803.03835" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">1803.03835 [cs.LG]</a>.</p>
+
+<p>Sevilla, Jaime et al. (2022). Compute Trends Across Three Eras of Machine Learning. arXiv: <a href="https://arxiv.org/abs/2202.05924" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2202.05924 [cs.LG]</a>.</p>
+
+<p>Tay, Yi et al. (2022). Scaling Laws vs Model Architectures: How does Inductive Bias Influence Scaling? arXiv: <a href="https://arxiv.org/abs/2207.10551" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2207.10551 [cs.LG]</a>.</p>

@@ -1,0 +1,65 @@
+<p><em>Alex C. Engler is a Fellow at the Brookings Institution and an Associate Fellow at the Center for European Policy Studies, and teaches AI policy at Georgetown University, where he is an adjunct professor and affiliated scholar. Sylvia Brown is a graduate of Georgetown University’s McCourt School of Public Policy and works in social science research in Chicago.</em></p>
+
+
+
+<figure><img src="https://reader.miniflux.app/proxy/O5WD4PTiyZRkTD8rLxy5kbyF0SRz8c3Pl6-Kf48LJi4=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL0hvbWUtVmFsdWF0aW9uLTEwMjR4NTc2LnBuZw==" alt="" srcset="https://reader.miniflux.app/proxy/O5WD4PTiyZRkTD8rLxy5kbyF0SRz8c3Pl6-Kf48LJi4=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL0hvbWUtVmFsdWF0aW9uLTEwMjR4NTc2LnBuZw== 1024w, https://reader.miniflux.app/proxy/WwchwQazyyh5QXlu3dDieAbDbzqixe-8ZEWI-8n6WWE=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL0hvbWUtVmFsdWF0aW9uLTMwMHgxNjkucG5n 300w, https://reader.miniflux.app/proxy/lCcXgL4Owzle9LbpEdyZVEO1661HBVEKqb0H2pvIvp8=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL0hvbWUtVmFsdWF0aW9uLTc2OHg0MzIucG5n 768w, https://reader.miniflux.app/proxy/0-kxSzcb8Bx_lOzJfKjgLBaFB5GiSHlq10ohm5nCbNw=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL0hvbWUtVmFsdWF0aW9uLnBuZw== 1200w" sizes="(max-width: 1024px) 100vw, 1024px" loading="lazy"/><figcaption><a href="https://www.shutterstock.com/image-illustration/real-estate-mortgage-property-management-rent-1419975836" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Shutterstock</a></figcaption></figure>
+
+
+<p>If we told you about an AI built on the latest foundation models that shapes multi-trillion-dollar markets and ‘walks’ through every home in the United States, would you say it was science fiction?</p>
+
+
+
+<p>Well, let us introduce you to Automated Valuation Models, or AVMs, invented a century ago. </p>
+
+
+
+<p>AVMs are algorithmic systems that estimate the market value of properties, such as residential homes and commercial buildings. Knowing the sales price of a home is critical to lenders who make loans on the basis that, if they aren’t paid back, they can foreclose on, and then sell, the property. This is the basic idea behind much of housing finance, including mortgages and home equity loans, a market built on 41 trillion dollars of property value. It’s also become a key feature of online platforms, especially Zillow and Redfin, which use home price valuations to attract over 250 million monthly buyers, sellers and voyeurs to their websites.</p>
+
+
+
+<p>Traditionally, estimating the value of a property has been done by human appraisers, but over the past several decades, algorithms have taken on a larger role. Invented in the 1920’s, AVMs have been increasingly commercialized since the late 1980’s. Their sophistication—and thereby their coverage and accuracy—has grown significantly. Simple regressions were supplanted by machine learning methods which then evolved into ensembles of many models. Most recently, computer vision algorithms examine photos of homes to evaluate the condition of a property, such as whether there is any water damage or if a roof needs replacing. While technological innovations are often presented as “revolutions” and “tsunamis,” this gradual expansion of AVMs—an example of what we call algorithmic creep—is the more commonplace reality. In the long term, the adoption of AVMs also portends fewer jobs and lower wages for appraisers.</p>
+
+
+
+<p>These models’ demand for data is creeping, too. The databases that underpin AVMs are enormous, brought together from property ownership records, land boundaries, tax assessments, past mortgages, foreclosures, liens, and neighborhood characteristics—all in addition to what a seller may voluntarily disclose about their home, such as its size, layout, and amenities. One major AVM provider <a href="https://www.corelogic.com/press-releases/corelogic-launches-property-analytics-ecosystem-and-data-exchange-discovery-platform/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">claims</a> to have property data for 99.9% of all US properties, totaling to 4.5 billion records spanning 50 years.</p>
+
+
+
+<p>Add to this recent trends, such as how sellers are encouraged to upload extensive interior photography and even generate 3D virtual tours on <a href="https://www.redfin.com/guides/virtual-walkthrough-tour" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Redfin</a> and <a href="https://www.zillow.com/z/3d-home/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Zillow</a>. Some AVM providers even incorporate aerial photography of homes—one vendor offers imagery captured multiple times per year for over 80% of the US with sufficient resolution to “<a href="https://www.nearmap.com/us/en/aerial-view-blog/why-aerial-imagery-for-insurance?utm_source=google&amp;utm_medium=organic" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">count the number of tiles on the roof</a>.” Unfortunately, if these companies have learned lessons from Clearview AI, it’s that they will face no real consequences for egregious privacy intrusions.</p>
+
+
+
+<p>The societal impact of these algorithms goes far beyond privacy. AVMs are a critical input into mortgage pricing and home equity loans, and can sometimes spare a home buyer from having to pay for an appraiser.</p>
+
+
+
+<p>The equity impact is more complicated. Housing is a key component of wealth in the US—housing equity <a href="https://www.urban.org/sites/default/files/publication/103267/closing-the-gaps-building-black-wealth-through-homeownership_1.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">comprises</a> nearly 60% of net worth for Black and Hispanic households, and 43% for White households. This makes the valuation of that property enormously important. </p>
+
+
+
+<p>On one hand, the social science evidence is convincing that AVMs are generally less discriminatory than human appraisers, a profession that is <a href="https://www.nytimes.com/2023/06/01/realestate/kamala-harris-home-appraisals-discrimination.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ninety-seven percent White</a>. When appraisers go to majority Black neighborhoods, the research suggests they systematically <a href="https://www.brookings.edu/articles/how-racial-bias-in-appraisals-affects-the-devaluation-of-homes-in-majority-black-neighborhoods/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">undervalue homes</a>, making lenders less likely to finance a higher purchase price.</p>
+
+
+
+<p>AVMs <em>can </em>be better than people. Like appraisers, they can also exhibit <a href="https://www.urban.org/sites/default/files/2022-05/Revisiting%20Automated%20Valuation%20Model%20Disparities%20in%20Majority-Black%20Neighborhoods.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">higher error rates</a> in majority Black neighborhoods and in lower income neighborhoods, but to a much lesser degree. Further, AVMs are equally likely to be wrong in both directions—they overvalue homes in communities of color as often as they undervalue them. This alone roughly halves the degree of harm from undervaluation.</p>
+
+
+
+<p>Still, we should be cautious. Even if AVMs were perfectly accurate in predicting the sales price of all homes, they would still reflect today’s discrimination by underappreciating homes in minority neighborhoods and perpetuating the effects of historical redlining. This would invariably embed past bias in future estimates. Despite these concerns, researchers at both Freddie Mac and the Urban Institute <a href="https://www.freddiemac.com/research/pdf/202205-Note-Appraisals-09.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">have</a> <a href="https://www.urban.org/research/publication/revisiting-automated-valuation-model-disparities-majority-black-neighborhoods" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">argued</a> for using AVMs more prominently in the home valuation process, highlighting their potential to reduce racial bias relative to human appraisals.</p>
+
+
+
+<p>Whether AVMs aid or inhibit equity matters, especially because federal regulators are allowing AVMs to play a greater role in housing. In 2019, the minimum home value that requires a human appraiser was <a href="https://www.fdic.gov/news/financial-institution-letters/2019/fil19053.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">raised to $400,000</a>—around <a href="https://www.federalregister.gov/documents/2019/10/08/2019-21376/real-estate-appraisals" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">70% of homes</a> cost less. The other major step comes from Fannie Mae and Freddie Mac, which buy mortgages from financial institutions, allowing those institutions to originate additional loans. Fannie Mae and Freddie Mac are relaxing <a href="https://capitalmarkets.fanniemae.com/mortgage-backed-securities/single-family-mbs/updates-regarding-valuation-modernization" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">their appraisal rules</a> for the mortgages they purchase, making it easier for lenders to rely on AVMs. Between their growing commercial value and regulatory acceptance, AVMs may soon become the central process of property valuation.</p>
+
+
+
+<p>The Biden administration has created a <a href="https://pave.hud.gov/actionplan" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">task force</a> to tackle equity in property assessment, including AVMs, and has proposed a new regulation adding <a href="https://www.federalregister.gov/documents/2023/06/21/2023-12187/quality-control-standards-for-automated-valuation-models" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">non-discrimination requirements</a> for AVMs. These are important steps, but more could be done.</p>
+
+
+
+<p>Existing regulations and guidelines could be adapted to standardize and improve transparency of AVM performance, so individuals and communities could better understand how well an AVM might be working when applied to their home. Further, while independent scrutiny of AVMs is currently required, these evaluations do not meaningfully inform the public nor ensure AVM providers develop less discriminatory alternative models. We think the government can require more rigor and scrutiny from these evaluations and work towards releasing expanded government datasets of its own that inform on the impact of AVMs. We describe these proposals in more detail <a href="https://www.brookings.edu/articles/governing-the-ascendancy-of-automated-valuation-models/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">in a report for the Brookings Institution</a>.</p>
+
+
+
+<p>AVMs are among the most established, ubiquitous, complex, and impactful algorithmic systems ever made, and so when you think about the risks of AI, we urge you to think a little closer to home.</p>
+<p>The post <a href="https://techpolicy.press/ai-in-property-valuation-the-most-consequential-algorithms-youve-never-heard-of/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">AI in Property Valuation: The Most Consequential Algorithms You’ve Never Heard Of</a> appeared first on <a href="https://techpolicy.press" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Tech Policy Press</a>.</p>

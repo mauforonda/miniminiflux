@@ -1,0 +1,21 @@
+<p>
+I was encouraged back in March when I was able to port my <a href="https://simblob.blogspot.com/2023/03/tank-control-experiments.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">tank control experiments from Flash to HTML5</a>. I had previously attempted to port my spaceship control experiments from Flash to HTML5, but failed. Part of the problem was that it wasn&#39;t a strict port; I wanted to use a different algorithm. But it didn&#39;t work well.
+</p>
+
+ 
+
+<p>
+After the tank control experiments I was excited to work on map generation again. I had high hopes and lots of ideas. I fell into a rabbit hole, <a href="https://simblob.blogspot.com/2023/04/improving-mapgen4s-boundaries-part-2.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">fixing many bugs with the map boundary</a>, and then after I got out of the rabbit hole … I had lost the desire to work on map features. Unfortunately this happens to me a lot.
+</p>
+
+<p>
+So I&#39;ve kind of been aimless since then. I decided to try the spaceship flyer again, but this time I wanted to try putting it into a game loop, so <a href="https://www.redblobgames.com/x/2322-spaceship-flyer/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">I made a little game</a>. This led me to another distraction, <a href="https://javascript.info/keyboard-events" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">learning about modern keyboard events</a>. The keyboard events used to have some incompatibilities between browsers but they seem to be much better now. That gave me an idea: since browsers now provide both keycode and scancode, can I use that to &#34;discover&#34; the WASD equivalent on different keyboards? <a href="https://www.redblobgames.com/x/2324-keyboard/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">I tried that</a>. It works, but I can get that data only <em>after</em> someone types a key. Would it be nice to get the layout without requiring typing? Well, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Keyboard_API" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Chrome has it</a> but it turns out <a href="https://news.ycombinator.com/item?id=29793991" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">it can be used for &#34;fingerprinting&#34;</a>, which is used to track people on the web. So Firefox and Safari both said no, they don&#39;t want to add an API that would get used for fingerprinting. Brave blocked it even thought they use Chrome code underneath. But I think it&#39;d be reasonable in the game setup/tutorial to ask someone to move around with <kbd>WASD</kbd> and then see what scancodes come up, and use that as the initial key bindings.
+</p>
+
+<p>
+But … the keyboard stuff was all a distraction. I learned a bit, but I didn&#39;t make a lot of progress on the spaceship flyer. After I got out of the rabbit hole, I had lost the desire to work on that project.
+</p>
+
+<p>
+Fortunately something came along. Every year, the Reddit <a href="https://old.reddit.com/r/roguelikedev/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">r/roguelikedev community</a> has an event to <a href="https://old.reddit.com/r/roguelikedev/wiki/python_tutorial_series" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">make a roguelike</a>. This year I decided to make <a href="https://www.redblobgames.com/x/2327-roguelike-dev/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a colony simulator</a>. I&#39;m using some of the code from the spaceship &amp; keyboard projects, so those didn&#39;t go to waste. I&#39;m hoping the structure of the community project will help me stay motivated for the six weeks. But I don&#39;t plan to continue after that. I will look for another project.
+</p>

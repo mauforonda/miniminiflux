@@ -1,0 +1,4 @@
+<p><a href="https://github.com/jpmens/jo" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">jo</a></p>
+<p>Neat little C utility (available via brew/apt-get install etc) for conveniently outputting JSON from a shell: &#34;jo -p name=jo n=17 parser=false&#34; will output a JSON object with string, integer and boolean values, and you can nest it to create nested objects. Looks very handy.</p>
+
+    <p>Via <a href="https://lobste.rs/s/4wiwig/shell_tip_print_json_with_printf#c_p9pihd" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">lobste.rs</a></p>

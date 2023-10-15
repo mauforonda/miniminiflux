@@ -1,0 +1,79 @@
+<p>Suppose you want to compute occluding contours of a smooth surface. Given the literature out there, and <a href="https://aaronhertzmann.com/2023/07/31/occluding-contours-part-2.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the new developments summarized in my previous blog post</a>, which method should you use? And, where is more research needed?  On this page, I’ll summarize my opinions on these questions.</p>
+
+<p>In most cases, I’ll assume you’re starting with a triangle mesh, or you’re willing to convert your input to a triangle mesh.</p>
+
+<p>
+I just want simple solid lines.
+</p>
+
+<p>For this case, you can just use an edge-detection shader, as has been used in many movies and <a href="http://www.cs.williams.edu/~morgan/SRG10" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">video games</a>.  See
+ Chapter 2 of <a href="https://arxiv.org/abs/1810.01175" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">our tutorial</a> for more detail.</p>
+
+
+<figure>
+  <img src="https://reader.miniflux.app/proxy/Silhjo2Y3WGkPrlihW-N17esUq5q7AiYgxFCCSnP-tc=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9zcGlkZXJ2ZXJzZS5qcGc=" alt="Spiderverse image" loading="lazy"/>
+  <figcaption>The character on the left has occluding contour outlines.
+</figcaption>
+</figure>
+
+
+<p>
+I want stylized vector curves, but they don&#39;t need to be robust or topologically-valid.
+</p>
+
+<p>If you want smooth strokes, but you’re willing to accept some amount of gaps and flickering in your curves, then there are a wealth of existing methods; see Chapters 5 and 6 of <a href="https://arxiv.org/abs/1810.01175" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">our tutorial</a>. As a starting point, I’d recommend <a href="https://mrl.cs.nyu.edu/publications/illustrating-smooth/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">our interpolation algorithm</a>, summarized in Section 6.2 of the tutorial; it’s the same one used in Blender Freestyle. If you want faster performance, <a href="https://github.com/JiangWZW/Realtime-GPU-Contour-Curves-from-3D-Mesh" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">this recent GPU paper</a> may be worth a look.</p>
+
+<p>With clever heuristics, you can improve these results to reduce the amount of flickering, and the occasional gaps that appear in curves that should be solid. But you will never, never get rid of them completely.</p>
+
+
+<figure>
+  <img src="https://reader.miniflux.app/proxy/oZt15voofl3djAQmafljK_-iJcmgaNyL1axRMk5xZng=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9jdXBpZF9oYXRjaC5wbmc=" alt="Cupid hatching" loading="lazy"/>
+  <figcaption>3D hatching, <a href="https://www.mrl.nyu.edu/publications/illustrating-smooth/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">automatically generated</a> from the 3D model on the left.
+</figcaption>
+</figure>
+
+
+<p>
+I want topologically-valid smooth curves.
+</p>
+
+<p>If you want curves that are topologically-valid, and thus can animate without unnecessary flickering, and can be vectorized into closed regions, then I believe the state-of-the-art is our new <a href="http://ryanjcapouellez.com/papers/algebraic_smooth_occluding_contours.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">quadratic contours method</a>.</p>
+
+<p>There are two caveats with this method. First, like any newly-published research paper, it’s hard to know if it’s robust enough for production; perhaps numerical errors do cause problems in some cases, even though we didn’t see it in our testing. Second, the algorithm is fairly involved to understand. <a href="http://ryanjcapouellez.com/papers/algebraic_smooth_occluding_contours.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The code is online</a>, but it might be challenging if you need to implement it yourself or modify it for some reason.</p>
+
+<p>
+I want topological validity and easier implementation, but don&#39;t need perfection.
+</p>
+
+<p>As discussed in the previous post, planar map methods can guarantee topological validity: compute the planar map of a triangle mesh, and you’re guaranteed that the planar map has valid visibility. But you’re not guaranteed a nice simple set of curves—there might be superfluous junk, but <a href="http://www.dgp.toronto.edu/~alexk/segegsr.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">such representations can be simplified</a>. I think there’s lots of room to develop practical new techniques here; I can imagine several different approaches.</p>
+
+<p>
+I want both topological validity and accuracy to a specific smooth surface representation.
+</p>
+
+<p>Suppose you have a mathematically-smooth surface, like a subdivision surface, in an engineering or rendering application where accuracy is important. Perhaps you care about getting contours that <em>precisely</em> follow those of the underlying surface, perhaps with some guaranteed accuracy or alignment to another rendering.</p>
+
+<p>This is what <a href="https://dgp.toronto.edu/~hertzman/contesse/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the ConTesse algorithm</a> can provide for subdivision surfaces (the code is online). And, I think that the strategy in that paper could be applied to any other smooth surface represention (e.g., implicits), with some additional development effort.</p>
+
+<p>However, I think there’s lots of room to improve this approach, with more research. This is research code, and we don’t know how robust it will be. In theory it will converge for any surface, but it could take ages for complicated cases. See the Discussion section of the paper for much more information and ideas. Perhaps, with enough effort, this approach could be competitive with the quadratic  approach.</p>
+
+<p>
+I want more curves besides just occluding contours.
+</p>
+
+<p>Occluding contours are just the starting point: there’s a <a href="https://aaronhertzmann.com/2020/09/14/how-to-draw-pictures-style.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">wealth of stylization options</a>. For visibility, there are few curves you need to get right: occluding contours, boundaries, and surface self-intersections. Then, one can add all sorts of wonderful and artistic stylizations.</p>
+
+<p>All of these steps are conceptually straightforward exensions of the above contour algorithms. But actually implementing them may be involved, and there may be more research to do to work out the details, e.g., how do you handle self-intersecting surfaces in these representations.</p>
+
+<p>
+I want to help artists make cool art and animation
+</p>
+
+<p>These algorithms provide a foundation for artistic tools for animation. Here’s a video from <a href="https://gfx.cs.princeton.edu/pubs/Kalnins_2002_WND/index.php" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a 2002 paper that I still find inspirational</a>:</p>
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gT9qU_fJNuw" frameborder="0" allowfullscreen="" sandbox="allow-scripts allow-same-origin allow-popups" loading="lazy"></iframe><p>Related techniques <a href="https://www.youtube.com/watch?v=TZJLtujW6FY" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">were used in Disney’s Paperman</a> and the Spider-Verse movies.  But now, with working occluding contour algorithms, we could make these techniques so much better.</p>
+
+<p>The <a href="https://dl.acm.org/doi/abs/10.1145/1731047.1731056" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Freestyle Paper</a> illustrates a second approach to authoring many artistic styles on top of these representations, i.e., writing procedural “shaders”.</p>
+
+<p>Finally, we could also use machine learning on top of these representations, <a href="https://people.cs.umass.edu/~dliu/projects/NeuralStrokes/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">as illustrated in our Neural Strokes paper</a>, thereby providing some of the best of both worlds: the guaranteed control and precision of geometric computation, with the stylistic range and expressivity of ML-based methods.</p>

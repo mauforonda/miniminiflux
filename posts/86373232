@@ -1,0 +1,8 @@
+CRDTs sound cool, but how are they actually used? Let&#39;s learn by building a collaborative pixel art editor.
+
+<p>
+    This post was originally published <a href="https://jakelazaroff.com/words/building-a-collaborative-pixel-art-editor-with-crdts/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a> and
+    you are reading it in the
+    <a href="https://blaggregator.recurse.com/new/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Blaggregator</a> feed.
+    <a href="https://recurse.zulipchat.com/#narrow/stream/blogging/topic/Building.20a.20Collaborative.20Pixel.20Art.20Editor.20with.20CRDTs" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Join the discussion</a> on Zulip!.
+</p>

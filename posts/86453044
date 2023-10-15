@@ -1,0 +1,149 @@
+<p><em>Social media data and metadata is best managed through an architecture that is highly protective of contextual privacy, says Richard Reisman.</em></p>
+
+
+
+<figure><img src="https://reader.miniflux.app/proxy/y_NMjxMVQWSsUO4J7bxP94GgWr7uc1jELXjbC9GLrLI=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzAyL3NodXR0ZXJzdG9ja18xNTI5NTc4ODIuanBn" alt="Data from apps" srcset="https://reader.miniflux.app/proxy/y_NMjxMVQWSsUO4J7bxP94GgWr7uc1jELXjbC9GLrLI=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzAyL3NodXR0ZXJzdG9ja18xNTI5NTc4ODIuanBn 1000w, https://reader.miniflux.app/proxy/MiV5R2JLliJzQTbcwHpBOkr-Ck6oJxzLIX9_B0eEAwA=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzAyL3NodXR0ZXJzdG9ja18xNTI5NTc4ODItMzAweDE4OS5qcGc= 300w, https://reader.miniflux.app/proxy/1iratgMU5K_WjyqOZEeQyWz6WmY5yz89zDk76FQjv3o=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzAyL3NodXR0ZXJzdG9ja18xNTI5NTc4ODItNzY4eDQ4My5qcGc= 768w" sizes="(max-width: 1000px) 100vw, 1000px" loading="lazy"/></figure>
+
+
+<p>As the case for social media “<a href="https://hai.stanford.edu/news/radical-proposal-middleware-could-give-consumers-choices-over-what-they-see-online" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">middleware</a>” continues to gain support among scholars, policymakers, and developers – as a way to increase “<a href="https://www.law.cornell.edu/uscode/text/47/230" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">user control over what information is received</a>” and thus to <a href="https://knightcolumbia.org/content/amplification-and-its-discontents" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">improve the quality of online discourse</a> while protecting freedom of expression – our understanding of related concerns and how to overcome them has also advanced. A <a href="https://techpolicy.press/a-better-approach-to-privacy-for-third-party-social-media-tools/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">recent article</a> in <em>Tech Policy Press</em> by the Initiative for Digital Public Infrastructure’s Chand Rajendra-Nicolucci and Ethan Zuckerman builds on Cornell scholar Helen Nissenbaum’s <a href="https://digitalcommons.law.uw.edu/cgi/viewcontent.cgi?article=4450&amp;context=wlr" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">argument</a> that privacy is not as simplistic a binary of personal ownership as many presume, but depends on context – to help cut through the concerns that such agents could sacrifice privacy that were <a href="https://www.journalofdemocracy.org/articles/the-future-of-platform-power-making-middleware-work/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">cited</a> by Stanford Cyber Policy Center’s Daphne Keller in 2021. “Contextual integrity” is the idea that privacy is a nuanced matter of social norms, in specific contexts, governing just what should be shared with whom, for what uses. </p>
+
+
+
+<p>To complement and expand on Rajendra-Nicolluci and Zuckerman’s article, I draw attention to further insights from Keller later that year, and to a solution architecture that I proposed in response. Those further comments and suggestions add a layer of architectural structure to managing those privacy issues in context. The core idea is that social media data and metadata is best managed through an architecture that is highly protective of contextual privacy by breaking the problem down to multiple levels. </p>
+
+
+
+<p>Most discussion of middleware considers only a single level of it. An open market for “attention agent” middleware services must offer wide diversity, and so must be open to lightweight service providers. That potentially makes it hard to ensure that privacy can be protected. But the addition of a second, and more tightly controlled data intermediary layer between the platform service and the attention agent service can ensure tighter control of privacy. A body of work on <a href="https://www.weforum.org/reports/advancing-digital-agency-the-power-of-data-intermediaries/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data intermediaries</a>, <a href="https://hai.stanford.edu/news/radical-proposal-data-cooperatives-could-give-us-more-power-over-our-data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">cooperatives</a>, and <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3700087" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">fiduciaries</a> supports such a strategy. <em>Tightly controlled data intermediaries</em> can support <em>lightweight and less tightly controlled attention intermediaries</em> by limiting how data is released, or by requiring that the algorithms be sent “to” the data, rather than the other way around. Such data intermediaries can also potentially help limit abuses of personal data by the platforms.</p>
+
+
+
+<p>Here is some further background, plus more on how and why two layers of middleware intermediaries may help better address privacy, and potentially help <a href="https://bridging.systems/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">bridge divides</a> between polarized social media users.</p>
+
+
+
+<h2 id="h-middleware-attention-agents-and-contextual-privacy"><strong>Middleware attention agents and contextual privacy</strong></h2>
+
+
+
+<p>The idea of user-controlled attention agents is not new. A <a href="https://cyber.fsi.stanford.edu/publication/report-working-group-platform-scale" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Stanford group</a> led by political scientist Francis Fukuyama brought it to the attention of the tech policy community as “middleware” and explained why it was urgently needed to protect democracy from corporate, and potentially authoritarian, control of social media feeds and recommendations. A 2021 Fukuyama article in <a href="https://www.journalofdemocracy.org/articles/making-the-internet-safe-for-democracy/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Democracy</a> was followed by a set of articles critiquing various issues with the middleware proposal (which I <a href="https://techpolicy.press/scholars-reckon-with-democracy-and-social-media/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">summarized</a> in <em>Tech Policy Press</em>), including <a href="https://www.journalofdemocracy.org/articles/the-future-of-platform-power-making-middleware-work/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the one by Keller</a> later addressed in Rajendra-Nicolucci and Zuckerman’s recent article.</p>
+
+
+
+<p>Soon after that, I moderated a <a href="https://techpolicy.press/reconciling-social-media-democracy-fukuyama-keller-marechal-reisman/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">session with Fukayama and Keller</a> at a <em>Tech Policy Press</em> mini-symposium that expanded the debate. I asked Keller a question in which I indicated that for attention agent services to be effective, it’s important to consider not only personal content data but also metadata about content and reaction flows. Keller elaborated on why she thought that might “make things more complicated and harder.” She agreed that “a lot of content moderation does depend on metadata,” such as for “spam detection and demotion” and based on “patterns of connections between accounts,” referring to the <a href="https://cdn.annenbergpublicpolicycenter.org/wp-content/uploads/2020/06/ABC_Framework_TWG_Francois_Sept_2019.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Actors-Behaviors-Content (ABC) framework</a> of Camille Francois. The concern is such metadata “is often personally identifiable data about users, including users who haven’t signed up for this new middleware provider” and is “a different kind of personally identifiable data…that adds another layer of questions I’m not sure how to solve.”</p>
+
+
+
+<p>I was not yet aware of Nissenbaum’s contextual integrity formulation, but wondered aloud whether such data should be considered private. “Because in regular culture, people get reputations for how they behave and we decide who to listen to based on their reputation, not just what they say,” I said at the time. “I think there’s a counter argument that that’s fundamental to how society figures out what’s meaningful and what isn’t.” How to do this effectively in practice, however, is another question.</p>
+
+
+
+<h2 id="h-two-levels-of-intermediaries"><strong>Two levels of intermediaries</strong></h2>
+
+
+
+<p>That conversation with Keller spurred me to refocus on ideas for both data and attention intermediaries (“infomediaries”) that I first encountered in work by John Hagel and his co-authors in <a href="https://hbr.org/1997/01/the-coming-battle-for-customer-information" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">1997</a> and <a href="https://www.amazon.com/Net-Worth-Shaping-Customers-Hardcover/dp/B010EWL0BG" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">1999</a>, and to consider more recent work on the related idea of “<a href="https://hai.stanford.edu/news/radical-proposal-data-cooperatives-could-give-us-more-power-over-our-data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data cooperatives</a>.” That led to the idea that there should be two levels of intermediaries. My <a href="https://ucm.teleshuttle.com/2021/11/resolving-speech-biz-model-and-privacy.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">blog post</a> a month later, “Resolving Speech, Biz Model, and Privacy Issues – An Infomediary Infrastructure for Social Media?”, proposed a more sophisticated distribution of functions. </p>
+
+
+
+<p>The idea is to separate out two interacting levels of “middleware” services that intermediate as user agents between the platforms and the users:</p>
+
+
+
+<ul>
+<li><em>Data infomediaries</em> – a few, highly privileged, agents that are tightly secured and accredited  agents for managing limited sharing of sensitive user data.</li>
+</ul>
+
+
+
+<ul>
+<li><em>Attention agent infomediaries</em> – many, and more limited, agents that can make controlled use of that data to serve as filtering and recommendation agents.</li>
+</ul>
+
+
+
+<p>This concentrates elements of the infomediary role that have network-wide impact and sensitive data into a small number of reasonably large competitive entities that can apply needed resources and controls to maintain privacy and still offer some diversity. It enables much larger numbers of filtering services that serve diverse user needs to be lean and unburdened.</p>
+
+
+
+<ul>
+<li>Because the data infomediaries would be accredited custodians of sensitive messaging data, as fiduciaries for the users, they could share that data among themselves, providing a collective resource to safely power the filtering services. </li>
+</ul>
+
+
+
+<ul>
+<li>Support for the filtering services might be done in two ways. One is to provide time- and purpose-limited access to the data. Perhaps simpler and more secure, those data infomediaries could serve as secure platforms that enable the attention agent infomediaries to “send the algorithm to the data” and return rankings, without ever divulging the data itself.   </li>
+</ul>
+
+
+
+<p>This should enable powerful filtering and ranking based on rich data and metadata within and across platforms and user populations. The platforms would no longer control or be gatekeepers for user attention or data. The interface boundaries between platforms, data intermediaries, and attention intermediaries can be well defined. Implementation will not be trivial, but is not unlike many complex systems already working in other domains, such as finance.</p>
+
+
+
+<p>Such an approach might evolve to a more general infrastructure that works across multiple social media platforms and user subsets. It can support higher levels of user communities and special interest groups on this same infrastructure, so that the notion of independent platforms can blur into independent groups, communities, using a full suite of interaction modalities, all on a common backbone network infrastructure – the emerging “fediverse” and “pluriverse.”</p>
+
+
+
+<h2 id="h-further-advances"><strong>Further advances</strong></h2>
+
+
+
+<p><a href="https://techpolicy.press/progress-toward-re-architecting-social-media-to-serve-society/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">My update in <em>Tech Policy Press</em></a> on related discussions at the Stanford HAI conference soon afterwards reported that in the <a href="https://hai.stanford.edu/news/radical-proposal-middleware-could-give-consumers-choices-over-what-they-see-online" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Middleware session</a> (with Fukayama and others) Hebrew University computer scientist Katrina Ligett lent support to this idea of using data infomediaries to secure data and metadata for attention middleware:</p>
+
+
+
+<blockquote>
+<p>[Ligett] reinforced the need for filters to be bolder, to consider not only content items, but the social flow graph of how content moves through the network and draws telling reactions from users. Ligett made a connection to the emerging approach of data cooperatives that would intervene between a platform and the user on usage of personal data, again as the user’s agent, as being another kind of middleware. She also emphasized that some aspects of so-called personal data- such as this social flow graph data- are really pooled and collective, with a value greater than the sum of its parts.</p>
+
+
+
+<p>The direct focus of filtering against harm is the personalization and tailoring of what Ligett called “the incoming vector” from the platform to us – but driving those harms are how the platforms learn from the patterns in “the outgoing vector” of content and reactions from us. Unlike putting harmful content on a billboard, the platforms learn how to make it effective by feeding it to those most susceptible, when they are most susceptible. Ligett argued that interventions must benefit from a collective perspective. This is how social mediation can enter the digital realm, providing a digital counterpart to traditional mediation processes.</p>
+</blockquote>
+
+
+
+<p>I expanded on the benefits of this two-level intermediary architecture soon after that in a <a href="https://ucm.teleshuttle.com/2021/11/directions-toward-re-architecting.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">companion blog post</a>. It hinted at the idea that the emerging fediverse could support a dual-layered framework and could potentially offer robust and varied filtering services (whether working to unbundle current dominant platforms or evolving into a more distributed context). This structure could simultaneously maintain a significant, almost centralized, federated support service that would be shielded from both the platforms (large or small) and the filtering services themselves. Infomediaries could also play a crucial role in addressing the business model challenges associated with middleware and the advertising revenue model, aligning with Hagel’s early recommendations.</p>
+
+
+
+<h2 id="h-but-what-about-filter-bubbles-and-bridging"><strong>But what about filter bubbles and bridging?</strong></h2>
+
+
+
+<p>At that Stanford HAI conference, Kate Starbird noted that “toxicities on social media are not primarily related to individual pieces of content that can be labeled, but rather to the algorithms that amplify and recommend, creating influence across networks.” The privacy issues relating to social media metadata that Keller and I discussed, plus the above comments by Ligett and Starbird, bring us to perhaps the most commonly raised and fundamental concern about attention agent middleware – from the policy community as well as ordinary users: “Won’t user agency over feeds lead to worsening filter bubbles and echo chambers?”:</p>
+
+
+
+<p>As I’ve noted before, skeptics are right that user-selected filtering services might sometimes foster filter bubbles. But these skeptics should also consider the power that multiple services all filtering for user value might achieve, working together in “coopetition.” A diversity of filtering services might collaborate to mine the wisdom of the crowd. User-selected filtering services may not always lead to better quality information for individual users, but collectively, a powerful vector of emergent consensus can bend toward quality. The genius of democracy is its reliance on free speech to converge on truth – when mediated toward consensus by an open ecosystem of supportive and appropriately adversarial institutions. Well-managed and well-regulated technology can augment that mediation, instead of disrupting it.</p>
+
+
+
+<p>That is why access to metadata on user activity patterns is essential – and why a multilevel intermediary architecture seems the only way to make that data available to manage discourse in a reasonably open and robust way. There are a variety of proposals for reducing polarization that would use such metadata, such as the concept of <a href="https://bridging.systems/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">bridging systems</a>. I have <a href="https://ucm.teleshuttle.com/2012/10/filtering-for-serendipity-extremism.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">long seen such</a> methods as highly desirable components of attention agent services. But that brings us back to the question of who has legitimacy to decide what and how to make a “bridge” between users on polarizing topics. </p>
+
+
+
+<h2 id="h-the-future-is-not-yet-here-nor-is-it-easily-distributed"><strong>The future is not yet here, nor is it easily distributed</strong></h2>
+
+
+
+<p>The core motivation for user agency to be delegated to attention agent middleware is to optimize for “<a href="https://techpolicy.press/from-freedom-of-speech-and-reach-to-freedom-of-expression-and-impression/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">freedom of impression</a>” — as a complement to freedom of expression — and also incorporates the benefit of social mediation. That is illustrated with this simple diagram:</p>
+
+
+
+<p><img width="362" height="204" src="https://reader.miniflux.app/proxy/OB9DJSv2cGeHM4P0qhdN6R01ZKmX9UFmH8_xEr704mc=/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL0J2bFRTVElYSEFMcXJSOFdEUUV6enE0aVV3dWtUa3dmY2lPc2JJSUVFNGFvU2VCWURqSTlIRmc0UjhldWltdmdxejlPVlNTejVuTWJ0aVA4Szh3bGVNYjNmUzBLVnRLZVlpekhTS0g5VHcxekwyQnQ5TS1aUkhSSDJwbWpudExPY2xOdUlxRnVZNktndWFocU03ZXV4QQ==" alt="Diagram
+
+Description automatically generated" loading="lazy"/></p>
+
+
+
+<p>The common fear that user agency would run amok is countered by this understanding that thought is a social process that has long been tolerably well moderated in the real world by our social mediation ecosystem. The paradox of open societies is that the price of openness is informal reliance on the kind of social glue that can only be legitimized by openness. The path forward is not to retreat from openness, but to integrate robust online support for the <a href="https://techpolicy.press/delegation-or-the-twenty-nine-words-that-the-internet-forgot/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">bottom-up</a> generation and nurturing of the social glue that mediates it. </p>
+
+
+
+<p>Keller summarized the privacy concerns and other issues that have limited enthusiasm for user-agent middleware in her <a href="https://www.journalofdemocracy.org/articles/the-future-of-platform-power-making-middleware-work/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2021 <em>Democracy </em>article</a>, but has also articulated in depth why that seems to be the only solution to managing online speech to serve both individuals and society that can thread the needle of First Amendment freedoms (such as elsewhere in <a href="https://knightcolumbia.org/content/amplification-and-its-discontents" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2021</a>, and also in <a href="https://lawreviewblog.uchicago.edu/2022/06/28/keller-control-over-speech/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2022</a> and again <a href="https://techpolicy.press/experts-debate-social-media-and-the-first-amendment/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">last month</a>). Now, there are promising paths toward resolving those concerns. These ideas are now gaining real-world support in <a href="https://blueskyweb.xyz/blog/3-30-2023-algorithmic-choice" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Bluesky</a>, in Rajendra-Nicolucci and Zuckerman’s work on <a href="https://publicinfrastructure.org/2023/03/29/the-three-legged-stool/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Gobo</a>, and elsewhere. They are also gaining some traction with legislators in both the <a href="https://www.warner.senate.gov/public/index.cfm/2022/5/lawmakers-reintroduce-bipartisan-legislation-to-encourage-competition-in-social-media" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">US</a> and <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R1925&amp;from=EN" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">EU</a>, and are perhaps most significantly adopted in pending <a href="https://www.nysenate.gov/legislation/bills/2023/S6686" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">New York Senate Bill S6686</a>. </p>
+
+
+
+<p>This evolutionary path towards a better, more democratic internet will not be quick or easy, and will likely encounter many disruptive twists and turns as we learn more about <a href="https://techpolicy.press/understanding-social-media-an-increasingly-reflexive-extension-of-humanity/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">how we shape technology</a> and how technology shapes us. But that is the nature of the kind of social and political transformation that historic advances in media and communications can cause.   </p>
+<p>The post <a href="https://techpolicy.press/how-third-party-social-media-middleware-can-protect-contextual-privacy/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">How Third-Party Social Media Middleware Can Protect Contextual Privacy</a> appeared first on <a href="https://techpolicy.press" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Tech Policy Press</a>.</p>

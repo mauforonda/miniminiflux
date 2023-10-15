@@ -1,0 +1,47 @@
+<p>For various reasons, including &#34;video decoding is hard&#34;, &#34;your web browser hates you&#34;
+and &#34;watching movies on a phone over 3G is a basic human necessity&#34;,
+enabling hardware-accelerated video decoding in <a href="https://jellyfin.org" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Jellyfin</a>
+is a desirable goal if you don&#39;t want your CPU to set your house on fire. </p>
+<p>To attain it, one can mess around <a href="https://github.com/ddimick/proxmox-lxc-idmapper" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">cryptic gid mappings</a>,
+but granting every user on the hypervisor the right to read/write <code>/dev/dri/renderD128</code> and
+<code>/dev/dri/card0</code> is way easier, and it looks like this:</p>
+<pre><code># cat &gt; /etc/udev/rules.d/99-intel-chmod666.rules &lt;&lt; &#39;EOF&#39;
+KERNEL==&#34;renderD128&#34;, MODE=&#34;0666&#34;
+KERNEL==&#34;card0&#34;, MODE=&#34;0666&#34;
+EOF
+# udevadm control --reload-rules &amp;&amp; udevadm trigger
+#
+</code></pre>
+
+<p>It doesn&#39;t really worsen security, since:
+- the devices are only mounted inside my jellyfin container, which would have
+  the same privileges as if I used gid mapping.
+- odds are that an attacker able to get a shell on the hypervisor wouldn&#39;t
+  really need to have r/w access to the two devices to escalate their
+  privileges anyway, since they would either be:
+  - root already to escape from a container
+  - root already to escape from a vm
+  - whatever proxmox user and likely able to escalate to <code>root</code> trivially
+  - other users are sandboxed via systemd and/or seccomp.</p>
+<p>Speaking of mounting things inside the container:</p>
+<pre><code># cat &gt; /etc/pve/lxc/114.conf &lt;&lt; &#39;EOF&#39;
+lxc.cgroup2.devices.allow: c 226:0 rwm
+lxc.cgroup2.devices.allow: c 226:128 rwm
+lxc.mount.entry: /dev/dri dev/dri none bind,optional,create=dir
+lxc.mount.entry: /dev/dri/renderD128 dev/renderD128 none bind,optional,create=file
+EOF
+#
+</code></pre>
+
+<p>You can now run <code>vainfo</code> inside the container and be delighted by the
+presence of the <a href="https://en.wikipedia.org/wiki/Video_Acceleration_API" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">VA-API</a> version number:</p>
+<pre><code># vainfo 2&gt;/dev/null | head -n 1
+libva info: VA-API version 1.17.0
+#
+</code></pre>
+
+<p>The last step is to tick all the boxes in <a href="https://jellyfin.org/docs/general/administration/hardware-acceleration/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Jellyfin&#39;s
+preferences</a>
+and you&#39;re good to go. Don&#39;t forget to make some space on the disk for the
+transcoding cache, at least until <a href="https://github.com/jellyfin/jellyfin/pull/8744" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">this</a>
+makes its way into a release.</p>

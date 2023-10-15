@@ -1,0 +1,24 @@
+<p>The recent news that <a href="https://www.moneydashboard.com/faq" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">MoneyDashboard is suddenly shutting down</a> has exposed a gap in the way <a href="https://www.openbanking.org.uk/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">OpenBanking</a> works. It is simply impossible for a user to get read-only access to their own data without using an aggregator. And there are very few aggregators around.</p>
+<p>Why is it impossible for me to get programmatic access to my own data?</p>
+<p>There are two interlinked reasons which I&#39;d like to discuss.</p>
+<h2 id="background"><a href="#background">Background</a></h2>
+<p><a href="https://www.openbanking.org.uk/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">OpenBanking</a> is a brilliant idea encoded in an excellent standard wrapped in some very complex processes and with some rather unfair limitations.</p>
+<p>OpenBanking presents a <a href="https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/read-write-data-api-profile.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">standardised API to allow read and write access to a financial account</a>. So I could give a smartphone app read-only access to my credit card and let it automatically tell me when I&#39;ve spent more than £50 on sausage rolls this week. Or I could add all my bank accounts to one service which would let me see my net worth. Or any of a hundred ideas.</p>
+<p>I could also connect my accounts in such a way that when Bank Account A drop below £100, an OpenBanking API request is sent to Bank Account B to transfer some money to A.</p>
+<p>Nifty!</p>
+<h2 id="access"><a href="#access">Access</a></h2>
+<p>But here&#39;s the first problem. The only way you can get access to a bank&#39;s API is if you have a licence. And you only get a licence if you&#39;re a financial institution who can prove that they have robust security controls.  Which means that individuals have to go through an aggregator. Or, in OpenBanking terms, an &#34;Account Information Service Provider&#34;.</p>
+<p>Some OpenBanking providers will let individuals play in a &#34;sandbox&#34; to test out the API. There are no real accounts and no real money, it&#39;s just a way to test how the API works.</p>
+<p>I can see why that makes sense for write access. You don&#39;t want a user&#39;s unpatched Raspberry Pi suddenly sending all their money to Russia.</p>
+<p>And I can see why that makes sense for organisations which deal with data from multiple people. One leak and everyone is exposed.</p>
+<p>But I&#39;m not convinced that it makes sense to deny an individual read-only API access to their own account. Sure, I might accidentally leak my own data - but the same risk exists if I download a PDF statement from my bank.</p>
+<h2 id="coverage"><a href="#coverage">Coverage</a></h2>
+<p>The second problem is that not every OpenBanking <em>consumer</em> will talk to every OpenBanking <em>provider</em>.</p>
+<p>For example, I have an account with Coventry Building society. <a href="https://developer.coventrybuildingsociety.co.uk/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">They have an OpenBanking API</a> which <em>no one</em> uses! They&#39;re not the largest financial institution in the UK, but have a fair few customers. And yet all the OpenBanking apps refuse to work with it.</p>
+<p>So even if I did find an aggregator with an API, it may not work with all my financial institutions.</p>
+<h2 id="whats-next"><a href="#whats-next">What&#39;s next?</a></h2>
+<p>As much as I love using someone else&#39;s website or app, sometimes there&#39;s nothing better than writing something bespoke.</p>
+<p>I was using <a href="https://shkspr.mobi/blog/2020/10/unofficial-moneydashboard-api/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">MoneyDashboard as an <em>unofficial</em> API</a>. I gave them read-only access to my accounts and then piggybacked off their API. But that&#39;s now closed.</p>
+<p>Similarly, I was using <a href="https://shkspr.mobi/blog/2020/10/moneyed-a-personal-openbanking-api/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Moneyed - which offered a personal OpenBanking API</a> - but that shut down as well.</p>
+<p>And now I can&#39;t find anything.</p>
+<p>If you know of an Account Information Service Provider which provides read-only API access to connected accounts, please let me know!</p>

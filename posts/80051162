@@ -1,0 +1,96 @@
+<p>One of the problems that I have with LLMs is knowing when they will be useful and how to apply them to any given problem. A lot of it just feels alien to me because with a background in computer programing I&#39;ve been trained over 30 years that we frequently will get a deterministic set of results.</p>
+<p>I like to experiment and break new mental ground, so when I saw that Chat GPT had a code interpreter, I was was interested and yet had no clue what I would do with it.</p>
+<p>I had a bit of a think, and my <a href="https://paul.kinlan.me/bcd-a-hidden-web-compat-gem/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">side-passion is querying the BCD</a> (<a href="https://github.com/mdn/browser-compat-data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Browser Compat Data</a>) project for interesting information. BCD is a repository of features that are available to web browsers and their availability in them, for example: CSS Grid and Flexbox support.</p>
+<p>The BCD project is accessible as a <a href="https://unpkg.com/@mdn/browser-compat-data/data.json" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">large JSON file</a> and in many previous projects I create scripts or websites to parse the data, for example:</p>
+<ul>
+<li>
+<p><a href="https://bcd-training.deno.dev/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">BCD Training</a> (<a href="https://github.com/PaulKinlan/bcd-training" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">source</a>) - a web page with human readable versions of the data so it can be used in the LLM attached to <a href="https://paul.kinlan.me/ask-paul" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Ask Paul</a></p>
+</li>
+<li>
+<p><a href="https://time-to-stable.deno.dev/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Time to Stable</a> (<a href="https://github.com/PaulKinlan/time-to-stable" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">source</a>) - a web page that finds interesting stats about feature availability across browsers. Which browser is a sprinter and which is a plodder? or Which APIs are <a href="https://paul.kinlan.me/bcd-experimental-apis/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">experimental</a>, etc</p>
+</li>
+<li>
+<p><a href="https://baseline.deno.dev/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Baseline</a> (<a href="https://github.com/PaulKinlan/baseline" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">source</a>) - a web page that lists all the APIs that came to a the web in a given year. I use it to get a picture of what the <a href="https://web.dev/introducing-baseline/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Baseline project</a> might look like each year</p>
+</li>
+</ul>
+<p>These projects can take a little while to create as I build a parser and display logic and then a website around it. I thought it might be neat to see if the Code Interpreter could take some of this burden off me.</p>
+<p><strong>TL;DR</strong> - It can.</p>
+<p>I&#39;m very interested in Browser velocity, that is how quickly do browsers update, so I wanted to see if it could build some tools to analyse this data.</p>
+<p>First up, I downloaded the <a href="https://unpkg.com/@mdn/browser-compat-data/data.json" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">JSON file</a> and uploaded it to the new <a href="https://chat.openai.com/?model=gpt-4-code-interpreter" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Chat GPT model.</a></p>
+<p>I know the file format so I had a bit of head start, so I asked it something simple. &#34;Find me the most recent versions of each browser.&#34;</p>
+<p><img src="https://reader.miniflux.app/proxy/I-vuxsm3PVogfBZJRKOvM6YxYnJYX6EOxfj4g75Rrsk=/aHR0cHM6Ly9wYXVsLmtpbmxhbi5tZS9pbWFnZXMvU2NyZWVuc2hvdCUyMDIwMjMtMDctMTElMjBhdCUyMDE0LjA5LjQ4LnBuZw==" alt="Screenshot 2023-07-11 at 14.09.48.png" loading="lazy"/></p>
+<p>It&#39;s wrong, but it&#39;s kind of incredible to watch it build the code that parses the file format and produces something that could work.</p>
+<p>I suggested that it was wrong because Chrome is already a different version</p>
+<p><img src="https://reader.miniflux.app/proxy/9K_KSj8fqMlDwTZFhORtwJ4JWMz-1CGDuIMc8G-518I=/aHR0cHM6Ly9wYXVsLmtpbmxhbi5tZS9pbWFnZXMvU2NyZWVuc2hvdCUyMDIwMjMtMDctMTElMjBhdCUyMDE0LjA5LjU4LnBuZw==" alt="Screenshot 2023-07-11 at 14.09.58.png" loading="lazy"/></p>
+<p>It was incredible to see it adjust the algorithm to change how it parses the version number, however it was still wrong because it was showing future versions of browsers that haven&#39;t hit stable yet, so I simple suggested an improvement &#34;Close, but some of those have a &#39;release_date&#39; after today. Can you get only the latest released versions of the browsers?&#34;</p>
+<p><img src="https://reader.miniflux.app/proxy/ZqTgCpkexeSnVtUMab4icE4rQX9qKn2cyuPKDxDduEM=/aHR0cHM6Ly9wYXVsLmtpbmxhbi5tZS9pbWFnZXMvU2NyZWVuc2hvdCUyMDIwMjMtMDctMTElMjBhdCUyMDE0LjEwLjA3LnBuZw==" alt="Screenshot 2023-07-11 at 14.10.07.png" loading="lazy"/></p>
+<p>Damn!</p>
+<p>All in all it&#39;s pretty great. Something that would have taken me about 30 minutes to make was created in about 2 minutes and a great thing is that it has the script so that you can run it locally too.</p>
+<p>Yes, technically there are some errors for example if you check the code below you will see it tries to convert the browser version to an integer, yet some browsers have x.y.z versioning.... Yet, I&#39;m still blown away.</p>
+<pre><code>from datetime import datetime
+import json
+
+# Load JSON file
+with open(&#39;/mnt/data/data (1).json&#39;, &#39;r&#39;) as f:
+    data = json.load(f)
+
+# The issue might be related to the version numbers being treated as strings rather than numbers. 
+# This can result in &#34;99&#34; being considered larger than &#34;110&#34; because &#34;9&#34; is larger than &#34;1&#34; in string comparison.
+
+# To fix this, we need to convert the version numbers to integers where possible for the comparison. 
+# However, we need to handle cases where the version number is not a simple integer (e.g., &#34;9.3.0&#34;).
+
+def convert_version_to_int(version):
+    # Try to convert the version to an integer
+    try:
+        return int(version)
+    except ValueError:
+        # If that fails, convert the first part of the version to an integer
+        try:
+            return int(version.split(&#39;.&#39;)[0])
+        except ValueError:
+            # If that still fails, return the version as is
+            return version
+
+
+# Function to convert a string to a datetime object
+def convert_string_to_date(date_string):
+    return datetime.strptime(date_string, &#34;%Y-%m-%d&#34;)
+
+# Get today&#39;s date
+today = datetime.now()
+
+# Let&#39;s inspect the &#39;browsers&#39; key
+browsers_data = data[&#39;browsers&#39;]
+
+# Initialize an empty dictionary to store the most recent version of each browser
+recent_versions = {}
+
+# Loop over each browser
+for browser, details in browsers_data.items():
+    # Get the &#39;releases&#39; field which contains version information
+    releases = details.get(&#39;releases&#39;, {})
+
+    # Filter out versions where the release date is in the future
+    releases = {version: details for version, details in releases.items()
+                if &#39;release_date&#39; in details and convert_string_to_date(details[&#39;release_date&#39;]) &lt;= today}
+    
+    # Convert the versions to integers where possible
+    releases = {convert_version_to_int(version): version for version in releases.keys()}
+    
+    # Get the most recent version
+    recent_version = max(releases.keys(), default=&#39;No releases found&#39;)
+    # Map the recent version back to its original string representation
+    recent_version = releases[recent_version]
+    recent_versions[browser] = recent_version
+
+recent_versions
+</code></pre><p><img src="https://reader.miniflux.app/proxy/SynFWTJJ0eGYE19H58d5Ki1bAR-WvdsY-N0Gv3Yn9bM=/aHR0cHM6Ly9wYXVsLmtpbmxhbi5tZS9pbWFnZXMvU2NyZWVuc2hvdCUyMDIwMjMtMDctMTElMjBhdCUyMDE0LjI1LjIzLnBuZw==" alt="Screenshot 2023-07-11 at 14.25.23.png" loading="lazy"/></p>
+<p>Absolutely amazing! I think the summary is great too. The only nit right now is that the colours are hard to distinguish.</p>
+<p><img src="https://reader.miniflux.app/proxy/oLUj0IIOorhBi0ILCkpHEQfke4F5omZXznEAp6N5HeU=/aHR0cHM6Ly9wYXVsLmtpbmxhbi5tZS9pbWFnZXMvU2NyZWVuc2hvdCUyMDIwMjMtMDctMTElMjBhdCUyMDExLjIzLjAzLnBuZw==" alt="Screenshot 2023-07-11 at 11.23.03.png" loading="lazy"/></p>
+<p>It kept all the context amazingly well, but as I was reading this, but the IE outlier make it hard to see what&#39;s happening today, so I asked it to &#34;Remove some of the outliers&#34;</p>
+<p><img src="https://reader.miniflux.app/proxy/Gj7l48xmdY-ODQJEgHOgBBXkbMTJRjmKVAhFA69CCGA=/aHR0cHM6Ly9wYXVsLmtpbmxhbi5tZS9pbWFnZXMvU2NyZWVuc2hvdCUyMDIwMjMtMDctMTElMjBhdCUyMDE0LjI5LjMxLnBuZw==" alt="Screenshot 2023-07-11 at 14.29.31.png" loading="lazy"/></p>
+<p>Much clearer, but also WOW! Just by looking at the data there are stories that I can see :D</p>
+<p>I&#39;m not sure this post does my reaction any justice. I was completely blown away! Yes it&#39;s not an amazingly complex example, but I got to an output that I found incredibly useful in minutes and it&#39;s now left me thinking what else can I do with it.</p>
+<p>If you are interested in the final code it generated check out this <a href="https://gist.github.com/PaulKinlan/7f25055ac899e1667a6f80119d7c3b05" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">gist</a>.</p>
+<p>Let me know if you&#39;ve played with the Code Interpreter, I&#39;m certainly keen to learn more about how you are using it so that I can work out where I can take better advantage of it.</p>

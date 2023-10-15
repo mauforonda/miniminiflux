@@ -1,0 +1,39 @@
+<p><a href="https://nostarch.com/hacks-leaks-and-revelations" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img alt="Hacks, Leaks, and Revelations cover" src="https://reader.miniflux.app/proxy/e1l2LhI6NhfPsQOg3eEJXY0LHZQD75QgJXMTtewk9uk=/aHR0cHM6Ly9kdXN0cmkub3JnL2IvaW1hZ2VzL0hhY2tzTGVha3NSZXZlbGVhdGlvbnMucG5n" loading="lazy"/></a></p>
+<p>Last month, I got an email <a href="https://nostarch.com/about" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">from Briana Blackwell from No Starch Press</a>&#39;s marketing department,
+telling me that <a href="https://hacksandleaks.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Hacks, Leaks, and Revelations: The Art of Analyzing Hacked and Leaked Data</a>
+by <a href="https://micahflee.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Micah Lee</a>
+was available in <em>early access</em>, and that they&#39;d be happy to send me an ebook
+copy free of charge!</p>
+<p>From the couple of interactions I had with him, Lee is not only a great human being,
+but also technically literate. He&#39;s the director of information security
+at <a href="https://theintercept.com/staff/micah-lee/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The Intercept</a>, and the person
+behind <a href="https://onionshare.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">OnionShare</a> and <a href="https://dangerzone.rocks/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DangerZone</a>;
+so I was thrilled to finally get my hands on his book!</p>
+<p>And what a great one it is! It&#39;s a complete course for everyone who want to learn how to properly deal with and report on large data sets like leaks:
+How to communicate with sources along with some notions of <a href="https://en.wikipedia.org/wiki/Operations_security" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">opsec</a>,
+some words on the ethics of dealing with this kind of data,
+how to get data leaks and how to analyse them
+properly and safely, wrangling tools like
+<a href="https://github.com/freedomofpress/dangerzone" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">dangerzone</a>,
+a <a href="https://en.wikipedia.org/wiki/BitTorrent" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">BitTorrent</a> client,
+<a href="https://signal.org" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Signal</a>,
+<a href="https://torproject.org" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Tor</a> via the <a href="https://www.torproject.org/download/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Tor Browser</a> and
+<a href="https://onionshare.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Onionshare</a>,
+some <a href="https://en.wikipedia.org/wiki/Linux" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">linux</a> and <a href="https://en.wikipedia.org/wiki/Shell_(computing)" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">shell</a> basics,
+a crash course into data analysis with <a href="https://python.org" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Python</a> and <a href="https://en.wikipedia.org/wiki/SQL" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">SQL</a>,
+the <a href="https://occrp.org/en" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">OCCRP</a>&#39;s <a href="https://docs.aleph.occrp.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Aleph</a>,
+…
+with hands-on exercises and reporting examples based on real leaks like
+<a href="https://en.wikipedia.org/wiki/2021_Epik_data_breach" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">EpikFail</a>,
+<a href="https://en.wikipedia.org/wiki/BlueLeaks" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">BlueLeaks</a>, 
+the <a href="https://apnews.com/article/oath-keepers-leaked-membership-rolls-2ca4195ed3a10e45dd189bf98f3e5a26" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Oath Keepers leak</a>,
+<a href="https://discordleaks.unicornriot.ninja/discord/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Unicorn Riot&#39;s DiscordLeaks</a>,
+<a href="https://theintercept.com/2021/09/28/covid-telehealth-hydroxychloroquine-ivermectin-hacked/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">AFLDS</a>,
+he <a href="https://www.databreaches.net/heritage-foundation-wasnt-attacked-they-leaked-their-own-data/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Heritage Foundation emails</a>,
+…</p>
+<p>It&#39;s a comprehensive yet highly digestible resource that I would wholeheartedly
+recommend to anyone remotely interested by modern journalism practises. Hacked
+and dumped databases are all around the internet, waiting to be analysed, reported on,
+contextualised and exposed, and with this book, anyone could help with
+the effort of making the world a better place: sunlight is the best
+disinfectant!</p>

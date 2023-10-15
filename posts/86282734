@@ -1,0 +1,114 @@
+<p>Autocracies and weak democracies are more likely to import facial recognition AI from China, particularly in years when they experience domestic unrest</p>
+                                    
+                    <p>Global economic integration has long been considered instrumental to building a liberal democratic world order (Mousseau 2003, Tabellini and Magistretti 2023). President George H.W. Bush once remarked: “No nation on Earth has discovered a way to import the world’s goods and services while stopping foreign ideas at the border.” President Bush had in mind the diffusion of democracy, in an age when democracies were the leading producers of frontier technology. However, with the emergence of China as a leading innovator in AI technologies, could greater economic integration move countries away from liberal democratic institutions? This question is particularly relevant to developing countries, many of which are institutionally fragile and which are increasingly connected with China via trade, foreign aid, loans, and investments.</p>
+<p>In recent research (Beraja et al. 2023b), we explore the patterns and political consequences of trade in facial recognition AI technologies. Artificial intelligence (AI) technology has been hailed as the basis for a “fourth industrial revolution” (Schwab 2017) that will drive economic growth in the years to come (Bughin, and Hazan 2017, Aghion et al. 2018, Brynjolfsson et al. 2021). But the technology has also brought new challenges to the fore. It might undermine democracies (Acemoglu 2021a, 2021b), enhance autocrats’ aims of social control (Guriev and Treisman 2019, Tirole 2021), and empower “surveillance capitalists” (Zuboff 2019). China, in particular, has used facial recognition AI as a key technology to support its surveillance state (Beraja et al. 2023a).</p>
+<h2>Tracking global trade in facial recognition AI</h2>
+<p>We begin our paper by constructing a database on global trade in facial recognition AI. We collect data on trade in facial recognition AI from 2008 to 2021 by combining AI trade deals listed in the Carnegie Endowment for International Peace’s report The Global Expansion of AI Surveillance (Feldstein, 2019) with our own search of AI trade deals from all facial recognition AI firms in the Capital IQ database. In total, we find 1,636 AI deals from 36 exporting countries to 136 importing countries. From this dataset, we document three facts.</p>
+<h2>China has a comparative advantage in facial recognition AI</h2>
+<p>First, China has a comparative advantage in facial recognition AI. In Figure 1, we plot trade flows for the two largest exporters of facial recognition AI, China and the US. China exports to roughly twice as many countries as the US (83 versus 57 links) and has about 10% more trade deals (238 versus 211). To test China’s comparative advantage more rigorously, we compare whether China is more likely to export facial recognition AI relative to other kinds of frontier technology. In Figure 2, we plot China’s probability of trading each kind of frontier technology, relative to other countries and technologies. We see that while China displays a comparative advantage in radioactive materials, steam turbines, and laser and other beam processes, China’s largest comparative advantage is in facial recognition AI. Different factors may have contributed to this fact: the Chinese regime has explicitly made becoming a world leader in AI one of their key development and strategic goals, and the facial recognition AI industry has benefited from the government’s own demand for surveillance technology, often receiving access to large-scale government datasets (Beraja et al. 2023c). </p>
+<p><strong>Figure 1</strong>: Surveillance AI exports from China and the US.</p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/ZHAlQjNPHGzMZxyQBIq-GCgvlouYwyA153xOCumz-c8=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvc3VydmVpbGxhbmNlc3RhdGVfZmlndXJlMWEuanBn" loading="lazy"/></p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/MQpcvsVOOX6aBtCWnKcp37FN3z-JtyCrxvUbzeZ8UNg=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvc3VydmVpbGxhbmNlc3RhdGVfZmlndXJlMWIuanBn" loading="lazy"/></p>
+<p><strong>Figure 2</strong>: China’s probability of trade, compared against the rest of the world and other frontier technology exports. </p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/lCzl0Cuj1UDUceErOycAGTfSaPuVgkAXP9-J9tRgaGw=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvc3VydmVpbGxhbmNlc3RhdGVfZmlndXJlMi5qcGc=" loading="lazy"/></p>
+<h2>Autocracies and weak democracies are more likely to import facial recognition AI from China</h2>
+<p>Second, we find that autocracies and weak democracies are more likely to import facial recognition AI from China. In Figure 3, we reproduce Figure 1, now breaking up trade flows by whether the destination country is an autocracy/weak democracy or mature democracy. While the US predominantly exports facial recognition AI to mature democracies (roughly two-thirds of its links, or three-quarters of its deals), China exports roughly equal amounts to mature democracies and autocracies or weak democracies. Might this just be because China exports more to autocracies and weak democracies across all products? We formally test for China’s autocratic bias in exporting facial recognition AI by comparing it against China’s exports of other frontier technologies. In Figure 4, we show that this is not the case. Facial recognition AI is the only technology for which China displays this political bias. Notably, we do not find any such bias when investigating the US. One potential explanation for this fact is that autocracies and weak democracies might specifically turn to China for AI technology used for social and political control. We explore this possibility in greater depth in our last fact.</p>
+<p><strong>Figure 3</strong>: Surveillance AI exports from China and the US, split by destination regime type.</p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/E3HtDapYTIXmeRBVjiwb5UuBrFicX8rQrIsdD7UkJHo=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvc3VydmVpbGxhbmNlc3RhdGVfZmlndXJlM2EuanBn" loading="lazy"/></p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/NG1f89HQ_PU3oXSVEhA1E86HwLzvrGfLfOH9vRvICfA=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvc3VydmVpbGxhbmNlc3RhdGVfZmlndXJlM2IuanBn" loading="lazy"/></p>
+<p><strong>Figure 4</strong>: Political bias in frontier technology exports from China.</p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/OIk6drxeZeOAjojBIOXOlRek2rPRkudh2_ldlK4Cyjc=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvc3VydmVpbGxhbmNlc3RhdGVfZmlndXJlNC5qcGc=" loading="lazy"/></p>
+<h2>Autocracies and weak democracies are more likely to import facial recognition AI from China in years when they experience domestic unrest</h2>
+<p>Third, we show that autocracies and weak democracies are more likely to import facial recognition AI from China in years when they experience domestic unrest. We focus our analysis on weak democracies and autocracies and examine when they tend to import facial recognition AI from China, relative to times when they experience high levels of social and political unrest. In Figure 5, we show that surveillance AI is imported during the year of unrest, and not pre-emptively (before unrest occurs) or following unrest. This pattern holds when we focus attention on only “smart city” AI trade deals that are most likely associated with mass surveillance (the two prior facts also hold when looking at this subset of deals). However, we do not find that mature democracies import more facial recognition AI in response to unrest; we also do not find that autocracies and weak democracies import more facial recognition AI from the US in response to unrest. </p>
+<p><strong>Figure 5:</strong> Event study, local unrest in autocracies and weak democracies on surveillance AI imports from China (different symbols present estimates from models including different sets of control variables)</p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/8RCAX_hIO7gAeKvb2qIbpMlwDRuBN1C4oClTn-TXlho=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvc3VydmVpbGxhbmNlc3RhdGVfZmlndXJlNS5qcGc=" loading="lazy"/></p>
+<h2>Does importing surveillance AI technology accompany broader institutional changes?</h2>
+<p>Finally, we examine whether imports of surveillance AI technology during periods of domestic unrest are concomitant with broad changes in domestic institutional quality in autocracies and weak democracies. We show that Chinese surveillance AI imported during episodes of domestic unrest are associated with a country’s elections becoming less fair, less peaceful, and overall of lower quality. This pattern appears to also hold with imports of US surveillance AI, although it is less precisely estimated. In contrast, we do not find any association between surveillance AI imports and electoral institutional quality among mature democracies. Rather than interpreting our findings as the causal impact of AI on institutions, we think of the import of surveillance AI and the erosion of domestic institutions in autocracies and weak democracies as the joint outcome of a regime desiring greater political control. Interestingly, we find that imports of military technology follow a similar pattern to surveillance AI during periods of unrest. We also find suggestive evidence that autocracies and weak democracies importing large amounts of Chinese surveillance AI during unrest are less likely to transition to mature democracies when compared to their peers that import low amounts of surveillance AI. On the whole, these results suggest that the broad set of tactics employed by autocracies during times of unrest—importing surveillance AI, eroding electoral institutions, and importing military technology—may entrench non-democratic regimes.</p>
+<h2>Policy implications</h2>
+<p>Our research reveals that trade may not always foster democracy and liberalise regimes. In particular, China’s greater integration with the developing world may yield undesirable political consequences, suggesting the need for AI trade regulation. Regulation of surveillance AI can be modeled on regulation of other goods that produce similar negative externalities. Autocratically biased AI may be trained on data collected for politically repressive purposes, similar to goods produced from unethically sourced inputs, such as child labour. Surveillance AI may also have negative downstream global externalities, such as lost civil liberties and political rights, similar to pollution. Finally, like dual-use technologies, facial recognition AI has the capacity to benefit consumers and firms, but may cause harm when deployed for the wrong purposes. Altogether, these features suggest that trade regulations must be carefully devised to ensure that frontier AI technology can diffuse around the world, without also supporting the diffusion of autocracy.</p>
+<h2>References</h2>
+<p>Acemoglu, D (2021a), “Harms of AI,” Oxford Handbook of AI Governance, <em>forthcoming</em>.</p>
+<p>Acemoglu, D (2021b), “Dangers of unregulated artificial intelligence,” VoxEU.</p>
+<p>Aghion, P, B F Jones, and C I Jones (2018), &#34;Artificial intelligence and economic growth.&#34; In The Economics of Artificial Intelligence: An Agenda, pp. 237-282. University of Chicago Press, 2018.</p>
+<p>Beraja, M, A Kao, D Y Yang, and N Yuchtman (2023), &#34;AI-tocracy.&#34; <em>Quarterly Journal of Economics,</em> 138(3): 1349-1402.</p>
+<p>Beraja, M, A Kao, Y D Yang, and N Yuchtman (2023), &#34;Exporting the Surveillance State via Trade in AI.&#34; NBER working paper.</p>
+<p>Beraja, M, A Kao, Y D Yang, and N Yuchtman (2023), &#34;Data-intensive Innovation and the State: Evidence from AI Firms in China.&#34; <em>Review of Economic Studies</em>, 90(4): 1701-1723.</p>
+<p>Brynjolfsson, R, D Rock, and C Syverson (2021), “The Productivity J- Curve: How Intangibles Complement General Purpose Technologies,&#34; <em>American Economic Journal: Macroeconomics</em>, 13(1): 333-72.</p>
+<p>Bughin, J and E Hazan (2017), “The new spring of artificial intelligence: A few early economies,” VoxEU.</p>
+<p>Feldstein, S (2019), The Global Expansion of AI Surveillance (Vol. 17). Washington, DC: Carnegie Endowment for International Peace.</p>
+<p>Guriev, S, and D Treisman (2019), &#34;Informational Autocrats.&#34; <em>Journal of Economic Perspectives</em> 33(4): 100-127.</p>
+<p>Schwab, K (2016), The Fourth Industrial Revolution. New York: Crown Business.</p>
+<p>Mousseau, M (2003), &#34;The Nexus of Market Society, Liberal Preferences, and Democratic Peace: Interdisciplinary Theory and Evidence.&#34; <em>International Studies Quarterly,</em> 47(4): 483–510.</p>
+<p>Magistretti, G and M Tabellini (2023), &#34;Economic integration and democracy: An empirical investigation.&#34; Working paper.</p>
+<p>Tirole, J (2021), “Digital Dystopia,” <em>American Economic Review</em>, 111(6): 2007-2048.</p>
+<p>Zuboff, S (2019), The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power. New York: PublicAffairs.</p>
+                
+
+                    
+                    
+                    China
+                                
+                    AI
+                                
+                    Autocracy
+                                
+                    Democracy
+                                
+                    Unrest
+                                
+                    Facial recognition
+                                
+                    Trade
+                                
+                    Surveillance state
+                        
+    
+    
+    
+        <p>Share this article:</p>
+
+        <a href="https://twitter.com/intent/tweet/?text=How+the+surveillance+state+is+exported+through+trade+in+AI+&amp;url=https%3A%2F%2Fvoxdev.org%2Ftopic%2Finstitutions-political-economy%2Fhow-surveillance-state-exported-through-trade-ai" title="Share on Twitter" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvoxdev.org%2Ftopic%2Finstitutions-political-economy%2Fhow-surveillance-state-exported-through-trade-ai" title="Share on Facebook" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        
+        <a href="https://voxdev.org/cdn-cgi/l/email-protection#447b3731262e212730790c213621642d37642564122b3c002132642536302d272821643d2b316429253d642621642d2a3021362137302120642d2a62262b203d792c303034377e6b6b322b3c2021326a2b36236b302b342d276b2d2a37302d3031302d2b2a3769342b282d302d2725286921272b2a2b293d6b2c2b336937313632212d2828252a272169373025302169213c342b3630212069302c362b31232c69303625202169252d" title="Share on Email" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fvoxdev.org%2Ftopic%2Finstitutions-political-economy%2Fhow-surveillance-state-exported-through-trade-ai&amp;title=How+the+surveillance+state+is+exported+through+trade+in+AI+" title="Share on LinkedIn" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        
+                    
+        
+        <a href="https://voxdev.org/print/77678" title="Print this page" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+    
+
+            

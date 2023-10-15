@@ -1,0 +1,40 @@
+<p>Today at work, I needed a function in <a href="https://go.dev/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Go</a> to remove
+duplicates from a slice, and thus wrote something like this using the
+<a href="https://go.dev/doc/tutorial/generics" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">generic</a>-based
+<a href="https://pkg.go.dev/golang.org/x/exp/slices" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">slices</a> package:</p>
+<pre><code>func removeDuplicates(s []mytype) []mytype {
+    slices.SortFunc(s, less)
+    slices.CompactFunc(s, eq)
+    return s
+}
+</code></pre>
+
+<p>Can you spot the bug? Here are the prototypes of the two functions:</p>
+<pre><code>func SortFunc[E any](x []E, less func(a, b E) bool)
+func CompactFunc[S ~[]E, E any](s S, eq func(E, E) bool) S
+</code></pre>
+
+<p>The first has no return value, while the second does, unused in our case, hence
+the bug. It&#39;s <em>interesting</em> to note that the go compiler is perfectly happy
+with this, and doesn&#39;t issue any warning: it was <em>extraordinarily fun</em> to pinpoint.</p>
+<p>I reached out to <a href="https://airs.com/ian/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Ian Lance Taylor</a> who
+<a href="https://cs.opensource.google/go/x/exp/+/03df57b9a50843fbf23bf90375d6584bcc8ea13d" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">implemented</a>
+those functions in 2021 and he pointed me to <a href="https://go.dev/blog/slices-intro" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Go Slices: usage and internals
+</a>. Things indeed do become obvious once 
+looking at the <a href="https://github.com/golang/go/blob/master/src/runtime/slice.go" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">implementation of
+<code>slice</code></a>:</p>
+<pre><code>type slice struct {
+    array unsafe.Pointer
+    len   int
+    cap   int
+}
+</code></pre>
+
+<p>Both <code>slices.SortFunc</code> and <code>slices.CompactFunc</code> are taking a slice as
+parameter, and not a pointer to a slice, meaning that any changes to <code>len</code> and
+<code>cap</code> will be local to the function.</p>
+<p>Anyway, There is a <a href="https://github.com/golang/go/issues/20803" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">proposal</a> to require
+return values to be explicitly used or ignored open since 2017, but it didn&#39;t
+go anywhere for now. There is also <a href="https://github.com/golang/go/issues/20148" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">another proposal</a>
+to make <code>go vet</code> better at highlighting error mishandling, as well as <a href="https://github.com/kisielk/errcheck" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">errcheck</a>,
+but those wouldn&#39;t really help in this case.</p>

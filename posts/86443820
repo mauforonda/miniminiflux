@@ -1,0 +1,19 @@
+<p><img src="https://reader.miniflux.app/proxy/BewZxJbUAE1poMjm7FQxjR-UkQ1o7f170gyefphPFcM=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL2N1Y2tvb3MtZWdnLTcwMC5qcGc=" alt="Book cover - illustration of a person sat in front of a computer." width="210" height="350" loading="lazy"/>This book is <em>outstanding</em>. It&#39;s the mid 1980s, you&#39;re administrating a nascent fleet of UNIX boxen, and you are tasked with accounting for a 75¢ billing discrepancy.</p>
+<p>Naturally that eventually leads into an international conspiracy involving the FBI, NSA, and an excellent recipe for chocolate chip cookies. It is a fast paced, high-tension, page turner. There&#39;s also a sweet moral core to the story - as well as the somewhat saddening death of naïvety.</p>
+<p>It&#39;s hard to overstate just how fun this book is. Yes, with the benefit of hindsight running unpatched machines and letting any old hippy connect to them was always going to be a security nightmare. But some of the problems faced by those early pioneers are still present today.</p>
+<p>Default passwords, unmonitored systems, uninterested law enforcement, dictionary attacks, buggy permissions, the moral quandary of responsible disclosure - it&#39;s all in here.</p>
+<p>Of course, there are a few bits which look pretty dated now. Especially some of the attitudes to online privacy:</p>
+<blockquote><p>
+  “You’re not the government, so you don’t need a search warrant. The worst it would be is invasion of privacy. And people dialing up a computer probably have no right to insist that the system’s owner not look over their shoulder. So I don’t see why you can’t.”
+</p></blockquote>
+<p>It&#39;s also nice seeing how internecine warfare between hackers has barely evolved:</p>
+<blockquote><p>
+  From long tradition, astronomers have programmed in Fortran, so I wasn’t surprised when Dave gave me the hairy eyeball for using such an antiquated language. He challenged me to use the C language<br/>
+  ...<br/>
+   VI was predecessor to hundreds of word processing systems. By now, Unix folks see it as a bit stodgy—it hasn’t the versatility of Gnu-Emacs, nor the friendliness of more modern editors. Despite that, VI shows up on every Unix system.
+</p></blockquote>
+<p>There&#39;s some deep wisdom in there for any programmer to reflect on:</p>
+<blockquote><p>
+  If people built houses the way we write programs, the first woodpecker would wipe out civilization.
+</p></blockquote>
+<p>I urge anyone with an interest in computer security to read it. There&#39;s a huge amount of entertaining history in there - and plenty of lessons that we still need to learn.</p>

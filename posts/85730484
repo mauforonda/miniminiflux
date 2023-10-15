@@ -1,0 +1,14 @@
+<p>There is a new minor version of mat2:
+<a href="https://0xacab.org/jvoisin/mat2/tags/0.13.4" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">0.13.4</a>. No ground breaking
+changes, only minor improvements, code modernisation and a bit of hardening:</p>
+<ul>
+<li>Add documentation about mat2 on OSX</li>
+<li>Make use of python3.7 constructs to simplify code</li>
+<li>Use moderner type annotations</li>
+<li>Harden <code>get_meta</code> in archive.py against variants of <a href="https://cve.circl.lu/cve/CVE-2022-35410" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">CVE-2021-35410</a></li>
+<li>Improve MSOffice document support</li>
+<li>Package the manpage on PyPI.</li>
+</ul>
+<p>Thanks to <a href="https://anelki.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">akierig</a>, mat2 is now <a href="https://github.com/macports/macports-ports/pull/18072" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">available</a> in <a href="https://trac.macports.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">macports</a>!</p>
+<p>As usual, if you know some python help is
+<a href="https://0xacab.org/jvoisin/mat2/issues?label_name%5B%5D=good+first+issue" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">welcome</a>.</p>

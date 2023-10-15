@@ -1,0 +1,2391 @@
+<p>A few weeks ago I gave a keynote at <a href="https://www.thestrangeloop.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Strange Loop</a>
+called Making Hard Things Easy. It’s about why I think some things are hard
+to learn and ideas for how we can make them easier.</p>
+
+<p>Here’s the video, as well as the slides and a transcript of (roughly) what I
+said in the talk.</p>
+
+<h3 id="the-video">the video</h3>
+
+
+
+<h3 id="the-transcript">the transcript</h3>
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-0.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/nIgcqZr1MCjrJRfOO5S7RysWyc--RN4Gh1oGDbPhoKs=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtMC5wbmc=" loading="lazy"/></a>
+
+
+
+
+Hello, Strange Loop! Strange Loop is one of the first places I
+spoke almost 10 years ago and I&#39;m so honored to be back here today for the
+last one. Can we have one more round of applause for the organizers?
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-1.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/kmSbosuQqvck6ID5tjqrdepAJAFtoX2GT08xcip2geQ=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMS5wbmc=" loading="lazy"/></a>
+
+
+
+<p>
+I often give talks about things that I&#39;m excited about,
+or that I think are really fun.
+</p>
+
+<p>
+But today, I want to talk about something that I&#39;m a little bit mad about,
+which is that sometimes things that seem like they should be basic take me 10
+years or 20 years to learn, way longer than it seems like they should. 
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-2.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/50N1n5vzdIB_x7x-5ntnsMz_DQbJQTiQhRof7x08RP8=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMi5wbmc=" loading="lazy"/></a>
+
+
+
+One thing that took me a long time to learn was DNS, which is this question
+of -- what&#39;s the IP address for a domain name like example.com?
+This feels like it should be a straightforward thing.
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-3.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/WtUDtws7fkUsd5ZBrWxpP3lEn9vMjvIBsj5mP9fI_RQ=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMy5wbmc=" loading="lazy"/></a>
+
+
+
+But seven years into learning DNS, I&#39;d be setting up a website. And I&#39;d feel
+like things should be working. I thought I understood DNS. But then I&#39;d run
+into problems, like my domain name wouldn&#39;t work. And I&#39;d wonder -- why not?
+What&#39;s happening?
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-4.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/xge5mJJJ0cfdi6ZjKxdBcjHcBRxa8E355nJTSW08pY8=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNC5wbmc=" loading="lazy"/></a>
+
+
+
+<p>
+And sometimes this would feel kind of personal! This shouldn&#39;t be so hard
+for me! I should understand this already. It&#39;s been seven years!
+</p>
+
+
+<p>
+And this &#34;it&#39;s just me&#34; attitude is often encouraged -- when I write about
+finding things hard to learn on the Internet, Internet strangers will sometimes
+tell me: &#34;yeah, this is easy! You should get it already! Maybe you&#39;re just not
+very smart!&#34;
+</p>
+
+<p>
+But luckily I have a pretty big ego so I don&#39;t take the internet strangers too
+seriously. And I have a lot of patience so I&#39;m willing to keep coming back to a
+topic I&#39;m confused about. There were maybe four different things that were
+going wrong with DNS in my life and eventually I figured them all out.
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-5.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/GPNaUSKre3gBJx1WhijgMi9_3ELtzhSnqCvyyfd2rbM=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNS5wbmc=" loading="lazy"/></a>
+
+
+
+<p>
+So, hooray! I understood DNS! I win! But then I see some of my friends struggling with
+the exact same things.
+</p>
+
+<p>
+They&#39;re wondering, hey, my DNS isn&#39;t working. Why not? 
+</p>
+
+
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-6.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/YitK0tYyT_AWwk_3bBXFvLtyJ-NrUlrwj0W9LLOlrhM=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNi5wbmc=" loading="lazy"/></a>
+
+
+<p>
+And it doesn&#39;t end. We&#39;re still having the same problems over and over and over
+again. And it&#39;s frustrating! It feels redundant! It makes
+me mad. Especially when friends take it personally, and they feel like &#34;hey I
+should really understand this already&#34;.
+</p>
+
+<p>
+Because everyone is going through this. From the sounds of recognition I hear,
+I think a lot of you have been through some of these same problems with DNS.
+</p>
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-7.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/_LMmwLZ8JPbuZEn5hl8E7Yas5nybC4vML7moupGXhYU=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNy5wbmc=" loading="lazy"/></a>
+
+
+
+I got so mad about this that I decided to make it my job. 
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-8.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/SfBbzVve8SpMv6JON_QH6AeAQx2T9Zie4c3sLvUAZXk=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOC5wbmc=" loading="lazy"/></a>
+
+
+
+   <p>
+   I started a little publishing company called Wizard Zines where --
+   </p>
+   
+ <p>
+ (applause)
+ </p>
+ 
+   <p>
+   Wow. Where I write about some of these topics and try to demystify them.
+   </p>
+     
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-9.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/XQjuLHd66LzuAxyaRLcQ3DUw9CKrITtD7VwT97jH2Sw=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOS5wbmc=" loading="lazy"/></a>
+
+
+     Here are a few of the zines I&#39;ve published. I want to talk today about a
+     few of these topics and what makes them so hard and how we can make them
+     easier.
+     
+    
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-10.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/CVJqwWNTQIpe6C0YiTz18soS-gf_TkLiiJcYTmEHFNk=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTAucG5n" loading="lazy"/></a>
+
+
+
+<p>
+ We&#39;re going to talk about bash, HTTP, SQL, and DNS.
+</p> 
+    
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-11.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/AHR6Lixjs8EWiAWy1izYYCEeOhdjyBJgX9SvMUblVwA=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTEucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+ For each of them, we&#39;re
+ going to talk a little bit about:
+ </p>
+   
+ <p>
+ a.  what&#39;s so hard about it? 
+ </p>
+   
+ <p>
+ b. what are some things we can do to make it a little bit easier for each other?
+ </p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-12.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/C9lbUIM-iQgWs1wN4p6bFCFiZweOjHzm7uNUzAYG1Ns=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTIucG5n" loading="lazy"/></a>
+
+
+   Let&#39;s start with Bash. 
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-13.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/jI3LDiVM_YQfIJKXUYhJzsbEom25ZrSRHo1m-trbJ-k=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTMucG5n" loading="lazy"/></a>
+
+
+What&#39;s so hard about it?
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-14.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/S2s-WjcG4H-5XKn2z3B9kfICQzez5T8Ghju0fSwXAcM=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTQucG5n" loading="lazy"/></a>
+
+
+So, bash is a programming language, right?
+But it&#39;s one of the weirdest programming languages that I work
+with.
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-15.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/3LOlVJgqLvi5TL0_RL8VBTUCoYxbDOFoo794xyZRhTA=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTUucG5n" loading="lazy"/></a>
+
+
+
+To understand why it&#39;s weird, let&#39;s do a little small demo
+of bash.
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-16.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/AlSv6j_nFfqzhk-k82PknPhcTqWND6tI7n7B12YAC80=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTYucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+First, let&#39;s run this script, <code>bad.sh</code>:
+</p>
+
+<pre>mv ./*.txt /tmmpp
+echo &#34;success!&#34;
+</pre>
+
+   <p>
+   This moves a file and prints &#34;success!&#34;. And with most of the programming languages that I use, if there&#39;s a problem, the program will stop.
+   </p>
+   
+ <p>
+ [laughter from audience]
+ </p>
+ 
+ <p>
+ 
+     But I think a lot of you know from maybe sad experience that bash does not
+     stop, right? It keeps going. And going... and sometimes very bad things
+     happen to your computer in the process. 
+   </p>
+   
+ <p>
+ When I run this program, here&#39;s the output:
+ </p>
+   
+   <pre>mv: cannot stat &#39;./*.txt&#39;: No such file or directory
+success!
+</pre>
+
+<p>
+It didn&#39;t stop after the failed <code>mv</code>.
+</p>
+     
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-17.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/7QYMkBEX00lHvnhiEKUDitwTHuBB_jGNOKFGS1uac54=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTcucG5n" loading="lazy"/></a>
+
+
+
+<p>
+Eventually I learned that you can write <code>set
+-e</code> at the top of your program, and that will make bash stop if
+there&#39;s a problem. 
+</p>
+
+<p>
+When we run this new program with <code>set -e</code> at the top, here&#39;s the output:
+</p>
+
+<pre>mv: cannot stat &#39;./*.txt&#39;: No such file or directory
+</pre>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-18.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/t3wCUCaohZ_QBpmNO6lehFPP4bWY9SJ2V1IiY9wefKI=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTgucG5n" loading="lazy"/></a>
+
+
+Great. We&#39;re happy. Everything is good. But every time I think I&#39;ve learned
+everything that go wrong with bash, I&#39;ll find out -- surprise! There are more
+bad things that can happen! Let&#39;s look at another program as an example.
+     
+    
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-19.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/xS1P9qyR6P44PBHWndwZCQpprUUZCS1RJ2fRnddja4A=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTkucG5n" loading="lazy"/></a>
+
+
+
+<p>
+Here we&#39;ve put our code in a function. And if the function
+fails, we want to echo &#34;failed&#34;. 
+
+</p>
+
+<p>
+So use <code>set -e</code> at the beginning, and you might think everything should be okay. 
+</p>
+
+<p>
+But if we run it... this is the output we get
+</p>
+
+<pre>mv: cannot stat &#39;./*.txt&#39;: No such file or directory
+success
+</pre>
+
+<p>
+We get the &#34;success&#34; message again! It didn&#39;t stop, it just kept going. This is
+because the &#34;or&#34; (<code>|| echo &#34;failed&#34;</code>) globally disables <code>set -e</code> in the
+function.
+</p>
+
+<p>
+Which is certainly not what I wanted, and not what I would expect. But this is
+not a bug in bash, it&#39;s is the documented behavior.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-20.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/s5H_Y603SBe9Kp7ggro-bXpvv9MXwhNDrDf1A-ZFoE4=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMjAucG5n" loading="lazy"/></a>
+
+
+
+<p>
+And I think one reason this is tricky is a lot of us don&#39;t use bash very often.
+Maybe you write a bash script every six months and don&#39;t look at it again.
+</p>
+
+<p>
+When you use a system very infrequently and it&#39;s full of a lot of weird trivia
+and gotchas, it&#39;s hard to use the system correctly.
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-21.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/WPvbJfJ4zXtX_Him_siYf-Hu3eqM8onLEmD7_pCemx0=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMjEucG5n" loading="lazy"/></a>
+
+
+
+So how can we make this easier? What can we do about it?
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-22.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/-lLER4vPJWyXTDHf3jQGBWis_Urs4wMZpUaiFikiKnI=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMjIucG5n" loading="lazy"/></a>
+
+
+One thing that I sometimes hear is -- a newcomer will say &#34;this is hard&#34;,
+and someone more experienced will say &#34;Oh, yeah, it&#39;s impossible to use bash.
+Nobody knows how to use it.&#34;
+
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-23.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/MGKywS1wSz10boODo8fcyPCDiZwWIH1vqYSsve3yjEs=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMjMucG5n" loading="lazy"/></a>
+
+
+
+<p>
+But I would say this is factually untrue. How many of you are using bash?
+</p>
+
+<p>
+A lot of us ARE using it! And it doesn&#39;t always work perfectly, but often
+it gets the job done.
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-24.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/K0_OyMq3XY7r4W5oyG2Nj28_f6Tf4LLiRjZt7Zexuck=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMjQucG5n" loading="lazy"/></a>
+
+
+
+We have a lot of bash programs that are mostly working, and there&#39;s a big
+community of us who are using bash mostly successfully despite all the
+problems.
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-25.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/SVsi4fZPmZj7U32U_w5ZqDT1bEM-Z1TSeiwpD9y8uGQ=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMjUucG5n" loading="lazy"/></a>
+
+
+
+<p>
+The way I think this is --  you have some people on the left in this
+diagram who are confused about bash, who think it seems awful and
+incomprehensible.
+</p>
+
+<p>
+And some people on the right who know how to make the bash work for them,
+mostly.
+</p>
+
+<p>
+So how do we move people from the left to the right, from being overwhelmed by
+a pile of impossible gotchas to being able to mostly use the system correctly?
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-26.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/x1CkXkyyA44Ljw_ut_CRWAcjwgELITmI7C0K58qa-i4=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMjYucG5n" loading="lazy"/></a>
+
+
+
+Well, bash has a giant pile of trivia to remember. But who&#39;s good at remembering
+giant piles of trivia?
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-27.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/B6WjjKlFewTQ2JN0QNxmsn2qgu2PO8Fq7anueMLApvg=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMjcucG5n" loading="lazy"/></a>
+
+
+
+Not me! I can&#39;t memorize all of the weird things about bash. But computers!
+Computers are great at memorizing trivia!
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-28.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/ZZDnZPZdnh4GFJ6iHsEPn-Mg2X1_mVmkIwmyn3Teq78=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMjgucG5n" loading="lazy"/></a>
+
+
+
+<p>
+And for bash, we have this incredible tool called
+shellcheck.
+</p>
+
+<p>
+[ Applause ]
+</p>
+
+<p>
+Yes! Shellcheck is amazing! And shellcheck knows a lot of things that can go
+wrong and can tell you &#34;oh no, you don&#39;t want to do that. You&#39;re going to have
+a bad time.&#34;
+</p>
+
+<p>
+I&#39;m very grateful for shellcheck, it makes it much easier for me to write
+tiny bash scripts from time to time. 
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-29.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/UDyNF4PvMktZ9ovyCeDxYvcDR2okuOZilT9Q6iZQEIk=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMjkucG5n" loading="lazy"/></a>
+
+
+
+<p>
+Now let&#39;s do a shellcheck demo! 
+</p>
+
+<pre>$ shellcheck -o all bad-again.sh
+In bad-again.sh line 7:
+f || echo &#34;failed!&#34;
+^-- SC2310 (info): This function is invoked in an || condition so set -e will be disabled. Invoke separately if failures should cause the script to exit.
+</pre>
+
+<p>
+Shellcheck gives us this
+lovely error message. The message isn&#39;t completely obvious on its own (and this
+check is only run if you invoke shellcheck with <code>-o all</code>). But
+shellcheck tells you &#34;hey, there&#39;s this problem, maybe you should be worried
+about that&#34;.
+</p>
+
+<p>
+And I think it&#39;s wonderful that all these tips live in this linter. 
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-30.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/oB6X1lT2n7lKu4UzaapBZXruP2IrmifrhXe-htKtaFM=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMzAucG5n" loading="lazy"/></a>
+
+
+
+<p>
+I&#39;m not trying to tell you to write linters, though I think that some of you
+probably will write linters because this is that kind of crowd.
+</p>
+
+<p>
+I&#39;ve personally never written a linter, and I&#39;m definitely not going to create
+something as cool as shellcheck!
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-31.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/ZEKAAAMJHJkm-d6i72L6uysocQXyMppRitZqV2lXeWM=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMzEucG5n" loading="lazy"/></a>
+
+
+
+<p>
+But instead, the way I write linters is I tell people about shellcheck from
+time to time and then I feel a little like I invented shellcheck for those
+people. Because some people didn&#39;t know about the tool until I told them about
+it!
+</p>
+
+<p>
+I didn&#39;t find out about shellcheck for a long time and I was kind of mad about
+it when I found out. I felt like -- excuse me? I could have been using
+shellcheck this whole time? I didn&#39;t need to remember all of this stuff in
+my brain?
+</p>
+
+<p>
+So I think an incredible thing we can do is to reflect on the tools that we&#39;re
+using to reduce our cognitive load and all the things that we can&#39;t fit into
+our minds, and make sure our friends or coworkers know about them.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-32.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/_oGjV2kg5FUXIpuBtlITm2CYd7_1VMQn-qLafhV1dXA=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMzIucG5n" loading="lazy"/></a>
+
+
+
+<p>
+I also like to warn people about gotchas and some of the terrible things
+computers have done to me.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-33.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/XJLe2m_Yooh6CXAxM_Ciii7RLeDK-aDeN41f4VRXkRE=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMzMucG5n" loading="lazy"/></a>
+
+
+
+<p>
+I think this is an incredibly valuable community service. The example I shared
+about how <code>set -e</code> got disabled is something I learned from my
+friend Jesse a few weeks ago. 
+</p>
+
+<p>
+They told me how this thing happened to them, and now I know and I don&#39;t have
+to go through it personally.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-34.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/UPPYy3gyJYV6bUqFiTWQV7g5meDVU0AqWabFVJ6ZqvE=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMzQucG5n" loading="lazy"/></a>
+
+
+
+<p>
+One way I see people kind of trying to share terrible things that their
+computers have done to them is by sharing &#34;best practices&#34;.
+</p>
+
+<p>
+But I really love to hear the stories behind the best practices!
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-35.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/DdRgKS5YVbB60oNr-U0E1gNZPNExT611_yr4wcIaRk0=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMzUucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+If someone has
+a strong opinion like &#34;nobody should ever use bash&#34;, I want to hear about the
+story! What did bash do to you? I need to know.
+</p>
+
+<p>
+The reason I prefer stories to best practices is if I know the story about how
+the bash hurt you, I can take that information and decide for myself how I want
+to proceed.
+</p>
+
+<p>
+Maybe I feel like -- the computer did that to you? That&#39;s okay, I can deal with
+that problem, I don&#39;t mind.
+</p>
+
+<p>
+Or I might instead feel like &#34;oh no, I&#39;m going to do the best practice you
+recommended, because I do not want that thing to happen to me&#34;. 
+</p>
+
+<p>
+These bash stories are a great example of that: my reaction to them is &#34;okay,
+I&#39;m going to keep using bash, I&#39;ll just use shellcheck and keep my bash scripts
+pretty simple&#34;. But other people see them and decide &#34;wow, I never want to use
+bash for anything, that&#39;s awful, I hate it&#34;.
+</p>
+
+<p>
+Different people have different reactions to the same stories and that&#39;s okay.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-36.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/x5rxLuyKr_O9x88qZB34xsSTpB2kbpukNr2uaIz3n7M=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMzYucG5n" loading="lazy"/></a>
+
+
+That&#39;s all for bash. Next up we&#39;re gonna talk about HTTP. 
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-37.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/hv7v7HkJwXU35_8NntmLrmo4c9bUE1kzTPPZIaHUapw=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMzcucG5n" loading="lazy"/></a>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-38.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/QLu2rLzJVcHP4_SqVeQ7JjU6J0nPsMDrA_heCmBDDNI=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMzgucG5n" loading="lazy"/></a>
+
+
+
+<p>
+I was talking to Marco Rogers at some point, many years ago, and he mentioned
+some new developers he was working with were struggling with HTTP.
+</p>
+
+<p>
+And at first, I was a little confused about this -- I didn&#39;t understand what
+was hard about HTTP.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-39.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/nfWv7fDL8GCrKig03UfssqW_LjkTu9o_vUw-7NLDYEc=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMzkucG5n" loading="lazy"/></a>
+
+
+
+<p>
+The way I was thinking about it
+at the time was that if you have an HTTP response, it has a few parts: a response
+code, some headers, and a body.
+</p>
+
+
+<p>
+I felt like -- that&#39;s a pretty simple structure, what&#39;s the problem? But of
+course there was a problem, I just couldn&#39;t see what it was at first.
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-40.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/fFueuwIV4BpSQrFuRET3QzIHAjAYVA-EZDoR05hpHqc=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNDAucG5n" loading="lazy"/></a>
+
+
+
+<p>
+So, I talked to a friend who was newer to HTTP. And they asked &#34;why does it
+matter what headers you set?&#34;
+</p>
+
+<p>
+And I said: &#34;well, the browser...&#34;
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-41.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/EjxwPi_a2lhG26RUc0EZejCN168KV6lDRe9ptpA3Pio=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNDEucG5n" loading="lazy"/></a>
+
+
+But then I thought... the browser?
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-42.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/eZ2mKrABvSB29a8eVKquH6zcL-AQRLiCyat4WTGkWN8=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNDIucG5n" loading="lazy"/></a>
+
+
+the browser?
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-43.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/vIGB9NLmOfD95ZVzbUdWHw4NGl2WfxBEqOsqEkPP14w=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNDMucG5n" loading="lazy"/></a>
+
+
+
+<p>
+The browser!
+</p>
+
+<p>
+Firefox is 20 million lines of code! It&#39;s been
+evolving since the &#39;90s. There have been as I understand it, 1 million
+changes to the browser security model as people have discovered new and
+exciting exploits and the web has become a scarier and scarier place.
+</p>
+
+<p>
+The browser is really a lot to understand.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-44.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/DoOxxyMp01JGU_2NXpdkV3HHMLCaGP21EeuTANt8Y5s=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNDQucG5n" loading="lazy"/></a>
+
+
+
+
+
+<p>
+One trick for understanding why a topic is hard is -- if the implementation if the
+thing involves 20 million lines of code, maybe that&#39;s why people are confused!
+</p>
+
+<p>
+Though that 20 million lines of code also involves CSS and JS and many other
+things that aren&#39;t HTTP, but still.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-45.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/GRMuFl0T39vH9rWfsS1h_u_eLvGxUzMgm5HFfJy56gw=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNDUucG5n" loading="lazy"/></a>
+
+
+
+<p>
+Once I thought of it in terms of how complex a modern web browser is, it
+made so much more sense! Of course newcomers are confused about HTTP if you
+have to understand what the browser is doing!
+</p>
+
+<p>
+Then my problem changed from &#34;why is this hard?&#34; to &#34;how do I explain this at all?&#34;
+</p>
+
+<p>
+So how do we make it easier? How do we wrap our minds around this 20 million lines
+of code?
+</p>
+
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-46.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/FHtQWVghX95wzdKae68pE2Tg7vndybMqH6rK3YEJQcM=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNDYucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+One way I think about this for HTTP is: here are some of the HTTP request
+headers. That&#39;s kind of a big list there are 43 headers there.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-47.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/xwStQL39vJR2024FU6s5iV-hI_VL6TXq_Pi8Xf-cWxg=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNDcucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+There are more unofficial headers too.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-48.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/mg4IxSYe-5rL7aIX5a5U7a32IXNbiwFzNYeQNRa3TO0=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNDgucG5n" loading="lazy"/></a>
+
+
+
+<p>
+My brain does not contain all of those headers, I have no idea what most of
+them are.
+</p>
+
+<p>
+When I think about trying to explain big topics, I think about -- what is
+actually in my brain, which only contains a normal human number of things?
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-49.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/7ZQaTF-ljwQ6jrvDLKYI7ftivbZ7pD61J-zeXZYN-s8=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNDkucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+This is <a href="https://wizardzines.com/comics/request-headers/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a comic I drew about HTTP request headers</a>.
+You don&#39;t have to read the whole thing. This has 15
+request headers.
+</p>
+
+<p>
+I wrote that these are &#34;the most important headers&#34;, but what I mean by &#34;most
+important&#34; here is that these are the ones that I know about and use. It&#39;s a
+subjective list.
+</p>
+
+<p>
+I wrote about 12 words about each one, which I think is approximately the
+amount of information about each header that lives in my mind.
+</p>
+
+<p>
+For example I know that you can set <code>Accept-Encoding</code> to <code>gzip</code>
+and then you might get back a compressed response. That&#39;s all I know,
+and that&#39;s usually all I need to know!
+</p>
+
+<p>
+This very small set of information is working pretty well for me.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-50.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/CI1oQ2Pzh-Bb-rwPa2c3P5OiK0WAzvNWWjLUTbHLNPU=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNTAucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+The general way I think about this trick is &#34;turn a big list into a small list&#34;.
+</p>
+
+<p>
+Turn the set of EVERY SINGLE THING into just the things I&#39;ve personally used. I
+find it helps a lot.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-51.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/82XWZnllFk7LOd5HjTaXZMjWGp2AE_A5AbRQ6AYp4zY=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNTEucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+Another example of this &#34;turn a big list into a small list&#34; trick is command line arguments.
+</p>
+
+<p>
+I use a lot of command line tools, the number of arguments they have can be
+overwhelming, and I&#39;ve written about them <a href="https://wizardzines.com/zines/bite-size-command-line/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a fair amount</a> over
+the years.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-52.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/NH15p6PfAA3FrnTe9AIWNmKOIegkhwAwAvUtVLSzVKI=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNTIucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+Here are all the flags for grep, from its man page. That&#39;s too much! I&#39;ve been
+using grep for 20 years but I don&#39;t know what all that stuff is.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-53.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/9eV-NPOazazMnF3bATSPy1EZu-tHZ4ShBl6Aot-rWV8=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNTMucG5n" loading="lazy"/></a>
+
+
+
+<p>
+But when I look at the grep man page, this is what I see.
+</p>
+
+
+<p>
+I think it&#39;s very helpful to newcomers when a more experienced person says
+&#34;look, I&#39;ve been using this system for a while, I know about 7 things about it,
+and here&#39;s what they are&#34;.
+</p>
+
+<p>
+We&#39;re just pruning those lists down to a more human scale. And it can even help
+other more experienced people -- often someone else will know a slightly
+different set of 7 things from me.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-54.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/ZTcDFDgF11Ee7PnwbO6gsdiwAFOLz-CopTedIhLhVgc=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNTQucG5n" loading="lazy"/></a>
+
+
+
+<p>
+But what about the stuff that doesn&#39;t fit in my brain?
+</p>
+
+<p>
+Because I have a few things about HTTP stored in my brain. But sometimes I need
+other information which is hard to remember, like maybe the exact details of
+how CORS works.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-55.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/esZEnvAh3X9HeGnARTrD9i0XcX5hHYnRErTzNBRdDSs=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNTUucG5n" loading="lazy"/></a>
+
+
+
+And so, that&#39;s where we come to references. Where do we find the information
+that we can&#39;t remember?
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-56.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/jtczOJhVIzuBemiTCbluTHwhkKqKMHK3jl_aW0MAD4w=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNTYucG5n" loading="lazy"/></a>
+
+
+
+<p>
+I often have trouble finding the right references.
+</p>
+
+<p>
+For example I&#39;ve been trying to learn CSS off and on for 20 years. I&#39;ve made a
+lot of progress -- it&#39;s going well!
+</p>
+
+<p>
+But only in the last 2 years or so I learned about this wonderful website called 
+<a href="https://css-tricks.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">CSS Tricks</a>.
+</p>
+
+<p>
+And I felt kind of mad when I learned about CSS Tricks! Why didn&#39;t I know about
+this before? It would have helped me!
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-57.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/uMRrh4i4T81Knlg4YWNifMN0LJ61hkEPlif5caagdsw=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNTcucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+But anyway, I&#39;m happy to know about CSS Tricks now. (though sadly they seem to
+have stopped publishing in April after the acquisition, I&#39;m still happy the older posts are there)
+</p>
+
+<p>
+For HTTP, I think a lot of us use the Mozilla Developer Network. 
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-58.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/QdxR2LRro0imU6Ya_lSfjCxezpPToa4j_Rb-99XCAXM=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNTgucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+Another HTTP reference I love is the official RFC, <a href="https://www.rfc-editor.org/rfc/rfc9110" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">RFC 9110</a> (also
+<a href="https://www.rfc-editor.org/rfc/rfc9111" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">9111</a>,
+<a href="https://www.rfc-editor.org/rfc/rfc9112" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">9112</a>,
+<a href="https://www.rfc-editor.org/rfc/rfc9113" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">9113</a>,
+<a href="https://www.rfc-editor.org/rfc/rfc9114" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">9114</a>)
+</p>
+
+<p>
+It&#39;s a new authoritative reference for HTTP and it was written just last
+year, in 2022! They decided to organize all the information really nicely. So if you
+want to know exactly what the <code>Connection</code> header does, you can look
+it up. 
+</p>
+
+<p>
+This is not really my top reference. I&#39;m usually on MDN. But I really
+appreciate that it&#39;s available.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-59.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/gOnI2pjdxQILOIe1wiUNh9wJEpeZIGtELAJJfCJcRjk=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNTkucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+So I love to share my favorite references.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-60.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/gP30fJ--EQMSmYZNZu5MnSOXSPucxKgm9NQw8oTv0Ig=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNjAucG5n" loading="lazy"/></a>
+
+
+
+<p>
+I do sometimes find it tempting to kind of lie about references. Not on
+purpose.
+But I&#39;ll see something on the internet, and I&#39;ll think it&#39;s kind of cool, and
+tell a friend about. But then my friend might ask me -- &#34;when have you used this?&#34;
+And I&#39;ll have to admit &#34;oh, never, I just thought it seemed cool&#34;.
+</p>
+
+<p>
+I think it&#39;s important to be honest about what the references that I&#39;m actually
+using in real life are. Even if maybe the real references I use are a little
+&#34;embarrassing&#34;, like maybe w3schools or something.
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-61.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/zA9_ZLhM8JoxbVdqExqgVZGajqD5A0XhxiJ1xIXrytw=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNjEucG5n" loading="lazy"/></a>
+
+
+
+So that&#39;s HTTP! Next we&#39;re going to talk about SQL.
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-62.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/1JYz-QGjI3HjM5Fi4Y1cRr3Mjwb9NS2lEqBL8URE3Zg=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNjIucG5n" loading="lazy"/></a>
+
+
+The case of the mysterious execution order.
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-63.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/BtAR0TEMf7goz5CX57-eBaf1bvdUYiUDbX05i8vq83c=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNjMucG5n" loading="lazy"/></a>
+
+
+
+<p>
+I started thinking about SQL because someone mentioned they&#39;re trying to learn
+SQL. I get most of my zine ideas that way, one person will make an offhand
+comment and I&#39;ll decide &#34;ok, I&#39;m going to spend 4 months writing about
+that&#34;. It&#39;s a weird process.
+</p>
+
+<p>
+So I was wondering -- what&#39;s hard about SQL? What gets in the way of trying
+to learn that?
+</p>
+
+<p>
+I want to say that when I&#39;m confused about what&#39;s hard about something, that&#39;s
+a fact about me. It&#39;s not usually that the thing is easy, it&#39;s that I need to
+work on understanding what&#39;s hard about it. It&#39;s easy to forget when you&#39;ve
+been using something for a while.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-64.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/O026Irrl-hrCpZCjJo8va7Ubc2XGoqYv_mWETd07f3U=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNjQucG5n" loading="lazy"/></a>
+
+
+
+<p>
+So, I was used to reading SQL queries. For example this made up query that tries to
+find people who own exactly two cats. It felt straightforward
+to me, SELECT,
+FROM, WHERE, GROUP BY.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-65.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/XCP2N_jRVSLgfn3vZGiYibDMBaolCmGgbb8Fgppz-zE=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNjUucG5n" loading="lazy"/></a>
+
+
+
+<p>
+But then I was talking to a friend about these queries who was new to SQL. And
+my friend asked -- what is this doing?
+</p>
+
+<p>
+I thought, hmm, fair point.
+</p>
+
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-66.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/Ls27ew9fS063-pMJqXQ4wMqpkXBKj3YqW3H6__bzIA8=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNjYucG5n" loading="lazy"/></a>
+
+
+
+<p>
+And I think the point my friend was making was that the order that this SQL
+query is written in, is not the order that it actually happens in. It happens
+in a different order, and it&#39;s not immediately obvious what that is.
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-67.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/Qt0tFCxX2g4MbRYxk5OCi_M7KyzknRzgKAjdPPryAtQ=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNjcucG5n" loading="lazy"/></a>
+
+
+
+So how do we make this easier?
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-68.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/SrmUSogDrfmRsbvsdUGdnRPzLWln46_HBXrU4h_RjKU=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNjgucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+I like to think about: what does the computer do first?
+What actually happens first chronologically?
+</p>
+
+<p>
+Computers actually do live in the same timeline as us. Things happen. Things
+happen in an order. So what happens first?
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-69.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/Gv1FYci0t6BVFGjhLcdnBpcHG9MjIcTOExHHYpvD4KY=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNjkucG5n" loading="lazy"/></a>
+
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-70.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/WrvHdro6n9AuRANaq85S2Gy6KO7ugrZ82F--nJptg90=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNzAucG5n" loading="lazy"/></a>
+
+
+
+The way I think about an SQL query is: is you start with a table like
+<code>cats</code>.
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-71.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/sDOYqjk6ehVvoJ9WD76JlQGWhYealRQU4x3kGCaOEZU=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNzEucG5n" loading="lazy"/></a>
+
+
+
+Then maybe you filter it, you remove some stuff. 
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-72.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/BGV0oFdl05GzaBmcE8i3MSFgkGSSeZiK11x-kYHYuAY=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNzIucG5n" loading="lazy"/></a>
+
+
+
+Then you make some groups.
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-73.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/0PhSD9vH1-7iC7FzpgBxQ632kZdxmDy9IyMGQohCavg=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNzMucG5n" loading="lazy"/></a>
+
+
+
+Then you filter the groups, remove some of them.
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-74.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/LSJLqc5WczpFErp5kKiHLD55dnyGjH4rVl0pl871GNs=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNzQucG5n" loading="lazy"/></a>
+
+
+
+Then you do some
+aggregation. There&#39;s two things in each group.
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-75.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PJ5bbA_Bh2rtTjab-rZgqXHFC0-OzPXK1DQEmlx37ew=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNzUucG5n" loading="lazy"/></a>
+
+
+
+And you sort it.
+
+And you
+can also limit the results.
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-76.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/p5uKwwc0j_GzNy3-MgGGHhpznZKqhKJvndN5GBiQrWg=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNzYucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+So, that&#39;s how I think about SQL. The way a query runs is first
+FROM, then WHERE, GROUP BY, HAVING, SELECT, ORDER BY, LIMIT.
+</p>
+
+<p>
+At least conceptually. Real life databases have optimizations and it&#39;s more
+complicated than that. But this is the mental model that I use most of the time
+and it works for me. Everything is in the same order as you write it,
+except SELECT is fifth. 
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-77.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/tu-BcBm10srgEcT6ixj3iLzOLtqm5pAra8gsPEz-pOw=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNzcucG5n" loading="lazy"/></a>
+
+
+
+I&#39;ve really gotten a lot out of this trick where you try to tell the
+chronological story of what the computer is doing. I want to talk about a
+couple other examples.
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-78.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/s317Ao8S8ST5ZMgnXhOj3vzU-OoaynkMHB4jJiVdYHQ=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNzgucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+One is CORS, in HTTP. 
+</p>
+
+<p>
+This <a href="https://wizardzines.com/comics/cors/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">comic</a> is way too small to read on the slide.
+But the idea is if you&#39;re making a cross-origin request in your
+browser, you can write down every communication that&#39;s happening between your
+browser and the server, in chronological order.
+</p>
+
+<p>
+And I think writing down everything in chronological order makes it a lot easier to understand and more concrete.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-79.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/D_6s4cfI3gP5BiGEfGh6peo2pM0Fczjq1DzeCdEu6-4=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtNzkucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+&#34;What happens in chronological order?&#34; is a very
+straightforward structure, which is what I like about it. &#34;What happens first?&#34;
+feels like it should be easy to answer. But it&#39;s not!
+</p>
+
+<p>
+I&#39;ve found that it&#39;s actually very hard to know what our computers is
+doing, and it&#39;s a really fun question to explore.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-80.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/DMQRJl3QoaawRlpoaZG-GztFYoltk9u9IK-c2hiMe74=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtODAucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+As an example of how this is hard: I wrote a blog post recently called 
+<a href="https://jvns.ca/blog/2023/08/03/behind--hello-world/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">&#34;Behind Hello World on Linux&#34;</a>. It&#39;s about what happens when you run &#34;hello world&#34; on a
+Linux computer. I wrote a bunch about it, and I was really happy with it.
+</p>
+
+<p>
+But after I wrote the post, I thought -- haven&#39;t I written about this before? Maybe 10 years ago?
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-81.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/2o6E4hCbqZ-PU9GJYjxoc1hHVPZhU7FupAMr1_gGJFc=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtODEucG5n" loading="lazy"/></a>
+
+
+
+<p>
+And sure enough, I&#39;d tried to write <a href="https://jvns.ca/blog/2013/11/29/what-happens-when-you-run-a-unix-program/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+a similar post</a> 10 years before.
+</p>
+
+<p>
+I think this is really cool. Because the 2013 version of this post was about 6
+times shorter. This isn&#39;t because Linux is more complicated than it was 10
+years ago -- I think everything in the 2023 post was probably also true in
+2013. The 2013 post just has a lot less information in it.
+</p>
+
+<p>
+The reason the 2023 post is longer is that I didn&#39;t know what was happening
+chronologically on my computer in 2013 very well, and in 2023 I know a lot
+more. Maybe in 2033 I&#39;ll know even more!
+</p>
+
+<p>
+I think a lot of us -- like me in 2013 and honestly me now, often don&#39;t know
+the facts of what&#39;s happening on our computers. It&#39;s very hard, which is what
+makes it such a fun question to try and discuss.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-82.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/a4uuOjDVEnSs67j3fVXMH4ezextT7DzrDzDMVlRznPs=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtODIucG5n" loading="lazy"/></a>
+
+
+
+
+
+<p>
+I think it&#39;s cool that all of us
+have different knowledge about what is happening chronologically on our
+computers and we can all chip in to this conversation.
+</p>
+
+<p>
+For example when I posted this blog post about Hello World on Linux, some people
+mentioned that they had a lot of thoughts about what happens exactly in your
+terminal, or more details about the filesystem, or about what&#39;s happening
+internally in the Python interpreter, or any number of things. You can go
+really deep.
+</p>
+
+<p>
+I think it&#39;s just a really fun collaborative question. 
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-83.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/C-GZlJmrwjPJQxZx-ccUZPlaWb4a0_W_jw_lQup48o4=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtODMucG5n" loading="lazy"/></a>
+
+
+
+<p>
+I&#39;ve seen &#34;what happens chronologically?&#34; work really well as an activity with
+coworkers, where you&#39;re ask: &#34;when a request comes into this API endpoint we
+run, how does that work? What happens?&#34;
+</p>
+
+<p>
+What I&#39;ve seen is that someone will understand some part of the system, like &#34;X
+happens, then Y happens, then it goes over to the database and I have no idea
+how that works&#34;.  And then someone else can chime in and say &#34;ah, yes, with the
+database A B C happens, but then there&#39;s a queue and I don&#39;t know about that&#34;.
+</p>
+
+<p>
+I think it&#39;s really fun to get together with people who have different
+specializations and try to make these little timelines of what the
+computers are doing. I&#39;ve learned a lot from doing that with people.
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-84.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/IKLxQ6q8Gtdg0ok1aAOjN1ibKBXEJV9LrlW5x72IQN0=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtODQucG5n" loading="lazy"/></a>
+
+
+That&#39;s all for SQL.
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-85.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/HXiCkzRqPin9L05YA8ZOd1th7sGTFLDieFKCOBmpoL4=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtODUucG5n" loading="lazy"/></a>
+
+
+
+So, now we&#39;ve arrived at DNS which is
+where we started the talk.
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-86.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/E9sUz0_GtejCIjeVSb1HtcVmb_6iGqUHDtKvVjTH8WY=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtODYucG5n" loading="lazy"/></a>
+
+
+
+
+
+<p>
+Even though I struggled with DNS. Once I got figured it out, I felt like &#34;dude,
+this is easy!&#34;. Even though it just took me 10 years to learn how it
+works.
+</p>
+
+<p>
+But of course, DNS was pretty hard for me to learn. So -- why is that? Why did
+it take me so long?
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-87.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/5czR-f3ELSC-k6aHSaCdcOToZQslCwIiTYQaoPc05S4=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtODcucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+So, I have a little <a href="https://wizardzines.com/comics/cast-of-characters/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">chart</a> here of how I think about DNS.
+</p>
+
+<p>
+You have your browser on the left. And over on the right there&#39;s the authoritative
+nameservers, the source of truth of where the DNS records for a domain live. 
+</p>
+
+<p>
+In the middle, there&#39;s a function that you call and a cache.
+So you have browser, function, cache, source of truth.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-88.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/siec1i3WXuQ1T11D-UY8zsuxlxS5AX_GwmV5g1aqwXg=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtODgucG5n" loading="lazy"/></a>
+
+
+
+<p>
+One problem is that there are a lot of things in this diagram that are
+totally hidden from you.
+</p>
+
+<p>
+The library code that you&#39;re using where you make a DNS request -- there are a
+lot of different libraries you could be using, and it&#39;s not straightforward to figure out which one is being used.
+That was the source of some of my confusion.
+</p>
+
+<p>
+There&#39;s a cache which has a bunch of cached data. That&#39;s invisible to you, you
+can&#39;t inspect it easily and you have no control over it. that
+</p>
+
+<p>
+And there&#39;s a conversation between the cache and the source of
+truth, these two red arrows which also you can&#39;t see at all.
+</p>
+
+<p>
+So this is kind of tough! How are you supposed to develop an intuition for a
+system when it&#39;s mostly things that are completely hidden from you? Feels like
+a lot to expect.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-89.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/w1bKkg5OURe6QeYzXhwgnvC5_fEzx4GttJhYGDS97ZI=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtODkucG5n" loading="lazy"/></a>
+
+
+
+So, what do we do about this?
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-90.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/y8nj1lYLzottJEIcQM2ziA5lWaNapk73vbv6cVP-JI8=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOTAucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+So: let&#39;s talk about these red arrows
+on the right.
+</p>
+
+<p>
+We have our cache and then we have the source of truth. This conversation
+is normally hidden from you because you often don&#39;t control either of these
+servers. Usually they&#39;re too busy doing high-performance computing to report to
+you what they&#39;re doing.
+</p>
+
+<p>
+But I thought: anyone can write an authoritative nameserver!
+In particular, I could write one that reports back every single message that it receives to its users.
+So, with my friend <a href="https://marieflanagan.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Marie</a>, we wrote a little DNS server.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-91.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/OTHoNfRGmQJ7lb_2ag4eAaQih8wcsFvwinxBbZg4yyk=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOTEucG5n" loading="lazy"/></a>
+
+
+
+<p>
+(demo of <a href="https://messwithdns.net" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">messwithdns.net</a>)
+</p>
+
+<p>
+This is called Mess With DNS. The idea is I have a domain name and you
+can do whatever you want with it. We&#39;re going to make a DNS record called
+<code>strangeloop</code>, and we&#39;re going to make a CNAME record pointing at
+<code>orange.jvns.ca</code>, which is just a picture of an orange. Because I
+like oranges.
+</p>
+
+<p>
+And then over here, every time a request comes in from a resolver, this will --
+this will report back what happened. So, if we click on this link, we can see
+-- a Canadian DNS resolver, which is apparently what my browser is configured
+to use, is requesting an IPv4 record and an IPv6 record, A and AAAA.
+</p>
+
+
+(at this point in the demo everyone in the audience starts visiting the link
+and it gets a bit chaotic, it&#39;s very funny)
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-93.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/0RlifKNNkfvhRefVSNG3IkBAf-usz_E7_2NVCdwjU4c=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOTMucG5n" loading="lazy"/></a>
+
+
+
+
+<p>
+So the trick here is to find ways to show people parts of what the computer is
+doing that are normally hidden.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-94.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/4Od2SuGgbwLS3X3Ub_OeYQF-riDyqw-6TyJkoTx2jf0=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOTQucG5n" loading="lazy"/></a>
+
+
+
+<p>
+Another great example of showing things that are hidden is this website called <a href="https://float.exposed/0x4d000006" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">float.exposed</a>
+by <a href="https://ciechanow.ski/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Bartosz Ciechanowski</a> who makes a lot of incredible visualizations.
+</p>
+
+<p>
+So if you look at <a href="https://float.exposed/0x4b800000" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">this 32-bit
+floating point number</a> and click the &#34;up&#34; button on the significand, it&#39;ll
+show you the next floating point number, which is 2 more. And then as you make
+the number bigger and bigger (by increasing the exponent), you can see that the
+floating point numbers get further and further apart.
+</p>
+
+<p>
+Anyway, this is not a talk about floating point. I could do an entire talk
+about this site and how we can use it to see how floating point works, but
+that&#39;s not this talk.
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-95.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/_QlGSNbzcHyE3mHpe_9F4SUbvloNKdgaz2cQW--IRDs=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOTUucG5n" loading="lazy"/></a>
+
+
+
+<p>
+Another thing that makes DNS confusing is that it&#39;s a giant distributed system
+-- maybe you&#39;re confused because there are 5 million computers involved (really, more!).
+Most of which you have no control over, and some
+are doing not what they&#39;re supposed to do. 
+</p>
+
+<p>
+So that&#39;s another trick for understanding why things are hard, check to see if
+there are actually 5 million computers involved.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-96.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/cIxtylzn2fOIY7UXrUjiHAC_UnWJ6G111ly0Cy26zxk=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOTYucG5n" loading="lazy"/></a>
+
+
+
+<p>
+So what else is hard about DNS?
+</p>
+
+<p>
+We&#39;ve talked about how most of the system is hidden from you, and about how
+it&#39;s a big distributed system.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-97.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/XKy6Bmg1Zv6uPhoVL78BQoDTLzjfKL9XGsbk5EMHgW8=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOTcucG5n" loading="lazy"/></a>
+
+
+
+One problem I&#39;ve run into is that the tools are confusing.
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-98.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/FAFemukjvrJuaQgfyYQmvNJrmbEZfyR9-nprm9K_gPg=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOTgucG5n" loading="lazy"/></a>
+
+
+
+<p>
+One of the hidden things I talked about was: the resolver has cached data,
+right? And you might be curious about whether a certain domain name is cached
+or not by your resolver right now.
+</p>
+
+<p>
+Just to understand what&#39;s happening:  am I getting this result because it was
+cached? What&#39;s the deal?
+</p>
+
+<p>
+
+I said this was hidden, but there are a couple of ways to query a resolver to
+see what it has cached, and I want to show you one of them.
+
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-99.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/b3Z5k40FmwwbOwtKPb_PfpBriSLzaIRLcCQl5nmjGxU=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtOTkucG5n" loading="lazy"/></a>
+
+
+
+The tool I usually use for making DNS queries is called <code>dig</code>, and
+it has a flag called <code>+norecurse</code>. You can use it to query a
+resolver and ask it to only return results it already has cached.
+
+<p>
+With <code>dig +norecurse jvns.ca</code>, I&#39;m kind of asking -- how popular is my website? Is it popular enough that someone has visited it in the last 5 minutes?
+Because my records are not cached for that long, only for 5 minutes.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-100.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/Vf-TUkDN0Tp_z4tehq4sIy55XL6tVhL96skPtfEW1W0=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTAwLnBuZw==" loading="lazy"/></a>
+
+
+
+
+<p>
+But when I look at this
+response, I feel like &#34;please! What is all this?&#34;
+</p>
+
+<p>
+And when I show newcomers this output, they often respond by saying &#34;wow,
+that&#39;s complicated, this DNS thing must be really complicated&#34;. But really this
+is just not a great output format, I think someone just made some relatively
+arbitrary choices about how to print this stuff out in the 90s and it&#39;s stayed
+that way ever since.
+</p>
+
+<p>
+So a bad output format can mislead newcomers into thinking that something is more complicated than it actually is.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-101.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/O7VULwAw4MT-lSUfCqPJBY3787vavw_8qKQfdNaDrLU=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTAxLnBuZw==" loading="lazy"/></a>
+
+
+
+What can we do about confusing output like this?
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-102.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/60TcHhnMvbgXRbHzLaoZm2ClpBCgBqkD9ynZ32T1DNY=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTAyLnBuZw==" loading="lazy"/></a>
+
+
+
+<p>
+One of my favorite tricks, I call eraser eyes.
+</p>
+
+<p>
+Because when I look at that output, I&#39;m not looking at all of it, I&#39;m just
+looking at a few things. My eyes are ignoring the rest of it.
+</p>
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-103.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/QAZEaVtmQ8PfdWIACgy5L7hDfp7T7TST7gu8p4ANs9A=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTAzLnBuZw==" loading="lazy"/></a>
+
+
+
+<p>
+When I look at the output, this is what I see: it says <code>SERVFAIL</code>.
+That&#39;s the DNS response code.
+</p>
+
+
+<p>
+Which as I understand it is a very unintuitive way of it saying, &#34;I do not have
+that in my cache&#34;. So nobody has asked that resolver about my domain name in
+the last 5 minutes, which isn&#39;t very surprising.
+</p>
+
+<p>
+I&#39;ve learned so much from people doing a little demo of a tool, and showing how
+they use it and which parts of the output or UI they pay attention to, and which parts they ignore.
+</p>
+
+<p>
+Becuase usually we ignore most of what&#39;s on our screens!
+</p>
+
+<p>
+I really love to use <code>dig</code> even though it&#39;s a little hairy because
+it has a lot of features (I don&#39;t know of another DNS debugging that supports this
+<code>+norecurse</code> trick), it&#39;s everywhere, and it hasn&#39;t changed in a
+long time. And I know if I learn its weird output format once I can know that
+forever. Stability is really valuable to me.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-104.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/sbsNXU8nq7cet0XpJWBB9WWtS6nH56OWJfLJK_xMCGo=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTA0LnBuZw==" loading="lazy"/></a>
+
+
+
+So we&#39;ve talked about these four technologies. Let&#39;s talk a little more about
+how we can make things easier for each other.
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-105.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/4OFLZtr3cQmhMNtdJ1a_0oueWuyA9cCr-16SgE_8EPc=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTA1LnBuZw==" loading="lazy"/></a>
+
+
+
+
+
+What can we do to move folks from &#34;I really don&#39;t get it&#34; to &#34;okay, I can
+mostly deal with this, at least 90% of the time, it&#39;s fine&#34;? For bash or HTTP or DNS or anything else.
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-106.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/Sk1l_WyJ-24hZqs568o5bo3qN1PD7wGSrapXliP5LL4=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTA2LnBuZw==" loading="lazy"/></a>
+
+
+
+
+<p>
+We&#39;ve talked about some tricks I use to bring people over, like:
+</p>
+
+<ul>
+<li> sharing useful tools </li>
+<li> sharing references</li>
+<li>telling a chronological story of what happens on your computer</li>
+<li>turning a big list into a small list of the things you actually use</li>
+<li>showing the hidden things</li>
+<li>demoing a confusing tool and telling folks which parts I pay attention to</li>
+</ul>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-107.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/ueR3FRaxV87SL2cVDtS_5GM6WX-AjlwzqZhETdG8L7M=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTA3LnBuZw==" loading="lazy"/></a>
+
+
+
+<p>
+
+When I practiced this talk, I got some feedback from people saying &#34;julia! I don&#39;t
+do those things! I don&#39;t have a blog, and I&#39;m not going to start one!&#34;
+
+</p>
+
+<p>
+And it&#39;s true that most people are probably not going to start programming blogs.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-108.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/QqD1UW0Vgl8FgVk1F90U29kB19oum21I0pOCMS_dDx4=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTA4LnBuZw==" loading="lazy"/></a>
+
+
+
+
+<p>
+But I really don&#39;t think you need to have a public presence on the internet to
+tell the people around you a little bit about how you use computers and how you
+understand them.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-109.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/u98GN6YbHdzJouONUV8R9j7X7WVt9XxgqHBemm-RO6w=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTA5LnBuZw==" loading="lazy"/></a>
+
+
+
+
+<p>
+My experience is that a lot of people (who do not have blogs!) have helped me
+understand how computers work and have
+shared little pieces of their experience with computers with me.
+</p>
+
+<p>
+I&#39;ve learned a lot from my friends and my coworkers and honestly a lot of
+random strangers on the Internet too. I&#39;m pretty sure some of you here today
+have helped me over the years, maybe on Twitter or Mastodon.
+</p>
+
+<p>
+So I want to talk about some archetypes of helpful people
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-110.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/sf3bjZ3ryfwoeghU8Rx0mv-yuOdcoJpyeMER54_qbD0=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTEwLnBuZw==" loading="lazy"/></a>
+
+
+
+<p>
+One kind of person who has really helped me is the
+grumpy old-timer. I&#39;ll say &#34;this is so cool&#34;. And they&#39;ll reply yes,
+however, let me tell you some stories of how this has gone wrong in my life.
+</p>
+
+
+<p>
+And those stories have sometimes helped spare me some suffering.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-111.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/Wc9v_ZfZs7JKNVkNCAR3fzBe1ANarM4Ns6wTPWIL7z8=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTExLnBuZw==" loading="lazy"/></a>
+
+
+
+<p>
+We have the loud newbie, who asks questions like &#34;wait, how does that work?&#34;
+And then everyone else feels relieved -- &#34;oh, thank god. It&#39;s not just me.&#34;
+</p>
+
+<p>
+I think it&#39;s especially valuable when the person who takes the &#34;loud newbie&#34;
+role is actually a pretty senior developer. Because when you&#39;re more secure in
+your position, it&#39;s easier to put yourself out there and say &#34;uh, I don&#39;t get
+this&#34; because nobody is going to judge you for that and think you&#39;re
+incompetent.
+</p>
+
+<p>
+And then other people who feel more like they might be judged for not knowing
+something can ride along on your coattails.
+</p>
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-112.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/lXSPugxmGCfFQSHi3Z5F94ll_QQhCA_DQcq8M85J6wA=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTEyLnBuZw==" loading="lazy"/></a>
+
+
+
+<p>
+Then we have the bug chronicler. Who decides &#34;ok, that bug. This can never happen again&#34;.
+</p>
+
+<p>
+&#34;I&#39;m gonna make sure we understand what happened. Because I want this to end
+now.&#34;
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-113.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/XzQMh1a8J6B0HigdfJ_WlsFgzeWakHaCcOPFKMHWhLU=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTEzLnBuZw==" loading="lazy"/></a>
+
+
+
+We have the tool builder, whose attitude is more like &#34;I see people struggling
+with something, and I don&#39;t feel like explaining it. But I can write code to
+just make it easier permanently for everyone.&#34;
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-114.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/Bxlz0_KaBbTNEBQQnseHZDYuuYemX-mYJ2xiKfvqNVM=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTE0LnBuZw==" loading="lazy"/></a>
+
+
+
+There&#39;s this &#34;today I learned&#34; person who&#39;s into sharing cool new tools they
+learned about, a bug that they ran into, or a great new-to-them library feature.
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-115.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/FC0IJU_yHlPyQ_vrvpS9No6gcaaoqG-bV1x7K6lfwho=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTE1LnBuZw==" loading="lazy"/></a>
+
+
+
+There&#39;s the person who has read the entire Internet and has 700 tabs open. If you
+want to know where to find something, there&#39;s a good chance they already have
+it open in their browser.
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-116.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/eW374w8ZONcWLA1iJwAm7GoU204qf9-J498cbl-_Eg8=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTE2LnBuZw==" loading="lazy"/></a>
+
+
+
+We have the person who is just willing to answer questions! &#34;Yeah, I can tell
+you how that works!&#34;
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-117.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/4tisddt-4nnXltypiD3iVJhQG1aYujVvZOpL6LcfPIw=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTE3LnBuZw==" loading="lazy"/></a>
+
+
+
+And at the end of all this, sometimes you have someone who likes to write some
+things down so that other people can read it and can find it later.
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-118.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/ccbV12hktX0YhluAS8osMYBk_BnFJF5kLDoO-2wppic=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTE4LnBuZw==" loading="lazy"/></a>
+
+
+
+But all of us have different roles and we need to work together. I&#39;m into
+writing but a lof of the stuff I&#39;ve written about, I only know about because
+someone told me about it or explained it to me.
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-119.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/vmS0qpoviSL9E9v2Diw_2GgMVB3A5bzBLA3F1MxoCMI=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTE5LnBuZw==" loading="lazy"/></a>
+
+
+
+To end: the one thing I would like to convince you of is: if you&#39;re struggling
+with something that feels basic, it&#39;s not just you! You&#39;re not alone. We&#39;re all struggling with a
+lot of these things that feel like they should be &#34;basic&#34;.
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-120.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/__rVkLWKTl4fiwQnVMP2V9fXOxE5jHoo9sqlaj3ki4s=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTIwLnBuZw==" loading="lazy"/></a>
+
+
+
+And we&#39;re struggling with these things for a lot of
+the same reasons as each other. 
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-123.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/k6ySbIX0mcC8MnXC9FWF65XPW9W2Kp9yh181ULIEtVk=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTIzLnBuZw==" loading="lazy"/></a>
+
+
+
+<p>
+And much like when debugging a computer program, when you have a bug, you
+want to understand why the bug is happening if you&#39;re gonna fix it.
+</p>
+
+<p>
+If we&#39;re all struggling with the same things together for the same reasons, if
+we can figure out what those reasons are, we can do a better job of fixing
+them.
+</p>
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-121.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/_cOvVXBdBP0m-kYrWe_ginNS3iXWp2_V0PleaJUaDnE=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTIxLnBuZw==" loading="lazy"/></a>
+
+
+
+Some of the reasons we&#39;ve talked about were:
+
+<ul>
+<li>
+a giant pile of trivia and gotchas.
+</li>
+<li>
+or maybe there&#39;s 20 million lines of code somewhere.
+</li>
+<li>
+Maybe a big part of the system is being hidden from you.
+</li>
+<li>
+Maybe the tool&#39;s output is extremely confusing and no UI designer has ever worked on improving it
+</li>
+</ul>
+
+And there are a lot more reasons.
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-124.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/FxR4jxvIXu-ab6pv-pfJKlH3UmF-urTZ5RUIJXMtdV4=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTI0LnBuZw==" loading="lazy"/></a>
+
+
+
+I don&#39;t have all the answers for why things are hard. For example I don&#39;t really understand why Git is hard, that&#39;s something I&#39;ve been thinking about recently.
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-125.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/8SNV6r0JIDqbZ96DJKkIkg4kufj53sfY--GhwhhO4dg=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTI1LnBuZw==" loading="lazy"/></a>
+
+
+
+But that&#39;s something I&#39;m excited to keep
+working on and keep trying to figure out.
+
+
+
+
+
+
+
+<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-126.png" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/Wp4AyI_MrRS1F1CuKWDgDb61dZ_qg5agRKY9TLDzMok=/aHR0cHM6Ly9qdm5zLmNhL2ltYWdlcy9zdHJhbmdlbG9vcC0yMDIzLXRhbGsvc2xpZGUtc21hbGwtMTI2LnBuZw==" loading="lazy"/></a>
+
+
+
+<p>
+And that&#39;s all I have for you. Thank you.
+</p>
+
+<p>
+I brought some zines to the conference, if you come to the signing later on you can get one.
+</p>
+
+
+
+
+<h3 id="some-thanks">some thanks</h3>
+
+<p>This was the last ever Strange Loop and I’m really grateful to Alex Miller and the
+whole organizing team for making such an incredible conference for so many years. Strange Loop
+accepted one of my first talks (<a href="https://www.youtube.com/watch?v=0IQlpFWTFbM" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">you can be a kernel hacker</a>) 9 years ago when I had
+almost no track record as a speaker so I owe a lot to them.</p>
+
+<p>Thanks to Sumana for coming up with the idea for this talk, and to Marie,
+Danie, Kamal, Alyssa, and Maya for listening to rough drafts of it and helping
+make it better, and to Dolly, Jesse, and Marco for some of the conversations I
+mentioned.</p>
+
+<p>Also after the conference Nick Fagerland wrote a nice post with thoughts on <a href="https://roadrunnertwice.dreamwidth.org/596185.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">why git is hard</a> in response to my “I
+don’t know why git is hard” comment and I really appreciated it. It had some
+new-to-me ideas and I’d love to read more analyses like that.</p>
+
+<p>
+    This post was originally published <a href="https://jvns.ca/blog/2023/10/06/new-talk--making-hard-things-easy/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a> and
+    you are reading it in the
+    <a href="https://blaggregator.recurse.com/new/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Blaggregator</a> feed.
+    <a href="https://recurse.zulipchat.com/#narrow/stream/blogging/topic/New.20talk.3A.20Making.20Hard.20Things.20Easy" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Join the discussion</a> on Zulip!.
+</p>

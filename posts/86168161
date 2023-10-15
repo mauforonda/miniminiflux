@@ -1,0 +1,11 @@
+Adding a new entry to the bestiary, the Minotaur.
+Minotaur by stable diffusion The Quest As a first step toward Reinforcement Learning (RL) let’s write a maze solver using Deep Q-Network (DQN).
+Bellman’s Equation To me DQN seems to be the RL technique requiring the least effort. All you need to do is to balance the left side of the Bellman’s equation with its right side:
+$$Q(s, a) = R + \gamma .
+
+<p>
+    This post was originally published <a href="https://swe-to-mle.pages.dev/posts/deep-q-leaning-a-maze/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a> and
+    you are reading it in the
+    <a href="https://blaggregator.recurse.com/new/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Blaggregator</a> feed.
+    <a href="https://recurse.zulipchat.com/#narrow/stream/blogging/topic/DQN.3A.20Deep.20Q-Leaning.20a.20Maze" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Join the discussion</a> on Zulip!.
+</p>

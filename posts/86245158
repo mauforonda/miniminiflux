@@ -1,0 +1,100 @@
+<p>September* has proven to be a period of growth and expansion for Bluesky and the ATproto network, in a variety of ways. On September 12, Bluesky hit the milestone of <a href="https://blueskyweb.xyz/blog/9-12-2023-one-million" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">1 million</a> registered accounts on the service. Bluesky has managed to grow consistently since it started in January of this year. Bluesky’s growth has been fairly consistent in the last month, growing on average by just over 1% every day.</p>
+
+
+
+<p>* (first week of October also included in this edition)</p>
+
+
+
+<p>As with all other microblogging platforms, Bluesky sees a significant influx every time something happens at X. Mid September Bluesky <a href="https://techcrunch.com/2023/09/22/bluesky-saw-record-usage-after-elon-musk-announced-plans-to-charge-all-x-users/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">hit a new record</a> of over 50k new accounts in a single day, after news came out that Elon Musk floated the idea of charging everyone to use X. This amounts to roughly three times the average daily signups. </p>
+
+
+
+<p>Measuring account growth for Bluesky in daily % growth of the network gives a better appreciation of both how consistent the growth is of Bluesky is. While there are certainly fluctuations, it is still keeping managing to keep growing the size of the entire network by 1% every day. And the larger the network is, the bigger that number is in absolute terms: In the four weeks after the 1 million mark was reached, Bluesky added another <a href="https://vqv.app/stats/chart" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">400.000</a> accounts.</p>
+
+
+
+<p>Growth of the network is also visible in the large US media outlets that have set up their presence on Bluesky, and validated it with their domain name. <a href="https://bsky.app/profile/nytimes.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The New York Times</a>, the <a href="https://bsky.app/profile/washingtonpost.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Washington Post</a> and <a href="https://bsky.app/profile/bloomberg.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Bloomberg</a> are all examples who now have a validated account. Validated means that their user name is the domain of their website, so you know for sure that they belong to each other. Other notable organisation which recently joined Bluesky is the <a href="https://bsky.app/profile/diplo.de" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">German ministry of Foreign Affairs</a>, which got some <a href="https://www.theguardian.com/world/2023/sep/30/german-government-rebukes-elon-musk-over-refugee-rescue-criticism" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">international media</a> attention recently for a public argument with Elon Musk on X.</p>
+
+
+
+<p></p>
+
+
+
+<h2>Growing pains</h2>
+
+
+
+<p>The other side of the coin for the growth that Bluesky has seen is that the current infrastructure is starting to hit it’s limits. Over the next few months they will be working on <a href="https://bsky.app/profile/jacob.gold/post/3k77t2a77ep2s" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">upgrading</a> their back-end to a new version (dubbed simply v2), that can handle over 10 million accounts. Bluesky engineer Jake Gold recently <a href="https://bsky.app/profile/jacob.gold/post/3kaxfijtins2n" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">announced</a> a major milestone in work on v2, which is also a major milestone on the work towards federation. The explanation is fairly technical, but below is an oversimplified explanation.</p>
+
+
+
+Technical explainer: how does the ATprotocol work? (click to expand)
+<p>Your data (your account, your posts, etc) for Bluesky is hosted somewhere, this is called a Personal Data Server (PDS). Up until now, data from your PDS got send to AppView. AppView is a program that is responsible for making your feeds: if you select the ‘following feed’, you get chronological posts by the people you follow, and if you select the custom ‘Whats Science’ feed, you get posts made by scientists.<br/>As part of the update, there is now an intermediary step: Big Graph Service or BGS. A BGS gathers data from the PDS, does some computery stuff, and sends it to the AppView. The reason why this is relevant, is that it allows the Bluesky team to own multiple PDS (the logic here is that due to computer reasons its easier to have 2 times a PDS with data for 1 million accounts, than 1 times a PDS with data for 2 million accounts). This is what allows Bluesky to scale from the current 1.3 million accounts to over 10 million and beyond. It is also what allows federation, because not every PDS has to be owned by Bluesky. This is not ready yet for live, but it is a crucial step in the direction for implementing federation on the ATproto network.</p>
+
+
+
+<p></p>
+
+
+
+
+<p></p>
+
+
+
+<p>As there now seems to be momentum in the move towards Bluesky, Bluesky engineer Jacob Gold <a href="https://bsky.app/profile/jacob.gold/post/3kb662ufk6k2w" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">mentioned</a> that they want to speed up the current growth by 10x ‘ASAP’. One of the ways they want to accomplish this from a technical perspective is by slowly starting the federation process, but limit it to other servers (PDS) that are also run by Bluesky.</p>
+
+
+
+<p>Bluesky has been <a href="https://fortune.com/2023/07/31/inside-bluesky-moderation-crisis-investor-pushback-user-backlash-ceo-apology/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">criticised</a> for its casual approach to Trust and Safety. For example, the team does not seem to have hired a head of Trust and Safety. Speeding up the growth of the network by another factor 10 makes this all the more risky. While the team seems to be focused on growth at the highest speed possible, there is little considerations of the risks that are posed. This <a href="https://bsky.app/profile/damonoutlaw.xyz/post/3kav7xim4yj2i" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">thread</a> is a good example; there does not seem to be a clear answer yet to the question of how the network should deal with a server (PDS) that either contains bad actors, or contains sock puppet accounts that astroturf other messages to influence the algorithmic feeds. There are hard questions that deserve careful deliberation. And that careful deliberation seems hard to square with the team’s goal of expanding growth by 10x ASAP.</p>
+
+
+
+<h2>In other news</h2>
+
+
+
+<p>One feature for Bluesky that is heavily in demand is that of DMs. It is something that people indicate that keeps them partially at X. The ATproto that underlies Bluesky in its current format does not support DMs. The architecture of the network is build around indexing and aggregating publicly available data, with no clear way of having private data. As <a href="https://bsky.app/profile/pfrazee.com/post/3k77t4au4h22x" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">explained</a> by developer Paul Frazee here, the protocol will either need to be expanded or other protocols will be used. This indicates that people should not expect DM functionality on Bluesky in the near future. However, that does not stop other developers from trying to build their own solution. An example of this is <a href="https://twexit.nl/messages" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Twexit</a>; people can log in with their Bluesky account on the Twexit website, and DM each other via this third-party platform. This feature is still heavily in <a href="https://bsky.app/profile/twexit.nl/post/3kb6dfwsmdp2f" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">development</a>, but it is an interesting workout for a feature that people want, and the official network cannot provide yet.</p>
+
+
+
+<p>ATproto has two new updates for users this month: <a href="https://bsky.app/profile/pfrazee.com/post/3kacudpuuka27" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">hashtags</a> and <a href="https://bsky.app/profile/deck.blue/post/3k7oj3plnep2s" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">lists</a>. Interestingly, both are not available yet in the official apps, but are available in third party clients such as <a href="https://deck.blue/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">deck.blue</a> and <a href="https://graysky.app/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">GraySky</a>. This indicates that it is better to think of the Bluesky team as a team who are developing a protocol than as a team who are building the Bluesky app. Both features should be available soon in the official apps, so I’ll spend some more time on it in the next update. For people who want to try out both features I can recommend giving the webclient deck.blue a shot.</p>
+
+
+
+<p>An update on Clearsky: last month I wrote about <a href="https://bsky.thieflord.dev/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ClearSky</a>, a tool that lets you look up information about blocks, including accounts who block you. Blocks are public information on Bluesky, and tools like ClearSky make this information easily available to people. During the first period of it launch it saw some controversy, especially with some other developers. It led to an ban on talking about the subject in the developers Discord, even though the actual rule does is formulated in a vague manner (“We can’t control what you create, but it is up to the discretion of moderators to decide what is discussed in this space.”). Over the last month the discussion around this has calmed down somewhat, and it seems like ClearSky is now a mainstay in how people use Bluesky. <a href="https://blog.rudyfraser.com/blacksky-part-two/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">This blog</a> by Rudy Fraser also provides insight in how people use information about who is blocking you in practice.</p>
+
+
+
+<p>The Bluesky team has given an <a href="https://atproto.com/blog/bgs-and-did-doc#how-close-are-we-to-federation" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">update</a> on the federation work as well. As mentioned above, with the latest update the entire system is now working according to the planned design. Federation is now possible, but not turned on yet. In a blog post the team reiterates this, saying that the network could technically start federation right now, but that they will not do so until they finish implementing some details and do more work on security. They expect that a basic version of federation will start in the coming weeks, and that they will start by only allowing federation with other servers (PDS) that are run by the Bluesky team.</p>
+
+
+
+<h2>Some links</h2>
+
+
+
+<p>Developers have been building interesting projects for Bluesky. The Bluesky team maintains a <a href="https://atproto.com/community/projects" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">list of community projects</a> that might be worth checking out if your are interested in browsing a more expansive list. Personally, I have been experimenting with <a href="https://deck.blue/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">deck.blue</a> as a great TweetDeck replacement. They managed to implement features like lists and hashtags before the official client. As a mobile client I find <a href="https://graysky.app/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Graysky</a> to be quite nicely designed. I still regularly use <a href="https://tapbots.com/ivory/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Ivory</a> as well, the Mastodon iOS client that also fully supports Bluesky accounts. Finally, <a href="https://poll.blue/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">poll.blue</a> is an interesting example of people building tools (like polls, in this case) that they need but the network does not support yet.</p>
+
+
+
+<p>As a reading suggestion, I can recommend the blog series by Rudy Fraser on BlackSky. The <a href="https://blog.rudyfraser.com/blacksky-part-one/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">first</a> <a href="https://blog.rudyfraser.com/blacksky-part-two/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">two</a> parts are available, with the final third part out soon. It offers excellent insight in how the new generation of social networks can be used to build safer communities online. Rudy Fraser gives a great documentation of early Bluesky as well, and how that intersects with Blackness on the platform.</p>
+
+
+
+<p>Finally, for the people who are interested in where decentralised social networks (the fediverse, Bluesky, Nostr) are headed, I recommend checking out the <a href="https://snarfed.org/2023-10-06_bridgy-fed-status-update-7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">work</a> of Ryan Barrett. He is working on bridging all the different protocols together, and the latest update shows that he’s gotten most of the way there. This is not yet accessible until Bluesky turns on federation, but it provides a clear direction of the future of decentralised social networks. Stay tuned for a more detailed explanation and article on this soon.</p>
+
+
+
+<p></p>
+
+
+
+<p>That’s all for this month, thanks for reading! If you want to stay in the loop on everything that is happening on decentralised social networks, you can subscribe below to receive an update in your inbox every Sunday:</p>
+
+
+
+<p></p>
+

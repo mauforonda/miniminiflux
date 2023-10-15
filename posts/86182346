@@ -1,0 +1,194 @@
+Published on October 5, 2023 6:36 PM GMT<br/><br/><p><a href="https://drive.google.com/file/d/1iLtE3lxQQcW6ltIn_umXw1hiI5EqvnoV/view?usp=sharing" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">PDF</a></p>
+<p>This is a technical post researching infinite <a href="https://www.lesswrong.com/posts/nksgLdLc7y5KtbmFw/a-reformulation-of-finite-factored-sets" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">factor spaces</a></p>
+<p>In a factor space F=⨉i∈IFi, for a measurable
+Z:F→Z(F), a Z-measurable
+index function J:F→{0,1}I is generating
+X:F→X(F), if X depends
+only on those arguments (xi), where J(x)i is 1, and
+Z. In this post, we show that there is an almost surely
+minimal such index function that we call the history of X
+given Z.</p>
+<p>We will reintroduce all the definitions from the finite case:</p>
+<p>Let I be finite. Let
+(Fi,Ai,Ni) be a measure
+space with nullsets, i.e. Fi is a set, Ai is a
+σ-algebra and Ni is a σ-ideal that admits a
+probability, i.e. there is Pi with
+Ni={A∈A:Pi(A)=0}.</p>
+<p>We define a product σ-ideal:
+N1⊗N2={A∈A:{x:A(x)∉N2}∈N1}.
+Clearly,
+N1⊗N2={A∈A:P1×P2(A)=0}.
+We can extend this by induction to
+⨂i∈INi.</p>
+<p>We construct
+(F,A,N)=(⨉i∈IF,⨂i∈IAi,⨂i∈INi).
+Furthermore, let P=⨉i∈IPi.</p>
+<p><em>Definition</em> 1 (almost sure subset)</p>
+<p>We will write
+A∗⊆B:⇔A∖B∈N.</p>
+<p><em>Definition</em> 2 (almost sure union with arbitrary index set)</p>
+<p>If N is a σ-ideal that admits a probability P and
+(Aj)j∈J∈AJ is a family of
+measurable sets, then there exists an almost surely unique and minimal
+A∈A with
+∀j∈J:Aj∗⊆A. i.e. whenever
+∀j∈J:Aj∗⊆B, we have
+A∗⊆B. We set
+∗⋃j∈JAj≔A. Furthermore, there is
+J∗⊆J countable, s.t.
+⋃∗j∈JAj=⋃j∈J∗Aj.<br/>
+<em>Proof.</em>   We will construct J∗.</p>
+<p>To start, choose any j∈J, J0={j} and let
+B0=Aj.</p>
+<p>Let Bn be defined and let
+sn=supj∈JP(Aj∖Bn).
+Choose jn∈J with
+P(Ajn∖Bn)≥sn−1n
+and set Jn+1=Jn∪{jn} and
+Bn+1=Bn∪Ajn.</p>
+<p>We set J∗={jn:n∈N} and
+A=⋃j∈J∗Aj.</p>
+<ul>
+<li>
+<p>A contains Aj: Let j∈J, we have to show
+P(Aj∖A)=0. Assume not, then
+P(Aj∖Bn)↓P(Aj∖A)=p&gt;0,
+so sn≥p for all n. Therefore, we have
+P(Ajn∖Bn)≥p−1n.
+Now
+1≥P(A)=P(⨃n∈NAjn∖Bn)=∑n∈NP(Ajn∖Bn)=∞,
+which is a contradiction.</p>
+</li>
+<li>
+<p>Minimality and uniqueness: Now let
+B∈A:∀j∈J:Aj∗⊆B.
+Then clearly,
+A=⋃n∈NAjn∗⊆B.
+If B is also minimal, then clearly
+A∗⊆B∗⊆A⇔P(A▲B)=0⇔Aa.s. =B.</p>
+</li>
+</ul>
+<p><em>Definition</em> 3 (almost sure intersection)</p>
+<p>We set
+⋂∗j∈JAj=(⋃∗j∈JAcj)c.</p>
+<p><em>Definition</em> 4 (feature)</p>
+<p>We call a measurable function
+Z:F→Z(F) a feature.   In the
+following let X,Y,Z be features.</p>
+<p><em>Definition</em> 5 (index function)</p>
+<p>We call a measurable J:F→{0,1}I an
+index function. We write Ji=πi∘J.
+We identify J with J′:F→P(I), where
+J′(x)={i∈I:Ji(x)=1} to allow for set operations such as
+J∩K=min(J,K).</p>
+<p><em>Definition</em> 6</p>
+<p>For an index function J, we set
+πJ=(1{Ji=1}πi)i∈I.</p>
+<p><em>Definition</em> 7</p>
+<p>We define that X is almost surely a function of
+Y by
+X≲∗Y:⇔σ(X)⊆σ(Y,N).</p>
+<p>Let ▲∗(F,N) be all product distributions whose
+nullsets are N.</p>
+<p><em>Definition</em> 8 (conditional generation)</p>
+<p>Let J:F→{0,1}I be
+Z-measurable. We write
+J⊢X | Z, if
+X≲∗(πJ,Z)∧∀P∈▲∗(F,N):πJ⫫Pπ¯J | Z. Note that πJ⫫Pπ¯J∣∣Z⇔(πJ,Z)⫫P(π¯J,Z)∣∣Z</p>
+<p><em>Lemma</em> 9</p>
+<p>For n∈N let Jn:F→P(I) be
+Z-measurable and
+J=⋃n∈NJn.</p>
+<p>Then
+σ(πJ,Z)=σ((πJn,Z)n∈N).
+<em>Proof.</em>   Let A≔σ(πJ,Z),
+B≔σ((πJn,Z)n∈N).</p>
+<p>&#39;A⊆B&#39;: Obviously,
+σ(Z)⊆B. Let
+A∈σ(1{Ji=1}πi), then there is a
+B∈σ(πi) with A=B∩{Ji=1}=B∩⋃n∈N{Jni=1}=⋃n∈N(B∩{Jni=1})∈B.</p>
+<p>&#39;A⊇B&#39;: Obviously,
+σ(Z)⊆A. Let
+A∈σ(1{Jni=1}πi), then there is
+B∈σ(πi) with A=B∩{Jni=1}=B∩{Ji=1}∈A∩{Jni=1}∈σ(Z)⊆A∈A.</p>
+<p><em>Lemma</em> 10</p>
+<p>Let J,K:F→P(I) and
+J,K⊢X | Z. Then
+J∩K⊢X | Z.</p>
+<p><em>Proof.</em>    Let P∈▲∗(F,N). We first show
+πJ∩K⫫Pπ¯J∩K | Z. For
+i,j∈{0,1}, let
+Mij={J′i∩K′j} where
+J′0=J,J′1=¯J, etc. Let
+Aij∈Mij. We have
+(πM00,πM01)⫫P(πM10,πM11)|Z, (1) (πM00,πM10)⫫P(πM01,πM11)|Z, (2)  Now P(⋂ijAij | Z)(1) =P(A00∩A01 | Z)⋅P(A10∩A11 | Z)(2) =∏ijP(Aij | Z).</p>
+<p>Now since sets of the form A01∩A10∩A11 generate
+π¯J∩K and are ∩-stable, we have that
+πJ∩K⫫Pπ¯J∩K | Z.</p>
+<p>It remains to show
+X≲∗(πJ∩K,Z).
+Since πJ∩K⫫PπJ∖K | Z, we have
+P(πJ∖K | Z)=P(πJ∖K | πJ∩K,Z).
+Since the same holds true for K∖J, we get
+πJ∖K⫫PπK∖J | πJ∩K,Z and therefore πJ⫫PπK | πJ∩K,Z.</p>
+<p>We claim
+σ(πJ,Z)∩σ(πK,Z)a.s. =σ(πJ∩K,Z).</p>
+<p>&#39;⊇&#39;: Trivial.<br/>
+&#39;⊆∗&#39;: Let
+A∈σ(πJ,Z)∩σ(πK,Z) and
+B=σ(πJ∩K,Z). Then A⫫PA | B. Therefore,
+P(A|B)=1B for a B∈B. We
+claim P(A▲C)=0. We have
+P(A∖C)=E(P(A∖C | B))=E(1CcP(A∖C | B))=E(0)=0,
+we have P(A∖C)=0. Similarly,
+P(C∖A | B)=0 and therefore
+P(C∖A)=0.</p>
+<p><em>Lemma</em> 11</p>
+<p>For n∈N, let Jn⊢X | Z.
+Let J=⋂n∈NJn. Then
+J⊢X | Z.<br/>
+<em>Proof.</em>   Let Kn=⋂k≤nJk. Clearly,
+Kn⊢X | Z and Kn↓J.</p>
+<p>We first show πJ⫫Pπ¯J | Z. Since
+σ(πJ)⊆σ(πKn), we have πJ⫫Pπ¯Kn | Z. Now
+¯Kn↑¯J. Clearly,
+⋃n∈Nσ(π¯Kn) is
+∩-stable and by Lemma 9 a generator of ¯J. Therefore,
+πJ⫫Pπ¯J | Z.</p>
+<p>We now show
+X≲∗(πJ,Z). Let
+B=⋂n∈Nσ(πKn,Z)
+and C=σ(πJ,Z)</p>
+<p>&#39;B⊇C&#34; : Trivial.<br/>
+&#39;B⊆∗C&#39;: From πJ⫫Pπ¯J | Z, we have
+πJ⫫PπKn∖J|Z,πJ⫫Pπ¯Kn|Z Therefore, πKn⫫π¯Kn∪J | C.</p>
+<p>Clearly,
+⋃n∈Nσ(π¯Kn∪J)
+is a ∩-stable generator of A and therefore
+B⫫PA | C. Now, since
+B⊆A, we have B⫫PB | C and therefore
+B⊆σ(C,N).</p>
+<p><em>Definition</em> 12 (history)</p>
+<p>H(X|Y) is the a.s. smallest
+generating index function.</p>
+<p><em>Theorem</em> 13 A history exists and is a.s. unique.</p>
+<p><em>Proof.</em> Existence: Let
+Mi={{Ji=1}:J⊢X | Z}.
+Define
+(H(X|Y))i≔1⋂∗Mi.
+Now clearly, for each i, there are countable many
+Jn,i⊢X | Z, such that
+(⋂n∈NJn,i)i=1⋂∗Mi.
+Now
+⋂n∈N,i∈IJni=H(X|Y),
+and therefore
+H(X|Y)⊢X | Z.
+Furthermore, by construction we have for any
+J⊢X | Z, that
+{H(X|Y)i=1}∗⊆{Ji=1}
+which implies
+H(X|Y)∗⊆J.</p>
+<p>Uniqueness: Let J be minimal, then clearly,
+H(X|Y)∗⊆J∗⊆H(X|Y).</p>
+<br/><br/><a href="https://www.alignmentforum.org/posts/EKPSgN8LsiEJzX5ni/a-well-defined-history-in-measurable-factor-spaces#comments" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Discuss</a>

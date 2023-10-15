@@ -1,0 +1,99 @@
+<figure><img src="https://reader.miniflux.app/proxy/fbg5k7ZGh9zyJNSWpRqPfRLtybmQQEJj04zWfGi0hUg=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wOC9UaGluZ3Mtd2UtY291bGQta25vdy03NDV4MTAyNC5qcGc=" alt="Oh, the things we could know! A cartoon in Dr Seuss style, with concentric bright colors, and a smiling person in a fuzzy yellow hat. (By Hilda Bastian.)" width="254" height="349" srcset="https://reader.miniflux.app/proxy/fbg5k7ZGh9zyJNSWpRqPfRLtybmQQEJj04zWfGi0hUg=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wOC9UaGluZ3Mtd2UtY291bGQta25vdy03NDV4MTAyNC5qcGc= 745w, https://reader.miniflux.app/proxy/rTgwH5bgfXOWOUn-GfzgNI6OnNsOcpF6XeXL9oSMsEs=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wOC9UaGluZ3Mtd2UtY291bGQta25vdy0yMTh4MzAwLmpwZw== 218w, https://reader.miniflux.app/proxy/MpIfWdkXDuAZHbLlXY9hBb3SPelZWlb94vly59DP62w=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wOC9UaGluZ3Mtd2UtY291bGQta25vdy03Njh4MTA1Ni5qcGc= 768w, https://reader.miniflux.app/proxy/q5oUcQ76wnP0mKsR68qU1Ukm7vyXtFEE7_OuCyHpIGQ=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wOC9UaGluZ3Mtd2UtY291bGQta25vdy0xMTE3eDE1MzYuanBn 1117w, https://reader.miniflux.app/proxy/WQiW-gSZQlnZW-UXM7ClZb0FeoRpOrLJKSAQUzF-40Q=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wOC9UaGluZ3Mtd2UtY291bGQta25vdy0xNDg5eDIwNDguanBn 1489w, https://reader.miniflux.app/proxy/q-wmkl-ukJDW99ssVDjLmXJUlX9soV3TeI7tHLsz3IM=/aHR0cHM6Ly9hYnNvbHV0ZWx5bWF5YmUucGxvcy5vcmcvd3AtY29udGVudC91cGxvYWRzL3NpdGVzLzgvMjAyMy8wOC9UaGluZ3Mtd2UtY291bGQta25vdy1zY2FsZWQuanBn 1862w" sizes="(max-width: 254px) 100vw, 254px" loading="lazy"/></figure>
+
+
+
+
+
+
+
+<p>About a week ago, I created <a href="https://en.wikipedia.org/wiki/Elisabeth_Wollman" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">an English Wikipedia page</a> for a woman who had an extraordinary life, and left a phenomenal legacy. The Pasteur Institute honored her, her husband, and their son, as “pioneers of modern biology.” Her name was Elisabeth Wollman. She was born in 1888, and she died in Auschwitz along with her husband and scientific collaborator, Eugène, in 1943. Their work, picked up by colleagues – including their son – and continued after the War ended, led to a Nobel prize and helped lay the foundations for understanding viruses, cancer, and, later, HIV.</p>
+
+
+
+<p>I found out about her when I was trawling through the <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Women_in_Red/Redlist_index" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Women In Red list</a>, looking for a female scientist who should have a Wikipedia page, but didn’t. <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Women_in_Red" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Women in Red</a> (WIR) is a wikiproject that just celebrated its 8th birthday. In that time, it’s helped push the percentage of biographies of women’s lives on Wikipedia from a measly 16% of all bios to 20%. </p>
+
+
+
+<p>Wollman made it onto the WIR list because she has an entry in one of my favorite Wikipedia-universe expanders, Wikidata. <a href="https://wikiedu.org/blog/2022/07/14/leveraging-wikidata-for-wikipedia/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">WIR runs hundreds</a> of automated queries in Wikidata to find women without English Wikipedia pages, while another automated function, <a href="https://www.wikidata.org/wiki/Wikidata:Listeria" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Listeria</a>, generates the dynamic list, updated by a bot.</p>
+
+
+
+<p>Wikidata is structured information which volunteers can edit, just as we do other parts of Wikipedia content. I edited Elisabeth Wollman’s Wikidata when I created her page, adding detail on the date of her death and references, for example.</p>
+
+
+
+<p>To get a sense of what Wikidata is like, you can <a href="https://www.wikidata.org/wiki/Q46525465" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">check out Elisabeth Wollman’s entry</a>. There are several data items about her – obvious things like her place and date of birth. And there are critical linkages, too. In her case, for example, there’s her relationship with other people in Wikidata (her husband and son), a public domain photo of her in Wikipedia’s image repository (Wikimedia Commons), and the Wikipedia pages about her. There were already small bios for her in the French and Belarusian Wikipedias – that’s how she came to be in WIR’s list. And when I created her English page, I linked it in as well.</p>
+
+
+
+<p>There’s a system for <a href="https://query.wikidata.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">running queries</a> in Wikidata, with a <a href="https://query.wikidata.org/querybuilder/?uselang=en" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">query builder</a> to help so you don’t need to use program language. (Unfortunately, though, there’s still no simple way to run queries for having – or not having – associated Wikipedia pages.) You can check out some examples of queries <a href="https://chem-bla-ics.blogspot.com/2022/11/finding-mastodon-accounts-with-wikidata.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">in this post</a> by Egon Willighagen, for using Wikidata to find accounts on Mastodon. One example is <a href="https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fjournal%20%3FjournalLabel%20%3Fmastodon%20WHERE%20%7B%0A%20%20%3Fjournal%20wdt%3AP31%2Fwdt%3AP279%2a%20wd%3AQ3918%20%3B%0A%20%20%20%20wdt%3AP4033%20%3Fmastodon%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%0A" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">universities with Mastodon accounts</a>, which listed 64 of them at the time I wrote this. (To run the query to get the current list, you press the blue square with the white arrow on the bottom left of the query box.)</p>
+
+
+
+<p>As of writing, there are over 11,100 categories for data – <a href="https://www.wikidata.org/wiki/Wikidata:List_of_properties" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">called properties</a> – in Wikidata, and over 105 million entries, for people and many other subjects (<a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">called items</a>). And from the little I’ve seen so far, although there are errors, of course, it’s pretty good quality. Wikidata is growing in scope – there have been over 1,000 properties added since <a href="https://web.archive.org/web/20220808142158/https://www.wikidata.org/wiki/Wikidata:List_of_properties" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">this time last year</a> – as well as size – with over 5 million entries <a href="https://web.archive.org/web/20220802021335/https://www.wikidata.org/wiki/Wikidata:Main_Page" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">since then</a>, too.</p>
+
+
+
+<p>The data isn’t just coming from those of us who are editing it manually. It’s being drawn out of structured elements of Wikipedia etc. And there are data donations. <a href="https://www.wikidata.org/wiki/Wikidata:Data_donation#What_data_we_host" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Some examples</a>: biographical data from the national libraries of Australia and France, artist bio data from the Netherlands Institute for Art History, and World Heritage Site data from UNESCO.</p>
+
+
+
+<p>One of my other favorite things about the Wikipedia universe these days is that you can keep up with all sorts of news via Mastodon. For example, I currently follow <a href="https://wikis.world/@wikidata" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Wikidata</a>, the <a href="https://wikimedia.social/@wikimediafoundation" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Wikimedia Foundation</a>, and my local <a href="https://wikis.world/@wm_au" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Wikipedia group (Australia)</a>. Wikipedia and Mastodon is such a natural pairing! You can even link your Wikipedia user page to your Mastodon account, resulting in a verified link at Mastodon. (<a href="https://mastodon.online/@hildabast/110403631288566898" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Here’s my explanation</a> of how I did that.)</p>
+
+
+
+<p>Since I’ve been seeing so much Wikipedia news, a couple of Wikipedia developments in particular caught my eye. One is a type of extension of Wikidata, called Abstract Wikipedia. It doesn’t mean abstract, as in scientific journal summaries – it’s abstract as in conceptual. The idea is that you could develop language-independent versions of Wikipedia articles, with code that could translate them into other languages. Gulp! You can read about it <a href="https://meta.wikimedia.org/wiki/Abstract_Wikipedia" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a>.</p>
+
+
+
+<p>The other news was <a href="https://diff.wikimedia.org/2023/06/29/stepping-into-the-future-wikimedia-projects-transition-to-creative-commons-4-0-license/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">why it’s a big deal</a> that Wikipedia updated to a Creative Commons 4.0 licence. For example, it’s a single global standard, and critically, it means that other content created under 4.0 is now allowed in the Wikipedia universe.</p>
+
+
+
+<p>Wikipedia turned 22 early this year. I’ve lost track of how many times I’ve seen people predict its imminent failure and death, but it’s still here, and its universe is still expanding. The <em>New York Times</em> recently had an in-depth article by Jon Gertner called <a href="https://archive.vn/hRrpP" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">“Wikipedia’s Moment of Truth.”</a> It explores what the Large Language Model explosion means for Wikipedia, now and down the line. Could we end up with a situation where Wikipedia, “outflanked by A.I. that has cannibalized it, suffers from disuse and dereliction”?</p>
+
+
+
+<p>Machines couldn’t produce anything as good as Wikipedia without Wikipedia to feed on. And several people argued that it’s possible the LLM developments “will help the organization improve rather than crash.” Fingers crossed we steer through this to that positive outcome. Reading this article made me realize we need to do more than just cross our fingers, though. I stopped keeping up with Wikipedia “politics” etc a few years ago, though I’ve kept editing. It turns out I’m one of only 40,000 people who edit enough to be rated as active – and 80% of them are male. I should carry some of the load on the sociopolitical side, too.</p>
+
+
+
+<p>The first in-person Wikipedia meeting I ever went to launched me into a lot of activity for a few years. <a href="https://commons.wikimedia.org/wiki/File:WikiWomen%27s_Lunch,_Wikimania_2012.jpg" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Here’s a photo</a> from then, at the WikiWomen gathering at Wikimania in July 2012. (I’m in the second row, fourth from the left.) I remember several people there asking why I wasted so much time on Twitter, when it could be better spent on Wikipedia – including socially. It was a good question, and I didn’t really have a good answer. Now, a decade(-ish) later, I’m no longer spending any time on Twitter – and it’s the Wikipedia-compatible platform of Mastodon that’s pulling me back into the Wikipedia social orbit. Better late than never, eh?!</p>
+
+
+
+
+
+
+
+<p><em>I’m <a href="https://mastodon.online/@hildabast" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">@hildabast@mastodon.online</a> on Mastodon.</em> <em>Interested in Mastodon? Check out my <a href="https://absolutelymaybe.plos.org/2022/12/12/some-shortcuts-to-giving-mastodon-a-try/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Shortcuts to Giving Mastodon a Try</a>.</em> You can check out my newsletter, <em>Living With Evidence,</em> <a href="https://hildabastian.wordpress.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a>.</p>
+
+
+
+<p><em>RSS feeds:</em></p>
+
+
+
+<ul><li>This blog, <em><a href="https://absolutelymaybe.plos.org/feed/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Absolutely Maybe</a></em>.</li><li>My newsletter, <a href="https://hildabastian.wordpress.com/feed/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><em>Living With Evidence</em></a>.</li><li><a href="https://mastodon.online/@hildabast.rss" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">My Mastodon account</a>.</li></ul>
+
+
+
+<p>~~~~</p>
+
+
+
+
+
+
+
+
+
+
+
+<p><em>Correction on August 3: The first version had Belgian instead of Belarusian Wikipedia. I’m very grateful to Ihar Razanau for <a href="https://fediscience.org/@razanau/110824009618863918" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">letting me know</a>.</em></p>
+
+
+
+<p><em>Disclosures: I’m an active Wikipedian – <a href="https://en.wikipedia.org/wiki/User:Hildabast" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">User:Hildabast</a>. I maintain a list of financial disclosures in the </em><a href="https://absolutelymaybe.plos.org/about-hilda-bastian/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><em>About section of </em>Absolutely Maybe<em>.</em></a></p>
+
+<p>The post <a href="https://absolutelymaybe.plos.org/2023/08/02/some-things-i-like-about-the-expanding-wikipedia-universe/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Some Things I Like About the Expanding Wikipedia Universe</a> appeared first on <a href="https://absolutelymaybe.plos.org" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Absolutely Maybe</a>.</p>

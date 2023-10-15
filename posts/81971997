@@ -1,0 +1,84 @@
+<p><em>Mapping material, sweeteners, Federal Reserve communications,
+English families, and winning numbers.</em></p>
+<p> </p>
+<p><em>📬 Reader Rob C used <a href="https://github.com/jfjelstul/englishfootball" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Josh Fjelstul’s
+English Football Database</a>, featured in <a href="https://www.data-is-plural.com/archive/2023-02-01-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2023.02.01</a>, to <a href="https://twitter.com/rob_clapp/status/1688604274471624704" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">examine
+what happens after teams get promoted and relegated</a>. (Have you
+published something with data you found via DIP? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXXD5eO05w0Xa7bwG3Ppia3uzr_o3y-xDEZuWRfXbCfCu_XA/viewform" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Click
+here to let me know</a>.)</em></p>
+<p> </p>
+<p><strong>Much mapping material.</strong> The <a href="https://overturemaps.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Overture Maps Foundation</a> has <a href="https://overturemaps.org/overture-maps-foundation-releases-first-world-wide-open-map-dataset/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">released</a>
+its <a href="https://overturemaps.org/download/overture-july-alpha-release-notes/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">first
+datasets</a>, which include 59 million “points of interest” (landmarks,
+businesses, parks, etc.), 785 million building outlines, road network
+data, and administrative boundaries. The initiative, which is steered by
+several giant tech companies, “could help third-party developers use
+maps that don’t rely on Google and Apple,” <a href="https://www.theverge.com/2023/7/26/23808274/meta-microsoft-amazon-overture-open-source-mapping" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The
+Verge’s Emma Roth writes</a>. The <a href="https://github.com/OvertureMaps/data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">datasets</a> draw on a range
+of sources, including the project’s member-companies, <a href="https://www.openstreetmap.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">OpenStreetMap</a>, and USGS’s <a href="https://www.usgs.gov/3d-elevation-program" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">3D Elevation
+Program</a>. <strong>Read more</strong>: “<a href="https://til.simonwillison.net/overture-maps/overture-maps-parquet" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Exploring
+the Overture Maps places data using DuckDB, sqlite-utils and
+Datasette</a>,” by <a href="https://simonwillison.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Simon
+Willison</a>, who considers the data release “a really big deal.” [h/t
+<a href="https://twitter.com/Arithmomaniac" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Avi Levin</a>]</p>
+<p> </p>
+<p><strong>Sweeteners.</strong> The US Department of Agriculture’s <a href="https://www.ers.usda.gov/data-products/sugar-and-sweeteners-yearbook-tables.aspx" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Sugar
+and Sweeteners Yearbook Tables</a> provide “summary statistics on sugar,
+sugarbeets, sugarcane, corn sweeteners (dextrose, glucose, and
+high-fructose corn syrup), and honey.” Compiled by the agency’s <a href="https://www.ers.usda.gov/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Economic Research Service</a> from a <a href="https://www.ers.usda.gov/data-products/sugar-and-sweeteners-yearbook-tables/documentation/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">range
+of national, international, and industry sources</a>, the statistics are
+provided as regularly-updated spreadsheets, many of which go back
+multiple decades. They estimate global and country-level production,
+supply, distribution, and prices, as well as US imports and consumption.
+[h/t <a href="https://www.linkedin.com/in/shlarson/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Sam Larson</a>]</p>
+<p> </p>
+<p><strong>Federal Reserve communications.</strong> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4447632" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Agam
+Shah et al.</a> have compiled a corpus of key communications by the US
+Federal Reserve’s <a href="https://www.federalreserve.gov/monetarypolicy/fomc.htm" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Federal
+Open Market Committee</a>, which “controls the three tools of monetary
+policy — open market operations, the discount rate, and reserve
+requirements.” Gathered from the Fed’s website, the corpus includes all
+meeting minutes and speeches from 1996 to mid-October 2022, and all
+press conferences from April 2011 to mid-October 2022. The <a href="https://github.com/gtfintechlab/fomc-hawkish-dovish" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">published
+records include</a> the <a href="https://github.com/gtfintechlab/fomc-hawkish-dovish/tree/main/data/raw_data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">raw
+text</a> and <a href="https://github.com/gtfintechlab/fomc-hawkish-dovish/tree/main/data/master_files" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">metadata</a>
+of each communication, as well as <a href="https://github.com/gtfintechlab/fomc-hawkish-dovish/tree/main/data/filtered_data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">datasets
+filtered to key sentences</a>. <strong>Previously</strong>: <a href="https://www.brookings.edu/research/diversity-within-the-federal-reserve-system/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Federal
+Reserve Bank directors</a> (<a href="https://www.data-is-plural.com/archive/2021-05-05-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2021.05.05</a>) and <a href="https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/greenbook" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Fed
+forecasts</a> (<a href="https://www.data-is-plural.com/archive/2018-02-07-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2018.02.07</a>).</p>
+<p> </p>
+<p><strong>English families.</strong> The <a href="http://neilcummins.com/foe.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Families of England</a> project,
+led by economic historians <a href="https://faculty.econ.ucdavis.edu/faculty/gclark/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Gregory
+Clark</a> and <a href="http://neilcummins.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Neil Cummins</a>, aims
+“to reconstruct the economic and social position, and the demography, of
+a representative set of English families” over time. A <a href="https://www.pnas.org/doi/10.1073/pnas.2300926120" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">recent paper by
+Clark</a> includes a <a href="https://www.pnas.org/doi/10.1073/pnas.2300926120#data-availability" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">public
+version of the dataset</a>, which “details the family connections of
+422,374 people with rarer surnames in England for births from 1600 to
+2022.” The dataset, based in part on genealogies from the <a href="https://one-name.org/about-the-guild/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Guild of One-Name
+Studies</a>, indicates (where available) each person’s years of birth,
+marriage, and death, plus indicators of literacy, sex, occupational
+status, and more. [h/t <a href="http://knosof.co.uk/ESEUR/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Derek M.
+Jones</a>]</p>
+<p> </p>
+<p><strong>Winning numbers.</strong> New York State’s Gaming Commission
+<a href="https://data.ny.gov/browse?limitTo=datasets&amp;tags=new+york+lottery&amp;sortBy=most_accessed&amp;utf8=%E2%9C%93" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">publishes
+various lottery-related datasets</a>, including the winning numbers for
+many national and state lotteries, such as <a href="https://data.ny.gov/Government-Finance/Lottery-Powerball-Winning-Numbers-Beginning-2010/d6yy-54nr" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Powerball</a>
+(since 2010), <a href="https://data.ny.gov/Government-Finance/Lottery-Mega-Millions-Winning-Numbers-Beginning-20/5xaw-6ayf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Mega
+Millions</a> (since 2002), and <a href="https://data.ny.gov/Government-Finance/Lottery-Pick-10-Winning-Numbers-Beginning-1987/bycu-cw7c" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Pick
+10</a> (since 1987). New York isn’t alone; the Colorado Lottery, for
+instance, <a href="https://www.coloradolottery.com/en/player-tools/winning-history/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">also
+publishes downloadable drawing histories</a>. Their Powerball results go
+back to August 2001 and include the jackpot values, unavailable from New
+York. <strong>As seen in</strong>: “<a href="https://www.zachseward.com/the-jackpot-is-a-lie/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The jackpot is a
+lie</a>,” by <a href="https://www.zachseward.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Zach Seward</a>.</p>
+<p> </p>
+<p><em>Dataset suggestions? Criticism? Praise? Send lucky feedback to
+jsvine@gmail.com, or just reply to this email. // Looking for past
+datasets? <a href="https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">This
+spreadsheet contains them all</a>. // Visit <a href="https://www.data-is-plural.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data-is-plural.com</a> to
+subscribe and to browse past editions.</em></p>

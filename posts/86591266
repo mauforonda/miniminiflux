@@ -1,0 +1,115 @@
+<p>Production networks matter for firm growth. However, little is known about what shapes firms’ production networks in developing countries. This column explores the role of community networks in West Bengal in firm-to-firm trade between 2010 and 2016. Firms systematically trade more within their caste than they would if trading relationships were randomly chosen, both for firms in large and smaller castes. Being in the same caste doubles the probability that two firms trade and, when they do, increases trade volumes by almost 20%.</p>
+                                    
+                    <p><em>Editor&#39;s note: This column previously appeared on VoxEU <a href="https://cepr.org/voxeu/columns/community-networks-and-trade-evidence-india" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a>.</em></p>
+<p>The overwhelming majority of firms in low- and middle-income countries are small. This limits their capacity to innovate, export, or even survive (Hsieh and Olken 2014, Atkin and Khandelwal 2020, Ciani et al. 2020). There is growing evidence that production networks – the set of clients and suppliers that firms trade with – matter for firm growth (Bernard et al. 2022). Yet we know very little about the determinants of firms’ production networks in developing countries.</p>
+<p>One potential determinant is social ties and communities. A large literature has shown that internal cooperation within communities supports local economic networks and facilitates firms’ access to credit (Fafchamps 2000, Fisman et al. 2017), investors (Hjort 2014), insurance and workers (Munshi and Rosenzweig 2016, Cassan et al. 2021, Caria and Labonne 2022). We know that international immigrant communities shape international trade (Greif 1993, Gould 1994, Rauch 2001), particularly when contractual frictions are high (Rauch and Trindade 2003). Communities could also facilitate within-country trade in developing countries, where such frictions loom large (Macchiavello 2022).</p>
+<h2>The role of castes in firm-to-firm trade</h2>
+<p>In a new paper (Böken et al. 2023), we explore the role of community networks in India in firm-to-firm trade. The communities we consider are castes, or jatis, which are the bedrock of India’s social architecture and support economic and social networks (Munshi 2019). To characterise within- and across-jati trade, we use administrative data on the universe of firms paying taxes in the state of West Bengal, India, between 2010 and 2016. This has two main attractive features. First, the data contain annual transactions between firms, enabling us to map firms’ production networks. Second, using the firm owners’ names from the official registries, we can assign each firm to a caste community using the anthropological literature on surnames (Singh 1996). Our data contain 106,775 firms in 723 castes and over 200 million potential trade relationships.</p>
+<p>Figure 1 presents graphical evidence of the role of castes in firm-to-firm trade in our data. We plot the relationship between how much a firm is observed trading with others in the same caste and how much it could potentially trade with same-caste firms, conditional on the distribution of castes in each industry. Panel (a) plots the share of firms’ input purchases from same-caste suppliers as a function of their potential same-caste input share. Panel (b) similarly plots the share of firms’ sales going to same-caste clients as a function of their potential same-caste sales share.</p>
+<p><strong>Figure 1:</strong> Potential and observed same-caste trade</p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/BDEJkdyMk9-GzC7RkVtKmsGJeA58bCvP-iA8zL8c8pc=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvY29tbXVuaXR5bmV0d29ya19maWd1cmUxLmpwZw==" loading="lazy"/></p>
+<p>Notes: We compute for each client in our data a set of potential suppliers based on the product that the client is observed buying. Potential suppliers (clients) are weighted by their average sales to construct potential same-caste input and sales shares; these potential input and sale same-caste shares can be interpreted as how much firms would trade within their caste if they randomly chose their trading partners. Bernard et al. (2019) use a similar approach to consider how distance affects firm-to-firm transactions.</p>
+<p>We see that firms systematically trade a lot more within their caste than they would if trading relationships were randomly chosen: each point on both panels is clearly above the 45-degree line. This is true both for firms in large castes (those with high potential same-caste shares) and for firms in smaller castes. On average, firms’ potential same-caste input share is 4.5% and sales share is 5.1%, but the average observed same-caste input and sales shares are more than twice as large, at 10.6% and 12.4%, respectively.</p>
+<p>This graphical evidence is a first indication that castes affect firm-to-firm trade, but it could be confounded by the fact that firms in the same caste are likely to make similar industry and location choices, and experience correlated shocks (if, for example, they rely on similar credit and insurance networks).</p>
+<p>We estimate the effect of castes on trade whilst flexibly controlling for the joint locations and products sold by suppliers and clients and allowing for arbitrary shocks to all trading partners over time. Our results show that being in the same caste doubles the probability that two firms trade, and, when they do, increases trade volumes by almost 20%.</p>
+<h2>Why do castes affect firm-to-firm trade?</h2>
+<p>Several possible mechanisms could explain our findings. First, castes may be allowing trading relationships to emerge – and even thrive – in contexts such as India where contractual frictions loom large. Caste networks can help alleviate these frictions via informal information and sanction mechanisms, enabling relational contracts to emerge.</p>
+<p>We test this hypothesis by considering whether our estimates of caste effects on trade are larger for trading relationships where we expect frictions to be more severe. Indeed, we find that castes matter more for the trade of products that are less standardised (for whom the hold-up problem is more of a concern), and when trading partners are located in areas with worse-performing (more congested) courts, where the formal enforcement of contracts is harder.</p>
+<p>Second, firms may hold discriminatory within-caste preferences, i.e. be willing to forego profit to trade more within their caste. We test Becker’s argument (1957) that firms with strong discriminatory preferences will eventually be forced out of competitive markets, by looking at the survival rate of firms as a function of their within-caste preferences, in the spirit of Weber and Zulehner (2014). We find that firms with high preferences for trading within their caste, relative to their industry average, are indeed slightly more likely to exit.</p>
+<p>Furthermore, neither general reputation (measured by firm age) nor bilateral trust (measured by the length of the trade relationship) alleviates the importance of castes for trade, highlighting the persistence of these effects.</p>
+<p>Overall, our estimates are consistent both with the idea of castes ‘greasing the wheels’ of trade in a context with severe contractual frictions, and with caste communities being a source of taste-based discrimination.</p>
+<p>Note that the effects of castes on trade could gradually decrease over time and/or over the course of economic development, as contract-enforcement institutions improve and firms with discriminatory preferences are driven out of the market. We see however no evidence of the effect decreasing (or increasing) during our six-year period. This may be because there were no major institutional changes in West Bengal that could have improved contract enforcement during our period, and because our estimate of the effect of higher-than-average caste preferences on exit is too small to affect the composition of firms over a short period.</p>
+<h2>Implications: Lowering all trade frictions to inter-caste frictions would increase welfare</h2>
+<p>We finally quantify the effect of castes on the aggregate economy. To do this, we build on the quantitative production network model developed by Bernard et al. (2022) that features a continuum of firms with heterogeneous productivity and relationship capability, and endogenous match formation. We extend this framework to allow for a third source of heterogeneity coming from the firm’s community (caste) affiliation.</p>
+<p>Castes shape production networks in two ways. First, we allow castes to affect the contracting premium faced by potential supplier-client pairs: the premium clients may have to pay to ensure that suppliers fulfil their contract (Startz 2021). Second, firms trading within their caste also face a caste-specific matching cost: castes may facilitate the formation of new relationships. We estimate our model using a simulated method of moments and leverage our empirical estimates on the effect of castes on trade to jointly estimate the caste-specific model parameters. We find that castes slightly increase match productivity and substantially decrease matching costs.</p>
+<p>We use our model to quantify the role of castes in the West Bengal economy by considering counterfactual scenarios. Our main counterfactual considers the effect of extending the positive effect of castes on trade to all potential supplier-client pairs. In other words, because our model tells us that same-caste pairs face lower frictions (lower matching costs and contracting premium) than across-caste pairs, our counterfactual considers what would happen if all pairs faced this same low(er) level of frictions.</p>
+<p>We find large aggregate effects. Welfare increases by about one-third. This is due to an increase in both the number of production network connections (firms match with more clients and suppliers) and in the average network sales (firms sell more to each other). Smaller firms benefit the most: they have smaller caste networks and therefore smaller production networks at baseline; this counterfactual scenario enables them to substantially expand their trade with other firms.</p>
+<h2>References</h2>
+<p>Atkin, D and A K Khandelwal (2020), “How distortions alter the impacts of international trade in developing countries”, <em>Annual Review of Economics</em> 12: 213–38.</p>
+<p>Becker, G S (1957), The economics of discrimination, University of Chicago Press.</p>
+<p>Bernard, A B et al. (2022), “The origins of firm heterogeneity: A production network approach”, <em>Journal of Political Economy</em> 130: 1765–804.</p>
+<p>Bernard, A B, A Moxnes, and Y U Saito (2019), “Production networks, geography, and firm performance”, <em>Journal of Political Economy</em> 127: 639–88.</p>
+<p>Böken, J, L Gadenne, T Nandi, and M Santamaria (2023), “Community networks and trade”, CEPR Discussion Paper 17787.</p>
+<p>Caria, S, and J Labonne (2022), “Village social structure and labor market performance: Evidence from the Philippines”.</p>
+<p>Cassan, G, D Keniston, and T K Kleineberg (2021), “A division of laborers : Identity and efficiency in India”, NBER Working Paper 28462.</p>
+<p>Ciani, A, M C Hyland, N Karalashvili, Jennifer L Keller, A Ragoussis, and T T Tran (2020), Making it big: Why developing countries need more large firms, World Bank.</p>
+<p>Fafchamps, M (2000), “Ethnicity and credit in African manufacturing”, <em>Journal of Development Economics</em> 61: 205–35.</p>
+<p>Fisman, R, D Paravisini, and V Vig (2017), “Cultural proximity and loan outcomes”, <em>American Economic Review</em> 107: 457–92.</p>
+<p>Gould, D M (1994), “Immigrant links to the home country: Empirical implications for US bilateral trade flows”, <em>Review of Economics and Statistics</em> 76: 302.</p>
+<p>Greif, A (1993), “Contract enforceability and economic institutions in early trade: The Maghribi traders’ coalition”, <em>American Economic Review</em> 83: 525–48.</p>
+<p>Hjort, J (2014), “Ethnic divisions and production in firms”, <em>Quarterly Journal of Economics</em> 129: 1899–946.</p>
+<p>Hsieh, C-T, and B A Olken (2014), “The missing ‘missing middle’”, <em>Journal of Economic Perspectives </em>28: 89–108.</p>
+<p>Macchiavello, R (2022), “Relational contracts and development”, <em>Annual Review of Economics</em> 14: 337–62.</p>
+<p>Munshi, K (2019), “Caste and the Indian economy”, <em>Journal of Economic Literature</em> 57: 781–834.</p>
+<p>Munshi, K, and M Rosenzweig (2016), “Networks and misallocation: Insurance, migration, and the rural-urban wage gap”,<em> American Economic Review</em> 106: 46–98.</p>
+<p>Rauch, J E (2001), “Business and social networks in international trade”, <em>Journal of Economic Literature</em> 39: 1177–203.</p>
+<p>Rauch, J E, and V Trindade (2003), “Information, international substitutability, and globalization”,<em> American Economic Review</em> 93: 775–91.</p>
+<p>Singh, K S (1996), “Communities, segments, synonyms, surnames and titles”, Anthropological Survey of India.</p>
+<p>Startz, M (2021), “The value of face-to-face: Search and contracting problems in Nigerian trade”, SSRN.</p>
+<p>Weber, A, and C Zulehner (2014), “Competition and gender prejudice: Are discriminatory employers doomed to fail?”, <em>Journal of the European Economic Association</em> 12: 492–521.</p>
+                
+
+                    
+                    
+                    India
+                                
+                    Caste
+                                
+                    Caste system
+                                
+                    West Bengal
+                                
+                    Community networks
+                                
+                    Trade
+                        
+    
+    
+    
+        <p>Share this article:</p>
+
+        <a href="https://twitter.com/intent/tweet/?text=Community+networks+and+trade%3A+Evidence+from+India&amp;url=https%3A%2F%2Fvoxdev.org%2Ftopic%2Finstitutions-political-economy%2Fcommunity-networks-and-trade-evidence-india" title="Share on Twitter" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvoxdev.org%2Ftopic%2Finstitutions-political-economy%2Fcommunity-networks-and-trade-evidence-india" title="Share on Facebook" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        
+        <a href="https://voxdev.org/cdn-cgi/l/email-protection#7f400c0a1d151a1c0b42371a0d1a5f160c5f1e5f2910073b1a095f1e0d0b161c131a5f06100a5f121e065f1d1a5f16110b1a0d1a0c0b1a1b5f1611591d101b0642170b0b0f0c4550500910071b1a0951100d18500b100f161c5016110c0b160b0a0b1610110c520f1013160b161c1e13521a1c1011101206501c1012120a11160b0652111a0b08100d140c521e111b520b0d1e1b1a521a09161b1a111c1a5216111b161e" title="Share on Email" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fvoxdev.org%2Ftopic%2Finstitutions-political-economy%2Fcommunity-networks-and-trade-evidence-india&amp;title=Community+networks+and+trade%3A+Evidence+from+India" title="Share on LinkedIn" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        
+                    
+        
+        <a href="https://voxdev.org/print/77707" title="Print this page" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+    
+
+            

@@ -1,0 +1,248 @@
+<p><img src="https://reader.miniflux.app/proxy/RoZIK1r179iPspfdpgBkGOpeoPHbdRSJB3PNeZQ0i-g=/aHR0cHM6Ly9tYWN3cmlnaHQuY29tL2ltYWdlcy8yMDIzLTEwLTE3LWJpa2VzaGFyZS0xLWRvY2tlZC1jaXRpLWJpa2VzLmpwZw==" alt="Docked Citi Bikes" loading="lazy"/></p>
+
+<p>Since July, I’ve been archiving data from the Citi Bike GBFS feed. Every five
+minutes, I have a datapoint for each of the roughly 2,090 stations with numbers
+for how many bikes are available or broken, and how many bikes are electric.
+It’s a long-term project that combines my interests in bikes, large datasets,
+and visualiation. It’s far from finished, though: these are just casual, early
+“lab notes”.</p>
+
+<h3 id="citi-bike">Citi Bike</h3>
+
+<p>For those unfamiliar, <a href="https://citibikenyc.com/homepage" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Citi Bike</a> is New York
+City’s bikeshare program. I ride it to work and back every day.</p>
+
+<p>Citi Bike gives me hope for humanity. Yesterday I was reading a book out on Pier
+6 in Brooklyn Bridge Park, and I saw a lot of people riding those bikeshare
+bikes - young couples on dates, a mother following her daughter’s little bike,
+every age and demographic. The bikes make people happy, give them a sense of
+freedom and ease that’s hard to find in the rest of city life.</p>
+
+<p>They’re accessible, too: there are stations in most neighborhoods, the only
+exceptions being outer Brooklyn, where they’re slowing expanding the network,
+and South Williamsburg, where
+<a href="https://macwright.com/2023/08/25/fortress-in-brooklyn" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">local opposition</a> has
+blocked them. You can buy a membership which is $205/year, or $5 a month if you
+use SNAP or live in public housing. The program is accessible, the bikes are
+stable and easy to ride.</p>
+
+<p>It’s a good thing.</p>
+
+<p>But it’s embattled. By the anti-bike activists, whose arguments don’t bear
+repeating. But it’s also facing a crunch from the city and the bikeshare
+operators. Despite the program
+<a href="https://nyc.streetsblog.org/2023/05/26/citibank-renews-nyc-bike-share-sponsorship-is-it-time-for-public-funding" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">growing in popularity</a>
+every single year including this one, Lyft has been hinting that it might
+<a href="https://www.curbed.com/2023/04/lyft-bike-share-citi-bike.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">sell the business unit</a>.
+Uber benefited from the pandemic and has diversified into freight and food
+delivery, but Lyft notably hasn’t.</p>
+
+<p><img src="https://reader.miniflux.app/proxy/EmOJon55uY5x5H5owzOtwgpUmvLK3yfkX6fTWSgfoT0=/aHR0cHM6Ly9tYWN3cmlnaHQuY29tL2ltYWdlcy8yMDIzLTEwLTE3LWJpa2VzaGFyZS0xLXViZXItdmVyc3VzLWx5ZnQtc3RvY2sucG5n" alt="Uber versus Lyft stock" loading="lazy"/></p>
+
+<p>They’re not doing very well as a business. So, Lyft wants to reduce their lines
+of business and focus on getting people into cars. So much for
+<a href="https://macwright.com/2019/07/27/beware-the-ethical-car" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">combating climate change.</a>.
+Lyft already pulled out of their contract with
+<a href="https://www.mprnews.org/story/2023/03/02/nice-ride-shuts-down-pioneering-minneapolis-bike-share-program" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Minneapolis</a>,
+so the worst could happen for New York.</p>
+
+<h3 id="my-project">My project</h3>
+
+<p>Let’s get one thing out of the way first, this is the millionth project relating
+to this data and that’s a good thing! Here’s a cool
+<a href="https://github.com/maronem/CitiBike_Data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">analysis of bikeshare data and gender</a>,
+and
+<a href="https://toddwschneider.com/posts/a-tale-of-twenty-two-million-citi-bikes-analyzing-the-nyc-bike-share-system/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">another one with cool graphics</a>,
+and <a href="https://github.com/rolyatmax/citibike-trips" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">another one with WebGL</a>.</p>
+
+<p>Bikeshare makes for a <em>really cool dataset</em>, because it’s geographic, free &amp;
+easy to obtain, and also because we <em>systematically undervalue the privacy of
+people using public transit and microtransit while giving drivers expansive
+<a href="https://macwright.com/2021/12/24/policing-the-open-road" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">privacy rights</a> which
+aren’t enough because they
+<a href="https://www.newyorker.com/magazine/2023/01/23/at-large-with-new-yorks-one-man-crime-spree" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">bend their license plates so that they don’t get speeding tickets in school zones</a>
+and tint their windows
+<a href="https://www.nydailynews.com/2023/06/06/suspect-in-double-fatal-dwi-wreck-admits-running-stop-sign-in-queens-nypd-says/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">so much that they don’t even realize they’ve killed people in crashes</a>.</em></p>
+
+<p>Bikeshare is a good dataset, though.</p>
+
+<h3 id="gbfs">GBFS</h3>
+
+
+
+
+
+
+
+
+
+<p>Most of the bikeshare-related projects are tinkering with the
+<a href="https://s3.amazonaws.com/tripdata/index.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">trips dataset</a>, which shows start
+&amp; end points for a given trip. That’s fun data to visualize, but I’m really
+interested in different dimensions of the dataset. So, I’m using the GBFS feed,
+which instead shows the capacity and status of the docks where the bikes are
+parked.</p>
+
+<p><a href="https://github.com/MobilityData/gbfs" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">GBFS</a> is a standard for how cities with
+bikeshare systems share their data. In practice, it’s a really nice
+specification to work with: it’s pretty well-designed, simple, easy to parse.
+And Citi Bike’s
+<a href="https://citibikenyc.com/system-data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">system data implementation</a> is stellar. In
+the whole time I’ve been working with it, I haven’t noticed downtime or a
+significant bug. The API responds quickly and doesn’t require any kind of
+authentication. Whoever implemented it did a good job.</p>
+
+<h3 id="the-worker">The Worker</h3>
+
+<p>The rest of the system is still kind of in flux, but the archiving step has been
+working well for months.</p>
+
+<p>It uses a <a href="https://workers.cloudflare.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Cloudflare Worker</a>, which is
+scheduled to run every 5 minutes. It fetches from the API, gzips the response,
+and saves it to <a href="https://developers.cloudflare.com/r2" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Cloudflare R2</a>, which is
+Cloudflare’s equivalent to Amazon S3 - a storage service.</p>
+
+<p>The worker itself is written in TypeScript and it fetches, compresses, and
+stores the data:</p>
+
+<pre><code>export interface Env {
+  DATA: R2Bucket;
+}
+
+export default {
+  async scheduled(
+    controller: ScheduledController,
+    env: Env,
+    ctx: ExecutionContext,
+  ): Promise&lt;void&gt; {
+    const res = await fetch(
+      &#34;https://gbfs.citibikenyc.com/gbfs/en/station_status.json&#34;,
+    );
+    if (!res.ok) {
+      throw new Error(`Endpoint down, status: ${res.status}`);
+    }
+
+    const compressionStream = new CompressionStream(&#34;gzip&#34;);
+    const compressed = await new Response(
+      res.body?.pipeThrough(compressionStream),
+    ).arrayBuffer();
+
+    const time = new Date(controller.scheduledTime);
+    const key = `station_status/${time.toISOString()}.json.gz`;
+    await env.DATA.put(key, compressed);
+    console.log(&#34;OK: Scrape done&#34;);
+  },
+};
+</code></pre>
+
+<p>And is scheduled using its <code>wrangler.toml</code> configuration file:</p>
+
+<pre><code>name = &#34;station_scraper&#34;
+main = &#34;src/index.ts&#34;
+compatibility_date = &#34;2023-06-29&#34;
+ 
+[[r2_buckets]]
+binding = &#34;DATA&#34;
+bucket_name = &#34;citibike-data-1&#34;
+preview_bucket_name = &#34;citibike-data-1-test&#34;
+ 
+[triggers]
+crons = [ &#34;*/5 * * * *&#34; ]
+</code></pre>
+
+<p>I have to bind the worker to the R2 bucket to give it access, and then that’s
+it - the worker runs on its own. Each new version of the <code>station_status</code>
+endpoint is named with a timestamp so that I can fetch a specific day by listing
+objects with a prefix.</p>
+
+<h3 id="the-collector">The Collector</h3>
+
+<p>The Worker produces gzipped JSON - not the best format for analysis. What <em>is</em>
+the best format for analysis? I think the current answer is Parquet. I wrote
+about Parquet a little in the context of
+<a href="https://macwright.com/2022/05/30/new-formats" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">geospatial formats</a>, and my
+friend <a href="https://kylebarron.dev/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Kyle</a> has been singing the praises of Parquet
+and Arrow, so I was excited to take a look.</p>
+
+<p>I implemented a “collector” in Rust for fun, and because I didn’t want to
+install Python on my laptop. There’s a good
+<a href="https://github.com/apache/arrow-rs" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">canonical implementation of Parquet and Arrow, arrow-rs</a>,
+in Rust. To read JSON, there’s <a href="https://serde.rs/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">serde</a>. To handle dates,
+there’s <a href="https://docs.rs/chrono/latest/chrono/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">chrono</a>.</p>
+
+<p>Overall, it was a good time hacking it together. As long as I avoid refactoring
+and splitting up functions, I can write Rust without bothering the borrow
+checker too much. The only thing that really got me was around the edges of
+Parquet: how should I structure my data - is it better to have lots of rows, or
+lots of columns? I could picture three different ways, at least, to model this
+data, and it was hard to figure out which was best. Plus, some of the knobs to
+<a href="https://github.com/apache/arrow-rs/issues/4804" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">optimize Parquet</a> were
+confusing to tweak.</p>
+
+<p>But anyway, the collector is able to take about 2 gigabytes of gzipped JSON and
+turn it into a 180MB Parquet file: a good 91% savings. I suspect that I could do
+better with tweaking some other settings, and being smarter about structuring
+the data.</p>
+
+<h3 id="web">Web</h3>
+
+<p>This is the part I’m still not sure about. I shipped a demo a while ago on
+<a href="https://bikesharecharts.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">bikesharecharts.com</a>, but I think it needs a
+rethink. There are a few things bugging me about the existing demo:</p>
+
+<ul>
+  <li>It’s doing too much custom visualization code: it’s rendering charts in a
+combination of raw d3 and Svelte. It’s annoyingly manual to tweak the charts.</li>
+  <li>The charts aren’t very understandable anyway, and I don’t really think that
+there needs to be this small-multiples view of all the bikeshare stations as a
+stack. It’s cool, but it doesn’t tell a story.</li>
+</ul>
+
+<p>So, I’m tinkering with other solutions. Part of the appeal of Parquet is that I
+can use it with <a href="http://duckdb.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DuckDB</a>, a database that can run in the
+browser and let me query the data with SQL. DuckDB is <em>very hot right now</em> and
+is great, except for how much time it took me to figure out
+<a href="https://github.com/duckdb/duckdb-wasm/issues/393" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">how to get it to convert timestamps</a>.</p>
+
+<p><a href="https://uwdata.github.io/mosaic/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Mosaic</a> is like
+<a href="https://observablehq.com/plot/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Observable Plot</a> combined with DuckDB. It’s
+very exciting in theory but it’s been hard to get the pieces to fit together and
+become familiar with the project by reading the documentation.</p>
+
+<p><a href="https://observablehq.com/plot/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Observable Plot</a> is itself a viable option, and
+connecting it manually to DuckDB is very possible, though it’ll be more code to
+connect it in the efficient way that Mosaic does. But it’s very limited in terms
+of <a href="https://observablehq.com/plot/features/interactions" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">interactivity</a> and this
+project could really benefit from at least being able to zoom into a day range.</p>
+
+<p>So, for now I’ve hooked up an
+<a href="https://observablehq.com/@tmcw/bikeshare-charts" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Observable Notebook</a> to
+explore the dataset. It’s fun to be able to use Observable as just a user, after
+helping build the platform itself in its very very early history. It’s a good
+platform, and lends itself pretty well to this problem area - it’s super easy to
+wire together inputs, processing, and visualization steps.</p>
+
+<h3 id="plans">Plans</h3>
+
+<ul>
+  <li>If the Citi Bike system changes, like if Lyft pulls out of its contract, or
+New York takes more ownership over the program, I think this will be a great
+dataset to see the effect of the change.</li>
+  <li>There are a few places in the city where bicycle rebalancing seems to be
+failing on a regular basis. For example, docks in
+<a href="https://en.wikipedia.org/wiki/Red_Hook,_Brooklyn" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Red Hook</a> are consistently
+full. I’d like to figure out how often these docks are getting rebalanced -
+how often Lyft or Motivate or a third party is, in fact, driving to the docks
+and moving the bikes. There’s an attempt at crowdsourcing that rebalancing by
+encouraging people to ride bikes from full docks to empty ones, called Bike
+Angels - does that have any effect?</li>
+  <li>Based on the demand curve of each station, it should be possible to figure out
+which are associated with workplaces more than homes - which absorb bikes
+between 9-5, and which lose them?</li>
+  <li>In the event that there’s system expansion, it’ll be interesting to see how
+quickly there’s adoption - outer Brooklyn expansion is likely in the short
+term, whereas South Williamsburg expansion might never come.</li>
+</ul>
+
+<p>In any case, I’m having fun with it, and enjoyed the excuse to produce a
+watercolor yesterday!</p>

@@ -1,0 +1,157 @@
+<p><em>Hype vs. reality: Tom Di Fonzo</em>, <em>journalist-in-residence for the Institute for Data, Democracy &amp; Politics (IDDP) asks, where does the technology stand heading into 2024?</em></p>
+
+
+
+<figure><img src="https://reader.miniflux.app/proxy/dA-9UutvG0RPf4V-LJOIOIF8mwPoSYF7s0IEu2__Eyw=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL2ltYWdlMS0xMDI0eDU3NC5wbmc=" alt="" srcset="https://reader.miniflux.app/proxy/dA-9UutvG0RPf4V-LJOIOIF8mwPoSYF7s0IEu2__Eyw=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL2ltYWdlMS0xMDI0eDU3NC5wbmc= 1024w, https://reader.miniflux.app/proxy/gJde1lRedu_hhzau6zCI_n4e-U4_Fyhoq7uFB-sLfWM=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL2ltYWdlMS0zMDB4MTY4LnBuZw== 300w, https://reader.miniflux.app/proxy/J-lHauMSeUAHbll4L41OrjThMYHWCZs9Q5WtkZ6_oRs=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL2ltYWdlMS03Njh4NDMwLnBuZw== 768w, https://reader.miniflux.app/proxy/LZFzhkfyVuZiT94YR3R8WH8QmvsqyUvTamPht0gTi6w=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL2ltYWdlMS5wbmc= 1456w" sizes="(max-width: 1024px) 100vw, 1024px" loading="lazy"/><figcaption>An image created by the author using Midjourney, a generative AI program that turns lines of text into hyper-realistic images, when given the prompt <em>“/imagine a massive information campaign being conducted by a single person on a computer”</em></figcaption></figure>
+
+
+<p>New generative AI tools like ChatGPT and Midjourney have sparked intense debate about how this accessible wave of artificial intelligence could transform industries ranging from healthcare to education. But how will these powerful technologies shape the high-stakes world of political campaigns in the years ahead?</p>
+
+
+
+<p>My interviews with US campaign strategists, tech policy experts and AI researchers reveal a mixed picture. Many anticipate revolutionary change in the long run, but some say the hype likely outweighs any truly game-changing impact in the near term given the current limitations of the technology. </p>
+
+
+
+<p>Yet, all are in agreement that generative AI will amplify the problem of misinformation and disinformation already seen in past elections—and that 2024 will be the first cycle impacted by its emergence. </p>
+
+
+
+<p>While how this plays out is a concern for those interviewed, what emerged as critical—but generally less talked about—are other important ways that future elections will be affected by these new technologies, for better and for worse. The potential implications for micro-targeting, campaigns and fundraising, and transparency and oversight in general are also worthy of attention and research. </p>
+
+
+
+<h2 id="h-amplifying-misinformation-and-disinformation-at-scale"><strong>Amplifying Misinformation and Disinformation at Scale</strong></h2>
+
+
+
+<p>While hyper-targeted voter outreach powered by AI may seem conceptual or in the future, experts warn that current uses of this technology could already supercharge online disinformation campaigns with respect to elections. </p>
+
+
+
+<p>Russia pioneered influence operations with <a href="https://www.sipa.columbia.edu/news/study-confirms-influence-russian-internet-trolls-2016-election" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">troll farms</a> spreading disinformation. This new wave of AI has the potential to generate constantly evolving, precisely targeted messages at unprecedented scale, making human review impractical. At the same time, social media companies like X (formerly Twitter), Meta, and YouTube, are <a href="https://techpolicy.press/the-era-of-big-tech-minimalism-missouri-v-biden-gives-platforms-cover-to-retreat-from-election-integrity-efforts/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">downscaling content moderation</a>, which could further enable the spread of disinformation.  </p>
+
+
+
+<p>“The doom take here is that It’s going to be the 2016 election, but way, way worse, an order of magnitude worse,” said Pat Dennis, the Vice President of Research at Democratic super PAC American Bridge 21st Century, pointing to AI’s potential for churning out manipulated content at unprecedented speed and volume. But Dennis believes that voters are likely able to differentiate and will turn to trusted information sources. “The pure doom take doesn’t take into account that voters are actually smart, individual actors who want true information about the world, because that helps them in their lives,” said Dennis.</p>
+
+
+
+<p>Increased accessibility to this technology could allow more people to leverage it for their own purposes, both good and bad. Individual hobbyists today can generate hyper-targeted political messages and deep fakes that previously required significant resources, technical skills, and institutional access. “Before you needed [to] run a building full of Russians in St. Petersburg to [spread disinformation],” said cybersecurity expert Bruce Schneier. “Now hobbyists can do what it took…in 2016.”</p>
+
+
+
+<p>“I think so many of the risks, the ethical risks, the risk to democracy created by AI are important, but they’re not new. They are the same things that we’ve been grappling with, that humans have done in the past,” said Nathan Sanders, a tech policy researcher at Duke University who has studied political applications of AI, referring to the historical use of misinformation and disinformation. </p>
+
+
+
+<p>Ben Winters, senior counsel at EPIC, a research organization focused on emerging privacy and civil liberties issues related to new technologies, pointed to a recent case of two men using robocalls to target Black voters with disinformation as an example of small groups engaging in large-scale manipulation. The men were sentenced after using robocalls to disseminate false information about voting by mail in Ohio. Winters worries similar groups could potentially utilize generative AI “to do that in a less trackable” way. With AI tools like ChatGPT, bad actors can easily “write me a text message” containing whatever fabricated message suits their aims, he noted. He is concerned that generative AI allows for deception “in a much sneakier way” while evading oversight.</p>
+
+
+
+<p>Some also argue today’s toxic information environment leaves little room for new technologies to further degrade truth seeking. “I don’t think it’s possible to amplify polarization at this point,” said cybersecurity expert Bruce Schneier. With political tribalism reaching extreme levels, he believes fabricated content mainly provides more fuel for the raging fire.</p>
+
+
+
+<h2 id="h-micro-micro-targeting-chatbots"><strong>“Micro-Micro” Targeting Chatbots</strong></h2>
+
+
+
+<p>Micro-targeting in itself is not new. For years, political campaigns have leveraged data and utilized demographic-based micro-targeting models to deliver messages tailored to small groups of like minded individuals. These tools first came to prominence when former President <a href="https://digitalcommons.butler.edu/cgi/viewcontent.cgi?article=1007&amp;context=bjur" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">George Bush’s 2004 reelection</a> campaign used individual-level consumer data to model the behaviors and attributes of voters. For example, if consumer data suggested someone was likely to drive a pickup truck, they would be predicted to be Republican-leaning. Through such techniques, Bush’s campaign divided the electorate into segments as small as several thousand people who could then be targeted with tailored messaging. In later campaigns, such as former President Barack Obama’s in 2008, the techniques were refined even further to target messages to groups of just a few hundred individuals.  </p>
+
+
+
+<p>In the future however, some envision this being taken a step further with conversational chatbots powered by large language models. This would enable a new level of hyper-individualized communication customized to each voter’s singular profile and concerns. In theory, voters could ask questions on issues important to them and get tailored answers from an AI “avatar” representing the candidate’s platform, suggests Nathan Sanders. However, Sanders believes the technology is not yet advanced enough for campaign chatbots to be effectively implemented right now. But as generative AI evolves, Sanders thinks an interactive campaign chatbot could provide helpful voter information to those who want it, especially in local and down-ballot races.</p>
+
+
+
+<p>EPIC’s Winters expressed strong skepticism about the potential for generative AI chatbots to aid political campaigns through hyper-personalized outreach to voters. “I very much do not see [chatbots] as a positive use case,” he said, arguing they are unlikely to provide accurate or helpful information about a candidate’s views. Winters believes chatbots powered by large language models like ChatGPT could enable deception on a large scale. </p>
+
+
+
+<p>Current campaign uses of chatbots appear to be attempts to latch onto the public interest in AI, as opposed to delivering substantive value. Miami mayor Francis Suarez recently <a href="https://apnews.com/article/florida-suarez-2024-campaign-artificial-intelligence-chatbot-6522b5802b8b33ee455c6c9eb367dd81" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">rolled out a rudimentary chatbot</a> powered by the product VideoAsk as part of his presidential campaign. The bot relies on pre-recorded videos rather than engaging in real-time dialogue and fails to directly answer many user questions. </p>
+
+
+
+<p>Sanders also warns that intimate digital outreach via AI chatbots can be dangerous. “It could look like demagoguery, but on a massive scale,” said Sanders. AI chatbots are inclined to give any response that placates the user – telling different people what they want to hear regardless of <a href="https://www.nytimes.com/2023/02/08/technology/ai-chatbots-disinformation.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">factual accuracy</a>. AI tools are trained to continuously predict the desired human response, so AI models like ChatGPT or Claude AI will fabricate answers that “sound right” when stumped rather than admit ignorance.</p>
+
+
+
+<h2 id="h-fundraising-and-campaigns-reimagined"><strong>Fundraising and Campaigns Reimagined</strong></h2>
+
+
+
+<p>The use of generative AI in political fundraising is still in its early days, but some high-profile campaign stunts have brought attention to the technology. According to Mike Nellis, CEO of AI startup Quiller AI, many current uses seem to be more about publicity than providing real value. “The GOP posts an AI generated video of Joe Biden and Kamala Harris. Like that’s a stunt, that was about getting press attention.” said Nellis.</p>
+
+
+
+<p>Even at this early stage, generative AI provides tangible efficiency gains when thoughtfully implemented. At the Democratic fundraising firm <a href="https://quiller.ai/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Quiller AI</a>, CEO Mike Nellis described an “intern-like” AI assistant that helps draft initial emails to spur donor engagement. “If we can give people a copilot that can help them with mundane tasks like first draft generation for an email, we’re going to allow people to live more balanced lives,” Nellis said.</p>
+
+
+
+<p>Rather than obfuscating authorship, Quiller’s AI builds human staff directly into the drafting process to maintain an authentic voice. Nellis believes the technology can open digital fundraising to long-shot local campaigns that were previously too expensive to devote staff to.</p>
+
+
+
+<p>Betsy Hoover, a partner at Higher Ground Labs, an investment firm that focuses on political technology, sees generative AI as a game changer if used in the right way  “Everyone else is using generative AI, it’s going to be in every part of our lives and a part of every industry. So voters, or candidates, or campaign staff, or volunteers, it’s going to be part of their lives. We’re not going to keep that out of politics and out of the democratic process. So in the world that we’re in today, our job is to figure out how to use it responsibly, how to do the most good with it, and how to prevent the downsides.</p>
+
+
+
+<p>Digital and public relations agencies like BerlinRosen carefully explore integrating AI into workflows, though not for public-facing work yet. The agency created an AI taskforce meeting weekly to develop guidelines and monitor developments. Kelly Vingelis, the Senior vice president of digital advertising at BerlinRosen cited AI’s help generating initial creative concepts and mockup images rapidly. However, human oversight remains critical: “We think it’s really important to have the human element and the human control over the very final end product.”</p>
+
+
+
+<p>AI is also assisting campaign operations in wide-ranging ways. “The possibilities are limitless, frankly,” said Larry Huynh, president of the American Association of Political Consultants (AAPC). Huynh described an AI-generated “fun and interesting” thank-you video made for a client depicting them as a superhero – an example of using the technology to “lift up, have humor in it, and do it in a positive way.” However, AAPC has condemned uses of AI that intentionally mislead voters, arguing they are not in America’s interest and undermine democracy. </p>
+
+
+
+<p>Other experts highlighted AI’s potential to assist with campaign operations from data processing to drafting ads. While still experimental, these tools can streamline workflows so staffers spend less time on mundane tasks. But generating high-quality creative content remains challenging for current systems. “I don’t see a ton of writing scripts using AI voices as being particularly useful, even if it is significantly upgraded.” says American Bridge 21st Century’s Dennis. “The human experience of communicating a message to voters is a little more complicated than [generative AI] can handle at the moment.”</p>
+
+
+
+<h2 id="h-transparency-and-oversight"><strong>Transparency and Oversight</strong></h2>
+
+
+
+<p>As artificial intelligence becomes more common in society and politics, there is a push to oversee the risks and benefits without hindering its progress. At this point, solutions remain elusive given the technology’s complexity, pace of change and lack of bipartisan vision. And experts are concerned that policy discussions are zeroing in too much on generative AI, potentially overlooking broader foundational issues.</p>
+
+
+
+<p>Despite differing views on AI’s influence in coming elections, the experts I spoke with converged around identifying transparency as a critical tool. One bill looking to do that is the <a href="https://www.congress.gov/bill/118th-congress/house-bill/3044" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">REAL Political Ads Act</a>, which would mandate labeling AI-generated content. This would require a disclaimer on political ads for federal campaigns if generative AI was used, whether it be video, audio or text. Another bill put forward recently to tackle the transparency issues is the <a href="https://www.govinfo.gov/app/details/BILLS-118s2691is" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">AI labeling act</a>, the first bipartisan effort, and mandates encrypted watermarks be included in all content created by generative AI and not just political content. </p>
+
+
+
+<p>Anna Lenhart, an Institute for Data, Democracy &amp; Politics (IDDP) fellow specializing in technology policy, recently mapped out <a href="https://iddp.gwu.edu/federal-ai-legislation" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Federal Legislative Proposals Pertaining to Generative AI</a>. She thinks that while the REAL Political Ads Act and AI labeling act will provide a useful tool for institutions, they won’t solve the underlying problem completely. “The US has no updated antitrust laws…we’ve never passed a privacy law…we have no data rights,” Lenhart said. “Data processing in this country should be regulated. And that will inherently regulate your AI tools. Because they’re a type of data process.”</p>
+
+
+
+<p>EPIC’s Ben Winters advocates for regulation that combines transparency rules with clear “bright line” rules prohibiting deception. He points to the <a href="https://www.cardin.senate.gov/wp-content/uploads/imo/media/doc/Deceptive%20Practices%20Bill%20Text.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Deceptive Practices and Voter Intimidation Prevention Act</a> from Senators Ben Cardin (D-MD) and Amy Klobuchar (D-MN) as a good model, stating it would “designate an unfair and deceptive trade practice and give a private right of action to people that are victims of the dis and misinformation, regardless of the form.” Winters believes this approach, combined with enforcement resources, is needed to address generative AI’s risks. </p>
+
+
+
+<p>Winters argues transparency alone has limits, as disclosures can be circumvented. He supports labeling requirements like the proposed REAL Political Ads Act, but says meaningful recourse for deception is also critical. Winters endorsed the Cardin-Klobuchar bill for establishing violations and penalties for knowingly deceiving voters about elections, which he believes can cover harms from generative AI systems when combined with transparency rules.</p>
+
+
+
+<p>Lenhart has observed mixed reactions from legislators so far on the issue of generative AI in campaigns. Lenhart noted that members of Congress who have long been concerned about disinformation and deceptive practices see this as an “escalation of an ongoing crisis.” However, legislators newer to this issue appear to be looking at the bigger picture, considering the overall impacts of generative AI on society rather than just the risks to elections. Lenhart pointed to some in Congress forming new commissions and task forces to holistically study AI’s risks. </p>
+
+
+
+<p>In the absence of movement at the federal level, Lenhart sees some promise in state policy serving as a sort of incubator for more substantial federal law. Massachusetts State Senator Barry Feingold (D 2nd Essex and Middlesex) has spearheaded accountability legislation including requirements for companies to register AI systems with the state attorney general’s office.</p>
+
+
+
+<p>Sen. Feingold compared AI’s significance to nuclear fission, saying it “can be phenomenal” when used positively but “very, very detrimental” if misapplied. “I think we need to put up the proper guardrails with AI,” he stated, highlighting the need for oversight mechanisms to match the technology’s risks and benefits.</p>
+
+
+
+<p>However, while Sen. Feingold hopes other states can model such regulation, Lenhart warned a patchwork of conflicting state laws also threatens headaches for national campaigns and hinders enforcement. </p>
+
+
+
+<p>Others like former FEC Chairman and regulatory attorney Karl Sandstrom favor tailored federal rules specifically for campaign AI. He suggested existing state consumer protection laws banning deception could potentially apply to interactive bots designed to mislead voters. He also thinks it’s important to build a system that “can identify who’s truly accountable”, suggesting that platforms shouldn’t be able to carry content that isn’t traceable to an accountable source.<br/><br/>In a recent move, Google announced it will require clear disclosures on AI-altered election ads starting in November 2023, aiming to increase transparency. Sen. Amy Klobuchar called it “a step in the right direction,” but said legislators can’t “solely rely on voluntary commitments” by tech firms. Sen. Klobuchar joined Senators  Josh Hawley (R-MO), Chris Coons (D-DE), and Susan Collins (R-ME) to introduce the <a href="https://www.congress.gov/118/bills/s2770/BILLS-118s2770is.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Protect Elections from Deceptive AI Act</a>. This bipartisan bill would amend federal election law to prohibit distributing materially deceptive AI-generated audio, video or images of candidates to influence voters. The legislation allows candidates targeted by such content to have it removed and seek damages. There is little chance this legislation will advance in a divided Congress.</p>
+
+
+
+<p>With AI leaders such as OpenAI CEO Sam Altman flagging the potential for manipulation (even, in Altman’s case, as his company releases increasingly powerful models) and with Congress at a deadlock, the question arises – how concerned should citizens be as the 2024 election looms? For now, the scale and sophistication of AI deployment in the election remains uncertain. But with the technology racing ahead, campaigns, media institutions, and voters face growing pressure to determine if and how these powerful systems might reshape the democratic process, and what politicians should do about it.</p>
+<p>The post <a href="https://techpolicy.press/what-you-need-to-know-about-generative-ais-emerging-role-in-political-campaigns/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">What You Need to Know About Generative AI’s Emerging Role in Political Campaigns</a> appeared first on <a href="https://techpolicy.press" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Tech Policy Press</a>.</p>

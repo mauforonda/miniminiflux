@@ -1,0 +1,104 @@
+<p>New empirical evidence on global deforestation casts doubts on Corporate Environmental Responsibility and ESG claims that they can replace state-led regulation as a mechanism to minimise negative environmental externalities in low government capacity settings</p>
+                                    
+                    <p>What matters more for managing negative environmental externalities? Corporate self-governance, or the state as rule-setter and regulation-enforcer? This is the question we seek to answer in our new research into the determinants of deforestation by oil companies around the world.</p>
+<p>Economic growth, population expansion, and the need for more energy put previously untouched natural environments under increasing pressure. The world’s forests are both a valuable carbon sink, and an invaluable source of biodiversity and natural habitats. In fact, much of the world’s unexploited oil and gas reserves sit beneath valuable, biodiverse forest ecosystems (Butt et al. 2013). However, private economic activity, such as oil drilling, fails to account for the intrinsic value of forest ecosystems, and may clear excessive amounts of forest since they do not bear the full cost of doing so. This negative environmental externality is a source of market failure that requires intervention of some kind to bring private and social incentives into alignment – and consequently help preserve forests which are undervalued by private actors.</p>
+<p><strong>Figure 1: Example of forest loss around oil activities in Brazil</strong></p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/BsVWlVjM-wplFuELujR01Gow2-o2pPeHjtIi0fYt2L8=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvZ292ZXJuYW5jZW9pbF9maWd1cmUxLmpwZw==" loading="lazy"/></p>
+<p>Notes: Satellite picture of oil drilling area in Brazil 1985–2015 (3BRSA-0670-AM well, lat:-4.8794, long:-65.2894). Source: Credit: Made with animation and Landsat satellite images via EarthTime.org, courtesy of the U.S. Geological Survey and EarthTime.org.</p>
+<h2>How can global forests be protected?</h2>
+<p>Two modern solutions to environmental externalities have emerged. The standard recipe to guard the natural environment derived from economic theory is some form of public regulation or pricing via taxes. Either of these can help bring private actions into alignment with the full social cost of those actions (see for example Pigouvian tax, Pigou 1932). Recently, however, there has been increased hope placed on private initiatives in the form of self-regulation by companies (see for example Egorov and Harstad 2017). Investors have sought emphasis on responsible company practices in the form of ESG criteria (environmental, social and governance). The hope, and claim by some, is that such approaches can correct market failures, by bringing private activity into closer alignment to social values, without recourse to the state. This may be particularly relevant where the state lacks the capacity to tax or regulate market failures effectively, such as in developing countries with weaker institutions.</p>
+<p>To date, little empirical work has examined the relative importance of public governance compared to corporate governance in reducing negative environmental externalities. To reveal the impact of corporate governance and ESG, the challenge has been that there is little data on the local environmental footprint of companies’ activity that is comparable across countries. </p>
+<h2>How do we research this issue?</h2>
+<p>In our research (Cust, Harding, Krings and Rivera-Ballesteros 2023), we address this problem by studying oil exploration in forests around the globe. Using comparable oil drilling data and forest loss data across many countries, we investigate the importance of which companies drill oil wells, relative to the importance of which countries the drilling takes place in. We observe forest loss over the period 2001–2018 by using satellite data and geo-coded exploration wells over the period 2004–2010. The data covers 3,101 onshore oil exploration wells drilled in forests, across 55 different countries by 396 different companies. We can also use the random event of discovering commercially viable oil as variation in the ongoing presence of oil companies in the area. This allows us to estimate at a global scale the impact of oil drilling on the world’s forests. Such estimates previously only existed for the US and Canada (Allred et al. 2015).</p>
+<h2>What do we find?</h2>
+<p>First, the paper documents that oil drilling leads to significant forest loss around oil wells. Second, we find that the institutional quality of the country where the drilling happens matters in predicting how much forest will be cleared.</p>
+<p><strong>Figure 2: Tree Cover Loss around wells drilled in high and low democracy score countries</strong></p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/5qc-hn_V3dZx06ZykJdGtrE90WADIabfljq1vV0H2vw=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvZ292ZXJuYW5jZW9pbF9maWd1cmUyLmpwZw==" loading="lazy"/></p>
+<p>Notes: Tree cover loss before and after exploration drilling in a circle of 5 km2 around a well. Cumulative tree cover loss is measured in percent of a 5 km2 ring area around a well. The starting year of exploration drilling is set to t = −2. Well and year fixed effects included. Using the margins function in Stata, we estimate marginal effects of each corporate governance measure on tree cover loss. This gives us the average effect per year across discovery results and institutional qualities. We compute the cumulative sum of the resulting marginal effects starting at t = −2, while we subtract those from t = −3 to t = −6.</p>
+<p>However, the paper does not find any systematic differences in the global average forest loss between the companies that do the drilling. We examine five corporate governance and ESG-related measures: national ownership, affiliation with supermajor companies (including subsidiaries or not), membership in IPIECA (an industry association committed to better environmental performance), and public listing status. Surprisingly, we find that presumptively &#34;responsible&#34; company traits do not correlate with reduced forest loss from oil activities.</p>
+<p><strong>Figure 3: Differential tree cover loss from International ‘Supermajor’ Oil companies, versus rest of sample, and IPIECA members vs rest of sample</strong></p>
+<p><img alt="" src="https://reader.miniflux.app/proxy/Gum6ASWLyxPWzNwJWozG2h5WRBEoMPMQCzbGvJMlWrc=/aHR0cHM6Ly92b3hkZXYub3JnL3NpdGVzL2RlZmF1bHQvZmlsZXMvaW1hZ2UvRnJvbU1heTIwMTQvZ292ZXJuYW5jZW9pbF9maWd1cmUzLmpwZw==" loading="lazy"/></p>
+<p>Notes: Tree cover loss before and after exploration drilling in a circle of 5km2 around a well. Cumulative tree cover loss is measured in percent of a 5km2 ring area around a well. The starting year of exploration drilling is set to t=-2. IOC_Major = super major international oil companies (IOC),  companies currently members of IPIECA. Well and year fixed effects included. Using the margins function, we estimate marginal effects of each corporate governance measure on tree cover loss. We compute the cumulative sum of the resulting marginal effects starting at t=-2, while we subtract those from t=-3 to t=-6.</p>
+<p>Instead of forest loss being driven by differences in corporate governance, the key insight of our research is that wells in countries with better public governance are associated with lower forest loss in the period after drilling. In contrast, weaker institutional settings are associated with greater forest loss, even if the company drilling is one that claims higher environmental standards and presumptively ‘responsible’ corporate governance.</p>
+<h2>What does public governance mean in our setting?</h2>
+<p>Although we use democracy scores as our main measure, we interpret it to reflect the quality of governance broadly defined, rather than simply whether a country has multi-party democracy and elections or not. This is because measures of democratic governance are strongly correlated with other dimensions of governance, including state regulatory capacity, so we cannot with precision reveal which aspect matters most for forest protection. For example, better public governance measures might be associated with political competition, but also freedom of speech, and accountability of decision making; allowing citizens and organizations to voice environmental concerns that may spur the introduction and enforcement of policies to protect the environment. Better public governance may also have indirect effects. For example, Acemoglu et al. (2019) find that democracy has a positive effect on the likelihood of economic reforms, tax revenue as a percentage of GDP, and enrolment in primary and secondary education. More generally, the large literature on institutions and economic growth has shown that institutional quality matters for a host of outcomes related to economic development. Economic policies, the capacity of the state, human capital, and various company investments can in turn affect environmental outcomes. In our setting, technology, information, workers’ education, infrastructure, and the level of conflict are examples of potential mechanisms, as they are channels by which public governance can affect outcomes. In line with the idea that public governance can work via broad mechanisms, we show that the effect of public governance goes beyond environmental stringency, as measured by a World Economic Forum index, and the level of economic development, as measured by GDP per capita.</p>
+<p>A striking result in our study is that the amount of forest loss incurred is no-better (and possibly even worse) when the well is operated by a presumptively more environmentally responsible company. This suggests that while weak public governance leads to worse outcomes, there is no evidence that corporate responsibility compensates for this deficiency. This stands in contrast to the ‘‘pollution halo’’ hypothesis, which proposes that multinational companies might bring better environmental standards or environmentally friendly production methods with them when operating abroad, including in settings lacking regulations of their own (see for example Birdsall and Wheeler 1993, Zarsky 1999). The current ESG focus at many companies, and among investors, may therefore prove insufficient to address negative environmental externalities, especially in the presence of weak public governance.</p>
+<h2>References</h2>
+<p>Acemoglu, D, S Naidu, P Restrepo, and J A Robinson (2019), “Democracy does cause growth.” <em>Journal of Political Economy</em> 127(1): 47–100. </p>
+<p>Allred, B W, W K Smith, D Twidwell, J H Haggerty, S W Running, D E Naugle, and D Fuhlendorf (2015), “Ecosystem services lost to oil and gas in North America.” <em>Science </em>348(6233): 401–402.</p>
+<p>Birdsall, N, and D Wheeler (1993), “Trade policy and industrial pollution in Latin America: where are the pollution havens?” <em>Journal of Environmental Development</em> 2(1): 137–149.</p>
+<p>Butt, N, H L Beyer, J R Bennett, D Biggs, R Maggini, M Mills, A R Renwick, L M Seabrook, and H P Possingham (2013), “Biodiversity risks from fossil fuel extraction.” <em>Science </em>342(6157), 425–426.</p>
+<p>Cust, J, T Harding, H Krings, and A Rivera-Ballesteros (2023), &#34;Public governance versus corporate governance: Evidence from oil drilling in forests.&#34; <em>Journal of Development Economics</em> 163: 103070.</p>
+<p>Egorov, G and B Harstad (2017), “Private politics and public regulation.” <em>Review of Economic Studies</em> 84(4): 1652–1682.</p>
+<p>Pigou, A C II, Chapter IX: Divergences Between Marginal Social Net Product and Marginal Private Net Product in The Economics of Welfare (1932)</p>
+<p>Zarsky, L (1999), “Havens, halos and spaghetti: untangling the evidence about foreign direct investment and the environment.” <em>Foreign Direct Investment Environment</em> 13(8): 47–74.</p>
+                
+
+                    
+                    
+                    Deforestation
+                                
+                    Oil drilling
+                                
+                    Environmental footprint
+                                
+                    Governance
+                                
+                    Stage covernance
+                                
+                    Corporate governance
+                                
+                    Corporate environmental responsibility
+                                
+                    ESG
+                        
+    
+    
+    
+        <p>Share this article:</p>
+
+        <a href="https://twitter.com/intent/tweet/?text=Better+state+governance+reduces+local+environmental+footprints+from+oil+drilling%2C+%E2%80%9Cbetter%E2%80%9D+corporate+governance+has+no+impact&amp;url=https%3A%2F%2Fvoxdev.org%2Ftopic%2Fenergy-environment%2Fbetter-state-governance-reduces-local-environmental-footprints-oil-drilling-better-corporate-governance" title="Share on Twitter" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvoxdev.org%2Ftopic%2Fenergy-environment%2Fbetter-state-governance-reduces-local-environmental-footprints-oil-drilling-better-corporate-governance" title="Share on Facebook" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        
+        <a href="https://voxdev.org/cdn-cgi/l/email-protection#57682422353d3234236a1f322532773e2477367701382f133221773625233e343b32772e3822773a362e773532773e392332253224233233773e39713538332e6a3f232327246d787821382f33322179382530782338273e347832393225302e7a3239213e2538393a323923783532232332257a24233623327a303821322539363934327a253233223432247a3b3834363b7a3239213e2538393a323923363b7a3138382327253e3923247a383e3b7a33253e3b3b3e39307a3532232332257a3438252738253623327a30382132253936393432" title="Share on Email" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fvoxdev.org%2Ftopic%2Fenergy-environment%2Fbetter-state-governance-reduces-local-environmental-footprints-oil-drilling-better-corporate-governance&amp;title=Better+state+governance+reduces+local+environmental+footprints+from+oil+drilling%2C+%E2%80%9Cbetter%E2%80%9D+corporate+governance+has+no+impact" title="Share on LinkedIn" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+        
+        
+                    
+        
+        <a href="https://voxdev.org/print/77659" title="Print this page" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+
+    
+    
+
+        </a>
+    
+
+            

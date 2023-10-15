@@ -1,0 +1,53 @@
+<p><a href="https://en.wikipedia.org/wiki/What.CD" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">What.CD</a> has been dead since 2016, and
+hopefully <a href="https://github.com/OPSnet/Gazelle/blob/master/app/Util/Crypto.php" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">nobody</a>
+is using <a href="https://github.com/WhatCD/Gazelle" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Gazelle</a>,
+their &#34;web framework geared towards private BitTorrent tracker&#34; anymore.
+I&#39;ve been sitting on this one for years, I know I wasn&#39;t the only one,
+and it&#39;s not the only low-hanging vulnerability lurking there.</p>
+<p>Rolling your own blunt is alright, rolling your own authentication scheme
+less so: there is a trivial <a href="https://en.wikipedia.org/wiki/Padding_oracle_attack" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">padding oracle</a>
+in the <a href="https://github.com/WhatCD/Gazelle/blob/master/classes/encrypt.class.php#L24" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">homegrown crypto scheme</a>:</p>
+<pre><code>public function decrypt($CryptStr, $Key = ENCKEY) {
+    if ($CryptStr != &#39;&#39;) {
+        $IV = substr(base64_decode($CryptStr), 0, 16);
+        $CryptStr = substr(base64_decode($CryptStr), 16);
+        return trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $Key, $CryptStr, MCRYPT_MODE_CBC, $IV));
+    } else {
+        return &#39;&#39;;
+    }
+}
+</code></pre>
+
+<p>leading to an <a href="https://github.com/WhatCD/Gazelle/blob/master/classes/ajax_start.php#L23-L31" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">authentication bypass via a SQL injection</a>:</p>
+<pre><code>if (isset($_COOKIE[&#39;session&#39;])) {
+    $LoginCookie = $Enc-&gt;decrypt($_COOKIE[&#39;session&#39;]);
+}
+if (isset($LoginCookie)) {
+    list($SessionID, $UserID) = explode(&#34;|~|&#34;, $Enc-&gt;decrypt($LoginCookie));
+
+    if (!$UserID || !$SessionID) {
+        die(&#39;Not logged in!&#39;);
+    }
+
+    if (!$Enabled = $Cache-&gt;get_value(&#34;enabled_$UserID&#34;)) {
+        require(SERVER_ROOT.&#39;/classes/mysql.class.php&#39;); //Require the database wrapper
+        $DB = NEW DB_MYSQL; //Load the database wrapper
+        $DB-&gt;query(&#34;
+            SELECT Enabled
+            FROM users_main
+            WHERE ID = &#39;$UserID&#39;&#34;);
+        list($Enabled) = $DB-&gt;next_record();
+        $Cache-&gt;cache_value(&#34;enabled_$UserID&#34;, $Enabled, 0);
+    }
+} else {
+    die(&#39;Not logged in!&#39;);
+}
+</code></pre>
+
+<p>Conveniently, the oracle doesn&#39;t touch the database, is completely stateless,
+and only shows up in the httpd/reverse-proxy&#39;s logs, which shouldn&#39;t log the cookies&#39;
+content, making forensic forensic nigh impossible. Once you&#39;re admin, there are
+a bunch of available SQL injections, like in
+<a href="https://github.com/WhatCD/Gazelle/blob/master/sections/reportsv2/takeresolve.php" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><code>takerevolve.php</code></a>.
+From there, remote code execution is doable, but left as an exercise for the
+reader.</p>

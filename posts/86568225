@@ -1,0 +1,27 @@
+<p>Here’s #11 in the new series on LLM-assisted coding over at The New Stack:<br/>
+<a href="https://thenewstack.io/how-to-use-llms-for-dynamic-documentation/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">How to Use LLMs for Dynamic Documentation</a></p>
+<blockquote><p>
+My hunch is that we’re about to see a fascinating new twist on the old idea of literate programming. Some explanations can, will, and should be written by code authors alone, or by those authors in partnership with LLMs. Others can, will, and should be conjured dynamically by code readers who ask LLMs for explanations on the fly.
+</p></blockquote>
+
+<p>The rest of the series:</p>
+<p>
+1 <a href="https://blog.jonudell.net/2023/05/24/when-the-rubber-duck-talks-back/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">When the rubber duck talks back</a> </p>
+<p>
+2 <a href="https://blog.jonudell.net/2023/06/14/radical-just-in-time-learning/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Radical just-in-time learning</a> </p>
+<p>
+3 <a href="https://blog.jonudell.net/2023/06/18/why-llm-assisted-table-transformation-is-a-big-deal/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Why LLM-assisted table transformation is a big deal</a> </p>
+<p>
+4 <a href="https://thenewstack.io/using-llm-assisted-coding-to-write-a-custom-template-function/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Using LLM-Assisted Coding to Write a Custom Template Function</a></p>
+<p>
+5 <a href="https://thenewstack.io/elevating-the-conversation-with-llm-assistants/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Elevating the Conversation with LLM Assistants</a></p>
+<p>
+6 <a href="https://thenewstack.io/how-large-language-models-assisted-a-website-makeover/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">How Large Language Models Assisted a Website Makeover</a></p>
+<p>
+7 <a href="https://thenewstack.io/should-llms-write-marketing-copy/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Should LLMs Write Marketing Copy?</a></p>
+<p>
+8 <a href="https://thenewstack.io/test-driven-development-with-llms-never-trust-always-verify/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Test-Driven Development with LLMs: Never Trust, Always Verify</a> </p>
+<p>
+9 <a href="https://thenewstack.io/learning-while-coding-how-llms-teach-you-implicitly/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Learning While Coding: How LLMs Teach You Implicitly</a></p>
+<p>
+10 <a href="https://thenewstack.io/how-llms-helped-me-build-an-odbc-plugin-for-steampipe/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">How LLMs Helped Me Build an ODBC Plugin for Steampipe</a></p>

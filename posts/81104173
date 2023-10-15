@@ -1,0 +1,83 @@
+<p><em>Natural resources revenue, gender and diplomacy, nearly 8 million
+PDFs, Iberian orcas, and Taskmaster tasks.</em></p>
+<p> </p>
+<p><em>📬 “<a href="https://wisconsinwatch.org/2023/06/some-milwaukee-county-parents-leaving-workforce-due-to-sky-high-child-care-costs/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Some
+Milwaukee County parents leaving workforce due to sky-high child care
+costs</a>,” reader <a href="http://www.tmdedrick.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Tyler Dedrick</a>
+reported in Wisconsin Watch last month, referencing the <a href="https://www.dol.gov/agencies/wb/topics/featured-childcare" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">National
+Database of Childcare Prices</a> featured in <a href="https://www.data-is-plural.com/archive/2023-04-26-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2023.04.26</a>. (Have you published something with data you found via
+DIP? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXXD5eO05w0Xa7bwG3Ppia3uzr_o3y-xDEZuWRfXbCfCu_XA/viewform" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Click
+here to let me know</a>.)</em></p>
+<p> </p>
+<p><strong>Natural resources revenue.</strong> To extract minerals,
+coal, oil, or gas from US federal land, Native American land, or the <a href="https://www.boem.gov/environment/outer-continental-shelf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Outer
+Continental Shelf</a>, companies must pay various royalties, rents, and
+bonuses to the <a href="https://onrr.gov/about" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Office of Natural
+Resources Revenue</a>, which then distributes those payments — amounting
+to billions of dollars per year — to the federal government, local
+governments, tribes, and individuals. Through its <a href="https://revenuedata.doi.gov/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data portal</a>, the agency provides
+annual and monthly breakdowns of revenue, disbursements, and production,
+which you can <a href="https://revenuedata.doi.gov/downloads" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">download</a>, <a href="https://revenuedata.doi.gov/query-data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">query</a>, and <a href="https://revenuedata.doi.gov/explore" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">visually explore</a>.
+<strong>Related</strong>: The <a href="https://www.blm.gov/about" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Bureau
+of Land Management</a> also <a href="https://www.blm.gov/programs-energy-and-minerals-oil-and-gas-oil-and-gas-statistics" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">provides</a>
+“data that include the numbers of BLM-administered oil and gas leases,
+applications for permit to drill, and oil and gas wells” on federal
+land. <strong>As seen in</strong>: “<a href="https://usafacts.org/articles/how-much-oil-and-gas-comes-from-federal-territory/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">How
+much oil and gas comes from federal territory</a>?” (USAFacts).</p>
+<p> </p>
+<p><strong>Gender and diplomacy.</strong> <a href="https://www.gu.se/en/about/find-staff/birgittaniklasson" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Birgitta
+Niklasson</a> and <a href="https://www.gu.se/en/about/find-staff/anntowns" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Ann Towns</a>’s <a href="https://www.gu.se/en/gendip/the-gendip-dataset-on-gender-and-diplomatic-representation" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">GenDip
+dataset</a> “maps the extent to which states appoint men, women and
+other diplomats to different kinds of bilateral ambassador postings.”
+The data cover 200+ countries and 10 specific years between 1968 and
+2021. For each diplomat and year, the dataset indicates their sending
+country, receiving country, type of diplomatic title (e.g., ambassador,
+minister, etc.), and gender, which is “based on titles (e.g. Mr/Mrs,
+prince/princess, baron/baroness, etc.), pronouns used when referring to
+the diplomat, or the recognition of names as either female or male.” The
+team has also produced a series of <a href="https://www.gu.se/en/gendip/the-gendip-dataset-on-gender-and-diplomatic-representation/visualization-tools" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">visualizations
+based on the data</a>.</p>
+<p> </p>
+<p><strong>Millions of PDFs.</strong> As <a href="https://www.darpa.mil/news-events/2023-06-14" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">part</a> of its <a href="https://www.darpa.mil/program/safe-documents" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">SafeDocs</a>
+project, <a href="https://en.wikipedia.org/wiki/DARPA" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DARPA</a> has <a href="https://digitalcorpora.org/corpora/file-corpora/cc-main-2021-31-pdf-untruncated/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">compiled
+a corpus</a> of “nearly 8 million PDFs gathered from across the web in
+July/August of 2021.” To create it, the authors began with the URLs of
+PDF files identified by <a href="https://commoncrawl.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Common
+Crawl</a> (<a href="https://www.data-is-plural.com/archive/2021-04-21-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2021.04.21</a>), fetched their complete contents, and recorded metadata
+about each file and where it was found. “At the time of its creation,
+this is the largest single corpus of real-world (extant) PDFs that is
+publicly available,” they write.</p>
+<p> </p>
+<p><strong>Iberian orcas.</strong> The website <a href="https://www.orcas.pt/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">orcas.pt</a> publishes <a href="https://www.orcas.pt/maps" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">monthly, downloadable maps</a>
+indicating the date, time, and location of orca sightings and <a href="https://www.theguardian.com/environment/2023/jul/11/the-orca-uprising-whales-are-ramming-boats-but-are-they-inspired-by-revenge-grief-or-memory" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">attacks</a>
+off the coasts of Portugal and Spain. <a href="https://www.pbs.org/newshour/show/group-of-orcas-attack-and-sink-vessels-off-iberian-peninsula" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Run
+by Rui Alves as a personal project</a>, the project gathers its data
+through a network of local sailors. <strong>Related</strong>: The <a href="https://www.theca.org.uk/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Cruising Association</a>, in
+collaboration with <a href="https://www.orcaiberica.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Grupo de
+Trabajo Orca Atlántica</a>, publishes <a href="https://www.theca.org.uk/orcas/reports" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">maps and detailed
+reports</a> of <a href="https://www.theca.org.uk/orcas" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">orca
+interactions</a>, including “uneventful passages.” [h/t <a href="https://fairwarning.substack.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Soph Warnes</a>]</p>
+<p> </p>
+<p><strong>Comedians, challenged.</strong> At <a href="https://taskmaster.info/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">TaskMaster.Info</a>, <a href="https://www.linkedin.com/in/kandrewcraven/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Karl Craven</a> is
+“obsessively documenting the international Taskmaster franchise,” which
+<a href="https://en.wikipedia.org/wiki/Taskmaster_(TV_series)" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">began as
+a British game show</a> on which comedians compete to win challenges
+such as <a href="https://taskmaster.info/task.php?id=2" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">watermelon
+speed-eating</a> and <a href="https://taskmaster.info/task.php?id=8" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">high-fiving strangers</a>.
+Reddit user <a href="https://www.reddit.com/user/Alohamori/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Alohamori</a> has used the
+site and <a href="https://prettygr.im/tdlm/sources" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">other sources</a> to
+create a “<a href="https://www.reddit.com/r/taskmaster/comments/13zb9nl/i_put_together_a_ridiculously_comprehensive/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ridiculously
+comprehensive</a>” <a href="https://prettygr.im/tdlm/taskmaster" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">database of that
+information</a>, enabling queries such as <a href="https://prettygr.im/tdlm/taskmaster/measurements?_sort=measurement&amp;objective.target__exact=least&amp;measurement__notnull=1&amp;objective.unit__exact=time" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the
+fastest-completed tasks</a>, <a href="https://prettygr.im/tdlm/taskmaster/tasks?points=0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">tasks awarding
+zero points</a>, and <a href="https://prettygr.im/tdlm/taskmaster/episode_scores?rank=1%3D&amp;_sort_desc=episode" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">episodes
+ending in ties</a>. <strong>Bonus link</strong>: <a href="https://www.youtube.com/channel/UCT5C7yaO3RVuOgwP8JVAujQ" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Taskmaster’s
+official YouTube channel</a>.</p>
+<p> </p>
+<p><em>Dataset suggestions? Criticism? Praise? Send obsessively
+documented feedback to jsvine@gmail.com, or just reply to this email. //
+Looking for past datasets? <a href="https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">This
+spreadsheet contains them all</a>. // Visit <a href="https://www.data-is-plural.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data-is-plural.com</a> to
+subscribe and to browse past editions.</em></p>

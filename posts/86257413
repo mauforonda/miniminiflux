@@ -1,0 +1,85 @@
+<p>A bit of a slower week on the fediverse, and a busier period over at Bluesky. Let’s get to it:</p>
+
+
+
+<h2>Bluesky update</h2>
+
+
+
+<figure>
+<blockquote><a href="https://fediversereport.com/last-month-in-bluesky-september-2023/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Last Month in Bluesky – September 2023</a></blockquote><iframe src="https://fediversereport.com/last-month-in-bluesky-september-2023/embed/#?secret=aDxMeICAZe#?secret=JHgQuQUuQR" width="600" height="338" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups" loading="lazy"></iframe></figure><h2>Mastodon Annual Report</h2>
+
+
+
+<p>Mastodon has released their annual report for 2022. It provides some valuable insight in how the organisation is run, and how little money you actually need to build a great social network. It is also a bit of a trip down memory lane, as in the last 9 months, lots has already changed again.</p>
+
+
+
+<p>The financial statements provide as clear of a story as possible of the twittermigration that happened at the end of October 2022, when Elon Musk bought Twitter. The spike in donations is massive; the organisation grew from an average 7k EUR/month of income for most of the year to a sudden 132k EUR in November and 50k EUR in December. We’ll have to wait for the next report to get a better understanding of how these numbers have settled down.</p>
+
+
+
+<p>Most of the income comes from donations (326k), with another 19k funding from the Prototype Fund and 43k from the NLnet foundation for reaching specific milestones. One things that’s worth pointing out is that one of the milestones of the NLnet funding is for implementing groups. This feature is mostly developed in August and September of 2022, the code is available here on Github. A few items on the todo are left open. There has been no developer work or comments being made on this since October 2022.</p>
+
+
+
+<p>The report also mentions the work that has been done on software, both on the web and on mobile. Features that are now mainstay of Mastodon and hard to do without, such as editing of posts and following hashtags, were all added in 2022.</p>
+
+
+
+<p>Compared with the 2021 report, the team has only grown by one extra iOS developer, for a total of 8 people. Of those 8 people, 2 are working on actual features: Eugen Rochko (besides his other many responsibilities) and Claire. The renumeration of everyone has gone up compared to 2021. However, the overall numbers are still very low compared to the US tech industry. Mastodon spend a total of 80k EUR on personnel expenses, which is less than half the average software engineer salary in San Francisco. It is a great indication of how impactful a small and passionate team can be.</p>
+
+
+
+<h2>In other news</h2>
+
+
+
+<p>Lemmy has provided their regular <a href="https://lemmy.ml/post/6097110" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">update</a> again on their development work. They are working towards the next update, v0.19, which will be released soon. Part of the update is the ability for users to block other servers, something that is currently only possible as an admin. Here is a preview of how this will look. Other work is mainly technical in nature, as well as an update for the join-lemmy.org website. The update will create breaking changes for other developers, which are listed <a href="https://lemmy.ml/post/5711722" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a>. The developers state that they will give at least 4 weeks notice in advance for breaking changes.</p>
+
+
+
+<p>Mozilla is continuing work on their fediverse server <a href="https://mozilla.social/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">mozilla.social</a>. Although it is still in closed beta, it is seeing more and more use. Mozilla has also posted the repositories for the server online, as well as some job descriptions for the mozilla.social project. It seems that the server uses Elk as a front end. Currently the backend is Mastodon, but @<a href="https://alpaca.gold/@Jeremiah/111198718946613092" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Jeremiah</a> spots that the job listing for backend engineers asks for different programming languages than Mastodon currently uses. Interestingly, their repository also list iOS and Android apps that do not seem to be forks of any current apps, and <a href="https://mastodon.social/@cheeaun/111181891525052998" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">suggest</a> that the are building their own apps.</p>
+
+
+
+<h2>The links</h2>
+
+
+
+<ul>
+<li>A one-month <a href="https://motd.co/2023/10/postmarks-one-month-update/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">update</a> on Postmarks.</li>
+
+
+
+<li>ActivityPub co-author Evan Prodromou <a href="https://evanp.me/2023/10/06/activitypub-the-socialcg-and-the-social-web/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">writes</a> about ActivityPub, the social web, and the issues with competition by other protocols.</li>
+
+
+
+<li>Fediseer now allows <a href="https://lemmy.dbzer0.com/post/5376797" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">servers</a> to self-tag, helping self-reporting. @db0 explains why this might be helpful: “For example, let’s say that you want your instance to be SFW, you could explicitly block any instance self reporting as “porn” or “gore” etc.”</li>
+
+
+
+<li>A simple Mastodon Bot <a href="https://seanboyer.uk/sbjournal/mastodon-bot-generator" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Generator</a>.</li>
+
+
+
+<li>Around 2% of accounts have <a href="https://vmst.io/@iostat/111160718422531381" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">opted into</a> Mastodon’s search ability.</li>
+</ul>
+
+
+
+<p></p>
+
+
+
+<p>That’s all for this week, thanks for reading! If you want to receive this update directly in your inbox, subscribe below:</p>
+
+
+
+<p></p>
+
+
+
+
+<p></p>

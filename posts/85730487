@@ -1,0 +1,48 @@
+<p>Ruiqi Gong and Xiu Jianfeng got their
+<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=3c6152940584290668b35fa0800026f6a1ae05fe" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Randomized slab caches for kmalloc()</a>
+patch series merged upstream, and I&#39;ve had enough discussions about it to
+warrant summarising them into a small blogpost.</p>
+<p>The main idea is to have multiple slab caches, and pick one at random based on
+the address of code calling <code>kmalloc()</code> and a per-boot seed, to make heap-spraying harder.
+It&#39;s a great idea, but comes with some shortcomings for now:</p>
+<ul>
+<li>Objects being allocated via wrappers around <code>kmalloc()</code>, like <code>sock_kmalloc</code>,
+  <code>f2fs_kmalloc</code>, <code>aligned_kmalloc</code>, … will end up in the same slab cache.</li>
+<li>The slabs needs to be pinned, otherwise an attacker could <a href="https://en.wikipedia.org/wiki/Heap_feng_shui" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">feng-shui</a> their way
+  into having the whole slab free&#39;ed, garbage-collected, and have a slab for
+  another type allocated at the same VA. <a href="https://thejh.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Jann Horn</a> and <a href="https://infosec.exchange/@nspace" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Matteo Rizzo</a> have a <a href="https://github.com/torvalds/linux/compare/master...thejh:linux:slub-virtual-upstream" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">nice
+  set of patches</a>,
+  discussed a bit in <a href="https://googleprojectzero.blogspot.com/2021/10/how-simple-linux-kernel-memory.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">this Project Zero blogpost</a>,
+  for a feature called <a href="https://github.com/torvalds/linux/commit/f3afd3a2152353be355b90f5fd4367adbf6a955e" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><code>SLAB_VIRTUAL</code></a>,
+  implementing precisely this.</li>
+<li>There are 16 slabs by default, so one chance out of 16 to end up in the same
+  slab cache as the target.</li>
+<li>There are no guard pages between caches, so inter-caches overflows are
+  possible.</li>
+<li>As pointed by <a href="https://twitter.com/andreyknvl/status/1700267669336080678" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">andreyknvl</a>
+  and <a href="https://infosec.exchange/@minipli/111045336853055793" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">minipli</a>,
+  the fewer allocations hitting a given cache means less noise,
+  so it might even help with some heap feng-shui.</li>
+<li>minipli also pointed that &#34;randomized caches still freely
+  mix kernel allocations with user controlled ones (<code>xattr</code>, <code>keyctl</code>, <code>msg_msg</code>, …).
+  So even though merging is disabled for these caches, i.e. no direct overlap
+  with <code>cred_jar</code> etc., other object types can still be targeted (<code>struct
+  pipe_buffer</code>, BPF maps, its verifier state objects,…). It’s just a matter of
+  probing which allocation index the targeted object falls into.&#34;,
+  but I considered this out of scope, since it&#39;s much more involved;
+  albeit something like Jann Horn&#39;s <a href="https://github.com/thejh/linux/blob/slub-virtual/MITIGATION_README" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><code>CONFIG_KMALLOC_SPLIT_VARSIZE</code></a>
+  wouldn&#39;t significantly increase complexity.</li>
+</ul>
+<p>Also, while code addresses as a source of entropy has historically be a great
+way to provide <a href="https://lwn.net/Articles/569635/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">KASLR</a> bypasses, <code>hash_64(caller ^
+random_kmalloc_seed, ilog2(RANDOM_KMALLOC_CACHES_NR + 1))</code> shouldn&#39;t trivially
+leak offsets.</p>
+<p>The segregation technique is a bit like a weaker version of grsecurity&#39;s
+<a href="https://grsecurity.net/how_autoslab_changes_the_memory_unsafety_game" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">AUTOSLAB</a>,
+or a weaker kernel-land version of
+<a href="https://chromium.googlesource.com/chromium/src/+/master/base/allocator/partition_allocator/PartitionAlloc.md" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">PartitionAlloc</a>,
+but to be fair, making use-after-free exploitation harder, and significantly
+harder once pinning lands, with only ~150 lines of code and negligible
+performance impact is amazing and should be praised. Moreover, I wouldn&#39;t be
+surprised if this was backported in <a href="https://google.github.io/security-research/kernelctf/rules.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Google&#39;s KernelCTF</a>
+soon, so we should see if my analysis is correct.</p>

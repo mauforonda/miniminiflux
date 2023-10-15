@@ -1,0 +1,125 @@
+<p>Whether computers can be creative or not comes up a lot these days. Sometimes it’s assumed they can be, like in some of the court cases. I get the question a lot when <a href="https://www.youtube.com/watch?v=ZOv3GizIUE0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">I give talks on computers as artists</a> (and why I don’t think they can be considered artists).</p>
+
+<p>In this post, I’ll describe how I now think about creativity. I’ve written a lot about it over the past few years, <a href="https://aaronhertzmann.com/2021/04/19/questons-for-computational-creativity.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">from some initial questions about computational creativity</a>, to <a href="https://aaronhertzmann.com/2020/10/05/art-is-a-process.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">reflecting on my own progress in painting and drawing</a>, and <a href="https://aaronhertzmann.com/2022/05/25/dall-e.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">comparing that to using DALL-E 2</a> when it first came out, to <a href="https://aaronhertzmann.com/2023/03/06/open-ended-exploration.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">collecting others’ examples of open-ended exploration</a>, and a <a href="https://arxiv.org/abs/2205.01605" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">computational creativity conference paper</a>. And of course lots of related discussion on <a href="https://www.mdpi.com/2076-0752/7/2/18" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">whether computers can be artists.</a></p>
+
+<p>This post summarizes the results of those explorations. My answer won’t be surprising to anyone who’s read my writing or speaking before, but here I’m putting together those ideas into a coherent statement on computational creativity.</p>
+
+<p>Now, this discussion would be easy if we had a clear, concrete definition of “creativity.” But we don’t. We have intutions, and we have the way the word is used (which, according to Wittgenstein, <em>is</em> meaning), and lots of previous attempts to define it. Our definitions don’t tell us anything about machine-made creativity because we haven’t ever considered machines as creative before.</p>
+
+<p>In fact, the new technology helps us attempt to clarify what is or isn’t “creativity,” by providing provocative real-world examples.  Just as new technologies do with “art,” another word for which there are <a href="https://aaronhertzmann.com/2022/09/19/art-definitions-1.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">no simple definitions</a>, but many usages.</p>
+
+<h1 id="creativity-as-making-creative-things">“Creativity” as “Making Creative Things”</h1>
+
+<p>Many attempts to define <em>creativity</em> describe <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jocb.516" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">making something good that didn’t exist before that’s particularly surprising and unique</a>.  An artist makes a painting that’s particularly provocative or beautiful in a new way, or expresses a new visual idea. A writer composes an unusual story with a surprising take. A research paper suggests an unexpected new approach to an old problem, or an unexpected but exciting new problem.</p>
+
+<p>So, a lot of effort goes into defining what makes a painting or an invention “creative.”  Past authors distinguish between “little-C” personal creativity, such as a child’s drawing, and “big-C” innovative creativity that affects society, such as a highly-original fine art painting or invention.</p>
+
+<p>A natural next step, then, is to say that “creativity” <em>only</em> requires that the product is creative. Many computer scientists have gone this route, sometimes running studies to ask viewers to rate the “creativity” of algorithmic outputs and comparing them to human-made products. In part, this might be because <a href="https://aaronhertzmann.com/2020/10/21/quantitative-evaluation.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">many “AI” researchers love quantification and benchmarks</a>, perhaps even suffering from the <a href="https://en.wikipedia.org/wiki/McNamara_fallacy" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">McNamara Fallacy</a>. If a machine makes an outputs that people rate as creative, then, it is reasoned, the machine itself must therefore be “creative.”</p>
+
+<p>But, in that view, we <em>already</em> have creative systems—and we’ve had them for decades, even if they’ve been more “little-C” than “big-C”. We have decades of high-quality generative art that, though human-authored, can autonomously generate new works. <a href="https://en.wikipedia.org/wiki/Harold_Cohen_(artist)" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Harold Cohen built a system called AARON</a> that automatically produced many abstract and figurative artworks, shown in major galleries and museums.  And, even simpler, <a href="https://en.wikipedia.org/wiki/Mandelbrot_set#Computer_drawings" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the Mandelbrot set</a>, produces a seemingly-endless stream of mesmerizing imagery:</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/b005iHf8Z3g" frameborder="0" allowfullscreen="" sandbox="allow-scripts allow-same-origin allow-popups" loading="lazy"></iframe><p>that, surely, no one (including Mandelbrot himself) could have predicted from the math itself.  In fact, <a href="https://en.wikipedia.org/wiki/Chaos_theory" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">chaos theory</a> tells us that it is unpredictable. Yet it can be described in <a href="https://en.wikipedia.org/wiki/Mandelbrot_set#Formal_definition" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a single equation</a>, or <a href="https://en.wikipedia.org/wiki/Mandelbrot_set#Computer_drawings" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a few lines of code</a>.</p>
+
+<p>And, arguably, so many of our video games produce novel images and experiences procedurally. Sure, people authored them to generate these experiences, but people have also authored all of our current “AI” systems.</p>
+
+<h1 id="productivity-or-humanity">Productivity or Humanity?</h1>
+
+<p>People in the 20th Century studied creativity for at least two distinct reasons:</p>
+
+<ol>
+  <li>
+    <p>First, <a href="https://www.newyorker.com/magazine/2023/04/24/the-cult-of-creativity-samuel-weil-franklin-book-review" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">business leaders sought to <strong>increase corporate productivity.</strong></a> 
+Management researchers and psychologists tried to understand how companies come up with new product ideas, solve problems, and make effective new ad campaigns. How did creative individuals and teams function, and how could they be made more effective?</p>
+  </li>
+  <li>
+    <p>Second, psychologists sought to <strong>describe human intelligence and behavior</strong>, and to improve it. What are the attributes of creative behaviors and creative people? How can psychologists help people explore their own creativity and, thus, their own self-actualization?</p>
+  </li>
+</ol>
+
+<p>These distinct goals persist in how we talk about creativity in “AI” today.</p>
+
+<p>If all you care about is productivity and problem-solving, then, indeed, the output is all that matters when defining creativity. Can the system create useful new things?</p>
+
+<p>If so, then, by that definition: of course computers are already creative, and <em>have been for decades</em>, as in the examples in the previous section. And they’re getting better and better at it.</p>
+
+<p>But I don’t think that’s what most of us mean when we ask whether algorithms can be creative.</p>
+
+<p><strong>In this essay, I’m focused on how the systems we build relate to human creativity and intelligence.</strong>   When we say that an “AI” is creative, then we’re saying it’s creative in some way similar to human creativity.</p>
+
+<p>I do not think that just looking at the outputs is enough.  Computer systems work by following instructions, and I think most of us would agree that human “creativity” can’t just be about following instructions.</p>
+
+<p>Imagine hiring an employee to create a Spanish-language poem, by following very specific rules. Your employee-who doesn’t understand Spanish-must follow the rules precisely, to the letter, without deviation. The rules might be very complicated and involve rolling dice. In the end, your employee produces a poem that is widely lauded as original and wonderful. Is the worker “creative”? I think most people would say no.</p>
+
+<p>But this is exactly a description of how computers work: they follow instructions they were given precisely, without deviation. (This is a variant of the <a href="https://en.wikipedia.org/wiki/Chinese_room" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">“Chinese room argument”</a>). Precisely-following instructions without deviation or autonomy does not seem “creative” to me.</p>
+
+
+  <figure>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zNB3cr-3Gi0?si=q7DeNYvMCG9Rpj6s" frameborder="0" allowfullscreen="" sandbox="allow-scripts allow-same-origin allow-popups" loading="lazy"></iframe><figcaption>Surely there&#39;s more to creativity and discovery than following instructions.</figcaption>
+</figure>
+
+
+<h1 id="computational-systems-as-models-of-intelligence">Computational systems as <em>models</em> of intelligence</h1>
+
+<p>What then, are we to make of the fact that current systems can create surprising, novel, and delightful things? That the latest text-to-image systems can make pictures that, had they been made solely by a person, we’d certainly call “creative?”</p>
+
+<p>When comparing to human intelligence, or the intelligence of other animals, we should think of “artificial intelligence” algorithms as <em>models of aspects of animal intelligence</em>.  In science, we often must choose between models that capture phenomenology well and models that capture aspects of the underlying mechanisms.  Hummingbirds and helicopters can both hover, but a helicopter is a poor model for the workings of a hummingbird, or its intelligence.</p>
+
+<p>“AI” models are optimized and trained to model the phenomena of human dialogue and picture-making—and they often do so very well—but the underlying mechanisms are almost entirely different. In nearly ever layer—biology, system dynamics, evolutionary, social, and cultural history—human intelligence is entirely different from “AI.”</p>
+
+<p>I often hear “we’re just computers”; aren’t <a href="https://en.wikipedia.org/wiki/Determinism" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">we all just consequences of the laws of physics</a>? <a href="https://aaronhertzmann.com/2022/09/04/computationalism.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">But we’re not <em>just</em> computers</a> in the sense of our current understanding of computation; this false equivalence <a href="https://www.frontiersin.org/articles/10.3389/fcomp.2022.810358/full" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">confuses two different very notions of computing</a>.</p>
+
+<p>It’s fine to say that our current algorithms are “intelligent” as long as we understand that this “intelligence” describes a set of skills, rather than representing a holistic model of human or animal intelligence.</p>
+
+<p>Likewise, “computational creativity” algorithms can <em>model</em> aspects of how human creativity works.  We have all sorts of <a href="https://aaronhertzmann.com/2020/09/12/how-to-draw-pictures-contours.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">computer graphics</a> and “AI” algorithms that make novel and original pictures, and can fool people and be judged artistic in some sense, but they all do so by following their instructions.</p>
+
+<p><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jocb.395" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Psychologists have pointed out many aspects crucial to human creativity</a>, almost none of which our current algorithms attempt to model.</p>
+
+<h1 id="creative-processes">Creative processes</h1>
+
+<p>Our current algorithms do not attempt to model the <em>processes</em> of human creativity. Here’s one important aspect that I think is missing.</p>
+
+<p>Simplistic descriptions of creativity often emphasize “inspiration,” an instaneous flash of insight, those “where did that idea come from?” moments, perhaps granted by the gods on the subconscious mind.  Hollywood stories like to dramatize invention with a dramatic moment when the scientist or artist saw some real world behavior and turned it into their new discovery.</p>
+
+<p>But these flashes of insight are rare, and there’s much more to it. Creativity arises much from a <em>process</em>, not just one moment. Often, it’s hard work getting to that moment, and hard work after. And flashes of insight aren’t necessary for discovery. Often, it’s not one big moment, but a series of many small moments.</p>
+
+<p>Even if Kekulé solved the chemical structure of benzene in <a href="https://en.wikipedia.org/wiki/Benzene#Ring_formula" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">a lucky vision of a snake biting its own tail</a>, it was because he’d spent years studying chemical bonds and working on the problem.</p>
+
+<p>Think about a few times you made something that you consider creative. It doesn’t have to be a great work of art, just something you were proud of, something artistic, or something clever you figured out, or designed. In can just be run-of-the-mill, everyday creativity. In these experiences, how much did you know about what the final outcome was going to be when you started? How predictable was it? And how does that relate to your sense of how creative you’d been?</p>
+
+<p>Here’s my experience; you can see if you relate at all.</p>
+
+<p>When I draw or paint a picture, or work on a research project, I can’t really predict the outcome.  I usually start a painting with a vague, initial idea for what it should be. Then I start working, and, as I do, something starts to emerge. It’s usually different than what I’d imagined… and, often, better. So I keep working on the new thing, but, rather than try to bring it back to the original idea, I try to make the new thing work. I end up something that I hadn’t thought of before—something that hadn’t even occurred to me as a <em>possibility</em> before.  It wasn’t the initial idea that made the work—although sometimes the initial idea is a big part of it—<em>the creative idea was discovered through the process of working</em>.</p>
+
+<p>The more predictable the outcome, the less creative it feels. If I walk into the kitchen without a plan for what to cook and combine ingredients a bit differently than I have before, it only feels slightly creative. If I paint a picture that ended up totally different than I’d originally meant, that feels much more creative.  Of course, a picture can still be skillful without feeling as creative.</p>
+
+<p><strong>It’s not just me.</strong> The more I started to understand creativity this way, the more I recognized it in artists’ descriptions of their own practice. Reading <a href="https://link.springer.com/book/10.1007/978-3-319-15524-1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><em>Why Greatness Cannot Be Planned</em></a>  helped too.</p>
+
+<p><a href="https://aaronhertzmann.com/2023/03/06/open-ended-exploration.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">This blog post</a> collects many examples I’ve found of great artists describing their practice in terms of this kind of process of discovery.</p>
+
+<p>Moreover, I bet that if you probe any competent creator, you’ll discover a refined practice of developing ideas, following intuitions and gut feelings, and explorations and refinements that helps them make these discovering.  Learning to be creative involves learning many specific skills and intuitions.</p>
+
+<p>In short, creativity isn’t just about what you produce. It’s how you got there.</p>
+
+<p>As a result, really creative works aren’t just surprising to the audience… really creative works are surprising to the person who made them.</p>
+
+<h1 id="goals-open-ended-or-well-defined">Goals: open-ended or well-defined</h1>
+
+<p>Another attribute of human creativity that’s missing from computational systems is its open-endedness.</p>
+
+<p>A big part of the creative journey for me, and for many people, is redefining goals. I start out meaning to paint in one style and end up with a different kind of painting. I intend to solve one research problem, and end up publishing a paper on another.</p>
+
+<p>It isn’t just me. So many great artists and researchers <a href="https://aaronhertzmann.com/2023/03/06/open-ended-exploration.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">start from an initial vague idea, and then evolve or discard that idea while working</a>.  <strong>Many great inventions come not from picking a problem and solving it, but from figuring out the problem and the solution <em>together</em>.</strong>  Over and over, artists and researchers describe their processes this way.</p>
+
+<p>But sometimes the solution to a well-defined problem is described as creative, especially lateral-thinking solutions that bypass unstated assumptions. For example, advocates for computational creativity seem to frequently quote Go champion Lee Sedol’s description of one AlphaGo move in 2016 as “creative.” This quote gets trotted out again and again as evidence that computers can be creative, including in discussions of artistic creativity. Solutions to optimization problems themselves are also <a href="https://arxiv.org/abs/1803.03453" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">described as creative</a>.  I can attest that it does feel magical and lifelike when <a href="https://www.youtube.com/watch?v=9pGH6-QY-sQ" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">an animation control optimization produces its own delightful behaviors</a>. But, when the results are surprising, I would call these results unintended consequences of the design of the loss function or constraints.</p>
+
+<p>In my opinion, there are important differences between <a href="https://aaronhertzmann.com/2023/03/06/open-ended-exploration.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">open-ended problems</a>, and problems where there is a concrete goal or objective function. Open-ended problems include things like “make an artwork,” “invent something new,” and concrete goals are “solve a math problem” or “win a game of Chess or Go.”   Solutions to both may be described as “creative,” but they aren’t the same thing.</p>
+
+<h1 id="toward-new-kinds-of-models">Toward new kinds of models</h1>
+
+<p>Could we formulate computational models of the processes of open-ended creativity?  In <a href="https://arxiv.org/abs/2205.01605" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">my ICCC 2022 paper</a>, I proposed a model for open-endedness computational creativity that generalizes optimization. I’m not sure if the model can be realized. But, even if it can, it would still just be a different computational <em>model</em> of creativity.</p>
+
+<p>Ultimately, all of our algorithms are still just going to be algorithms, sets of instructions for computers to make things, and sometimes they will mimic well the phenomena of human creativity, and in other ways they won’t.</p>
+
+
+
+<p>Thanks to Laura Herman for comments on this piece and sending links that made me rewrite parts of this.</p>

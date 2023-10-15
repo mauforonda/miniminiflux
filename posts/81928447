@@ -1,0 +1,119 @@
+<p>
+One of the things I highly value is stable URLs. When you link to my site, I want that URL to work as long as my site is up. I don&#39;t want to lose all those links lightly. But for ease of implementation, the URL structure matches the <em>file</em> structure on my site, and I occasionally want to change the file structure. So what should I do?
+</p>
+
+<p>
+<strong>I make a 301 redirect from the old URL to the new URL</strong>.
+</p>
+
+<p>
+There are links on forums, discord, stackoverflow, etc. that I can&#39;t expect anyone to change. But I can keep those links working on <em>my</em> end by adding a redirect. I have made 28 of these URL changes in 28 years, an average of once year, and each one has a redirect to keep the old URLs working.
+</p>
+
+
+
+<p>
+In this case I wanted to move <a href="https://www.redblobgames.com/grids/line-drawing.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://www.redblobgames.com/grids/line-drawing.html</a> to <a href="https://www.redblobgames.com/grids/line-drawing/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://www.redblobgames.com/grids/line-drawing/</a> . The original plan back in 2011 was to have a main page about <em>grids</em> and then a few pages that went along with that. The line drawing page was one one the accompanying pages. But I never did write a main page, so now the line drawing page is its own project. I want to move it into its own folder so that I can add more pages to the project, including a comparison to <a href="https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm#All_cases" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Bresenham&#39;s Line Algorithm</a>. Here were the steps:
+</p>
+
+<ol>
+<li><strong>Move the files</strong></li>
+</ol>
+
+
+<pre>cd grids/
+mkdir line-drawing
+mv line-drawing.bxml line-drawing/index.bxml
+mv line-drawing.html line-drawing/index.html
+mv line-drawing.js line-drawing/line-drawing.js
+mv line-drawing.org line-drawing/index.org
+mv line-drawing.png line-drawing/
+mv _line-drawing-helper.js line-drawing/
+</pre>
+
+
+<ol>
+<li><strong>Test the new page locally</strong></li>
+
+<p>
+I run a staging server locally so that I can test all of my pages before I upload them. I want to make sure I get all the supporting files, and I also want to make sure any relative links to <code>../</code> get changed to <code>../../</code>. I use the Network panel in the browser tools to make sure there are no 404s. It turns out I had missed some files, so I&#39;m glad I tested this before uploading it.
+</p>
+
+<li><strong>Create a permanent redirect</strong></li>
+
+<p>
+I&#39;m using Nginx for redblobgames.com, so I added this to <code>nginx.conf</code>:
+</p>
+
+
+<pre>location = /grids/line-drawing.html {
+  return 301 $scheme://www.redblobgames.com/grids/line-drawing/;
+}
+</pre>
+
+
+<p>
+I then have to tell nginx to load the updated configuration file:
+</p>
+
+
+<pre>sudo service nginx reload
+</pre>
+
+
+<li><strong>Test the redirect</strong></li>
+
+<p>
+It turns out I had gotten this wrong, initially putting <code>location ~</code>. I rarely edit my nginx file so I keep forgetting the various rules for matchers. 
+</p>
+
+<p>
+This means the site was broken for a few minutes while I fixed the bug. If I were more disciplined I&#39;d have a staging server for testing nginx configuration, but my staging server runs Caddy so I don&#39;t catch this type of bug. I rarely change my <code>nginx.conf</code> though, so it&#39;s a low priority to add tests here.
+</p>
+
+<li><strong>Update links from the rest of my site</strong></li>
+
+<p>
+Since I set up a redirect, I don&#39;t <em>have</em> to update the links, but I think it&#39;s good to do it anyway.
+My upload script checks local links and gave me a list of pages to update:
+</p>
+
+<ul>
+<li><a href="https://www.redblobgames.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://www.redblobgames.com/</a></li>
+<li><a href="https://www.redblobgames.com/grids/hexagons/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://www.redblobgames.com/grids/hexagons/</a></li>
+<li><a href="https://www.redblobgames.com/grids/line-drawing/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://www.redblobgames.com/grids/line-drawing/</a></li>
+<li><a href="https://www.redblobgames.com/grids/parts/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://www.redblobgames.com/grids/parts/</a></li>
+<li><a href="https://www.redblobgames.com/making-of/line-drawing/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://www.redblobgames.com/making-of/line-drawing/</a></li>
+<li><a href="https://www.redblobgames.com/making-of/diagram-structure/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://www.redblobgames.com/making-of/diagram-structure/</a></li>
+<li><a href="https://www.redblobgames.com/making-of/little-things/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://www.redblobgames.com/making-of/little-things/</a></li>
+</ul>
+
+<p>
+I went through each one and changed the links manually. I don&#39;t have an automated tool for this (other than occasionally using <code>perl -i -pe</code>) because it&#39;s not a common thing I do.
+</p>
+
+<p>
+However I still have links <em>on my blog</em> that aren&#39;t included here. Moving my blog from blogspot to my own site is another project. Until then, I have search for links in two places.
+</p>
+
+<ul>
+<li><a href="https://simblob.blogspot.com/2014/12/line-drawing-on-grid-maps.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://simblob.blogspot.com/2014/12/line-drawing-on-grid-maps.html</a></li>
+<li><a href="https://simblob.blogspot.com/2016/12/five-year-mission.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://simblob.blogspot.com/2016/12/five-year-mission.html</a></li>
+<li><a href="https://simblob.blogspot.com/2017/05/making-of-line-drawing-tutorial.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://simblob.blogspot.com/2017/05/making-of-line-drawing-tutorial.html</a></li>
+<li><a href="https://simblob.blogspot.com/2018/02/how-i-implement-my-interactive-diagrams.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://simblob.blogspot.com/2018/02/how-i-implement-my-interactive-diagrams.html</a></li>
+<li><a href="https://simblob.blogspot.com/2019/03/brainstorming-with-factoring.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://simblob.blogspot.com/2019/03/brainstorming-with-factoring.html</a></li>
+<li><a href="https://simblob.blogspot.com/2023/01/making-of-circle-drawing.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">https://simblob.blogspot.com/2023/01/making-of-circle-drawing.html</a></li>
+</ul>
+
+<p>
+I went through each one and changed the links manually. I can&#39;t use <code>perl -i -pe</code> here because blogspot requires me to edit through their editor instead of editing files.
+</p>
+</ol>
+
+<p>
+<strong>I think everything works now</strong>.
+</p>
+
+<p>
+Also see: <a href="https://www.w3.org/Provider/Style/URI" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Cool URIs don&#39;t change</a>
+</p>

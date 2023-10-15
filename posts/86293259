@@ -1,0 +1,143 @@
+<p>I like the JetPack related post functionality. But I wanted to customise it far beyond what the default code allows for.</p>
+<p>So here&#39;s how I went from this:</p>
+<p><img src="https://reader.miniflux.app/proxy/TSHcuJTaJWKc9vxV1M0tuo7_TIcccZNCX5jnBrtR7-A=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL29sZC1sYXlvdXQtZnM4LnBuZw==" alt="The old layout has three items, with small images and indistinct text." width="540" height="610" loading="lazy"/></p>
+<p>To this:</p>
+<p><img src="https://reader.miniflux.app/proxy/mpfukJd2ZiAJbRC1mVareBOTxizB68gtrjy_6VGNNcg=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzEwL3N1Z2dlc3RlZC1mczgucG5n" alt="The new layout has 4 items, each boxed off, with a larger image and more distinct text." width="540" loading="lazy"/></p>
+<h2 id="documentation"><a href="#documentation">Documentation</a></h2>
+<p>The <a href="https://jetpack.com/support/related-posts/customize-related-posts/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">complete documentation for related posts</a> is pretty easy to follow.</p>
+<p>This is an adaptation of &#34;<a href="https://jetpack.com/support/related-posts/customize-related-posts/#raw" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Use <code>Jetpack_RelatedPosts_Raw</code> to build your own list of Related Posts</a>&#34;.</p>
+<h3 id="remove-the-automatic-placement"><a href="#remove-the-automatic-placement">Remove the automatic placement</a></h3>
+<p>You can turn off the original &#34;related posts&#34; by adding this to your theme&#39;s <code>functions.php</code>:</p>
+<pre><code>function jetpackme_remove_rp() {
+    if ( class_exists( &#39;Jetpack_RelatedPosts&#39; ) ) {
+        $jprp = Jetpack_RelatedPosts::init();
+        $callback = array( $jprp, &#39;filter_add_target_to_dom&#39; );
+        remove_filter( &#39;the_content&#39;, $callback, 40 );
+    }
+}
+add_filter( &#39;wp&#39;, &#39;jetpackme_remove_rp&#39;, 20 );
+</code></pre>
+<h3 id="add-the-new-related-posts"><a href="#add-the-new-related-posts">Add the new Related Posts</a></h3>
+<p>In your theme&#39;s <code>index.php</code> (or wherever else you like) you can add this code to insert the new related posts functionality:</p>
+<pre><code>if ( is_single() ) {
+    echo &#34;&lt;section&gt;&#34;;
+        echo do_shortcode( &#39;[jprelp]&#39; );
+    echo &#34;&lt;/section&gt;&#34;;
+}
+</code></pre>
+<h3 id="create-the-new-functionality"><a href="#create-the-new-functionality">Create the new functionality</a></h3>
+<p>And this goes in your theme&#39;s <code>functions.php</code> file. I&#39;ve commented it as best I can. Let me know if you need more info.</p>
+<pre><code>function jetpackme_custom_related() {
+    //  Check that JetPack Related Posts exists
+    if (
+            class_exists( &#39;Jetpack_RelatedPosts&#39; )
+            &amp;&amp; method_exists( &#39;Jetpack_RelatedPosts&#39;, &#39;init_raw&#39; )
+    ) {
+            //  Get the related posts
+            $related = Jetpack_RelatedPosts::init_raw()
+                -&gt;set_query_name( &#39;edent-related-shortcode&#39; ) 
+                -&gt;get_for_post_id(
+                    get_the_ID(),   //  ID of the post
+                    array( &#39;size&#39; =&gt; 4 )//  How many related items to fetch
+                );
+            if ( $related ) {
+                //  Set the container for the related posts
+                $output = &#34;&lt;h2 id=&#39;related-posts&#39;&gt;The Algorithm™ suggests:&lt;/h2&gt;&#34;;
+                $output .=   &#34;&lt;ul class=&#39;related-posts&#39;&gt;&#34;;
+
+                foreach ( $related as $result ) {
+                    $related_post_id = $result[&#39;id&#39;];
+
+                    // Get the related post
+                    $related_post = get_post( $related_post_id );
+
+                    //  Get the attributes
+                    $related_post_title = $related_post-&gt;post_title;
+                    $related_post_date  = substr( $related_post-&gt;post_date, 0, 4 ); // YYYY-MM-DD
+                    $related_post_link  = get_permalink( $related_post_id );
+
+                    //  Get the thumbnail
+                    if ( has_post_thumbnail( $related_post_id) ) {
+                        $related_post_thumb = get_the_post_thumbnail( $related_post_id, &#39;full&#39;, 
+                            array( &#34;class&#34;   =&gt; &#34;related-post-img&#34;,
+                                   &#34;loading&#34; =&gt; &#34;lazy&#34; //   Lazy loading and other attributes
+                            ) 
+                        );
+                    } else {
+                        $related_post_thumb = null;
+                    }
+
+                    //  Create the HTML for the related post
+                    $output .= &#39;&lt;li class=&#34;related-post&#34;&gt;&#39;;
+                    $output .=    &#34;&lt;a href=&#39;{$related_post_link}&#39;&gt;&#34;;
+                    $output .=       &#34;{$related_post_thumb}&lt;p&gt;{$related_post_title}&lt;/p&gt;&lt;/a&gt;&#34;;
+                    $output .=    &#34;&lt;time&gt;{$related_post_date}&lt;/time&gt;&#34;;
+                    $output .= &#34;&lt;/li&gt;&#34;;
+                }
+                //  Finish the related posts container
+                $output .=&#34;&lt;/ul&gt;&#34;;
+            }
+        //  Display the related posts
+        echo $output;
+    }
+}
+add_shortcode( &#39;jprel&#39;, &#39;jetpackme_custom_related&#39; );   //  Shortcode name can be whatever you want
+</code></pre>
+<h3 id="bit-of-css-to-zhuzh-it-up"><a href="#bit-of-css-to-zhuzh-it-up">Bit of CSS to zhuzh it up</a></h3>
+<p>Feel free to add your own styles. This is what works for me.</p>
+<pre><code>.related-posts  {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.related-posts &gt; * {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#combining_flex-grow_and_flex-basis */
+    flex: 1 1 0;
+}
+
+    .related-post {
+        min-width: 10em;
+        max-width: 20em;
+        text-align: center;
+        margin: .25em;
+        border: .1em var(--color-text);
+        border-style: solid;
+        border-radius: var(--border-radius);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        overflow: clip;
+    }
+
+        .related-post h3 {
+            font-size: 1em;
+            padding-top: .5em;
+        }
+
+        .related-post img {
+            object-fit: cover;
+            height: 9em;
+            width: 100%;
+            border-radius: 0 1em 0 0;
+            background: var(--color-text);
+            display: inline-block;
+        }
+        .related-post p {
+            margin: 0 .25em;
+        }
+        .related-post time {
+            font-size: .75em;
+            display: block;
+        }
+</code></pre>
+<h2 id="todo"><a href="#todo">ToDo</a></h2>
+<ul>
+<li>Use transients to store the data to prevent repeated slow API calls?</li>
+<li>Perhaps some teaser text?</li>
+<li>Adjust the layout so the date always floats to the bottom?</li>
+</ul>

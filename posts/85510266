@@ -1,0 +1,78 @@
+<p><em>Linked historical censuses, fracking fluids, Europopulism, GitHub
+metrics, and ancient places.</em></p>
+<p> </p>
+<p><strong>Censuses, linked.</strong> The <a href="https://www.censustree.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Census Tree</a>, developed by <a href="https://www.nber.org/papers/w31671" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Kasey Buckles et al.</a>, “is
+the largest-ever database of record links among the historical U.S.
+censuses, with over 700 million links for people living in the United
+States between 1850 and 1940.” By the <a href="https://www.censustree.org/our-team" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">team</a>’s <a href="https://sites.google.com/nd.edu/censustreefaq" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">estimates</a>, the
+dataset “includes over 70% of the possible links that <em>could</em> be
+made for men, and over 60% of possible links for women.” To build it,
+the researchers <a href="https://www.censustree.org/methodology" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">began</a> with genealogy
+records from <a href="https://www.familysearch.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">FamilySearch.org</a>, developed a
+machine learning algorithm to identify additional links, and
+incorporated data from other census-linking projects. Each Census Tree
+row connects an individual’s <a href="https://usa.ipums.org/usa-action/variables/HISTID" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">IPUMS
+identifier</a> in one decade’s census to their identifier in another.
+Per the project’s <a href="https://www.censustree.org/quickstart" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">instructions</a>, you’ll
+need to download the Census data itself <a href="https://usa.ipums.org/usa/full_count.shtml" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">from IPUMS</a>.</p>
+<p> </p>
+<p><strong>Fracking fluids.</strong> Since <a href="https://www.fracfocus.org/learn/about-fracfocus" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">launching in
+2011</a>, <a href="https://fracfocus.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">FracFocus</a> has become the
+largest registry of <a href="https://en.wikipedia.org/wiki/Fracking" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">hydraulic fracturing</a>
+chemical disclosures in the US. The database, available to explore
+online and <a href="https://fracfocus.org/data-download" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">download in
+bulk</a>, contains 210,000+ such disclosures from fracking operators; it
+details the location, timing, and water volume of each fracking job,
+plus the names and amounts of chemicals used. The project is <a href="https://fracfocus.org/about-us" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">managed</a> by the <a href="https://www.gwpc.org/overview/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Ground Water Protection
+Council</a>, “a nonprofit 501(c)6 organization whose members consist of
+state ground water regulatory agencies”. <strong>As seen in</strong>:
+The <a href="https://www.nytimes.com/interactive/2023/09/25/climate/fracking-oil-gas-wells-water.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">latest
+installment</a> of the New York Times’ <a href="https://www.nytimes.com/series/uncharted-waters" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Uncharted Water
+series</a>.</p>
+<p> </p>
+<p><strong>Europopulism.</strong> <a href="https://popu-list.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The
+PopuList</a>, constructed by <a href="https://www.cambridge.org/core/journals/british-journal-of-political-science/article/populist-a-database-of-populist-farleft-and-farright-parties-using-expertinformed-qualitative-comparative-classification-eiqcc/EBF60489A0E1E3D91A6FE066C7ABA2CA" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Matthijs
+Rooduijn et al.</a>, “offers academics and journalists an overview of
+populist, far-left and far-right parties in Europe from 1989 until
+2022.” <a href="https://osf.io/2ewkq/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Version 3.0 of the dataset</a>,
+released last month, lists each party’s country, local/English names,
+presence in parliament, and identifiers in the <a href="https://partyfacts.herokuapp.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Party Facts</a> (<a href="https://www.data-is-plural.com/archive/2019-01-16-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2019.01.16</a>) and <a href="https://www.parlgov.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ParlGov</a> (<a href="https://www.data-is-plural.com/archive/2018-09-19-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2018.09.19</a>) databases. It also indicates whether the project’s <a href="https://popu-list.org/about/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">comparativists and country
+experts</a> classified the party (outright or “borderline”) as populist,
+far-right, far-left, and/or <a href="https://en.wikipedia.org/wiki/Euroscepticism" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">euroskeptic</a>, and
+for which time periods.</p>
+<p> </p>
+<p><strong>GitHub metrics.</strong> GitHub’s new <a href="https://innovationgraph.github.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Innovation Graph</a> datasets
+present a range of quarterly metrics on the code-sharing site,
+aggregated by “economy” — a concept similar to “country” but slightly
+broader. (Antarctica is an “economy” in the data, for example.) The <a href="https://github.com/github/innovationgraph" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">datasets</a> count the
+number of developers based in each economy, their repositories and <a href="https://github.com/git-guides/git-push" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">code pushes</a>, most-used
+programming languages, and more. As noted in the project’s <a href="https://github.com/github/innovationgraph/blob/main/docs/datasheet.md" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">datasheet</a>,
+the locations are based on IP addresses, so <a href="https://en.wikipedia.org/wiki/VPN_service" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">VPN</a> usage may
+distort the results. <strong>Previously</strong>: <a href="https://www.gharchive.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">More-granular GitHub activity via the
+GH Archive</a> (<a href="https://www.data-is-plural.com/archive/2018-02-21-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2018.02.21</a>). [h/t <a href="https://github.com/khxu" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Kevin
+Xu</a>]</p>
+<p> </p>
+<p><strong>Ancient places.</strong> <a href="https://pleiades.stoa.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Pleiades</a>, “a community-built
+gazetteer and graph of ancient places,” has collected <a href="https://pleiades.stoa.org/downloads" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data</a> on <a href="https://pleiades.stoa.org/home" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">40,000+</a> settlements, roads,
+rivers, monuments, and many other <a href="https://pleiades.stoa.org/vocabularies/place-types" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">types of
+landmarks</a>. It also describes the <a href="https://pleiades.stoa.org/vocabularies/relationship-types" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">relationships</a>
+between them — linking, for instance, the <a href="https://pleiades.stoa.org/places/168254096" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Parthenon</a> to the
+<a href="https://pleiades.stoa.org/places/638356144" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Acropolis</a> and
+the Acropolis to <a href="https://pleiades.stoa.org/places/579885" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Athens</a>.
+<strong>Related</strong>: <a href="https://orbis.stanford.edu/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ORBIS:
+The Stanford Geospatial Network Model of the Roman World</a>.
+<strong>Previously</strong>: <a href="https://github.com/roman-amphitheaters/roman-amphitheaters" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Roman
+amphitheaters</a> (<a href="https://www.data-is-plural.com/archive/2022-06-08-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2022.06.08</a>) and the <a href="https://darmc.harvard.edu/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Digital
+Atlas of Roman and Medieval Civilizations</a> (<a href="https://www.data-is-plural.com/archive/2020-06-24-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2020.06.24</a>). [h/t <a href="https://twitter.com/Arithmomaniac" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Avi
+Levin</a>]</p>
+<p> </p>
+<p><em>Dataset suggestions? Criticism? Praise? Send time-worn feedback
+to jsvine@gmail.com, or just reply to this email. // Looking for past
+datasets? <a href="https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">This
+spreadsheet contains them all</a>. // Visit <a href="https://www.data-is-plural.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data-is-plural.com</a> to
+subscribe and to browse past editions.</em></p>

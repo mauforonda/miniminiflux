@@ -1,0 +1,249 @@
+Latest Complexity Digest Posts
+        
+    
+    
+        
+        
+            <table>
+                <tbody><tr>
+                    <td>
+                        
+                        <table>
+                            <tbody><tr>
+                                <td>
+                                
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                                Learn about the latest and greatest related to complex systems research. More at <a href="http://comdig.unam.mx" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">http://comdig.unam.mx</a>
+                                            </td>
+                                            
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        
+                        <table>
+                            <tbody><tr>
+                                <td>
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                            
+                                                
+                                                <a href="http://comdig.unam.mx" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/gWY-VZqmIAQWx2fEMyEg0xaNJDkctXXxaVrxadZohB4=/aHR0cHM6Ly9nYWxsZXJ5Lm1haWxjaGltcC5jb20vMGViMGFjOWI0ZTg1NjVmMjk2N2E4MzA0Yi9pbWFnZXMvbG9nb2Q3NzAzOC5wbmc=" alt="Complexity Digest" width="600" loading="lazy"/></a>
+                                                
+                                            
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                
+                                                
+                                                <table>
+                                                    <tbody><tr>
+                                                        <td>
+                                                            <strong>Contents from of the 09/11/2023 edition:</strong><br/>
+<ul id="mctoc"><li><a href="#mctoc1">Dynamical heterogeneity and universality of power-grids</a></li><li><a href="#mctoc2">Active oscillations in microscale navigation</a></li><li><a href="#mctoc3">The Entropy of Entropy: Are We Talking about the Same Thing?</a></li><li><a href="#mctoc4">A taxonomy of multiple stable states in complex ecological communities</a></li><li><a href="#mctoc5">Statistics of remote regions of networks</a></li><li><a href="#mctoc6">Generalized Zurek’s bound on the cost of an individual classical or quantum computation</a></li><li><a href="#mctoc7">How the Brain Makes You: Collective Intelligence and Computation by Neural Circuits</a></li><li><a href="#mctoc8">A Causal Discovery Approach To Learn How Urban Form Shapes Sustainable Mobility Across Continents</a></li><li><a href="#mctoc9">How biological codes break causal chains to enable autonomy for organisms</a></li></ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            
+<h2><br/>
+Dynamical heterogeneity and universality of power-grids</h2>
+<p>Bálint Hartmann, István Papp, Kristóf Benedek, Shengfeng Deng, Géza Ódor, Jeffrey Kelling</p>
+<p>While weak, tuned asymmetry can improve, strong heterogeneity destroys synchronization in the electric power system. We study the level of heterogeneity, by comparing large high voltage (HV) power-grids of Europe and North America. We provide an analysis of power capacities and loads of various energy sources from the databases and found heavy tailed distributions with similar characteristics. Graph topological measures, community structures also exhibit strong similarities, while the cable admittance distributions can be well fitted with the same power-laws (PL), related to the length distributions. The community detection analysis shows the level of synchronization in different domains of the European HV power grids, by solving a set of swing equations. We provide numerical evidence for frustrated synchronization and Chimera states and point out the relation of topology and level of synchronization in the subsystems. We also provide empirical data analysis of the frequency heterogeneities within the Hungarian HV network and find q-Gaussian distributions related to super-statistics of time-lagged fluctuations, which agree well with former results on the Nordic Grid.</p>
+<p>Read the full article at: <a href="https://arxiv.org/abs/2308.15326v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">arxiv.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-52ad6f55&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3D8d7288064b%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F09%252Fdynamical-heterogeneity-and-universality-of-power-grids%252F%26title%3DDynamical%2520heterogeneity%2520and%2520universality...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=8d7288064b" title="Like Dynamical heterogeneity and universality of power-grids on Facebook" id="fblike-52ad6f55" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Dynamical heterogeneity and universality of power-grids on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Active oscillations in microscale navigation</h2>
+<p>Kirsty Y. Wan</p>
+<p>Animal Cognition</p>
+<p>Living organisms routinely navigate their surroundings in search of better conditions, more food, or to avoid predators. Typically, animals do so by integrating sensory cues from the environment with their locomotor apparatuses. For single cells or small organisms that possess motility, fundamental physical constraints imposed by their small size have led to alternative navigation strategies that are specific to the microscopic world. Intriguingly, underlying these myriad exploratory behaviours or sensory functions is the onset of periodic activity at multiple scales, such as the undulations of cilia and flagella, the vibrations of hair cells, or the oscillatory shape modes of migrating neutrophils. Here, I explore oscillatory dynamics in basal microeukaryotes and hypothesize that these active oscillations play a critical role in enhancing the fidelity of adaptive sensorimotor integration.</p>
+<p>Read the full article at: <a href="https://link.springer.com/article/10.1007/s10071-023-01819-5" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">link.springer.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-b2d3210e&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3D8d7288064b%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F09%252Factive-oscillations-in-microscale-navigation%252F%26title%3DActive%2520oscillations%2520in%2520microscale%2520naviga...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=8d7288064b" title="Like Active oscillations in microscale navigation on Facebook" id="fblike-b2d3210e" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Active oscillations in microscale navigation on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+The Entropy of Entropy: Are We Talking about the Same Thing?</h2>
+<p>Søren Nors Nielsen, Felix Müller</p>
+<p>Entropy 2023, 25(9), 1288</p>
+<p>In the last few decades, the number of published papers that include search terms such as thermodynamics, entropy, ecology, and ecosystems has grown rapidly. Recently, background research carried out during the development of a paper on “thermodynamics in ecology” revealed huge variation in the understanding of the meaning and the use of some of the central terms in this field—in particular, entropy. This variation seems to be based primarily on the differing educational and scientific backgrounds of the researchers responsible for contributions to this field. Secondly, some ecological subdisciplines also seem to be better suited and applicable to certain interpretations of the concept than others. The most well-known seems to be the use of the Boltzmann–Gibbs equation in the guise of the Shannon–Weaver/Wiener index when applied to the estimation of biodiversity in ecology. Thirdly, this tendency also revealed that the use of entropy-like functions could be diverted into an area of statistical and distributional analyses as opposed to real thermodynamic approaches, which explicitly aim to describe and account for the energy fluxes and dissipations in the systems. Fourthly, these different ways of usage contribute to an increased confusion in discussions about efficiency and possible telos in nature, whether at the developmental level of the organism, a population, or an entire ecosystem. All the papers, in general, suffer from a lack of clear definitions of the thermodynamic functions used, and we, therefore, recommend that future publications in this area endeavor to achieve a more precise use of language. Only by increasing such efforts it is possible to understand and resolve some of the significant and possibly misleading discussions in this area.</p>
+<p>Read the full article at: <a href="https://www.mdpi.com/1099-4300/25/9/1288" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.mdpi.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-97ca408f&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3D8d7288064b%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F08%252Fthe-entropy-of-entropy-are-we-talking-about-the-same-thing%252F%26title%3DThe%2520Entropy%2520of%2520Entropy%253A%2520Are%2520We%2520Talking%2520a...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=8d7288064b" title="Like The Entropy of Entropy: Are We Talking about the Same Thing? on Facebook" id="fblike-97ca408f" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like The Entropy of Entropy: Are We Talking about the Same Thing? on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+A taxonomy of multiple stable states in complex ecological communities</h2>
+<p>Guim Aguadé-Gorgorió, Jean-François Arnoldi, Matthieu Barbier, Sonia Kéfi</p>
+<p>Many natural and man-made systems, from financial markets to ecosystems or the human brain, are built from multiple interconnected units. This complex high-dimensionality hinders our capacity to understand and predict the dynamics, functioning and fragility of these systems. One fragility scenario, particularly relevant to ecological communities of interacting species, concerns so-called regime shifts: abrupt and unexpected transitions from healthy, species-rich communities towards states of degraded ecosystem function and services. The accepted explanation for these shifts is that they arise as abrupt transitions between alternative stable states: multiple stable configurations of a system under the same internal and external conditions. These alternative states are well-understood in low-dimensional systems, but how they upscale with system complexity remains a debated question. In the present work we investigate the emergence of multiple stable states in a number of complex system models. We find that high-dimensional models with random interactions can unfold at least four different regimes of multistability, each emerging under a specific interaction scheme. More importantly, each multistability regime leaves a distinct and quantifiable fingerprint, providing a framework to analyze experimental evidence of abrupt shifts. By bridging previous results and studying multistability regimes, their fingerprints and their correlation with empirical evidence in ecology, our study helps define a common ground to understand and classify multiple stable states in complex systems.</p>
+<p>Read the full article at: <a href="https://www.biorxiv.org/content/10.1101/2023.08.30.555051v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.biorxiv.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-9ef0b0c7&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3D8d7288064b%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F08%252Fa-taxonomy-of-multiple-stable-states-in-complex-ecological-communities%252F%26title%3DA%2520taxonomy%2520of%2520multiple%2520stable%2520states%2520in%2520...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=8d7288064b" title="Like A taxonomy of multiple stable states in complex ecological communities on Facebook" id="fblike-9ef0b0c7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like A taxonomy of multiple stable states in complex ecological communities on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Statistics of remote regions of networks</h2>
+<p>J. G. Oliveira, S. N. Dorogovtsev, J. F. F. Mendes</p>
+<p>We delve into the statistical properties of regions within complex networks that are distant from vertices with high centralities, such as hubs or highly connected clusters. These remote regions play a pivotal role in shaping the asymptotic behaviours of various spreading processes and the features of associated spectra. We investigate the probability distribution P≥m(s) of the number s of vertices located at distance m or beyond from a randomly chosen vertex in an undirected network. Earlier, this distribution and its large m asymptotics 1/s2 were obtained theoretically for undirected uncorrelated networks [S. N. Dorogovtsev, J. F. F. Mendes, A. N. Samukhin, Nucl. Phys. B 653 (2003) 307]. Employing numerical simulations and analysing empirical data, we explore a wide range of real undirected networks and their models, including trees and loopy networks, and reveal that the inverse square law is valid even for networks with strong correlations. We observe this law in the networks demonstrating the small-world effect and containing vertices with degree 1 (so-called leaves or dead ends). We find the specific classes of networks for which this law is not valid. Such networks include the finite-dimensional networks and the networks embedded in finite-dimensional spaces. We notice that long chains of nodes in networks reduce the range of m for which the inverse square law can be spotted. Interestingly, we detect such long chains in the remote regions of the undirected projection of a large Web domain.</p>
+<p>Read the full article at: <a href="https://arxiv.org/abs/2309.00537v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">arxiv.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-aa808c1c&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3D8d7288064b%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F07%252Fstatistics-of-remote-regions-of-networks%252F%26title%3DStatistics%2520of%2520remote%2520regions%2520of%2520networks&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=8d7288064b" title="Like Statistics of remote regions of networks on Facebook" id="fblike-aa808c1c" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Statistics of remote regions of networks on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Generalized Zurek’s bound on the cost of an individual classical or quantum computation</h2>
+<p>Artemy Kolchinsky</p>
+<p>Phys. Rev. E 108, 034101</p>
+<p>We consider the minimal thermodynamic cost of an individual computation, where a single input x is mapped to a single output y. In prior work, Zurek proposed that this cost was given by K(x|y), the conditional Kolmogorov complexity of x given y (up to an additive constant that does not depend on x or y). However, this result was derived from an informal argument, applied only to deterministic computations, and had an arbitrary dependence on the choice of protocol (via the additive constant). Here we use stochastic thermodynamics to derive a generalized version of Zurek’s bound from a rigorous Hamiltonian formulation. Our bound applies to all quantum and classical processes, whether noisy or deterministic, and it explicitly captures the dependence on the protocol. We show that K(x|y) is a minimal cost of mapping x to y that must be paid using some combination of heat, noise, and protocol complexity, implying a trade-off between these three resources. Our result is a kind of “algorithmic fluctuation theorem” with implications for the relationship between the second law and the Physical Church-Turing thesis.</p>
+<p>Read the full article at: <a href="https://link.aps.org/doi/10.1103/PhysRevE.108.034101" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">link.aps.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-41e33014&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3D8d7288064b%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F06%252Fgeneralized-zureks-bound-on-the-cost-of-an-individual-classical-or-quantum-computation%252F%26title%3DGeneralized%2520Zurek%25E2%2580%2599s%2520bound%2520on%2520the%2520cost%2520...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=8d7288064b" title="Like Generalized Zurek’s bound on the cost of an individual classical or quantum computation on Facebook" id="fblike-41e33014" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Generalized Zurek’s bound on the cost of an individual classical or quantum computation on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+How the Brain Makes You: Collective Intelligence and Computation by Neural Circuits</h2>
+<p> <iframe width="100" height="350" src="https://www.youtube-nocookie.com/embed/cZbpd_q3oD8?version=3&amp;rel=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;fs=1&amp;hl=en&amp;autohide=2&amp;wmode=transparent" allowfullscreen="true" sandbox="allow-scripts allow-same-origin allow-popups" loading="lazy"></iframe><br/>
+ loadYouTubePlayer(‘yt_video_cZbpd_q3oD8_sXnSKY5qc4IcwCtc’);</p>
+<p>Vijay Balasubramanian University of Pennsylvania, SFI The human brain consists of a 100 billion neurons connected by a 100 trillion synapses. In its computational function, each neuron is a simple electrical device. In this sense it is no different, in its conceptual essence, from a transistor or a diode in a silicon microchip, converting input signals into ephemeral voltage pulses that transmit to other neurons. And yet, the collective effect of these tiny electrical flutterings creates the intelligent mind, with its astonishing capacity for perception and action, memory and imagination, affection and indifference. In the words of Ramon y Cajal (1854-1932), a founding figure of neuroscience, neurons are “the mysterious butterflies of the soul, whose beating of wings may one day reveal to us the secrets of the mind.” In this talk, Vijay Balasubramanian will explore current ideas about how this transmutation occurs. <a href="https://aliencrashsite.org" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"></a></p>
+<p></p>
+<p>Watch at: <a href="https://www.youtube.com/watch?v=cZbpd_q3oD8&amp;t=160s" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.youtube.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-9d232e5f&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3D8d7288064b%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F06%252Fhow-the-brain-makes-you-collective-intelligence-and-computation-by-neural-circuits%252F%26title%3DHow%2520the%2520Brain%2520Makes%2520You%253A%2520Collective%2520Inte...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=8d7288064b" title="Like How the Brain Makes You: Collective Intelligence and Computation by Neural Circuits on Facebook" id="fblike-9d232e5f" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like How the Brain Makes You: Collective Intelligence and Computation by Neural Circuits on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+A Causal Discovery Approach To Learn How Urban Form Shapes Sustainable Mobility Across Continents</h2>
+<p>Felix Wagner, Florian Nachtigall, Lukas Franken, Nikola Milojevic-Dupont, Rafael H.M. Pereira, Nicolas Koch, Jakob Runge, Marta Gonzalez, Felix Creutzig</p>
+<p>Global sustainability requires low-carbon urban transport systems, shaped by adequate infrastructure, deployment of low-carbon transport modes and shifts in travel behavior. To adequately implement alterations in infrastructure, it’s essential to grasp the location-specific cause-and-effect mechanisms that the constructed environment has on travel. Yet, current research falls short in representing causal relationships between the 6D urban form variables and travel, generalizing across different regions, and modeling urban form effects at high spatial resolution. Here, we address all three gaps by utilizing a causal discovery and an explainable machine learning framework to detect urban form effects on intra-city travel based on high-resolution mobility data of six cities across three continents. We show that both distance to city center, demographics and density indirectly affect other urban form features. By considering the causal relationships, we find that location-specific influences align across cities, yet vary in magnitude. In addition, the spread of the city and the coverage of jobs across the city are the strongest determinants of travel-related emissions, highlighting the benefits of compact development and associated benefits. Differences in urban form effects across the cities call for a more holistic definition of 6D measures. Our work is a starting point for location-specific analysis of urban form effects on mobility behavior using causal discovery approaches, which is highly relevant for city planners and municipalities across continents.</p>
+<p>Read the full article at: <a href="https://arxiv.org/abs/2308.16599v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">arxiv.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-2d3fa5c7&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3D8d7288064b%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F06%252Fa-causal-discovery-approach-to-learn-how-urban-form-shapes-sustainable-mobility-across-continents%252F%26title%3DA%2520Causal%2520Discovery%2520Approach%2520To%2520Learn%2520How...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=8d7288064b" title="Like A Causal Discovery Approach To Learn How Urban Form Shapes Sustainable Mobility Across Continents on Facebook" id="fblike-2d3fa5c7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like A Causal Discovery Approach To Learn How Urban Form Shapes Sustainable Mobility Across Continents on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+How biological codes break causal chains to enable autonomy for organisms</h2>
+<p>Keith D. Farnsworth</p>
+<p>Biosystems Volume 232, October 2023, 105013</p>
+<p>Autonomy, meaning freedom from exogenous control, requires independence of both constitution and cybernetic regulation. Here, the necessity of biological codes to achieve both is explained, assuming that Aristotelian efficient cause is ‘formal cause empowered by physical force’. Constitutive independence requires closure to efficient causation (in the Rosen sense); cybernetic independence requires transformation of cause–effect into signal-response relations at the organism boundary; the combination of both kinds of independence enables adaptation and evolution. Codes and cyphers translate information from one form of physical embodiment (domain) to another. Because information can only contribute as formal cause to efficient cause within the domain of its embodiment, translation can extend or restrict the range over which information is effective. Closure to efficient causation requires internalised information to be isolated from the cycle of efficient causes that it informs: e.g. Von Neumann self-replicator requires a (template) source of information that is causally isolated from the physical replication system. Life operationalises this isolation with the genetic code translating from the (isolated) domain of codons to that of protein interactions. Separately, cybernetic freedom is achieved at the cell boundary because transducers, which embody molecular coding, translate exogenous information into a domain where it no longer has the power of efficient cause. Information, not efficient cause, passes through the boundary to serve as stimulus for an internally generated response. Coding further extends freedom by enabling historically accumulated information to be selectively transformed into efficient cause under internal control, leaving it otherwise stored inactive. Code-based translation thus enables selective causal isolation, controlling the flow from cause to effect. Genetic code, cell-signalling codes and, in eukaryotes, the histone code, signal sequence based protein sorting and other code-dependent processes all regulate and separate causal chains. The existence of life can be seen as an expression of the power of molecular codes to selectively isolate and thereby organise causal relations among molecular interactions to form an organism.</p>
+<p>Read the full article at: <a href="https://www.sciencedirect.com/science/article/pii/S0303264723001880" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.sciencedirect.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-d7a97110&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3D8d7288064b%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F09%252F06%252Fhow-biological-codes-break-causal-chains-to-enable-autonomy-for-organisms-2%252F%26title%3DHow%2520biological%2520codes%2520break%2520causal%2520chains...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=8d7288064b" title="Like How biological codes break causal chains to enable autonomy for organisms on Facebook" id="fblike-d7a97110" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like How biological codes break causal chains to enable autonomy for organisms on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h3>More to read:</h3>
+
+<table>
+	
+		<tbody><tr>
+			<td>
+			<table>
+				
+					<tbody><tr>
+						<td><a href="https://comdig.unam.mx/2023/09/03/more-is-different-in-real-world-multilayer-networks/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">More is different in real-world multilayer networks</a><br/><a href="https://comdig.unam.mx/2023/09/03/future-directions-in-human-mobility-science/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Future directions in human mobility science</a><br/><a href="https://comdig.unam.mx/2023/09/01/cognitive-science-of-augmented-intelligence/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Cognitive Science of Augmented Intelligence</a><br/><a href="https://comdig.unam.mx/2023/08/31/the-emergence-of-dynamic-networks-from-many-coupled-polar-oscillators-a-paradigm-for-artificial-life/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The emergence of dynamic networks from many coupled polar oscillators: a paradigm for artificial life</a><br/><a href="https://comdig.unam.mx/2023/08/31/heterogeneity-extends-criticality-3/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Heterogeneity Extends Criticality</a><br/><a href="https://comdig.unam.mx/2023/08/31/evolution-of-priorities-in-strategic-funding-for-collaborative-health-research-a-comparison-of-the-european-union-framework-programmes-to-the-program-funding-by-the-united-states-nih/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Evolution of priorities in strategic funding for collaborative health research. A comparison of the European Union Framework Programmes to the program funding by the United States NIH</a><br/><a href="https://comdig.unam.mx/2023/08/30/opinion-dynamics-explain-price-formation-in-prediction-markets/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Opinion Dynamics Explain Price Formation in Prediction Markets</a><br/><a href="https://comdig.unam.mx/2023/08/29/evolution-on-purpose-teleonomy-in-living-systems-edited-by-peter-a-corning-stuart-a-kauffman-denis-noble-james-a-shapiro-richard-i-vane-wright-and-addy-pross/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Evolution “On Purpose” Teleonomy in Living Systems. Edited by Peter A. Corning, Stuart A. Kauffman, Denis Noble, James A. Shapiro, Richard I. Vane-Wright and Addy Pross</a><br/><a href="https://comdig.unam.mx/2023/08/28/the-adjacent-possible-and-how-it-explains-human-innovation-stuart-kauffman-ted/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The “Adjacent Possible” – and How It Explains Human Innovation | Stuart Kauffman | TED</a><br/><a href="https://comdig.unam.mx/2023/08/27/biology-in-ai-new-frontiers-in-hardware-software-and-wetware-modeling-of-cognition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Biology in AI: New Frontiers in Hardware, Software, and Wetware Modeling of Cognition</a></td>
+					</tr>
+				
+			</tbody></table>
+			</td>
+		</tr>
+	
+</tbody></table>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                                
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                            
+                                                
+                                                <table>
+                                                    <tbody><tr>
+                                                        <td colspan="2">
+                                                             <a href="http://twitter.com/cxdig" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">follow on Twitter</a> | <a href="https://www.facebook.com/pages/Complexity-Digest/103026839755164" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">like on Facebook</a> | <a href="http://www.linkedin.com/groups?gid=3270291" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">join on LinkedIn</a> | <a href="https://plus.google.com/b/105687854558109225649/105687854558109225649/posts" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Google+</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            
+                                                        </td>
+                                                        <td>
+                                                            
+                                                                 <a href="http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter&amp;utm_medium=email&amp;utm_campaign=referral_marketing&amp;aid=0eb0ac9b4e8565f2967a8304b&amp;afl=1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/hs10_MQ15R2QK5H4lve1DmmZBzxvn-h8RkX8kiNvCSk=/aHR0cHM6Ly9jZG4taW1hZ2VzLm1haWxjaGltcC5jb20vbW9ua2V5X3Jld2FyZHMvaW50dWl0LW1jLXJld2FyZHMtMi5wbmc=" alt="Email Marketing Powered by Mailchimp" title="Mailchimp Email Marketing" width="137" height="53" loading="lazy"/></a> 
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                                
+                                            
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <br/>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+                
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <table>
+                    <tbody><tr>
+                        <td>
+                            <table>
+                                <tbody><tr>
+                                    <td>
+                                        This email was sent to <a href="mailto:&lt;&lt;Email Address&gt;&gt;" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">&lt;&lt;Email Address&gt;&gt;</a>
+                                        <br/>
+                                        <a href="https://unam.us4.list-manage.com/about?u=0eb0ac9b4e8565f2967a8304b&amp;id=f55ea67de1&amp;e=[UNIQID]&amp;c=8d7288064b" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><em>why did I get this?</em></a>    <a href="https://unam.us4.list-manage.com/unsubscribe?u=0eb0ac9b4e8565f2967a8304b&amp;id=f55ea67de1&amp;e=[UNIQID]&amp;c=8d7288064b" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">unsubscribe from this list</a>    <a href="https://unam.us4.list-manage.com/profile?u=0eb0ac9b4e8565f2967a8304b&amp;id=f55ea67de1&amp;e=[UNIQID]&amp;c=8d7288064b" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">update subscription preferences</a>
+                                        <br/>
+                                        Complexity Digest · Universidad Nacional Autónoma de México · Ciudad Universitaria · Mexico City, DF 01000 · Mexico
+                                        <br/>
+                                        <br/>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+                
+            

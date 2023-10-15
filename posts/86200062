@@ -1,0 +1,18 @@
+<p>It&#39;s always a bit concerning when a new icon suddenly appears at the top of your phone&#39;s screen.  Without any warning, my ageing OnePlus 5T - <a href="https://shkspr.mobi/blog/2023/02/what-doesnt-work-in-lineageos-20/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">which now runs LineageOS</a> - started showing this:</p>
+<p><img src="https://reader.miniflux.app/proxy/iYq6-fLjkP7PkETfNU4BVJrAjCc85pdf-QR76_y_6RI=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzA5L1NtYWxsLUljb25zLWZzOC5wbmc=" alt="Three Android icons. A circle, a square, and a triangle." width="154" height="24" loading="lazy"/></p>
+<p>I know that, from right to left, it is showing me my battery percentage, WiFi strength, and that I&#39;m using work mode. But what&#39;s the weird circle?</p>
+<p>ZOOM! ENHANCE!</p>
+<p><img src="https://reader.miniflux.app/proxy/LUAFDx06MTscgri3a2oHRbv15O14Ph7YgVqvBXqcSr4=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzA5L0xhcmdlLUljb25zLWZzOC5wbmc=" alt="Zoomed in icons, they&#39;re still a bit indistinct." width="616" height="96" loading="lazy"/></p>
+<p>Well, that&#39;s not much help, is it!</p>
+<p>Buried in the <a href="https://source.android.com/docs/automotive/hmi/status_bar" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Android <em>Automotive</em> documentation</a> is some information on how to &#34;Customize Status Bar System Icons&#34;. It helpfully says:</p>
+<blockquote><p>
+  Most resources for items displayed in the Status bar are provided in the following directory:<br/>
+  <code>/platform/frameworks/base/packages/SystemUI/res/drawable</code>
+</p></blockquote>
+<p>OK! That gives us something to work on.</p>
+<p>Let&#39;s pop along to <a href="https://github.com/LineageOS/android_frameworks_base/tree/lineage-20.0/packages/SystemUI/res/drawable" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Lineage&#39;s GitHub repo to look in that directory</a>.  There are 650 icons in there (!) so I <a href="https://download-directory.github.io/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">downloaded them all</a> (!!).</p>
+<p>Of course, Google can&#39;t do anything standardised like use SVG. It uses its own magical Android Vector Drawable format. You can <a href="https://vd.floo.app/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">individually convert the files to SVG online</a> or in bulk <a href="https://github.com/seanghay/vector-drawable-svg" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">on the command line</a>.</p>
+<p>After a bit of flicking through, I found this:</p>
+<p><img src="https://reader.miniflux.app/proxy/Ov9z7gHG2pdg4MR46juYStNo7m4NA5Z8AJPembBZpgc=/aHR0cHM6Ly9zaGtzcHIubW9iaS9ibG9nL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIzLzA5L2ljX3N0YXR1c2Jhcl9maXJld2FsbC1mczgucG5n" alt="A large icon that sort of looks a bit like a globe with a line through it." width="240" height="240" loading="lazy"/></p>
+<p>Which is from <code>ic_statusbar_firewall.xml</code></p>
+<p>This is a fairly new icon, <a href="https://review.lineageos.org/c/LineageOS/android_frameworks_base/+/350286" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">introduced in March 2023</a>. It appears in the status bar when an app tries to access the network but &#34;allow network access&#34; is turned off.</p>

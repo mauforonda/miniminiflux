@@ -1,0 +1,263 @@
+Latest Complexity Digest Posts
+        
+    
+    
+        
+        
+            <table>
+                <tbody><tr>
+                    <td>
+                        
+                        <table>
+                            <tbody><tr>
+                                <td>
+                                
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                                Learn about the latest and greatest related to complex systems research. More at <a href="http://comdig.unam.mx" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">http://comdig.unam.mx</a>
+                                            </td>
+                                            
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        
+                        <table>
+                            <tbody><tr>
+                                <td>
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                            
+                                                
+                                                <a href="http://comdig.unam.mx" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/gWY-VZqmIAQWx2fEMyEg0xaNJDkctXXxaVrxadZohB4=/aHR0cHM6Ly9nYWxsZXJ5Lm1haWxjaGltcC5jb20vMGViMGFjOWI0ZTg1NjVmMjk2N2E4MzA0Yi9pbWFnZXMvbG9nb2Q3NzAzOC5wbmc=" alt="Complexity Digest" width="600" loading="lazy"/></a>
+                                                
+                                            
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                
+                                                
+                                                <table>
+                                                    <tbody><tr>
+                                                        <td>
+                                                            <strong>Contents from of the 08/07/2023 edition:</strong><br/>
+<ul id="mctoc"><li><a href="#mctoc1">Collective behavior from surprise minimization</a></li><li><a href="#mctoc2">Open data for COVID-19 policy analysis and mapping</a></li><li><a href="#mctoc3">Genomic assessment of invasion dynamics of SARS-CoV-2 Omicron BA.1</a></li><li><a href="#mctoc4">How Genetic Surprises Complicate the Old Doctrine of DNA</a></li><li><a href="#mctoc5">New Proof Shows That ‘Expander’ Graphs Synchronize</a></li><li><a href="#mctoc6">Asynchrony rescues statistically optimal group decisions from information cascades through emergent leaders</a></li><li><a href="#mctoc7">Global scale coupling of pyromes and fire regimes</a></li><li><a href="#mctoc8">Discovering the mesoscale for chains of conflict</a></li><li><a href="#mctoc9">Terrorist attacks sharpen the binary perception of “Us” vs. “Them”</a></li><li><a href="#mctoc10">Anatomy of an AI-powered malicious social botnet</a></li><li><a href="#mctoc11">Elements and Relations: Aspects of a Scientific Metaphysics</a></li></ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            
+<h2><br/>
+Collective behavior from surprise minimization</h2>
+<p>Conor Heins, Beren Millidge, Lancelot da Costa, Richard Mann, Karl Friston, Iain Couzin<br/>Collective motion is ubiquitous in nature; groups of animals, such as fish, birds, and ungulates appear to move as a whole, exhibiting a rich behavioral repertoire that ranges from directed movement to milling to disordered swarming. Typically, such macroscopic patterns arise from decentralized, local interactions among constituent components (e.g., individual fish in a school). Preeminent models of this process describe individuals as self-propelled particles, subject to self-generated motion and ‘social forces’ such as short-range repulsion and long-range attraction or alignment. However, organisms are not particles; they are probabilistic decision-makers. Here, we introduce an approach to modelling collective behavior based on active inference. This cognitive framework casts behavior as the consequence of a single imperative: to minimize surprise. We demonstrate that many empirically-observed collective phenomena, including cohesion, milling and directed motion, emerge naturally when considering behavior as driven by active Bayesian inference — without explicitly building behavioral rules or goals into individual agents. Furthermore, we show that active inference can recover and generalize the classical notion of social forces as agents attempt to suppress prediction errors that conflict with their expectations. By exploring the parameter space of the belief-based model, we reveal non-trivial relationships between the individual beliefs and group properties like polarization and the tendency to visit different collective states. We also explore how individual beliefs about uncertainty determine collective decision-making accuracy. Finally, we show how agents can update their generative model over time, resulting in groups that are collectively more sensitive to external fluctuations and encode information more robustly.</p>
+<p>Read the full article at: <a href="https://arxiv.org/abs/2307.14804v3" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">arxiv.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-121f622a&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F06%252Fcollective-behavior-from-surprise-minimization%252F%26title%3DCollective%2520behavior%2520from%2520surprise%2520minimi...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like Collective behavior from surprise minimization on Facebook" id="fblike-121f622a" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Collective behavior from surprise minimization on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Open data for COVID-19 policy analysis and mapping</h2>
+<p><img src="https://reader.miniflux.app/proxy/H_nM5wBYHnyBi0EvCM_XIbmIe3soU3aI649MusekVHw=/aHR0cHM6Ly9jeGRpZy5maWxlcy53b3JkcHJlc3MuY29tLzIwMjMvMDgvNTJiMmY0ODAtYjA1MS00YmVmLTljY2YtMWI0MzM2M2RkZWZiLTEuanBnP3c9MTEwOA==" loading="lazy"/></p>
+<p>Rebecca Katz, Kate Toole, Hailey Robertson, Alaina Case, Justin Kerr, Siobhan Robinson-Marshall, Jordan Schermerhorn, Sarah Orsborn, Michael Van Maele, Ryan Zimmerman, Tess Stevens, COVID AMP Coding Team, Alexandra Phelan, Colin Carlson &amp; Ellie Graeden <br/>Scientific Data volume 10, Article number: 491 (2023)</p>
+<p></p>
+<p>As the COVID-19 pandemic unfolded in the spring of 2020, governments around the world began to implement policies to mitigate and manage the outbreak. Significant research efforts were deployed to track and analyse these policies in real-time to better inform the response. While much of the policy analysis focused narrowly on social distancing measures designed to slow the spread of disease, here, we present a dataset focused on capturing the breadth of policy types implemented by jurisdictions globally across the whole-of-government. COVID Analysis and Mapping of Policies (COVID AMP) includes nearly 50,000 policy measures from 150 countries, 124 intermediate areas, and 235 local areas between January 2020 and June 2022. With up to 40 structured and unstructured characteristics encoded per policy, as well as the original source and policy text, this dataset provides a uniquely broad capture of the governance strategies for pandemic response, serving as a critical data source for future work in legal epidemiology and political science.</p>
+<p>Read the full article at: <a href="https://www.nature.com/articles/s41597-023-02398-3" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.nature.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-3a807b69&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F05%252Fopen-data-for-covid-19-policy-analysis-and-mapping%252F%26title%3DOpen%2520data%2520for%2520COVID-19%2520policy%2520analysis%2520a...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like Open data for COVID-19 policy analysis and mapping on Facebook" id="fblike-3a807b69" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Open data for COVID-19 policy analysis and mapping on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Genomic assessment of invasion dynamics of SARS-CoV-2 Omicron BA.1</h2>
+<p>JOSEPH L.-H. TSUI, et al.</p>
+<p>SCIENCE 20 Jul 2023 Vol 381, Issue 6655 pp. 336-343</p>
+<p>Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) variants of concern (VOCs) now arise in the context of heterogeneous human connectivity and population immunity. Through a large-scale phylodynamic analysis of 115,622 Omicron BA.1 genomes, we identified &gt;6,000 introductions of the antigenically distinct VOC into England and analyzed their local transmission and dispersal history. We find that six of the eight largest English Omicron lineages were already transmitting when Omicron was first reported in southern Africa (22 November 2021). Multiple datasets show that importation of Omicron continued despite subsequent restrictions on travel from southern Africa as a result of export from well-connected secondary locations. Initiation and dispersal of Omicron transmission lineages in England was a two-stage process that can be explained by models of the country’s human geography and hierarchical travel network. Our results enable a comparison of the processes that drive the invasion of Omicron and other VOCs across multiple spatial scales.</p>
+<p>Read the full article at: <a href="https://www.science.org/doi/10.1126/science.adg6605" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.science.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-3b3d40df&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F05%252Fgenomic-assessment-of-invasion-dynamics-of-sars-cov-2-omicron-ba-1%252F%26title%3DGenomic%2520assessment%2520of%2520invasion%2520dynamics%2520...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like Genomic assessment of invasion dynamics of SARS-CoV-2 Omicron BA.1 on Facebook" id="fblike-3b3d40df" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Genomic assessment of invasion dynamics of SARS-CoV-2 Omicron BA.1 on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+How Genetic Surprises Complicate the Old Doctrine of DNA</h2>
+<p>For over a century, biologists have had to contend with a complicated picture of genetics, which they’ve only recently begun to understand.</p>
+<p>Read the full article at: <a href="https://www.quantamagazine.org/how-genetic-surprises-complicate-the-old-doctrine-of-dna-20230731/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.quantamagazine.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-7312dcbd&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F05%252Fhow-genetic-surprises-complicate-the-old-doctrine-of-dna%252F%26title%3DHow%2520Genetic%2520Surprises%2520Complicate%2520the%2520Old...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like How Genetic Surprises Complicate the Old Doctrine of DNA on Facebook" id="fblike-7312dcbd" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like How Genetic Surprises Complicate the Old Doctrine of DNA on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+New Proof Shows That ‘Expander’ Graphs Synchronize</h2>
+<p>The proof establishes new conditions that cause connected oscillators to sway in sync.</p>
+<p>Read the full article at: <a href="https://www.quantamagazine.org/new-proof-shows-that-expander-graphs-synchronize-20230724/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.quantamagazine.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-7b7f4bed&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F04%252Fnew-proof-shows-that-expander-graphs-synchronize%252F%26title%3DNew%2520Proof%2520Shows%2520That%2520%25E2%2580%2598Expander%25E2%2580%2599%2520Grap...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like New Proof Shows That ‘Expander’ Graphs Synchronize on Facebook" id="fblike-7b7f4bed" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like New Proof Shows That ‘Expander’ Graphs Synchronize on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Asynchrony rescues statistically optimal group decisions from information cascades through emergent leaders</h2>
+<p>A. Reina, T. Bose, V. Srivastava, J.A.R. Marshall</p>
+<p>Royal Society Open Science 10: 230175, 2023.</p>
+<p>It is usually assumed that information cascades are most likely to occur when an early but incorrect opinion spreads through the group. Here, we analyse models of confidence-sharing in groups and reveal the opposite result: simple but plausible models of naive-Bayesian decision-making exhibit information cascades when group decisions are synchronous; however, when group decisions are asynchronous, the early decisions reached by Bayesian decision-makers tend to be correct and dominate the group consensus dynamics. Thus early decisions actually rescue the group from making errors, rather than contribute to it. We explore the likely realism of our assumed decision-making rule with reference to the evolution of mechanisms for aggregating social information, and known psychological and neuroscientific mechanisms.</p>
+<p>Read the full article at: <a href="https://royalsocietypublishing.org/doi/10.1098/rsos.230175" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">royalsocietypublishing.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-4c30fff2&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F04%252Fasynchrony-rescues-statistically-optimal-group-decisions-from-information-cascades-through-emergent-leaders%252F%26title%3DAsynchrony%2520rescues%2520statistically%2520optimal...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like Asynchrony rescues statistically optimal group decisions from information cascades through emergent leaders on Facebook" id="fblike-4c30fff2" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Asynchrony rescues statistically optimal group decisions from information cascades through emergent leaders on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Global scale coupling of pyromes and fire regimes</h2>
+<p><img src="https://reader.miniflux.app/proxy/mpNW83Ob1l3FQYm8kCa3TFfGhU5nuSslJeiW91EsHaU=/aHR0cHM6Ly9jeGRpZy5maWxlcy53b3JkcHJlc3MuY29tLzIwMjMvMDgvNzczNjYxY2YtYWQ1Mi00ZTU2LWE5MjUtMjY0OWFiMGUzNjdkLTEuanBnP3c9MTEwOA==" loading="lazy"/></p>
+<p>Cristobal Pais, Jose Ramon Gonzalez-Olabarria, Pelagie Elimbi Moudio, Jordi Garcia-Gonzalo, Marta C. González &amp; Zuo-Jun Max Shen <br/>Communications Earth &amp; Environment volume 4, Article number: 267 (2023)</p>
+<p>Different interpretations of the fire regime concept have limited the capacity to allocate specific fire regimes worldwide. To solve this limitation, in this study, we present a framework to frame contemporary fire regimes spatially on a global scale. We process historical wildfire records between 2000 and 2018 across the six continents. We uncover 15 global pyromes with clear differences in fire-related metrics, such as frequency and size. The pyromes were further divided into 62 regimes based on spatial aggregation patterns. This spatial framing of contemporary fire regimes allows for an interpretation of how a combination of driving factors such as vegetation, climate, and demographic features can result in a specific fire regime. To the best of our knowledge, this open source platform at unprecedented scale expands on existing classification efforts and bridges the gaps between global and regional fire studies. A framework to classify fire regimes spatially on a global scale based on historical records between 2000 and 2018 reveals 15 global pyromes with differences in fire-related metrics and indicates how factors such as vegetation, climate, and demographic features can result in a specific fire regime.</p>
+<p>Read the full article at: <a href="https://www.nature.com/articles/s43247-023-00881-8" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.nature.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-2deb5fb4&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F04%252Fglobal-scale-coupling-of-pyromes-and-fire-regimes%252F%26title%3DGlobal%2520scale%2520coupling%2520of%2520pyromes%2520and%2520fir...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like Global scale coupling of pyromes and fire regimes on Facebook" id="fblike-2deb5fb4" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Global scale coupling of pyromes and fire regimes on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Discovering the mesoscale for chains of conflict</h2>
+<p><img src="https://reader.miniflux.app/proxy/abcObOHfiwsDDUUoeLPWe2kCTcsEeld4MJcV05Lbuw4=/aHR0cHM6Ly9jeGRpZy5maWxlcy53b3JkcHJlc3MuY29tLzIwMjMvMDgvNDIxYWM3NDgtNTFlYi00MWRkLWI2NWUtNDJkMDQxMDhjM2Y1LTEuanBnP3c9MTEwOA==" loading="lazy"/></p>
+<p>Niraj Kushwaha, Edward D Lee <br/>PNAS Nexus, Volume 2, Issue 7, July 2023, pgad228</p>
+<p>Conflicts, like many social processes, are related events that span multiple scales in time, from the instantaneous to multi-year development, and in space, from one neighborhood to continents. Yet, there is little systematic work on connecting the multiple scales, formal treatment of causality between events, and measures of uncertainty for how events are related to one another. We develop a method for extracting causally related chains of events that addresses these limitations with armed conflict. Our method explicitly accounts for an adjustable spatial and temporal scale of interaction for clustering individual events from a detailed data set, the Armed Conflict Event &amp; Location Data Project. With it, we discover a mesoscale ranging from a week to a few months and tens to hundreds of kilometers, where long-range correlations and nontrivial dynamics relating conflict events emerge. Importantly, clusters in the mesoscale, while extracted from conflict statistics, are identifiable with mechanism cited in field studies. We leverage our technique to identify zones of causal interaction around conflict hotspots that naturally incorporate uncertainties. Thus, we show how a systematic, data-driven, and scalable procedure extracts social objects for study, providing a scope for scrutinizing and predicting conflict and other processes.</p>
+<p>Read the full article at: <a href="https://academic.oup.com/pnasnexus/article/2/7/pgad228/7230197" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">academic.oup.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-2cb4a096&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F04%252Fdiscovering-the-mesoscale-for-chains-of-conflict%252F%26title%3DDiscovering%2520the%2520mesoscale%2520for%2520chains%2520of%2520...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like Discovering the mesoscale for chains of conflict on Facebook" id="fblike-2cb4a096" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Discovering the mesoscale for chains of conflict on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Terrorist attacks sharpen the binary perception of “Us” vs. “Them”</h2>
+<p><img src="https://reader.miniflux.app/proxy/GM_VTi7q4_74JP974v0rCpJn_Wk25_WBWJFW-zuKcq4=/aHR0cHM6Ly9jeGRpZy5maWxlcy53b3JkcHJlc3MuY29tLzIwMjMvMDgvY2MxNjc5MmItOGVjYy00ZGNhLTg0YmMtNDEwZjQ5ZWExNjM3LTEuanBnP3c9MTEwOA==" loading="lazy"/></p>
+<p>Milan Jović, Lovro Šubelj, Tea Golob, Matej Makarovič, Taha Yasseri, Danijela Boberić Krstićev, Srdjan Škrbić &amp; Zoran Levnajić <br/>Scientific Reports volume 13, Article number: 12451 (2023)</p>
+<p>Terrorist attacks not only harm citizens but also shift their attention, which has long-lasting impacts on public opinion and government policies. Yet measuring the changes in public attention beyond media coverage has been methodologically challenging. Here we approach this problem by starting from Wikipedia’s répertoire of 5.8 million articles and a sample of 15 recent terrorist attacks. We deploy a complex exclusion procedure to identify topics and themes that consistently received a significant increase in attention due to these incidents. Examining their contents reveals a clear picture: terrorist attacks foster establishing a sharp boundary between “Us” (the target society) and “Them” (the terrorist as the enemy). In the midst of this, one seeks to construct identities of both sides. This triggers curiosity to learn more about “Them” and soul-search for a clearer understanding of “Us”. This systematic analysis of public reactions to disruptive events could help mitigate their societal consequences.</p>
+<p>Read the full article at: <a href="https://www.nature.com/articles/s41598-023-39035-3" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">www.nature.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-91296406&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F04%252Fterrorist-attacks-sharpen-the-binary-perception-of-us-vs-them%252F%26title%3DTerrorist%2520attacks%2520sharpen%2520the%2520binary%2520per...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like Terrorist attacks sharpen the binary perception of “Us” vs. “Them” on Facebook" id="fblike-91296406" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Terrorist attacks sharpen the binary perception of “Us” vs. “Them” on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Anatomy of an AI-powered malicious social botnet</h2>
+<p><img src="https://reader.miniflux.app/proxy/PQ5gcwz8h7ZeckIRRn9JGpuMZS471CZoyBekLCzRc6A=/aHR0cHM6Ly9jeGRpZy5maWxlcy53b3JkcHJlc3MuY29tLzIwMjMvMDgvNDMzOTQ3YjItOWFlZC00NTUzLTlkYWMtZmMxNjkxZmNlMDEwLTEuanBnP3c9MTEwOA==" loading="lazy"/></p>
+<p>Large language models (LLMs) exhibit impressive capabilities in generating<br/>realistic text across diverse subjects. Concerns have been raised that they<br/>could be utilized to produce fake content with a deceptive intention, although<br/>evidence thus far remains anecdotal. This paper presents a case study about a<br/>Twitter botnet that appears to employ ChatGPT to generate human-like content.<br/>Through heuristics, we identify 1,140 accounts and validate them via manual<br/>annotation. These accounts form a dense cluster of fake personas that exhibit<br/>similar behaviors, including posting machine-generated content and stolen<br/>images, and engage with each other through replies and retweets.<br/>ChatGPT-generated content promotes suspicious websites and spreads harmful<br/>comments. While the accounts in the AI botnet can be detected through their<br/>coordination patterns, current state-of-the-art LLM content classifiers fail to<br/>discriminate between them and human accounts in the wild. These findings<br/>highlight the threats posed by AI-enabled social bots.</p>
+<p>Read the full article at: <a href="https://arxiv.org/abs/2307.16336v1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">arxiv.org</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-78990481&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F03%252Fanatomy-of-an-ai-powered-malicious-social-botnet%252F%26title%3DAnatomy%2520of%2520an%2520AI-powered%2520malicious%2520socia...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like Anatomy of an AI-powered malicious social botnet on Facebook" id="fblike-78990481" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Anatomy of an AI-powered malicious social botnet on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+<h2><br/>
+Elements and Relations: Aspects of a Scientific Metaphysics</h2>
+<p><img src="https://reader.miniflux.app/proxy/YzaSizepGh8nF4bz97YVaOMj3oGMS-bTALzQ-duY_3g=/aHR0cHM6Ly9jeGRpZy5maWxlcy53b3JkcHJlc3MuY29tLzIwMjMvMDgvYzNlYTBjMTMtM2E5NC00MjczLWEzZGYtYWExYjFlNDI4MTRjLTEuanBnP3c9MTEwOA==" loading="lazy"/></p>
+<p>This textbook is built around the central proposition that systems theory is an attempt to construct an “exact and scientific metaphysics” (an ESM).</p>
+<p>Read the full article at: <a href="https://link.springer.com/book/10.1007/978-3-030-99403-7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">link.springer.com</a></p>
+<br/>
+<img src="https://reader.miniflux.app/proxy/uHW-W2zObBC4JGiWQw8sER1b_icXfMic20JVGR6vgBg=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9zb2NpYWxfY29ubmVjdF90d2VldC5wbmc=" width="55" height="20" alt="share on Twitter" loading="lazy"/> <a href="https://us4.campaign-archive.com/?fblike=fblike-e0792769&amp;e=[UNIQID]&amp;socialproxy=https%3A%2F%2Fus4.campaign-archive.com%2Fsocial-proxy%2Ffacebook-like%3Fu%3D0eb0ac9b4e8565f2967a8304b%26id%3Dfa7db75029%26url%3Dhttps%253A%252F%252Fcomdig.unam.mx%252F2023%252F08%252F03%252Felements-and-relations-aspects-of-a-scientific-metaphysics%252F%26title%3DElements%2520and%2520Relations%253A%2520Aspects%2520of%2520a%2520Sci...&amp;u=0eb0ac9b4e8565f2967a8304b&amp;id=fa7db75029" title="Like Elements and Relations: Aspects of a Scientific Metaphysics on Facebook" id="fblike-e0792769" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/PcB_tt0CWxqCjRWJtU1Py1n9qh35rJZX3Is9dWNxnIc=/aHR0cDovL2Nkbi1pbWFnZXMubWFpbGNoaW1wLmNvbS9mYi9saWtlLmdpZg==" alt="Like Elements and Relations: Aspects of a Scientific Metaphysics on Facebook" height="20" width="48" loading="lazy"/></a><br/>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h3>More to read:</h3>
+
+<table>
+	
+		<tbody><tr>
+			<td>
+			<table>
+				
+					<tbody><tr>
+						<td><a href="https://comdig.unam.mx/2023/07/29/asymmetric-ideological-segregation-in-exposure-to-political-news-on-facebook/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Asymmetric ideological segregation in exposure to political news on Facebook</a><br/><a href="https://comdig.unam.mx/2023/07/29/future-medicine-from-molecular-pathways-to-the-collective-intelligence-of-the-body/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Future medicine: from molecular pathways to the collective intelligence of the body</a><br/><a href="https://comdig.unam.mx/2023/07/25/artificial-life-conference-proceedings-2023/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Artificial Life Conference Proceedings 2023</a><br/><a href="https://comdig.unam.mx/2023/07/25/binghamton-university-job-posting-assistant-professors-systems-science-complex-systems-network-science-computational-social-science/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Binghamton University Job Posting: Assistant Professors-Systems Science/Complex Systems/Network Science &amp; Computational Social Science</a><br/><a href="https://comdig.unam.mx/2023/07/24/the-experience-machine-by-andy-clark/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The Experience Machine by Andy Clark</a><br/><a href="https://comdig.unam.mx/2023/07/24/spiking-neural-networks-produce-informational-closure-by-stimulus-avoidance/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Spiking neural networks produce informational closure by stimulus avoidance </a><br/><a href="https://comdig.unam.mx/2023/07/22/democracy-by-design-perspectives-for-digitally-assisted-participatory-upgrades-of-society-2/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Democracy by Design: Perspectives for Digitally Assisted, Participatory Upgrades of Society</a><br/><a href="https://comdig.unam.mx/2023/07/22/dynamical-independence-discovering-emergent-macroscopic-processes-in-complex-dynamical-systems/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Dynamical independence: Discovering emergent macroscopic processes in complex dynamical systems</a><br/><a href="https://comdig.unam.mx/2023/07/22/how-do-we-know-how-smart-ai-systems-are/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">How do we know how smart AI systems are?</a><br/><a href="https://comdig.unam.mx/2023/07/22/the-santiago-boys/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The Santiago Boys</a></td>
+					</tr>
+				
+			</tbody></table>
+			</td>
+		</tr>
+	
+</tbody></table>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                                
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                    <table>
+                                        <tbody><tr>
+                                            <td>
+                                            
+                                                
+                                                <table>
+                                                    <tbody><tr>
+                                                        <td colspan="2">
+                                                             <a href="http://twitter.com/cxdig" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">follow on Twitter</a> | <a href="https://www.facebook.com/pages/Complexity-Digest/103026839755164" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">like on Facebook</a> | <a href="http://www.linkedin.com/groups?gid=3270291" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">join on LinkedIn</a> | <a href="https://plus.google.com/b/105687854558109225649/105687854558109225649/posts" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Google+</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            
+                                                        </td>
+                                                        <td>
+                                                            
+                                                                 <a href="http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter&amp;utm_medium=email&amp;utm_campaign=referral_marketing&amp;aid=0eb0ac9b4e8565f2967a8304b&amp;afl=1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img src="https://reader.miniflux.app/proxy/hs10_MQ15R2QK5H4lve1DmmZBzxvn-h8RkX8kiNvCSk=/aHR0cHM6Ly9jZG4taW1hZ2VzLm1haWxjaGltcC5jb20vbW9ua2V5X3Jld2FyZHMvaW50dWl0LW1jLXJld2FyZHMtMi5wbmc=" alt="Email Marketing Powered by Mailchimp" title="Mailchimp Email Marketing" width="137" height="53" loading="lazy"/></a> 
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                                
+                                            
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <br/>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+                
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <table>
+                    <tbody><tr>
+                        <td>
+                            <table>
+                                <tbody><tr>
+                                    <td>
+                                        This email was sent to <a href="mailto:&lt;&lt;Email Address&gt;&gt;" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">&lt;&lt;Email Address&gt;&gt;</a>
+                                        <br/>
+                                        <a href="https://unam.us4.list-manage.com/about?u=0eb0ac9b4e8565f2967a8304b&amp;id=f55ea67de1&amp;e=[UNIQID]&amp;c=fa7db75029" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><em>why did I get this?</em></a>    <a href="https://unam.us4.list-manage.com/unsubscribe?u=0eb0ac9b4e8565f2967a8304b&amp;id=f55ea67de1&amp;e=[UNIQID]&amp;c=fa7db75029" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">unsubscribe from this list</a>    <a href="https://unam.us4.list-manage.com/profile?u=0eb0ac9b4e8565f2967a8304b&amp;id=f55ea67de1&amp;e=[UNIQID]&amp;c=fa7db75029" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">update subscription preferences</a>
+                                        <br/>
+                                        Complexity Digest · Universidad Nacional Autónoma de México · Ciudad Universitaria · Mexico City, DF 01000 · Mexico
+                                        <br/>
+                                        <br/>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+                
+            

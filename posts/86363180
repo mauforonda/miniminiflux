@@ -1,0 +1,52 @@
+<p>This uses <a href="https://developer.wordpress.org/cli/commands/shell/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">the <code>wp shell</code> command</a>. It gives you an interactive prompt into which you can do various WordPress &#34;things&#34;.</p>
+<p>One small annoyance is that it doesn&#39;t like multi-line entry. It treats every hit of the enter key as &#34;plz run the codez&#34; - so, at the end of this blog post, I&#39;ve put the commands in copy-n-paste format.</p>
+<p>Once you&#39;ve installed WP CLIP, go to the command line and run <code>wp shell</code>. You&#39;ll be greeted with an interactive prompt <code>wp&gt;</code></p>
+<h2 id="method-one-quick-search"><a href="#method-one-quick-search">Method One - Quick Search</a></h2>
+<p>This command constructs a query which gets <em>all</em> posts, which have been published, where there is no thumbnail ID.  Note - this isn&#39;t quite the same as not having a featured image.</p>
+<pre><code>$args = array(
+    &#39;post_type&#39;     =&gt; &#39;post&#39;,
+    &#39;post_status&#39;   =&gt; array(&#39;publish&#39;),
+    &#39;posts_per_page&#39;=&gt; -1,
+    &#39;meta_query&#39;    =&gt; array(
+        array(
+            &#39;key&#39; =&gt; &#39;_thumbnail_id&#39;,
+            &#39;compare&#39; =&gt; &#39;NOT EXISTS&#39;
+        )
+    ),
+);
+</code></pre>
+<p>Next we run that query. It will dump quite a lot of information into the screen, we&#39;ll format it shortly.</p>
+<pre><code>$query = new WP_Query( $args );
+</code></pre>
+<p>Finally, we loop through all the posts the query has found and print them out in a nice format.</p>
+<pre><code>$posts = $query-&gt;posts;
+foreach ( $posts as $post ) {
+    echo $post-&gt;post_date . &#34; &#34; . $post-&gt;guid . &#34; &#34; . $post-&gt;post_title . &#34;\n&#34;;
+}
+</code></pre>
+<p>That will give you the date, link, and title of every post where there is no featured image set.</p>
+<h3 id="copy-and-paste-snippet"><a href="#copy-and-paste-snippet">Copy and Paste Snippet</a></h3>
+<pre><code>$args = array( &#39;post_type&#39; =&gt; &#39;post&#39;, &#39;post_status&#39; =&gt; array(&#39;publish&#39;), &#39;posts_per_page&#39;=&gt; -1,  &#39;meta_query&#39; =&gt; array(       array( &#39;key&#39; =&gt; &#39;_thumbnail_id&#39;, &#39;value&#39; =&gt; &#39;?&#39;, &#39;compare&#39; =&gt; &#39;NOT EXISTS&#39; ) ),);
+$query = new WP_Query( $args );
+$posts = $query-&gt;posts;
+foreach ( $posts as $post ) { echo $post-&gt;post_date . &#34; &#34; . $post-&gt;guid . &#34; &#34; . $post-&gt;post_title . &#34;\n&#34;; }
+</code></pre>
+<h2 id="method-two-full-search"><a href="#method-two-full-search">Method Two - Full Search</a></h2>
+<p>Sometimes the WordPress database can get a little confused. It will say there is a post thumbnail, but when you try to retrieve it, there&#39;s nothing there!</p>
+<p>This method is slightly slower if you have lots of posts. It goes through every single post and checks whether the featured image can be retrieved. If not it will let you know.</p>
+<pre><code>$args = array(
+    &#39;post_type&#39;     =&gt; &#39;post&#39;,
+    &#39;post_status&#39;   =&gt; array(&#39;publish&#39;),
+    &#39;posts_per_page&#39;=&gt; -1,
+);
+
+$posts = get_posts( $args );
+
+foreach ( $posts =&gt; $post) {
+    if( get_the_post_thumbnail( $post ) == &#34;&#34; ) {
+        echo $post-&gt;post_date . &#34; &#34; . $post-&gt;guid . &#34; &#34; . $post-&gt;post_title . &#34;\n&#34;; }
+}
+</code></pre>
+<h3 id="copy-and-paste-snippet"><a href="#copy-and-paste-snippet">Copy and Paste Snippet</a></h3>
+<pre><code>foreach (get_posts( array( &#39;post_type&#39; =&gt; &#39;post&#39;, &#39;post_status&#39; =&gt; array(&#39;publish&#39;), &#39;posts_per_page&#39; =&gt; -1,) ) as $post) { if(get_the_post_thumbnail($post)== &#34;&#34;) { echo $post-&gt;post_date . &#34; &#34; . $post-&gt;guid . &#34; &#34; . $post-&gt;post_title . &#34;\n&#34;; } }
+</code></pre>

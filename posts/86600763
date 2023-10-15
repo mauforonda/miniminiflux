@@ -1,0 +1,22 @@
+<p>Quite often websites will encourage you to copy and paste commands into your terminal.</p>
+<p>There are a variety of reasons why this is bad - not least because someone could hide malicious code. That&#39;s usually done with a bit of CSS to make the evil command invisible, or using Javascript to inject something unwanted into your keyboard.</p>
+<p>Here&#39;s method that I hadn&#39;t seen before. Copy this code and paste it into your terminal to see your external IP address:</p>
+<p></p>
+<p>Notice anything weird about it? Depending on how you selected it, possibly not. Try pasting it into your terminal.</p>
+<p>Let&#39;s take a look at how it works:</p>
+<pre><code>&lt;input 
+   type=&#34;text&#34;
+   readonly=&#34;&#34;
+   value=&#34;curl ipconfig.io  ;yes &amp;quot;Don&#39;t copy and paste commands!&amp;quot;&#34;
+   size=&#34;17&#34; 
+   style=&#34;display: inline; 
+          width: fit-content; 
+          background: var(--color-box); 
+          border: none; 
+          outline: none;
+          padding: 0; 
+          font-family:monospace; 
+          border-radius: 0;&#34;&gt;
+</code></pre>
+<p>It&#39;s a readonly text input! The size has been set to cut off anything after the innocuous command. The CSS makes it look like part of the regular page with none of the styling associated with an input.</p>
+<p>I&#39;d hope that most people would realise that the command they pasted looked different from the one they thought had been copied - but we all make mistakes.</p>

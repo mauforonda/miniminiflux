@@ -1,0 +1,119 @@
+<p>A couple nights ago <a href="https://cs.nyu.edu/~davise/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Ernie Davis</a> and I put out a paper entitled <a href="https://arxiv.org/abs/2308.05713" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Testing GPT-4 on Wolfram Alpha and Code Interpreter plug-ins on math and science problems</a>.  Following on our <a href="https://arxiv.org/abs/2204.13807" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DALL-E paper</a> with Gary Marcus, this was another “adversarial collaboration” between me and Ernie.  I’m on leave to work for OpenAI, and have been extremely excited by the near-term applications of LLMs, while Ernie has often been skeptical of OpenAI’s claims, but we both want to test our preconceptions against reality.  As I recently remarked to Ernie, we both see the same glass; it’s just that he mostly focuses on the empty half, whereas I remember how fantastical even a <em>drop</em> of water in this glass would’ve seemed to me just a few years ago, and therefore focus more on the half that’s full.</p>
+
+
+
+<p>Anyway, here are a few examples of the questions I posed to GPT-4, with the recent plug-ins that enhance its calculation abilities:</p>
+
+
+
+<blockquote>
+<p>If you fell into the black hole at the center of the Milky Way, how long would you have before hitting the singularity? <em>[You’d have about a minute]</em></p>
+
+
+
+<p>Approximately how much time would a commercial airliner save in going from New York to Tel Aviv, if it could go in a straight line, through a tunnel in the earth, at the same speed as usual?  <em>[I was on such a flight when I wrote this question, and must’ve been bored and impatient.  The answer is ~50 minutes.]</em></p>
+
+
+
+<p>Approximately how long would it take to transmit an entire human genome over a standard WiFi connection? <em>[About 4 minutes, assuming no compression and a 25Mbps connection]</em></p>
+
+
+
+<p>How does the total weight of all the uranium that humans mined, compare to the total weight of all the gold that they’ve mined? <em>[About 13 times as much uranium]</em></p>
+
+
+
+<p>Approximately how many errors will a standard laptop suffer over its lifetime, due to cosmic rays hitting the microchip? <em>[Estimates vary widely, but maybe 2000]</em></p>
+
+
+
+<p>What is the approximate probability that a randomly-chosen 100-digit integer is prime? <em>[About 0.4%]</em></p>
+</blockquote>
+
+
+
+<p>GPT-4 with plug-ins did very well on all of the questions above.  Here, by contrast, is a question where it did poorly:</p>
+
+
+
+<blockquote>
+<p>Assume that IQs are normally distributed, with a mean of 100 and a standard deviation of 15. For what n is there the maximum excess of people with an IQ of n over people with an IQ of n+1?</p>
+</blockquote>
+
+
+
+<p>GPT-4 thought that there were two solutions, n~85 and n~115, rather than just a single solution (n~115).</p>
+
+
+
+<p>Ernie, for his part, was more a fan of “pure pain” problems like the following:</p>
+
+
+
+<blockquote>
+<p>A quantity of chlorine gas is in a right prism whose base is a triangle with sides 5cm, 7cm, and 4cm and whose altitude is 8cm. The temperature is the freezing point of mercury, and the pressure is 2 atmospheres. What is the mass of the chlorine?</p>
+</blockquote>
+
+
+
+<p>GPT-4 actually aced the above problem.  But it failed the majority of Ernie’s other problems, such as:</p>
+
+
+
+<blockquote>
+<p>Viewed from Vega, what is the angle between Sirius and the Sun?  <em>[The answer is about 5.6 degrees.  GPT thought, implausibly, that it was just 0.005 degrees, or that the answer would vary depending on the time of day.]</em></p>
+</blockquote>
+
+
+
+<p>My personal favorite among Ernie’s problems was this one:</p>
+
+
+
+<blockquote>
+<p>A physical process generates photons whose energies follow a random distribution of the following form: For positive energy e, the probability density at e is proportional to the value of e in a Gaussian distribution with mean 2 Ev and standard deviation 0.01 Ev. The probability of a negative value is zero. What is the expected value of the wavelength of a photon produced by this process? (Give the mathematical answer, assuming that the above description is exact, and assuming the standard relation between energy and wavelength in a photon. The answer is not physically plausible.)</p>
+</blockquote>
+
+
+
+<p>The answer, in case you’re wondering, is “infinity.”  On this problem, GPT-4 set up the integral perfectly correctly, then correctly fed it to WolframAlpha.  But on getting the result, it apologized that “something went wrong,” it must’ve made a mistake, the integral seemed not to be converging, and there was a singularity at E=0 that would have to be dealt with by a change of variables.  So it tried again.  And again.  And again.  Each time, it got the same “mistaken” result, and each time it profusely apologized.  Despite the explicit wording of the problem, GPT-4 never considered the possibility that the human would be so ridiculous as to give it a physics problem with an infinite answer.</p>
+
+
+
+<p>Anyway, what did we learn from this exercise?</p>
+
+
+
+<ul>
+<li>GPT-4 remains an endlessly enthusiastic B/B+ student in math, physics, and any other STEM field.  By using the Code Interpreter or WolframAlpha plugins, it can correctly solve difficult word problems, involving a combination of tedious calculations, world knowledge, and conceptual understanding, maybe a third of the time—a rate that’s not good enough to be relied on, but is utterly astounding compared to where AI was just a few years ago.</li>
+</ul>
+
+
+
+<ul>
+<li>GPT-4 can now <em>clearly</em> do better at calculation-heavy STEM problems with the plugins than it could do without the plugins.</li>
+</ul>
+
+
+
+<ul>
+<li>We didn’t see that either the WolframAlpha or Code Interpreter plugin is clearly superior to the other.  It’s possible that they’re incomparable, good for different things.</li>
+</ul>
+
+
+
+<ul>
+<li>When GPT-4 screwed up, it was often due to a “poor interface” between the language model and the plug-in—e.g. the model having no idea what call to make or how to recover when a call returned an error.  <em>Enormous</em> gains seem to be possible by improving these interfaces.</li>
+</ul>
+
+
+
+<ul>
+<li>Sometimes, much like humans I’ve known, GPT-4 would do amazingly well at a difficult computation, then fumble a trivial final step (e.g., converting the answer into the requested units).  Just like with I would with human students, I advocated for generous partial credit in such cases.</li>
+</ul>
+
+
+
+<ul>
+<li>I <em>conjecture</em>, although I don’t have empirical data to show this, that GPT-4 with math plug-ins used in “interactive mode”—with a human reformulating and clarifying the problems as needed, feeding ideas, checking the answers for plausibility, pointing out errors, etc.—could currently get excellent accuracy on these sorts of problems faster than either GPT-4 with math plug-ins alone, <em>or</em> all but the very best humans alone.</li>
+</ul>

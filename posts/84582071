@@ -1,0 +1,92 @@
+<p><em>Political contributions, historical newspaper articles, Prigozhin
+audio messages, and license plate designs.</em></p>
+<p> </p>
+<p><em>📬 Reader <a href="https://michael-sparks13.github.io/portfolio/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Michael</a> built a
+<a href="https://michael-sparks13.github.io/canadian-wildfires/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">map
+comparing Canada’s 2023 fire season to earlier years</a>, using data
+from the <a href="https://cwfis.cfs.nrcan.gc.ca/home" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Canadian Wildland
+Fire Information System</a> featured in <a href="https://www.data-is-plural.com/archive/2023-06-14-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2023.06.14</a>. (Have you published something with data you found via
+DIP? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXXD5eO05w0Xa7bwG3Ppia3uzr_o3y-xDEZuWRfXbCfCu_XA/viewform" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Click
+here to let me know</a>.)</em></p>
+<p> </p>
+<p><em>🔄 The Washington Post has <a href="https://www.washingtonpost.com/investigations/interactive/2023/opioid-epidemic-pain-pills-sold-oxycodone-hydrocodone/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">obtained
+and published five more years of prescription opioid data</a> (initially
+featured in <a href="https://www.data-is-plural.com/archive/2019-08-07-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2019.08.07</a>). The <a href="https://www.washingtonpost.com/national/2019/07/18/how-download-use-dea-pain-pills-database/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">records</a>
+now cover 2006–2019.</em></p>
+<p> </p>
+<p><strong>Political contributions, enhanced.</strong> Political
+scientist <a href="https://web.stanford.edu/~bonica/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Adam Bonica</a>’s
+<a href="https://data.stanford.edu/dime" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Database on Ideology, Money in
+Politics, and Elections</a> (DIME) gathers “500 million itemized
+political contributions made by individuals and organizations to local,
+state, and federal elections covering from 1979 to 2020.” The project,
+which received a <a href="https://listserv.wustl.edu/scripts/wa.exe?A2=1702A&amp;L=POLMETH&amp;D=0&amp;H=N&amp;P=6749708" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">major
+update last month</a>, “is intended to make data on campaign finance and
+elections (1) more centralized and accessible, (2) easier to work with,
+and (3) more versatile […].” It assigns each contributor a unique
+identifier, geocodes their stated addresses, quantifies their
+ideological orientation, and more. The raw data come from several
+sources, including the <a href="https://www.fec.gov/data/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Federal
+Election Commission</a> and <a href="https://www.opensecrets.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">OpenSecrets</a>.
+<strong>Related</strong>: <a href="https://moneyinpolitics.wtf/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">MoneyInPolitics.wtf</a>, a <a href="https://moneyinpolitics.wtf/about/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">collaborative project</a> that
+aims to be “America’s most comprehensive dictionary of campaign finance
+jargon.” [h/t <a href="https://twitter.com/1sadoraB" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Isadora Borges
+Monroy</a>]</p>
+<p> </p>
+<p><strong>Historical newspaper articles.</strong> <a href="https://arxiv.org/abs/2308.12477" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Melissa Dell et al.</a>’s <a href="https://huggingface.co/datasets/dell-research-harvard/AmericanStories" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">American
+Stories dataset</a> contains the text of ~400 million newspaper
+articles, extracted from ~20 million public-domain scans in the Library
+of Congress’s <a href="https://chroniclingamerica.loc.gov/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Chronicling
+America</a> project (<a href="https://www.data-is-plural.com/archive/2017-08-16-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2017.08.16</a>). To construct the dataset, the authors <a href="https://github.com/dell-research-harvard/AmericanStories" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">built</a>
+“a novel deep learning pipeline that incorporates layout detection,
+legibility classification, custom OCR, and the association of article
+texts spanning multiple bounding boxes.” For each article, the dataset
+provides the newspaper name, edition number, date of publication
+(largely in the 1800s–1920s), page number, headline, byline, and article
+text. <strong>Previously</strong>: The LOC’s <a href="https://news-navigator.labs.loc.gov/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Newspaper Navigator
+dataset</a> (<a href="https://www.data-is-plural.com/archive/2020-10-07-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2020.10.07</a>), which extracts visual content from the Chronicling
+America scans. [h/t <a href="http://knosof.co.uk/ESEUR/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Derek M.
+Jones</a>]</p>
+<p> </p>
+<p><strong>Prigozhin audio messages.</strong> <a href="https://giorgiocomai.eu/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Giorgio Comai</a> has <a href="https://tadadit.xyz/posts/2023-08-telegram_prigozhin/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">collected
+and auto-transcribed</a> hundreds of audio messages from Russian
+mercenary leader <a href="https://en.wikipedia.org/wiki/Yevgeny_Prigozhin" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Yevgeny
+Prigozhin</a>, which were posted “on his official Telegram channel - the
+press service of his holding company” from late 2022 through June 2023.
+For each transcribed segment within each message, the <a href="https://tadadit.xyz/datasets/prigozhin_audio_files/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">resulting
+datasets</a> (one in Russian and one auto-translated into English)
+include the message ID, time posted, segment timestamp, and segment
+text. [h/t <a href="https://twitter.com/_federicocaruso" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Federico
+Caruso</a>]</p>
+<p> </p>
+<p><strong>The “Unknome.”</strong> The human genome has been sequenced,
+but what do all those genes do? <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002222" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">João
+J. Rocha et al.</a>’s <a href="https://unknome.mrc-lmb.cam.ac.uk/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Unknome database</a> assigns a
+“knownness” score to “all protein clusters that contain at least 1
+protein from humans or any of 11 model organisms.” The score is based on
+the density of annotations in the <a href="https://geneontology.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Gene Ontology knowledgebase</a>, which
+bills itself as “the world’s largest source of information on the
+functions of genes.” The clustering comes from another downloadable
+database, <a href="https://pantherdb.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">PANTHER</a>, which contains
+“comprehensive information about the evolution of protein-coding gene
+families.”</p>
+<p> </p>
+<p><strong>License plate designs.</strong> <a href="https://www.beautifulpublicdata.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Beautiful Public Data</a>’s
+<a href="https://jonkeegan.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Jon Keegan</a> scraped the websites of
+every US state’s (and DC’s) motor vehicle agency to assemble a <a href="https://github.com/jonkeegan/us-license-plates" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">dataset of 8,291
+license plate designs</a>. The dataset provides each design’s name,
+state, and image. <strong>Read more</strong>: <a href="https://www.beautifulpublicdata.com/all-of-the-license-plates-in-the-united-states/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Keegan’s
+exploration of the data</a>, which includes a searchable table.
+<strong>Previously</strong>: Vanity plates requested in <a href="https://github.com/veltman/ca-license-plates" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">California</a> (<a href="https://www.data-is-plural.com/archive/2020-01-29-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2020.01.29</a>) and <a href="https://github.com/datanews/license-plates" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">New York</a> (<a href="https://www.data-is-plural.com/archive/2015-10-21-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2015.10.21</a>).</p>
+<p> </p>
+<p><em>Dataset suggestions? Criticism? Praise? Send vain feedback to
+jsvine@gmail.com, or just reply to this email. // Looking for past
+datasets? <a href="https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">This
+spreadsheet contains them all</a>. // Visit <a href="https://www.data-is-plural.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data-is-plural.com</a> to
+subscribe and to browse past editions.</em></p>

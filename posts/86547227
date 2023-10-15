@@ -1,0 +1,11 @@
+Say hi to our new bestiary friend, Grok.
+Our lovely ogre: Grok the cruel The Quest Let’s explore how a network can generalize the solution after already reaching perfect loss.
+Grokking Grokking is the model’s ability to move beyond rote learning of training data and develop a broader understanding that allows it to generalize well to unseen inputs.
+The Model We’ll try to reproduce this effect using a model trained to predict modular addition (a + b) % vocab.
+
+<p>
+    This post was originally published <a href="https://swe-to-mle.pages.dev/posts/grokking-with-weights-decay/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a> and
+    you are reading it in the
+    <a href="https://blaggregator.recurse.com/new/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Blaggregator</a> feed.
+    <a href="https://recurse.zulipchat.com/#narrow/stream/blogging/topic/Grokking.20With.20Weights.20Decay" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Join the discussion</a> on Zulip!.
+</p>

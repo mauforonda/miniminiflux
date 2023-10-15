@@ -1,0 +1,99 @@
+<p><em>Jonathan Horowitz, a Legal Advisor at the International Committee of the Red Cross, provides legal assessments and recommendations for digital tech companies operating in wartime.</em></p>
+
+
+
+<figure><img src="https://reader.miniflux.app/proxy/BzyFsvG2kNRpx0KpPsYzgpKg7MDSygn4BKUfR_0Loaw=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzAzL3NodXR0ZXJzdG9ja18yMTI5NjA1NDQ1LmpwZw==" alt="War" srcset="https://reader.miniflux.app/proxy/BzyFsvG2kNRpx0KpPsYzgpKg7MDSygn4BKUfR_0Loaw=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzAzL3NodXR0ZXJzdG9ja18yMTI5NjA1NDQ1LmpwZw== 1000w, https://reader.miniflux.app/proxy/VgAZCZqVoVckdh7G2XNsTkWI3-jBSS9bt4gcZwYUci8=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzAzL3NodXR0ZXJzdG9ja18yMTI5NjA1NDQ1LTMwMHgxNzEuanBn 300w, https://reader.miniflux.app/proxy/SHqSvGiSVJ55jyQxyR0quK7OCe1WC-nRFrpWhNvzq-0=/aHR0cHM6Ly90ZWNocG9saWN5LnByZXNzL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzAzL3NodXR0ZXJzdG9ja18yMTI5NjA1NDQ1LTc2OHg0MzkuanBn 768w" sizes="(max-width: 1000px) 100vw, 1000px" loading="lazy"/></figure>
+
+
+<p><a href="https://www.justsecurity.org/89463/digital-tech-companies-in-war-what-is-the-law-what-are-the-risks/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><em>This piece is copublished on Just Security</em>.</a></p>
+
+
+
+<p>Private tech companies are increasingly providing both civilians and militaries with digital infrastructure and services utilized during armed conflict. Depending on the circumstances, this might include communications platforms, cloud computing services, and cyber defenses. Some of that infrastructure and some of those services are shared between militaries and civilians, and some are not. The situation in Russia and Ukraine is the most recent armed conflict where we so publicly see this blurred line between civilian and military technologies, but other <a href="https://www.satellitetoday.com/government-military/2008/04/01/satellite-vendors-ready-to-meet-military-challenges/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">examples</a> exist.</p>
+
+
+
+<p>The role of tech companies during wartime is further complicated as governments want to beef up private-public partnerships to protect their domestic critical infrastructure—such as medical services, electricity supplies, and water treatment—from cyber threats. If those governments were to go to war with another country, those companies may be expected to engage in cyber defense activities against military adversaries that, lawfully or not, target those sectors.</p>
+
+
+
+<p>These trends are presenting tech companies with new operational environments and heightened security risks that could expose their employees, properties, and surrounding civilians to significant harms. That is where international humanitarian law (IHL) comes in. This is the body of law that governs armed conflict (such as the Geneva Conventions), and tech company lawyers and policy makers need to be familiar with it.  </p>
+
+
+
+<p>IHL places important limits on warfare. In a forthcoming law journal article, “<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4470988" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">One Click from Conflict</a>,” I set out how IHL protects tech company employees and their properties from being attacked when they are located in the territory of a State that is party to an armed conflict.</p>
+
+
+
+<p>The default position is that tech company employees and properties are civilian and, therefore, must not be attacked. But—and this point may raise some eyebrows—there are situations where those same people and properties might lose those protections. This may happen in exceptional circumstances when a tech company employee “<a href="https://ihl-databases.icrc.org/en/customary-ihl/v1/rule6" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">directly participates in hostilities</a>” (DPH) or when a piece of company property qualifies as a “<a href="https://ihl-databases.icrc.org/en/customary-ihl/v1/rule8" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">military objective</a>.” Both are terms of legal art under IHL, and any lawyer and executive working for a tech company that is operating in an armed conflict should know what they mean.</p>
+
+
+
+<p>And, to be clear, when I say “attack,” I mean violence that has the potential to kill, injure, or cause damage, including physical damage. I am not talking solely about cyber responses that have non-physical effects. That is because, when a civilian is engaged in DPH or a piece of company property qualifies as a military objective, IHL does not outright prohibit States from causing kinetic effects against those civilians or properties.</p>
+
+
+
+<p>Also, the concept of “acceptable” collateral damage that we are all familiar with from the movies and the like does not cease to exist just because we are talking about cyberspace. IHL has strict obligations aimed at<a href="https://ihl-databases.icrc.org/en/customary-ihl/v1/rule15" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"> </a>avoiding and minimizing <a href="https://ihl-databases.icrc.org/en/customary-ihl/v1/rule15" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">incidental death and injury to civilians and damage to civilian objects (hereafter “incidental civilian harm</a>”), but at the same time it does not provide a legal rule that outright prohibits those harms <a href="https://ihl-databases.icrc.org/en/customary-ihl/v1/rule14" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">unless such harms are excessive</a>. This means that, depending on the circumstances, IHL may not prohibit the incidental death of a civilian standing next to a tech company office building that is bombed if that building would qualify, in the circumstances, as a military objective. It also means, depending on the circumstances, IHL may not prohibit a cyber attack expected to cause incidental civilian harm when the attack is aimed at a piece of tech company property that provides military communications capabilities essential for coordinating an important ongoing offensive operation. These are just some of the potential dangers for civilians who get caught in the “digital crossfire.”</p>
+
+
+
+<p>Recognizing that war brings life threatening risks and innumerable other hardships to the people it affects, as a starting point companies should receive IHL training, conduct IHL assessments, mitigate risks, and inform their employees and customers of any risks that remain. To offer a bit more detail, here is a list of some measures for companies operating in armed conflicts to  take to help protect civilians and civilian objects from the dangers of armed conflict. </p>
+
+
+
+<p>Some of these may in fact reflect legal obligations or liabilities that companies already have under national laws: </p>
+
+
+
+<ul>
+<li>Company decision-makers should familiarize themselves with necessary understandings of IHL. This could be accomplished through IHL training programs that help them understand the implications that the basic rules and principles of IHL have for their company’s activities in situations of armed conflict. </li>
+</ul>
+
+
+
+<ul>
+<li>Companies should conduct audits or otherwise assess whether their employees and properties might lose their legal protections against being attacked under IHL.</li>
+</ul>
+
+
+
+<ul>
+<li>If a company wants these legal protections to remain in force, it needs to ensure its employees do not engage in activities that qualify as “directly participating in hostilities,” and ensure its properties are not being used in ways that qualify them as “military objectives.” As an added risk mitigation measure, a company could communicate these intentions to the warring sides, or publicly, to avoid misperceptions about what the company is up to.</li>
+</ul>
+
+
+
+<ul>
+<li>Companies engaged solely in civilian activities could also provide information to warring parties, or publicly, about the incidental civilian harm that may be caused, directly or indirectly, by an attack against a proximate military objective. Parties to an armed conflict would be legally obligated to take this information into account to ensure their attacks are not <a href="https://ihl-databases.icrc.org/en/customary-ihl/v1/rule14" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">disproportionate</a>. This information also helps warring parties assess what <a href="https://ihl-databases.icrc.org/en/customary-ihl/v1/rule15" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">precautionary measures</a> they must take to avoid or minimize civilian harm.</li>
+</ul>
+
+
+
+<ul>
+<li>There are <a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/264AA387FDB2065B359A16B66813EEB5/S1816383123000152a.pdf/will-the-centre-hold-countering-the-erosion-of-the-principle-of-distinction-on-the-digital-battlefield.pdf" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">urgent humanitarian and practical reasons</a> why civilians, including private company employees, should not directly participate in hostilities. If a company is nevertheless willing to expose its employees or properties to the risk of being attacked, it should, at minimum, be transparent with, and alert, its employees about the associated worker safety risks.</li>
+</ul>
+
+
+
+<ul>
+<li>It is also important for companies to adopt policies and practices that ensure their employees comply with all applicable rules of IHL, for example, by ensuring they are not engaged in activities that could amount to war crimes.  </li>
+</ul>
+
+
+
+<ul>
+<li>To minimize incidental civilian harm from the effects of an attack by a belligerent, these companies may need to take mitigation measures, such as segmenting, where feasible, the military and civilian uses of the goods and services they offer. This would be particularly relevant for companies that store military and civilian data and provide other shared services and infrastructure.<br/></li>
+
+
+
+<li>Finally, companies should be as transparent as possible about the incidental harms their civilian customers might face when those companies’ digital goods or services are being used in an armed conflict.</li>
+</ul>
+
+
+
+<p>It is the parties to an armed conflict that are primarily responsible for complying with IHL and protecting civilians from harm, whether physical or digital. At the same time, the complexity of the digital environment is increasingly bringing tech companies into contact with the realities of war. </p>
+
+
+
+<p>As companies find themselves involved in armed conflicts, and the lives of people living through those conflicts, executives will have to decide how to navigate this space. To do this, IHL provides rules of the road with which  companies will need to be familiar. The law offers protections to their civilian employees and properties from attack. But it is also the choices of a company that can influence when those protections may cease and, in doing so, when civilians may be exposed to the crossfire of armed conflict.</p>
+<p>The post <a href="https://techpolicy.press/when-might-digital-tech-companies-become-targetable-in-war/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">When Might Digital Tech Companies Become Targetable in War?</a> appeared first on <a href="https://techpolicy.press" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Tech Policy Press</a>.</p>

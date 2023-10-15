@@ -1,0 +1,83 @@
+<p><em>Nursing home inspections, local ideology, COVID-19 in deer,
+Colombian public-sector algorithms, and forageable fruit.</em></p>
+<p> </p>
+<p><em>📬 Reader <a href="https://medium.com/@deabardhoshi" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Dea B</a>
+used the <a href="https://globaldatabarometer.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Global Open Data
+Barometer</a>, featured in <a href="https://www.data-is-plural.com/archive/2022-05-18-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2022.05.18</a>, to create an <a href="https://towardsdatascience.com/global-data-barometer-whats-the-current-state-of-open-data-in-the-world-2841e80503c2" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">exploratory
+data story on the state of open data around the world</a>. (Have you
+published something with data you found via DIP? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXXD5eO05w0Xa7bwG3Ppia3uzr_o3y-xDEZuWRfXbCfCu_XA/viewform" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Click
+here to let me know</a>.)</em></p>
+<p> </p>
+<p><strong>Nursing home inspections.</strong> A couple of weeks ago,
+ProPublica <a href="https://www.propublica.org/article/here-whats-new-in-nursing-home-inspect-database" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">launched
+a major update</a> to its <a href="https://projects.propublica.org/nursing-homes/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Nursing Home
+Inspect</a> database, originally published in 2012 (and briefly
+mentioned in <a href="https://www.data-is-plural.com/archive/2016-07-06-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2016.07.06</a>). The new version “includes more data, new views that
+summarize problems, and advanced search features.” As an <a href="https://www.propublica.org/article/how-to-use-updated-nursing-home-inspect" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">accompanying
+guide</a> explains, the database now “covers nearly 400,000 deficiencies
+from over 90,000 reports at over 15,000 homes.” The project links to its
+source data, including the federal government’s <a href="https://data.cms.gov/provider-data/dataset/4pq5-n9py" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">list of
+Medicare-certified nursing homes</a> and the date, regulation,
+scope/severity, and narrative text of all deficiencies.
+<strong>Tip</strong>: <a href="https://github.com/seattletimes/nursing_homes_staffing_20200925#deficiency-data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">The
+Seattle Times provides guidance for downloading those deficiency
+records</a>. <strong>Later today</strong>: <a href="https://www.propublica.org/events/how-to-use-propublicas-updated-nursing-home-inspect-database" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ProPublica
+is hosting a webinar about the updated database</a>.</p>
+<p> </p>
+<p><strong>Local ideology.</strong> “Little is known about the American
+public’s policy preferences at the level of Congressional districts,
+state legislative districts, and local municipalities,” <a href="https://ctausanovitch.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Chris Tausanovitch</a> and <a href="http://www.chriswarshaw.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Christopher Warshaw</a> wrote <a href="https://www.jstor.org/stable/10.1017/s0022381613000042?seq=1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">in
+the Journal of Politics a decade ago</a>. To address the issue, the
+researchers applied Bayesian statistical methods to large public-opinion
+surveys to generate numeric “ideal point” (left-vs-right) estimates at
+many geographic levels. Through their <a href="https://americanideologyproject.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">American Ideology
+Project</a>, they have since <a href="https://dataverse.harvard.edu/dataverse/americanideologyproject" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">updated
+these estimates</a>, including <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BQKU4M" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">most
+recently with data through 2021</a>. <strong>Previously</strong>:
+Ideology estimates for <a href="https://americanlegislatures.wordpress.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">state legislators</a>
+(<a href="https://www.data-is-plural.com/archive/2020-01-01-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2020.01.01</a>), <a href="https://americanlegislatures.wordpress.com/2023/04/14/april-2023-update-to-shor-mccarty-state-legislatures-data/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">updated
+in April 2023</a>, and <a href="https://voteview.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">members of
+Congress</a> (<a href="https://www.data-is-plural.com/archive/2023-03-01-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2023.03.01</a>). [h/t <a href="https://twitter.com/MikeStucka" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Mike
+Stucka</a>]</p>
+<p> </p>
+<p><strong>COVID-19 in deer.</strong> <a href="https://www.nature.com/articles/s41467-023-39782-x" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Aijing Feng et
+al.</a> “collected 8,830 respiratory samples from free-ranging
+white-tailed deer across Washington, D.C. and 26 states in the United
+States between November 2021 and April 2022.” The researchers sequenced
+the COVID-19 genomes from 391 of the samples that tested positive for
+the virus, finding that the infections “originated from at least 109
+independent spillovers from humans, which resulted in 39 cases of
+subsequent local deer-to-deer transmission and three cases of potential
+spillover from white-tailed deer back to humans.” The <a href="https://www.nature.com/articles/s41467-023-39782-x#Sec28" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">study’s
+public spreadsheets</a> include data about each sequenced sample
+(collection date, state, virus lineage, etc.), each spillover event, and
+more. [h/t <a href="http://www.tmdedrick.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Tyler Dedrick</a>]</p>
+<p> </p>
+<p><strong>Colombian public-sector algorithms.</strong> <a href="https://juangutierrez.co/2023/06/07/nueva-base-de-datos-caracteriza-113-algoritmos-utilizados-el-sector-publico-colombiano-para-orientar-o-tomar-decisiones/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Juan
+David Gutiérrez et al.</a> have compiled a <a href="https://research-data.urosario.edu.co/dataset.xhtml?persistentId=doi:10.34848/YN1CRT" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">spreadsheet
+listing 113 automated decision systems</a> (“sistemas de decisión
+automatizada”) in the Colombian public sector. Each entry lists the
+system’s name, government entity, level of government (national, <a href="https://en.wikipedia.org/wiki/Departments_of_Colombia" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">department</a>,
+municipal), sector, description, objectives, data used, various
+categorizations, and much more. The project also includes a spreadsheet
+of the 300+ sources used in the compilation.</p>
+<p> </p>
+<p><strong>Forageable fruit.</strong> The <a href="https://fallingfruit.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Falling Fruit</a> project “is a
+celebration of the overlooked culinary bounty of our city streets.” It
+<a href="https://fallingfruit.org/about" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">provides</a> a map — “not the
+first of its kind, but [aspiring] to be the world’s most comprehensive”
+— and <a href="https://fallingfruit.org/data" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">downloadable dataset</a>
+of 1.5 million locations of edible plants in public, although not
+strictly fruit. The entries come from <a href="https://fallingfruit.org/changes" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">user contributions</a>, as well
+as <a href="https://fallingfruit.org/datasets" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">imports of community maps
+and tree inventories</a>. [h/t <a href="https://twitter.com/susiecambria" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Susie Cambria</a>]</p>
+<p> </p>
+<p><em>Dataset suggestions? Criticism? Praise? Send foraged feedback to
+jsvine@gmail.com, or just reply to this email. // Looking for past
+datasets? <a href="https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">This
+spreadsheet contains them all</a>. // Visit <a href="https://www.data-is-plural.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data-is-plural.com</a> to
+subscribe and to browse past editions.</em></p>

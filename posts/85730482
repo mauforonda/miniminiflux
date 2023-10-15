@@ -1,0 +1,50 @@
+<p>Thanks to fortunate circumstances,
+I became the owner of an <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-4070ti/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Nvidia GeForce RTX 4070</a>:
+<a href="https://en.wikipedia.org/wiki/Deep_learning_super_sampling" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DLSS</a>, <a href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ray tracing</a>, better power efficiency, …
+I can hang out with the gamers now!
+Unfortunately, on my Debian Sid with <a href="http://gnome.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">GNOME</a>, the GPU is too recent for <a href="https://nouveau.freedesktop.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">nouveau</a> to work,
+and the
+garbage/secure-boot-breaking/binary-blob/<a href="https://arstechnica.com/information-technology/2012/06/linus-torvalds-says-f-k-you-to-nvidia/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">fuck-you-nvidia</a>
+<a href="https://wiki.debian.org/NvidiaGraphicsDrivers" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">proprietary drivers</a> leads to a bootloop.</p>
+<p>Somewhere hidden in the huge syslog, one can see the following:</p>
+<pre><code>2023-07-28T19:16:38.600949+02:00 facilier /usr/libexec/gdm-x-session[1573]: /etc/gdm3/Xsession: Beginning session setup...
+2023-07-28T19:16:38.611970+02:00 facilier /usr/libexec/gdm-x-session[1584]: dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+2023-07-28T19:16:38.611994+02:00 facilier /usr/libexec/gdm-x-session[1584]: dbus-update-activation-environment: setting DISPLAY=:0
+2023-07-28T19:16:38.612010+02:00 facilier /usr/libexec/gdm-x-session[1584]: dbus-update-activation-environment: setting XAUTHORITY=/X11/Xauthority
+2023-07-28T19:16:38.612554+02:00 facilier dbus-daemon[1115]: [system] Successfully activated service &#39;org.freedesktop.UPower&#39;
+2023-07-28T19:16:38.612678+02:00 facilier systemd[1]: Started upower.service - Daemon for power management.
+2023-07-28T19:16:38.615580+02:00 facilier /usr/libexec/gdm-x-session[1587]: Authorization required, but no authorization protocol specified
+2023-07-28T19:16:38.615619+02:00 facilier /usr/libexec/gdm-x-session[1587]: xrdb: Resource temporarily unavailable
+2023-07-28T19:16:38.615636+02:00 facilier /usr/libexec/gdm-x-session[1587]: xrdb: Can&#39;t open display &#39;:0&#39;
+2023-07-28T19:16:38.618702+02:00 facilier /usr/libexec/gdm-x-session[1594]: Authorization required, but no authorization protocol specified
+2023-07-28T19:16:38.618727+02:00 facilier /usr/libexec/gdm-x-session[1594]: xhost:  unable to open display &#34;:0&#34;
+2023-07-28T19:16:38.685466+02:00 facilier gnome-session[1573]: gnome-session-binary[1573]: WARNING: software acceleration check failed: Child process exited with code 1
+2023-07-28T19:16:38.685489+02:00 facilier gnome-session-binary[1573]: WARNING: software acceleration check failed: Child process exited with code 1
+2023-07-28T19:16:38.692650+02:00 facilier gnome-session[1617]: Authorization required, but no authorization protocol specified
+2023-07-28T19:16:38.692909+02:00 facilier gnome-session-f[1617]: Cannot open display:
+</code></pre>
+
+<p>The interesting part being <code>software acceleration check failed</code>, from
+<code>gnome-session</code>, as well as <code>gdm-x-session</code>. I have automatic login, so it seems that 
+<a href="https://wiki.gnome.org/Projects/GDM" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">GDM</a> is launching an <a href="https://www.x.org/wiki/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">X</a> session instead of
+a <a href="https://wayland.freedesktop.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Wayland</a> one, and gnome-session falls over trying to use hardware acceleration
+there.</p>
+<p>Looking at GDM&#39;s source code, and searching for <code>wayland</code> leads to a property called
+<a href="https://gitlab.gnome.org/search?search=WaylandEnable&amp;nav_source=navbar&amp;project_id=1856&amp;group_id=8&amp;search_code=true&amp;repository_ref=main" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><code>WaylandEnabled</code></a>,
+used in a couple of places, including <a href="https://gitlab.gnome.org/GNOME/gdm/-/blob/main/data/61-gdm.rules.in" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><code>/lib/udev/rules.d/61-gdm.rules</code></a>,
+where it can be automatically disabled should some <a href="https://en.wikipedia.org/wiki/Udev" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">udev</a> rules match.</p>
+<p>Getting rid of the bootloop is simply a matter of commenting the two <code>RUN</code> lines telling GDM to prefer Xorg and to disable Wayland:</p>
+<pre><code>LABEL=&#34;gdm_prefer_xorg&#34;
+#RUN+=&#34;/usr/libexec/gdm-runtime-config set daemon PreferredDisplayServer xorg&#34;
+GOTO=&#34;gdm_end&#34;
+
+LABEL=&#34;gdm_disable_wayland&#34;
+#RUN+=&#34;/usr/libexec/gdm-runtime-config set daemon WaylandEnable false&#34;
+GOTO=&#34;gdm_end&#34;
+</code></pre>
+
+<p>A proper fix would be of course to make GDM properly detect that the GPU
+supports Wayland with hardware acceleration, but I wasted enough time on it
+already, and I <strong>really</strong> don&#39;t want to
+touch anything display/Xorg related anymore, ever. I still have PTSD from
+trying to write a Xorg.conf by hand, 15 years ago.</p>

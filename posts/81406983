@@ -1,0 +1,231 @@
+<p>In the <a href="https://aaronhertzmann.com/2023/07/31/occluding-contours-part-1.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">first post in this series</a>, I outlined the problem of occluding contours for smooth surfaces, that we’ve never really fully understood. In this post, I’ll explain our new insights that finally explain these long-standing problems, from this paper:</p>
+
+<ul>
+  <li>Chenxi Liu, Pierre Bénard, Aaron Hertzmann, Shayan Hoshyari. <em><strong>ConTesse: Accurate Occluding Contours for Subdivision Surfaces.</strong></em> ACM Transactions on Graphics (TOG). 2023. Volume 42, Number 1, Article No. 5. [<a href="https://dgp.toronto.edu/~hertzman/contesse/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">paper webpage</a>]</li>
+</ul>
+
+<p>And then I’ll discuss our even-newer approach:</p>
+
+<ul>
+  <li>Ryan Capouellez, Jiacheng Dai, Aaron Hertzmann, Denis Zorin. <em><strong>Algebraic Smooth Occluding Contours</strong></em>. Proceedings of SIGGRAPH 2023. [<a href="http://ryanjcapouellez.com/papers/algebraic_smooth_occluding_contours.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">paper webpage</a>]</li>
+</ul>
+
+<h1 id="when-are-curves-valid">When Are Curves <em>Valid</em>?</h1>
+
+<p>Let’s begin with a simple case: smooth objects for which the contour is a single, closed curve. For smooth surfaces, we can’t compute the exact contour, so instead, we typically approximate it with a polyline in 3D. But how do we compute visbility of the polyline in a sensible way, <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1467-8659.2008.01258.x" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">since the polyline isn’t the contour of the surface</a>? We need to define a new triangle mesh for which the polyline is its contour.</p>
+
+<p>The core idea we propose is that:</p>
+
+<table>
+  
+    <tbody><tr>
+      <td>A closed contour curve in the 2D image is <em>valid</em> if and only if there exists a 3D surface for which this curve is the occluding contour.</td>
+    </tr>
+  
+</tbody></table>
+
+<p>If a curve is valid, then there’s a meaningful visibility assignment for it, using standard mesh visibility.</p>
+
+<p>For example, this simple loop is <em>valid</em> because it’s the projection of a polyhedron’s contours:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/IKpAAgCLjrwPzlPfEoA5cDNZRRmWdIF36JjusV03sgs=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9tZXNoLWNvbnRvdXItZGVmLnBuZw==" alt="Defintion of mesh occluding contours" loading="lazy"/>
+</p>
+</figure>
+
+<p>The same notion of validity applies both to smooth surfaces with smooth contours, and to polygon meshes with polyline contours.
+I am being a bit hand-wavy about precise definitions here, in the interest of brevity; things are more precise <a href="https://dgp.toronto.edu/~hertzman/contesse/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">in our paper</a>.</p>
+
+<p>A valid contour loop might intersect itself in 2D, if the surface overlaps itself in image space:</p>
+
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/gA3BWR9KVxc55M0f-2clZNrGyqpUKqsG6PnqrCZzOx8=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9nYW1tYS1jYW1lcmEucG5n" alt="Smooth self-overlapping object in camera view" loading="lazy"/>
+<img src="https://reader.miniflux.app/proxy/sSx2j6OXnm9JoFlR_h6Lt9ZvbpACyt6jStrdmbeykds=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9nYW1tYS1zaWRlLnBuZw==" alt="Smooth self-overlapping object in side view" loading="lazy"/>
+</p>
+</figure>
+
+<p>Here’s a valid 2D polygon approximating this contour:</p>
+
+<figure>
+<img src="https://reader.miniflux.app/proxy/1XC0oNxdXOFlVKLPufO8Mih0m1K_etlmTIfZewH8qK4=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9nYW1tYS1wb2x5Z29uLnBuZw==" alt="Smooth self-overlapping object, polygonal approximation" loading="lazy"/>
+</figure>
+
+<p>and, once we compute visibility, the rendering would look something like this:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/Ud60kt0YaB0oxngqBTmyAxK5OdzB3YbgUumETr1GYOE=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9nYW1tYV92aXMuanBn" alt="Smooth self-overlapping object, polygonal approximation with visibility" loading="lazy"/>
+</p>
+</figure>
+
+
+<h1 id="invalid-polygons">Invalid Polygons</h1>
+
+<p>Here’s a contour polygon that’s <em>invalid</em>:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/iB5-CUcdT5MyDJgv8gugmfzarZEk6LLRYBpVzb1qOHo=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9ib3d0aWUucG5n" alt="Bowtie polygon" loading="lazy"/>
+</p>
+</figure>
+
+<p>This is a single, self-intersecting polygon in a figure-8 configuration. I’ve drawn the vertices here; there is no vertex at the self-intersection point.   This polygon <em>cannot</em> be the contour of a mesh: <strong>There does not exist an orientable triangle mesh for which the occluding contour projects to this polygon,</strong> with each polygon edge being the projection of one mesh edge.</p>
+
+<p>Hence, there’s no “correct” way to determine visibility for this curve.</p>
+
+<p>(One way to see this is to try to attach triangles that satisfy the constraint that contour edges connect front-faces to back-faces, and non-contour edges connect same-orientation faces. This constraint can’t be satisfied because the contour is one-sided, like a Möbius strip. However, “two-sidedness” isn’t a sufficient condition for validity.)</p>
+
+<p>(In fact, there’s no way to triangulate the above polygon that fills it with consistently oriented triangles. This is a broader notion of <em>validity</em>, and the one we actually use: any closed polygon is <em>valid</em> if and only if it could be the projection of the boundary of a patch of 3D triangles that are all front-faces or all back-faces. )</p>
+
+<p>So, there exist invalid polygons. Where do they come from? And how can we tell if a curve <em>is</em> valid?</p>
+
+<h1 id="invalid-contours-come-from-sampling">Invalid Contours come from sampling</h1>
+
+<p>When do invalid contours occur? Well, suppose the actual smooth contour looks like this in 2D:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/iv0WeOrMS1qFqdMNZNiwYgrOVYOHtoN8-bMPAWLUPgw=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9pbnZhbGlkLXNvdXJjZS5wbmc=" alt="Curved object with smooth feature" loading="lazy"/>
+</p>
+</figure>
+
+<p>If you discretize it, you might get the figure-8 configuration:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/eLg6OIGJM_Y-HFLvsRUavEjYcUOsY-9ukQ0VrA6zn58=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9pbnZhbGlkLnBuZw==" alt="Discretization with bowtie structure" loading="lazy"/>
+</p>
+</figure>
+
+<p>It’s an invalid polygon, and now your visibility is busted.</p>
+
+<p>In a nutshell, this the fundamental problem: <strong>All contour algorithms for smooth surfaces discretize the contours into polylines. This odiscretization often produces invalid polygons.</strong> And invalid polygons do not have meaningful visibility. Sometimes it doesn’t matter, because the invalid polygons are entirely hidden by occluders. But, eventually, all existing algorithms are going to produce visible errors due to invalid curves.</p>
+
+<p>This is an instance of the common-but-surprising fact that discretizing a continuous system does not preserve its properties, e.g., discretization breaks <a href="https://en.wikipedia.org/wiki/Discrete_differential_geometry" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">some differential geometric properties on smooth surfaces</a>, and breaks some conservation laws and collision handling in physical simulation.</p>
+
+<p>Unfortunately, it’s not just figure-8 configurations; there are lots of ways that a polygon can be invalid.</p>
+
+<h1 id="theory">Theory</h1>
+
+<p>How can we determine algorithmically whether a curve is valid or not?</p>
+
+<p>First, note that <em>linear projection preserves triangle orientation</em>. For example, if you project a front-facing triangle to image space, you get a triangle with positive orientation (i.e., <code>det([x1,y1,1;x2,y2,1;x3,y3,1])&gt;0</code>). Curve orientation is also preserved.</p>
+
+<p>Let’s look again at this example:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/IKpAAgCLjrwPzlPfEoA5cDNZRRmWdIF36JjusV03sgs=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9tZXNoLWNvbnRvdXItZGVmLnBuZw==" alt="Mesh contour definition" loading="lazy"/>
+</p>
+</figure>
+
+<p>The 3D contour bounds a set of front faces. These triangles project to a 2D collection of positively-oriented triangles, bounded by a 2D polygon.  They constitute a triangulation of the polygon.  This is the case for any valid hole-free collection of front-faces, even if the triangles self-overlap in image space.</p>
+
+<p>So, <em>for a 2D polygon to be valid, it must be possible to triangulate it with positively-oriented triangles</em>.</p>
+
+<p>How can we check if a polyline is valid?  Fortunately, there’s a <a href="https://dl.acm.org/doi/abs/10.1145/73833.73838" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">dynamic programming algorithm from computational geometry</a> to check this.  Specifically, the class of polygons I’ve discussed so far is called “self-overlapping.”</p>
+
+<p>Things get more complicated for typical surfaces: contours may have cusps, and collections of front-faces may have holes. These cases are discussed <a href="https://dgp.toronto.edu/~hertzman/contesse/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">in our paper</a>.</p>
+
+<h1 id="the-contesse-approach">The ConTesse approach</h1>
+
+<p>So how can we deal with invalid polygons?  In the example above, we can simply refine the discretization, and stop when the curve becomes valid, e.g.,:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/4NgUnEWTczfZuBsqdsrbi-rmhZOkZwrBy_UORjGDIo8=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9pbnZhbGlkLXN1YnNhbXBsZWQucG5n" alt="Refined invalid configuration" loading="lazy"/>
+</p>
+</figure>
+
+
+<p>In our <a href="https://dgp.toronto.edu/~hertzman/contesse/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">paper</a>, we begin with a subdivision surface, and discretize it into a mesh, including vertices sampled on the subdivision surface’s contour. We check if all mesh contours are valid. If not, we insert more contour vertices, and check again. This is guaranteed to converge to valid contours, because the smooth surface’s contours must be valid.</p>
+
+<p>Then, we generate a new 3D mesh with contours that are both valid, and topologically-equivalent to the input surface’s contours:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/HSz5VdQY5-88POqsQ816TFyE1g5QKsyLJnHWsV_xaR4=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9mZXJ0aWxpdHkucG5n" alt="Example of our method on the Fertility model" loading="lazy"/>
+</p>
+</figure>
+
+
+<p>As far as I know, our method is the first that really solves the smooth contour visibility problem, guaranteeing valid curves if you run it long enough.</p>
+
+<p>However, making it work for entire surfaces is <em>far</em> more involved than I’ve described here; see the paper for the full story.</p>
+
+<h1 id="hindsights">Hindsights</h1>
+
+<p>Ultimately, I view the ConTesse paper as a theoretical contribution together with an algorithmic proof-of-concept. It suggests future algorithms that are much more practical and efficient; there’s also room to refine the theory.  Even when we were developing it we came up with better versions, but knew that we would never finish the project if we pursued them. See our Discussion section for much more on these topics.</p>
+
+<p>This line of work began in <a href="https://www.labri.fr/perso/pbenard/publications/contours/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">our 2014 paper</a>, which produced the idea that we should look for a valid mesh that preserves a smooth surface’s contours (but not a reliable way to find it). That paper took five years from start to finish, with many, many false starts. It’s amazing how these long, multiyear research efforts ultimately lead to ideas that seem so obvious and simple in retrospect.</p>
+
+<p>I also want to acknowledge the extraordinarily hard work and insight that Chenxi brought to this paper under difficult pandemic conditions, as we stumbled through figuring out the theory and algorithms together.</p>
+
+<p>We can also look back and ask: do any historical algorithms guarantee validity?  In fact, I <em>think</em> some do (although I’m not 100% sure). Specifically some of the Planar Map methods—<a href="https://dl.acm.org/doi/10.1145/237170.237287" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Winkenbach and Salesin’s 1998 paper</a> and <a href="https://ieeexplore.ieee.org/document/4359481/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Stroila et al.’s 2007 paper</a>—should give consistent contour visibility.  For example, Stroila et al. sample contour polylines  and then throw these polylines into a planar map library that (I believe) will break up any invalid polygons into valid pieces.
+So they might produce lots of extra little bits of geometry, but they will all be valid. (The paper mentions that they remove tiny regions.)</p>
+
+<p>But some planar map algorithms don’t produce valid visibility, like the <a href="https://dl.acm.org/doi/10.1145/2024676.2024683" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2011 algorithm of Karsch and Hart</a>, which computes a planar map, but doesn’t compute visibility according to a single consistent representation.</p>
+
+<p>Without our new theory, it was hard to know which of these methods were guaranteed to work and which suffered the same pitfalls as other contour methods.</p>
+
+<h1 id="piecewise-quadratic-surfaces">Piecewise Quadratic Surfaces</h1>
+
+<p>The problems created by sampling contours into polylines led us to the question: can we construct useful smooth surfaces where the contours <em>do</em> have closed-form expressions?  In our new <a href="http://ryanjcapouellez.com/papers/algebraic_smooth_occluding_contours.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">SIGGRAPH 2023 paper</a> with Ryan Cappouellez, Jiacheng Dai, and Denis Zorin, we found that the the answer is Yes.</p>
+
+<p>Let’s consider a single parametric patch <strong>p</strong>(<em>u</em>,<em>v</em>):</p>
+
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/jC1ZgjkTXaYx2F6QFoRLhoFxn1WZdk09WBj_M-wcJNc=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9xdWFkcmF0aWMtcGF0Y2gucG5n" alt="Patch parameterization" loading="lazy"/>
+</p>
+</figure>
+
+
+<p>The surface normal at a point is <strong>n</strong>(<em>u</em>,<em>v</em>) = <strong>p</strong><sub><em>u</em></sub> x <strong>p</strong><sub><em>v</em></sub>. 
+Moreover, for now, let’s assume we’re using orthographic projection with a constant view vector <strong>τ</strong>.  Then, the contour is the set of points where <em>f</em>(<em>u</em>,<em>v</em>)=<strong>τ</strong> • <strong>n</strong>(<em>u</em>,<em>v</em>) = 0.</p>
+
+<p>If <em>f</em> is quadratic, then we get a parametric contour: specifically, a conic section in (<em>u</em>,<em>v</em>).
+And, we can make <em>f</em> quadratic by choosing <strong>p</strong>(<em>u</em>,<em>v</em>) to be quadratic. This is the sweet spot: higher-order patches don’t give parametric contours (except in some weird special cases), and lower-order is just a triangle. There’s no other general-purpose algebraic solution possible.</p>
+
+<p>In order to model more general surfaces, we need to concatenate quadratic patches. In order for the contour to be continuous across patches, the boundaries need G<sup>1</sup> continuity; there may still be cusps at boundaries.</p>
+
+<p>In the paper, we describe a novel G<sup>1</sup> piecewise quadratic construction to approximate an input mesh. The contours can then computed analytically as piecewise rational functions, and the remaining visibility operations involve fast numerical root-finding steps. See the paper for details.</p>
+
+<p>Given a 3D mesh viewed under perspective projection, we first apply a projective transformation to the vertices, i.e., convert to camera coordinates, so that we’re using orthographic projection.</p>
+
+<p>This method avoids all the complexity of finding valid polyline approximations, and we get these nice, clean contour extractions:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/qmY0T9G0DOeovVbnrSYTQWrppNf1DdPCBwl9lAEhkE8=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9xdWFkcmF0aWMtZmVydGlsaXR5LnBuZw==" alt="Example of quadratic algorithm" loading="lazy"/>
+</p>
+</figure>
+
+<p>Moreover, it’s much faster than ConTesse. It takes at most one second per frame at run-time for most of the meshes we tested.</p>
+
+<p>Once you have these contours, you can stylized them cleanly:</p>
+
+<figure>
+   <p>
+<img src="https://reader.miniflux.app/proxy/JGWW7z5eQbxZRAAjE9N1XcyVJvfPOpPVx_HtLHAfhHw=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9zcG90LW1vZGVsLmpwZw==" alt="Spot model" loading="lazy"/>
+<img src="https://reader.miniflux.app/proxy/KreBwIIRKuIV1dQdttJ1gQ4jsGrycWHKn7FW043HX-k=/aHR0cHM6Ly9hYXJvbmhlcnR6bWFubi5jb20vaW1hZ2VzL2hvd3RvZHJhdy9zcG90LXN0eWxpemVkLmpwZw==" alt="Spot model" loading="lazy"/>
+</p>
+</figure>
+
+
+<p>And, our method works robustly for every point of view, no more random, unpredictable gaps in the results:</p>
+
+<video width="640" height="480" controls="">
+  <source src="https://aaronhertzmann.com/images/howtodraw/spot_contours.mp4" type="video/mp4"/>
+Your browser does not support the video tag.
+</video>
+
+<p><strong>I believe this represents the state-of-the-art for efficiently producing smooth, sensible occluding contours from a triangle mesh.</strong> And, even if you’re starting with a subdivision surface, depending on your needs, your best bet may be to turn it into a triangle mesh and then run our algorithm.</p>
+
+<h1 id="next-steps">Next Steps</h1>
+
+<p><a href="https://aaronhertzmann.com/2023/07/31/occluding-contours-part-3.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">In part 3</a>, I’ll summarize which methods I think are best for which problems, and where the open research problems are.</p>

@@ -1,0 +1,181 @@
+<p>I&#39;ve been interested in <a href="https://www.inkandswitch.com/local-first/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">local-first software</a> for a long time, and recently attended an event about it with a bunch of luminaries from various research groups. I learned a lot, and it rekindled my interest in syncable data structures.</p>
+<p>I&#39;ve tried to sync data over the years with varying degrees of success. For example, I&#39;ve known about <a href="https://en.wikipedia.org/wiki/Operational_transformation" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">operational transformations (OT)</a> for a while (via <a href="https://quilljs.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Quill</a>, but I have never been able to get the syncing operations working to my satisfaction. Message ordering is crucially important in OT, and it&#39;s hard to get right. I get the impression that the engineers who worked on Google Wave (which also used OT) also struggled with this. One of them (Joseph Gentle) was quoted as saying &#34;Unfortunately, implementing OT sucks. There&#39;s a million algorithms with different tradeoffs, mostly trapped in academic papers. […] Wave took 2 years to write and if we rewrote it today, it would take almost as long to write a second time.&#34; (Worth noting that <a href="https://news.ycombinator.com/item?id=12311984" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">he later said it might not take as long today</a>, but still… pain!)</p>
+<p>In contrast to OT, conflict-free replicated data types (CRDTs) seem really promising! <a href="https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Wikipedia has a good summary</a>, which I&#39;ll quote:</p>
+<blockquote>
+<p>In distributed computing, a conflict-free replicated data type (CRDT) is a data structure that is replicated across multiple computers in a network, with the following features:</p>
+<ol>
+<li>The application can update any replica independently, concurrently and without coordinating with other replicas.</li>
+<li>An algorithm (itself part of the data type) automatically resolves any inconsistencies that might occur.</li>
+<li>Although replicas may have different state at any particular point in time, they are guaranteed to eventually converge.</li>
+</ol>
+</blockquote>
+<p>These properties appeal to me! If CRDTs can automatically and independently converge, no matter how far apart they drift, then you could store them wherever and however you like. Offline support should be simple, and adding live collaboration features should not mean spending years figuring out edge cases. Sign me up!</p>
+<p>What are CRDTs made from, though? It looks like typically it&#39;s some internal stuff, a function to resolve the internal stuff to a <code>value</code>, and a function to <code>merge</code> two of the data structure together. The merge function is the number-one-most-important thing about this whole arrangement, and has to satisfy<sup><a href="https://bytes.zone/posts/index.xml#1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">1</a></sup> these three laws:</p>
+<ul>
+<li>commutative (so <code>merge(a, b)</code> must be the same as <code>merge(b, a)</code>)</li>
+<li>associative (so <code>merge(merge(a, b), c)</code> must be the same as <code>merge(a, merge(b, c))</code>)</li>
+<li>idempotent (so <code>merge(a, b)</code> must be the same as <code>merge(merge(a, b), b)</code>.<sup><a href="https://bytes.zone/posts/index.xml#2" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">2</a></sup>)</li>
+</ul>
+<p>If all these are true, we can always merge two states, regardless of how many changes have been made since we last merged, and get the same result on both sides of the sync. Cool!</p>
+<p>These seem like the kinds of things that <a href="https://bytes.zone/projects/learning-alloy/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Alloy</a> would be good at modeling, so let&#39;s try it! Over the next couple of posts, I&#39;m going to build a handful of data structures that follow these three rules and compose them into data structures we could build an application on top of.</p>
+<p>Let&#39;s get a taste for this with <code>OR(bool, bool)</code>. First off, does it satisfy our three properties?</p>
+<ul>
+<li>commutative: <code>OR(True, False)</code> is the same as <code>OR(False, True)</code></li>
+<li>associative: <code>OR(OR(True, False), True)</code> is the same as <code>OR(True, OR(False, True))</code></li>
+<li>idempotent: calling <code>OR(x, True)</code> gives the same result as <code>OR(OR(x, True), True)</code>.</li>
+</ul>
+<p>So it looks like <code>OR</code> might be fine, but let&#39;s be sure. We can check this in Alloy by first defining<sup><a href="https://bytes.zone/posts/index.xml#3" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">3</a></sup> a boolean:</p>
+<pre><code>enum Bool { True, False }
+</code></pre>
+<p>Then a merge function, which we check is correct:</p>
+<pre><code>fun merge[a, b: Bool]: Bool {
+  // OR
+  a = True implies a else b
+}
+
+check MergeIsCorrect {
+  // read as: given `a` and `b`, which are `Bool`, the
+  // following condition must hold.
+  all a, b: Bool |
+    (a = True or b = True) implies merge[a, b] = True
+}
+</code></pre>
+<p>And finally, our three properties:</p>
+<pre><code>check MergeIsCommutative {
+  all a, b: Bool | merge[a, b] = merge[b, a]
+}
+
+check MergeIsAssociative {
+  all a, b, c: Bool | merge[merge[a, b], c] = merge[a, merge[b, c]]
+}
+
+check MergeIsIdempotent {
+  all a, b: Bool | merge[a, b] = merge[merge[a, b], b]
+}
+</code></pre>
+<p>Great! Alloy can&#39;t find any errors with <code>OR</code>.<sup><a href="https://bytes.zone/posts/index.xml#4" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">4</a></sup> We expected that, so let&#39;s break it in interesting ways. What if the merge function was <code>XOR(bool, bool)</code><sup><a href="https://bytes.zone/posts/index.xml#5" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">5</a></sup> instead?</p>
+<pre><code>fun merge[a, b: Bool]: Bool {
+  a = b implies False else True
+}
+</code></pre>
+<p>Now Alloy finds that we&#39;ve broken idempotency: <code>merge[False, True]</code> is <code>True</code>, but <code>merge[merge[False, True], True]</code> is <code>False</code>. This would cause big problems if we used <code>XOR</code> as a merge function: the act of syncing could change our values! We can imagine this sequence of events:</p>
+<ol>
+<li>Node A sets the value to <code>True</code></li>
+<li>Node B sets the value to <code>False</code></li>
+<li>The nodes sync, both resolving to <code>True</code> (since <code>XOR(True, False)</code> is <code>True</code>)</li>
+<li>The nodes sync again, both resolving to <code>False</code> (since <code>XOR(True, True)</code> is <code>False</code>)</li>
+<li>Further syncs would stay at <code>False</code> until someone changed the value to <code>True</code>, at which point we&#39;d repeat from step 3.</li>
+</ol>
+<p>But in a fun twist of fate, we don&#39;t <em>have</em> to imagine this; we can ask Alloy to generate these traces for us. First we&#39;ll make a document that contains a changeable value:</p>
+<pre><code>sig Document {
+  var value: one Bool,
+}
+</code></pre>
+<p>Then we&#39;ll define a <code>not</code> for our boolean and a couple of operations (flipping an arbitrary value and syncing two documents):</p>
+<pre><code>fun bool_not[b: Bool]: Bool {
+  b = True implies False else True
+}
+
+// intent: when `flip` is true, the provided document will go
+// from True to False or False to True in the next time step. 
+// This serves as our proxy for someone clicking a button in
+// a UI or whatever.
+pred flip[d: Document] {
+  // implementation: `value` is actually a set of tuples from
+  // documents to booleans, and `value&#39;` is the same but in the
+  // next time step. We set the entire value explicitly
+  // (instead of just saying like `d&#39;.value = False`) because
+  // otherwise Alloy could say &#34;and what if something changes
+  // that you weren&#39;t expecting?&#34;
+  //
+  // Syntax: `-&gt;` creates a tuple, and `++` replaces all
+  // existing tuples referencing `d` in the set.
+  value&#39; = value ++ d-&gt;bool_not[d.value]
+}
+
+// intent: merge two documents together in a way that all the
+// `merge` rules hold. Maybe imagine we have `d1` locally and
+// are getting `d2` over the network (but remember that order
+// should not matter!)
+pred sync[d1, d2: Document] {
+  let merged = merge[d1.value, d2.value] {
+    value&#39; = value ++ (d1-&gt;merged + d2-&gt;merged)
+  }
+}
+</code></pre>
+<p>Now wire them up so these events can happen over time:<sup><a href="https://bytes.zone/posts/index.xml#6" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">6</a></sup></p>
+<pre><code>pred init {
+  // `Document` is a set of documents, and `-&gt;` will apply pairwise
+  // for the sets in its arguments, so this means this says &#34;all
+  // documents start at `False`&#34;
+  value = Document -&gt; False
+}
+
+fact traces {
+  // this says &#34;start with `init`, then pick one of these things to
+  // happen at each time step.&#34; Putting it in a `fact` means that
+  // any assertions we make from now on assume that we want these
+  // instructions.
+  init
+  always {
+    (one d: Document | flip[d])
+    or (some d1, d2: Document | sync[d1, d2])
+  }
+}
+</code></pre>
+<p>We can now check that our sync is idempotent:<sup><a href="https://bytes.zone/posts/index.xml#7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">7</a></sup></p>
+<pre><code>check SyncIsIdempotent {
+  // at all times, if sync happens twice in a row (the `;` syntax) then
+  // the next value (`value&#39;`) and the one after that (`value&#39;&#39;`) should
+  // be the same.
+  always all d1, d2: Document |
+    (sync[d1, d2]; sync[d1, d2]) implies value&#39; = value&#39;&#39;
+}
+</code></pre>
+<p>If we make <code>OR</code> our <code>merge</code> function, this works fine and Alloy can&#39;t find any counterexamples. If we use <code>XOR</code> for <code>merge</code>, though, Alloy finds the trace I mentioned could show up earlier. Here&#39;s what it shows us.</p>
+<table><thead><tr><th>Step</th><th>Description</th><th>Image</th></tr></thead>
+<tbody><tr><td>1.</td><td>We start off with all documents at <code>False</code>.</td><td><img alt="an Alloy instance showing two documents both set to False" src="https://reader.miniflux.app/proxy/n_hJQ22TQIiD6c7kFEpzyGGUF6jpVN3RoefkPrNLeGw=/aHR0cHM6Ly9ieXRlcy56b25lL2ltYWdlcy94b3ItdHJhY2Utc3RlcC0xLWFuZC00LnBuZw==" loading="lazy"/></td></tr>
+<tr><td>2.</td><td>One of the documents flips to <code>True</code>.</td><td><img alt="the previous instance, but with one document now set to True" src="https://reader.miniflux.app/proxy/mPFD8SwafdiNn7Bgqns5g6kYfGNq0hc41UIGTv4CP_0=/aHR0cHM6Ly9ieXRlcy56b25lL2ltYWdlcy94b3ItdHJhY2Utc3RlcC0yLnBuZw==" loading="lazy"/></td></tr>
+<tr><td>3.</td><td>The documents sync, converging to <code>True</code>.</td><td><img alt="the previous instance, but with both documents now set to True" src="https://reader.miniflux.app/proxy/wRIdS82SDjFnHCP6f3gUd6T8dfSBVO6516uw-KvbC2s=/aHR0cHM6Ly9ieXRlcy56b25lL2ltYWdlcy94b3ItdHJhY2Utc3RlcC0zLnBuZw==" loading="lazy"/></td></tr>
+<tr><td>4.</td><td>The documents sync again, converging to <code>False</code> because <code>XOR(True, True)</code> (the previously synced state) is <code>False</code>.</td><td><img alt="the previous instance, but with both documents now set to False" src="https://reader.miniflux.app/proxy/n_hJQ22TQIiD6c7kFEpzyGGUF6jpVN3RoefkPrNLeGw=/aHR0cHM6Ly9ieXRlcy56b25lL2ltYWdlcy94b3ItdHJhY2Utc3RlcC0xLWFuZC00LnBuZw==" loading="lazy"/></td></tr>
+<tr><td>5.</td><td>Stay here forever or return to 2.</td><td></td></tr>
+</tbody></table>
+<p>In case you&#39;re encountering them for the first time, these diagrams are generated by Alloy—they&#39;re pretty fantastic for showing other people exactly what can happen in a system. (That&#39;s also why <code>Document 0</code> is <code>d1</code> and so on. The documents are defined separately, and the <code>d1</code> and <code>d2</code> labels come from our <code>check</code> so we can see what&#39;s doing what.)</p>
+<p>Alloy can do more than this, too. If we modify our condition to have 3 distinct documents like this:</p>
+<pre><code>check SyncIsIdempotent {
+  always all disj d1, d2, d3: Document |
+    (sync[d1, d2]; sync[d2, d3]) implies value&#39; = value&#39;&#39;
+}
+</code></pre>
+<p>Then Alloy shows the situation getting even sillier. You only need one of the nodes to be <code>False</code>, at which point it&#39;s possible that the documents as a whole could never converge again and just flap back and forth randomly forever. It all depends on which documents sync with which other documents. Turns out idempotency is pretty important!</p>
+<p>That&#39;s it for today. Next time we&#39;ll go from booleans-of-dubious-usefulness to counters!</p>
+
+<p>Big thanks to <a href="https://jakelazaroff.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Jake Lazaroff</a> for his help reviewing this post. If you&#39;re interested in this stuff, he also recently published <a href="https://jakelazaroff.com/words/an-interactive-intro-to-crdts/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">an interactive intro to CRDTs</a> that you may enjoy!</p>
+<sup>1</sup>
+<p>This is generally true but it&#39;s not always true when syncing. There&#39;s a further distinction here between operation- and state-based CRDTs. I&#39;m not going to get into it right now, but if I understand correctly, this distinction is about reducing the data you have to transfer by relaxing one of the three requirements while adding strict causal message ordering. For now, we&#39;re going to model state-based CRDTs, where this won&#39;t come up.</p>
+
+<sup>2</sup>
+<p>I think argument position doesn&#39;t matter for idempotency, since commutativity and associativity should mean we can rearrange the arguments however we like, but I don&#39;t have a proof of this.</p>
+
+<sup>3</sup>
+<p>Alloy has a boolean type I could just import, but it&#39;s useful to define exactly the operations you want to understand the system better, so I&#39;ve done that instead.</p>
+
+<sup>4</sup>
+<p>Note that I&#39;m not saying &#34;Alloy <em>proved</em> that this is correct.&#34; That&#39;s intentional! Alloy doesn&#39;t do proofs; it only exhaustively checks models up to a certain bound (four instances of each <code>sig</code> by default.) I have only had a handful of times where I&#39;ve had to increase the bound, though. In practice, I&#39;ve been more than happy to trade exhaustiveness for speed.</p>
+
+<sup>5</sup>
+<p>Exclusive OR. In other words, &#34;both of these can&#39;t be <code>True</code>.&#34; <a href="https://en.wikipedia.org/wiki/Exclusive_or" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Wikipedia has more details, as usual</a>.</p>
+
+<sup>6</sup>
+<p>I&#39;m skipping over a lot of detail here. If this is your first time seeing this, there are more details and explanation on the setup here at <a href="https://bytes.zone/posts/modeling-git-internals-in-alloy-part-1-blobs-and-trees/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">modeling Git internals in Alloy</a>.</p>
+
+<sup>7</sup>
+<p>I&#39;m <em>pretty sure</em> this is the right way to check this, but I had some trouble working it out and <a href="https://alloytools.discourse.group/t/how-to-assert-an-operation-is-idempotent/405" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">had to ask on the Alloy forum</a>. If you try to do something similar and run into difficult, you might try asking there too!</p>
+
+
+<p>
+    This post was originally published <a href="https://bytes.zone/posts/modeling-crdts-in-alloy-introduction-and-the-importance-of-idempotence/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a> and
+    you are reading it in the
+    <a href="https://blaggregator.recurse.com/new/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Blaggregator</a> feed.
+    <a href="https://recurse.zulipchat.com/#narrow/stream/blogging/topic/modeling.20CRDTs.20in.20Alloy.20-.20introduction.20and.20the.20importance.2E.2E.2E" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Join the discussion</a> on Zulip!.
+</p>

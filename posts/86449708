@@ -1,0 +1,79 @@
+<p><em>US income distributions, education reform, Kia/Hyundai thefts,
+Michigan air permit violations, and dog genomes.</em></p>
+<p> </p>
+<p><em>🔄 Data librarian <a href="https://works.bepress.com/lisa_deluca/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Lisa DeLuca</a> has <a href="https://works.bepress.com/lisa_deluca/59/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">updated her
+spreadsheet</a> of <a href="https://library.shu.edu/FOIA-Libraries" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">government agencies’
+Freedom of Information Act libraries</a> (<a href="https://www.data-is-plural.com/archive/2021-11-03-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2021.11.03</a>), now with 360+ entries.</em></p>
+<p> </p>
+<p><strong>US income distributions.</strong> The <a href="https://www.minneapolisfed.org/institute/income-distributions-and-dynamics-in-america" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Income
+Distributions and Dynamics in America</a> project <a href="https://www.minneapolisfed.org/article/2023/understanding-incomes-in-america" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">combines</a>
+confidential Census Bureau records and IRS tax forms to generate <a href="https://www.minneapolisfed.org/institute/income-distributions-and-dynamics-in-america/data-center" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">detailed,
+downloadable statistics</a> regarding “income percentiles, shares,
+growth rates, persistence, and more for many U.S. demographic groups at
+national and state levels.” The statistics, which cover 1998 through
+2019, are the result of a research partnership between the Minneapolis
+Fed’s <a href="https://www.minneapolisfed.org/institute" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Opportunity
+&amp; Inclusive Growth Institute</a> and the Census Bureau. The
+project’s <a href="https://www.minneapolisfed.org/institute/income-distributions-and-dynamics-in-america/chart-and-map-toolkit" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">interactive
+tools</a> let you track individual and household income percentiles by
+year, state, race/ethnicity, sex, US/foreign-born status, and age group.
+<strong>Previously</strong>: <a href="https://zenodo.org/record/7093997" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Global income deciles</a> from
+<a href="https://essd.copernicus.org/preprints/essd-2023-137/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Kanishka
+B. Narayan et al.</a> (<a href="https://www.data-is-plural.com/archive/2023-06-28-edition/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">DIP
+2023.06.28</a>). [h/t <a href="https://www.albrightalex.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Alex
+Albright</a>]</p>
+<p> </p>
+<p><strong>Education reform.</strong> The <a href="https://werd.stanford.edu/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">World Education Reform Database</a>
+describes 10,000+ education policy changes reported by 180+ countries to
+international organizations, among other sources. The project, <a href="https://werd.stanford.edu/our-team" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">led by</a> education policy
+scholars <a href="http://www.patriciabromley.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Patricia Bromley</a>
+and <a href="https://www.riekijima.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Rie Kijima</a>, <a href="https://werd.stanford.edu/database" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">focuses on</a>
+“<em>systemic</em> reforms that envision a supra-school administrative
+level and aim to impact the wider education system, rather than small
+projects that target individual schools.” The <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/C0TWXM" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">database</a>
+lists each reform’s country, year, name, and summary. Although some of
+the reforms in the database were introduced hundreds of years ago, the
+vast majority occurred in the last 50 years.</p>
+<p> </p>
+<p><strong>Kia/Hyundai thefts.</strong> “Cities around the U.S. are
+facing a staggering new normal when it comes to stolen cars,” <a href="https://www.vice.com/en/article/pkaq9z/us-cities-have-a-staggering-problem-of-kia-and-hyundai-thefts-this-data-shows-it" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">writes</a>
+Motherboard reporter <a href="https://aaronwgordon.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Aaron
+Gordon</a>, who has been digging into the <a href="https://www.vice.com/en/article/jg5b8d/what-its-like-to-own-the-cars-that-became-a-viral-sensation-to-steal" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">boom
+in thefts of Kia and Hyundai vehicles</a>, millions of which lack
+“engine immobilizers, a basic anti-theft device that is legally mandated
+in Canada and Europe.” Gordon has requested car theft data from more
+than 100 cities, and received it from 43 so far. He’s updating a <a href="https://docs.google.com/spreadsheets/d/1-6614t_Ata5k7oESrm-HAdF1uOe8aPGRaQECl44GYeE/edit#gid=0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">spreadsheet</a>
+that lists each city’s number of thefts each month, plus the
+number/percentage that were Kias or Hyundais. <strong>Related</strong>:
+Earlier this year, <a href="https://usafacts.org/data-projects/car-thefts" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">USAFacts obtained
+and published similar data from 23 US cities</a>.</p>
+<p> </p>
+<p><strong>Michigan air permit violations.</strong> For local news
+organization <a href="https://planetdetroit.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Planet Detroit</a>,
+freelance journalist <a href="https://shelbyjouppi.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Shelby
+Jouppi</a> has built a <a href="https://planet-detroit.github.io/air-permit-violation-dashboard/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">daily-updating
+dashboard</a> of air quality permit violations cited by Michigan’s <a href="https://www.michigan.gov/egle/about/organization/air-quality/air-permits" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Department
+of Environment, Great Lakes and Energy</a>. The <a href="https://github.com/Planet-Detroit/air-permit-violation-dashboard/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">dataset</a>
+lists 1,500+ violation notices since 2018; for each, it provides the
+notice date and findings, facility name and location, and more. To
+construct it, Jouppi had to <a href="https://shelbyjouppi.com/egle-air-database/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">scrape individual
+notice PDFs from the department’s website</a> and then extract the
+information from those documents. <strong>Read more</strong>: “<a href="https://planetdetroit.org/2023/09/southwest-detroit-steel-slag-processor-edward-c-levy-receives-12th-air-quality-permit-violation-for-fallout-since-2018/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Southwest
+Detroit steel slag processor receives 12th air quality permit violation
+for fallout since 2018</a>,” an article by Jouppi based on the data.</p>
+<p> </p>
+<p><strong>Dog genomes.</strong> The <a href="http://www.dog10kgenomes.org/dog10k/index.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Dog10K project</a>
+aims “to coordinate the global effort on genome sequencing in dogs and
+build a comprehensive resource for the canine community.” In a <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-023-03023-7" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">recent
+Genome Biology article</a>, the <a href="http://www.dog10kgenomes.org/dog10k/consortium.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">team</a>
+shared <a href="https://zenodo.org/record/8084059" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data</a> and findings
+from 1987 individual animals — “1611 dogs (321 breeds), 309 village
+dogs, 63 wolves, and four coyotes.” The <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-023-03023-7#availability-of-data-and-materials" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">records
+include</a> raw sequence data and variation analysis results. [h/t <a href="https://kimhnguyen.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Kim Nguyen</a>]</p>
+<p> </p>
+<p><em>Dataset suggestions? Criticism? Praise? Bark your feedback to
+jsvine@gmail.com, or just reply to this email. // Looking for past
+datasets? <a href="https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">This
+spreadsheet contains them all</a>. // Visit <a href="https://www.data-is-plural.com" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">data-is-plural.com</a> to
+subscribe and to browse past editions.</em></p>

@@ -1,0 +1,34 @@
+<p>I&#39;ve been using <a href="https://github.com/getpelican/pelican" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Pelican</a>
+more or less since the beginning of this blog and I&#39;m still
+pretty happy about it. Mostly because of how <a href="https://boringtechnology.club" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">boring</a>
+it is, and its complete absence of fundamental changes thorough the years.</p>
+<p>Anyway, I was looking at how to reduce the size of the pages of my blog
+and looked at how code is syntactically highlighted:
+Pelican is using <a href="https://pygments.org" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Pygments</a> to do this,
+and looking at its documentation, the <a href="https://pygments.org/docs/filters/#TokenMergeFilter" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">TokenMergeFilter</a>
+should help a bit, by merging token of the same type together,
+instead of highlighting them separately.</p>
+<p>Pelican&#39;s documentation <a href="https://docs.getpelican.com/en/stable/settings.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">says</a>
+that options can be passed to python-markdown like this:
+<code>MARKDOWN = { &#39;extension_configs&#39;: { &#39;markdown.extensions.codehilite&#39;: {&#39;css_class&#39;: &#39;highlight&#39;} } }</code>.</p>
+<p>Looking at <a href="https://python-markdown.github.io/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">python-markdown</a>&#39;s <a href="https://python-markdown.github.io/reference/#markdown" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">one</a>,
+one can pass various things as parameters, but it doesn&#39;t mention filters.
+<a href="https://pygments.org/docs/filters/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Pygments documentation on this topic</a> implies
+that the only way to add filters is to use the <code>add_filter</code> method on a lexer.</p>
+<p>But <a href="https://github.com/pygments/pygments/blob/master/pygments/lexer.py" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">looking at the code</a>
+as suggested <a href="https://github.com/Python-Markdown/markdown/issues/1322#issuecomment-1453911760" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">here</a>,
+filters can be passed like any other options, meaning that one only needs to
+add the following code into the <code>pelicanconf.py</code> file to used the
+<code>TokenMergeFilter</code>:</p>
+<pre><code>from pelican import TokenMergeFilter
+
+MARKDOWN = {
+    &#39;extension_configs&#39;: {
+        &#39;markdown.extensions.codehilite&#39;: {
+            &#39;filters&#39;: [TokenMergeFilter()]
+        }
+    }
+}`.
+</code></pre>
+
+<p>Totally worth the effort for a marginal page size reduction!</p>
